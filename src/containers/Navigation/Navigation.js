@@ -1,15 +1,15 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import NavigationLink from './NavigationLink/NavigationLink'
 
-import styles from './Style';
+import styles from './Style'
 
 const Navigation = props => {
 
   return (
     <div className={styles.navBar}>
       <ul>
-        <li>Link one</li>
-        <li>Link two</li>
+        <NavigationLink link="/" exact>Projects</NavigationLink>
+        <NavigationLink link="/achievements" exact>Achievements</NavigationLink>
       </ul>
     </div>
   )
