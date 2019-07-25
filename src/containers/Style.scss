@@ -1,8 +1,12 @@
 @import "pallet";
+@import "variables";
 
 .App {
   text-align: center;
-  background-color: $mainBackgroundColor;
   height: 100%;
   width: 100%;
+  color: $colorPrimary;
+  .MainContent {
+    padding: $navHeight;
+  }
 }

@@ -1,0 +1,10 @@
+@import 'pallet';
+@import "variables";
+
+.navBar {
+  background-color: $colorSecondary;
+  position: fixed;
+  width: 100%;
+  height: $navHeight;
+  top: 0;
+}

@@ -78,6 +78,8 @@ module.exports = {
   appSrc: resolveApp('src'),
   componentRoot: resolveApp('src/components'),
   pallet: resolveApp('src/styles/pallet.scss'),
+  variables: resolveApp('src/styles/variables.scss'),
+  containers: resolveApp('src/containers'),
   appTsConfig: resolveApp('tsconfig.json'),
   appJsConfig: resolveApp('jsconfig.json'),
   yarnLockFile: resolveApp('yarn.lock'),

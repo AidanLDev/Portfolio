@@ -1,14 +1,21 @@
-import React from 'react';
-import Card from 'components/Card/Card.js'
+import React from 'react'
+import Navigation from 'containers/Navigation/Navigation'
 
-import styles from './Style';
+import Achievements from 'containers/Achievements/Achievements'
+import Projects from 'containers/Projects/Projects'
+
+import styles from './Style'
 
 const App = () => {
   return (
     <div className={styles.App}>
       <header className={styles.AppHeader}>
-        <Card content='Test' />
+        <Navigation />
       </header>
+      <div className={styles.MainContent}>
+        <Achievements />
+        <Projects />
+      </div>
     </div>
   );
 }
