@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../components/Card/Card'
 
-import styles from './App';
+import styles from './Style';
 
 const App = () => {
   return (
