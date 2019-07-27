@@ -9,27 +9,23 @@ import styles from './Style'
 const Navigation = props => {
   console.log(props);
   console.log(window.location)
+  console.log(props.history)
   return (
     <div className={styles.navBar}>
       <ul className={styles.linkContainer}>
         <NavigationLink
           link="/"
-          exact >
-            <Icon
-              path={mdiCodeBraces}
-              size={1}
-              color='#ccc'
-            />
-              Projects
+          exact
+          iconPath={mdiCodeBraces}
+          clickedProps="Proj">
+            Projects
         </NavigationLink>
         <NavigationLink
           link="/achievements"
-          exact>
-            <Icon
-              path={mdiTrophy}
-              size={1}
-            />
-          Achievements
+          exact
+          iconPath={mdiTrophy}
+          clickedProps="Achiv">
+            Achievements
         </NavigationLink>
       </ul>
     </div>
