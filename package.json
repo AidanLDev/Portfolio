@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.4.3",
+    "@mdi/font": "^3.8.95",
+    "@mdi/js": "^3.8.95",
+    "@mdi/react": "^1.2.1",
     "@svgr/webpack": "4.1.0",
     "@typescript-eslint/eslint-plugin": "1.6.0",
     "@typescript-eslint/parser": "1.6.0",

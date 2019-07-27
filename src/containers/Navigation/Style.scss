@@ -5,6 +5,16 @@
   background-color: $colorSecondary;
   position: fixed;
   width: 100%;
+  height: 100%;
   height: $navHeight;
+  top: 0;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   top: 0;
 }
