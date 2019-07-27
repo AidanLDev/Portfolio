@@ -16,15 +16,13 @@ const Navigation = props => {
         <NavigationLink
           link="/"
           exact
-          iconPath={mdiCodeBraces}
-          clickedProps="Proj">
+          iconPath={mdiCodeBraces}>
             Projects
         </NavigationLink>
         <NavigationLink
           link="/achievements"
           exact
-          iconPath={mdiTrophy}
-          clickedProps="Achiv">
+          iconPath={mdiTrophy}>
             Achievements
         </NavigationLink>
       </ul>

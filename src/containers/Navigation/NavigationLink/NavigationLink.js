@@ -1,24 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 import styles from './Style'
 import Icon from '@mdi/react';
 
-const NavigationLink = props => {
-  const [activeIcon, setActiveIcon] = useState("Proj")
-  
-  const handleClick = iconClicked => {
-    setActiveIcon(iconClicked)
-    console.log(activeIcon)
-  }
-
-  return (
+const NavigationLink = props => (
   <li className={styles.NavLink}>
     <NavLink
       to={props.link}
       exact={props.exact}
       activeClassName={styles.active}
-      onClick={() => handleClick(props.clickedProps)}
     >
       {props.children}
       <Icon
@@ -28,6 +19,6 @@ const NavigationLink = props => {
     />
     </NavLink>
   </li>
-)}
+)
 
 export default NavigationLink;
