@@ -12,7 +12,7 @@ const Achievements = props => {
   return (
     <div>
       <p>
-        I consider myself a lifelong learner, during my learning endovers I have picked up numerous accolades.
+        I'm a lifelong learner, during my endovers I have picked up numerous accolades.
       </p>
       <Card
         content={AWSContent}
