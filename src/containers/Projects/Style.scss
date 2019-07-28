@@ -1,3 +1,5 @@
-.projectsWrapper {
- display:flex;
+.projectCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
