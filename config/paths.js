@@ -77,6 +77,7 @@ module.exports = {
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
   componentRoot: resolveApp('src/components'),
+  data: resolveApp('src/data'),
   assets: resolveApp('src/assets'),
   pallet: resolveApp('src/styles/pallet.scss'),
   variables: resolveApp('src/styles/variables.scss'),

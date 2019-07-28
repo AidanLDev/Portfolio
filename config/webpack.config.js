@@ -274,6 +274,7 @@ module.exports = function(webpackEnv) {
         containers: path.resolve(paths.containers),
         variables: path.resolve(paths.variables),
         assets: path.resolve(paths.assets),
+        data: path.resolve(paths.data),
 
         // Support React Native Web
         // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/

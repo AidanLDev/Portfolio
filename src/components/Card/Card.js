@@ -9,8 +9,8 @@ const Card = props => {
     <div className={styles.CardWrapper}>
       <h1>{props.title}</h1>
       {props.imgLink
-      ? <a href={props.imgLinkLocation} target="_blank"><img src={props.img} imgAlt={props.imgAlt} width={props.imgWidth} height={props.imgHeight}/></a>
-      : <img src={props.img} imgAlt={props.imgAlt} width={props.imgWidth} height={props.imgHeight}/>
+      ? <a href={props.imgLinkLocation} rel="noopener noreferrer" target="_blank"><img src={props.img} alt={props.imgAlt} width={props.imgWidth} height={props.imgHeight}/></a>
+      : <img src={props.img} alt={props.imgAlt} width={props.imgWidth} height={props.imgHeight}/>
       }
       <br />
       {props.content}
@@ -20,7 +20,6 @@ const Card = props => {
 }
 
 Card.propTypes = {
-  content: PropTypes.string,
   title: PropTypes.string
 }
 
