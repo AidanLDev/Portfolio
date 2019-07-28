@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'components/Card/Card'
 import BurgerBuilderImg from 'assets/Burger.png'
-import * as Descriptions from 'data/Data'
+import * as descriptions from 'data/Data'
 
 import styles from './Style'
 
@@ -9,14 +9,15 @@ const Projects = props => {
 
   return (
     <div>
-       {Descriptions.projectsDescription}
+       {descriptions.projectsDescription}
       <div className={styles.projectCards}>
       
         <Card
           title="Burger Builder"
-          content={Descriptions.burgerBuilderDesc}
+          content={descriptions.burgerBuilderDesc}
           img={BurgerBuilderImg}
           imgLink
+          transition
           imgWidth={300}
           imgHeight={200}
           imgLinkLocation="https://aidans-burger-builder.firebaseapp.com/"
@@ -24,7 +25,7 @@ const Projects = props => {
         />
         <Card
           title="Burger Builder"
-          content={Descriptions.burgerBuilderDesc}
+          content={descriptions.burgerBuilderDesc}
           img={BurgerBuilderImg}
           imgLink
           imgWidth={300}

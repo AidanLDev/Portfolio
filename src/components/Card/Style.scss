@@ -5,4 +5,7 @@
   width: 600px;
   padding-bottom: 30px;
   margin: 30px;
+  img {
+    transition: width 1s, height 1s;
+  }
 }
