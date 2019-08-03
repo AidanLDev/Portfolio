@@ -1,24 +1,30 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
+// import Radium from 'radium'
 import Tooltip from 'components/Tooltip/Tooltip'
 
 import styles from './Style'
 
 const Card = props => {
 
-  // const [active, setActive] = useState(false);
+  const [active, setActive] = useState(false);
+  const [mousePosition, setMousePosition] = useState(null);
 
-  // const handleMouseOver = () => setActive(true)
-
-  // const handleMouseLeave = () => setActive(false);
-
-  const transitionStyle = {
-    ':hover': {
-      width: `calc(${props.imgWidth ? props.imgWidth.toString().concat('px') : '0px'} + 20px)`,
-      height: `calc(${props.imgHeight ? props.imgHeight.toString().concat('px') : '0px'} + 20px)`
-    }
+  const handleMouseOver = e => {
+    setTimeout(function(){setActive(true)}, 200)
+    setMousePosition([e.pageX, e.pageY])
+    console.log(e.pageX, e.pageY)
   }
+  const handleMouseLeave = () => {
+    setTimeout(function(){setActive(false)}, 200)
+  };
+
+  // const transitionStyle = {
+  //   ':hover': {
+  //     width: `calc(${props.imgWidth ? props.imgWidth.toString().concat('px') : '0px'} + 20px)`,
+  //     height: `calc(${props.imgHeight ? props.imgHeight.toString().concat('px') : '0px'} + 20px)`
+  //   }
+  // }
   
   return (
     <div className={styles.CardWrapper}>
@@ -35,18 +41,21 @@ const Card = props => {
             alt={props.imgAlt}
             width={props.imgWidth}
             height={props.imgHeight}
-            style={props.transition ? transitionStyle : null}
-            // onMouseOver={handleMouseOver}
-            // onMouseLeave={handleMouseLeave}
+            className={props.transition ? styles.transitionStyle : null}
+            // style={props.transition ? transitionStyle : null}
+            onMouseOver={e => handleMouseOver(e)}
+            onMouseLeave={handleMouseLeave}
             /></a>
       : <img
           src={props.img}
           alt={props.imgAlt}
           width={props.imgWidth}
           height={props.imgHeight}
-          style={props.transition ? transitionStyle : null}/>
+          className={props.transition ? styles.transitionStyle : null}
+          // style={props.transition ? transitionStyle : null}
+        />
       }
-      <Tooltip text={`Click to navigate to ${props.imgAlt}`} active={true}/>
+      <Tooltip text={`Click to navigate to the ${props.imgAlt}`} active={active} position={mousePosition}/>
       <br />
       {props.content}
      
@@ -58,4 +67,4 @@ Card.propTypes = {
   title: PropTypes.string
 }
 
-export default Radium(Card);
+export default Card;

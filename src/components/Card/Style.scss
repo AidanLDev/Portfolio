@@ -9,6 +9,10 @@
   margin: 30px;
   background-color: $cardBackgroundColor;
   border-radius: 10px 10px;
+  .transitionStyle:hover {
+    width: 320px;
+    height: 220px;
+  }
   h1 {
     color: $titleColour;
   }
