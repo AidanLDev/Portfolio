@@ -12,8 +12,6 @@ const Card = props => {
       height: `calc(${props.imgHeight ? props.imgHeight.toString().concat('px') : '0px'} + 20px)`
     }
   }
-  console.log(props.imgWidth);
-  console.log(props.imgHeight);
   
   return (
     <div className={styles.CardWrapper}>
