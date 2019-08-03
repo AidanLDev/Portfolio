@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium';
+import Radium from 'radium'
+import Tooltip from 'components/Tooltip/Tooltip'
 
 import styles from './Style'
 
 const Card = props => {
+
+  // const [active, setActive] = useState(false);
+
+  // const handleMouseOver = () => setActive(true)
+
+  // const handleMouseLeave = () => setActive(false);
 
   const transitionStyle = {
     ':hover': {
@@ -22,12 +29,16 @@ const Card = props => {
           rel="noopener noreferrer"
           target="_blank"
         >
+          
           <img
             src={props.img}
             alt={props.imgAlt}
             width={props.imgWidth}
             height={props.imgHeight}
-            style={props.transition ? transitionStyle : null}/></a>
+            style={props.transition ? transitionStyle : null}
+            // onMouseOver={handleMouseOver}
+            // onMouseLeave={handleMouseLeave}
+            /></a>
       : <img
           src={props.img}
           alt={props.imgAlt}
@@ -35,6 +46,7 @@ const Card = props => {
           height={props.imgHeight}
           style={props.transition ? transitionStyle : null}/>
       }
+      <Tooltip text={`Click to navigate to ${props.imgAlt}`} active={true}/>
       <br />
       {props.content}
      

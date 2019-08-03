@@ -14,7 +14,7 @@ Developing websites/web applications is more than a carear, but a hobby too. I h
 
 
 export const burgerBuilderDesc = <div className={styles.burgerData}>
-  <p>The Burger Builder was developed as part of a Udemy course on React 16; including hooks, the context API, Redux and Firebase's NoSQL database, run by Maximilian Schwarzmüller.</p>
+  <p>The Burger Builder was developed as part of a Udemy course on React 16; including hooks, the context API, Redux and Firebase's NoSQL database.</p>
   <div className={styles.imgWrapper}></div>
   <img src={firebaseLogo} alt="Firebase logo" width="100" height="100"/>
   <img src={reactLogo} alt="React logo" width="100" height="100"/>
