@@ -1,11 +1,20 @@
 import React from 'react'
+
+import styles from './Style'
+
+/*  BurgerBuilder Photos  */
 import firebaseLogo from 'assets/Tech/firebaseLogo.png'
 import reactLogo from 'assets/Tech/ReactLogo.png'
 import reduxLogo from 'assets/Tech/Redux.png'
+/*  Node Photos  */
+import graphQLLogo from 'assets/Tech/graphQLLogo.png'
+import nodeLogo from 'assets/Tech/nodeLogo.png'
+import sqlLogo from 'assets/Tech/SQLLogo.png'
 
+/*  Achievement Photos  */
 import CloudPractitioner from 'assets/Certs/CloudPractitionerEmailBadge.png'
 
-import styles from './Style'
+
 /*  ############################################################################  */
 /*  ####  Projects  ####  */
 export const projectsDescription = <p>
@@ -20,6 +29,13 @@ export const burgerBuilderDesc = <div className={styles.burgerData}>
   <img src={reactLogo} alt="React logo" width="100" height="100"/>
   <img src={reduxLogo} alt="Redux logo" width="130" height="100"/>
   </div>
+
+export const ssShopDesc = <div className={styles.ssShopData}>
+  <p>Another project started from a Udemy course. This project uses Node.js, GraphQL, and SQL to build a shop served from the backend?</p>
+  <img src={graphQLLogo} alt="graphQL logo" width="100" height="100"/>
+  <img src={nodeLogo} alt="node.js logo" width="100" height="100"/>
+  <img src={sqlLogo} alt="sql logo" width="100" height="100"/>
+</div>
 
 /*  ############################################################################  */
 /*  ####  Achievemnets  ####  */
