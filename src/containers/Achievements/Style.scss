@@ -4,6 +4,10 @@
 .skillsContainer {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  & div {
+    max-width: 350px;
+  }
 }
 
 .achCards {
