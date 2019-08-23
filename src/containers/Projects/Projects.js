@@ -10,7 +10,7 @@ const Projects = props => {
 
   return (
     <div>
-       {descriptions.projectsDescription}
+       {/* {descriptions.projectsDescription} */}
       <div className={styles.projectCards}>
       
         <Card

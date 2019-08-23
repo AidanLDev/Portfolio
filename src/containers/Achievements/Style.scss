@@ -1,0 +1,13 @@
+@import "pallet";
+@import "variables";
+
+.skillsContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.achCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -11,8 +11,8 @@ const App = () => {
 
   const routes = (
     <Switch>
-      <Route path="/" exact component={Projects} />
-      <Route path="/achievements" component={Achievements} />
+      <Route path="/" exact component={Achievements} />
+      <Route path="/projects" component={Projects} />
       <Redirect to="/" />
     </Switch>
   )

@@ -13,10 +13,10 @@ const NavigationLink = props => (
     >
       {props.children}
       <Icon
-      path={props.iconPath}
-      size={1.2}
-      color={'green'}
-    />
+        path={props.iconPath}
+        size={1.2}
+        color={'green'}
+      />
     </NavLink>
   </li>
 )
