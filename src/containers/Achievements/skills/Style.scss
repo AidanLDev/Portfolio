@@ -1,0 +1,19 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.skillsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  h2 {
+    @include header;
+    margin: 0 0 -10px 0;
+  }
+  & div {
+    max-width: 350px;
+  }
+  img {
+    padding: 0 0 0 10px;
+  }
+}
