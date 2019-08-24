@@ -54,12 +54,16 @@ const Skills = props => {
             <p>The cloud platform used to host this portfolio and my organisations mission criticle applications</p>
           </div>
           <div>
-            <h2>Git <img src={AWSLogo} height={imgHeight} width={imgWidth} alt="AWS Logo"/></h2>
-            <p>The cloud platform used to host this portfolio and my organisations mission criticle applications</p>
+            <h2>Git <img src={AWSLogo} height={imgHeight} width={imgWidth} alt="Git Logo"/></h2>
+            <p></p>
           </div>
           <div>
-            <h2>Webpack <img src={AWSLogo} height={imgHeight} width={imgWidth} alt="AWS Logo"/></h2>
-            <p>The cloud platform used to host this portfolio and my organisations mission criticle applications</p>
+            <h2>Webpack <img src={AWSLogo} height={imgHeight} width={imgWidth} alt="Webpack Logo"/></h2>
+            <p></p>
+          </div>
+          <div>
+            <h2>Docker <img src={AWSLogo} height={imgHeight} width={imgWidth} alt="Docker Logo"/></h2>
+            <p>TODO</p>
           </div>
         </div>
     </div>
