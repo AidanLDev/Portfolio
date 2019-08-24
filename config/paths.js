@@ -81,6 +81,7 @@ module.exports = {
   assets: resolveApp('src/assets'),
   pallet: resolveApp('src/styles/pallet.scss'),
   variables: resolveApp('src/styles/variables.scss'),
+  mixins: resolveApp('src/styles/mixins.scss'),
   containers: resolveApp('src/containers'),
   appTsConfig: resolveApp('tsconfig.json'),
   appJsConfig: resolveApp('jsconfig.json'),

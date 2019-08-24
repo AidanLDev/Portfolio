@@ -14,6 +14,7 @@ const Achievements = props => {
         <div><h2>JavaScript</h2><p>From front-end frameworks to using JQuery to vanilla JavaScript when writting my first web applications. JavaScript has been a constant in my web development carear.</p></div>
         <div><h2>React</h2><p>The front-end framework I use within my organisation to create CMS, Callback Solutions and web applications</p></div>
         <div><h2>Angular</h2><p>Developed public facing forms for finacial(check spelling) services using this framework. Creating a front-end that looks good both on 300px wide mobiles and 1920px desktops</p></div>
+        <div><h2>SASS</h2><p>CSS prefixing. Re-usable colour pallets/variables/mixins simplifies consistancy</p></div>
         <div><h2>Node.js</h2><p>Used in conjunction with <code>Koa</code> and <code>Express</code> to server secure services.</p></div>
         <div><h2>MySQL</h2><p>The RDMS used for persitant data storage, experiance in both Oracle database engine and MS SQL creating transactional SQL procedures.</p></div>
         <div><h2>AWS</h2><p>The cloud platform used to host this portfolio and my organisations mission criticle applications</p></div>

@@ -1,10 +1,14 @@
 @import "pallet";
 @import "variables";
+@import "mixins";
 
 .skillsContainer {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  h2 {
+    @include header;
+  }
   & div {
     max-width: 350px;
   }

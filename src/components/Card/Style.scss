@@ -1,5 +1,6 @@
 @import "pallet";
 @import "variables";
+@import "mixins";
 
 .CardWrapper {
   border: 1px solid $darkGrey;
@@ -15,8 +16,7 @@
     height: 220px;
   }
   h1 {
-    color: $titleColour;
-    /*  Make this a MXIN  */
+    @include header;
   }
   img {
     transition: width 1s, height 1s;

@@ -8,8 +8,8 @@ import reactLogo from 'assets/Tech/ReactLogo.png'
 import reduxLogo from 'assets/Tech/Redux.png'
 /*  Node Photos  */
 import graphQLLogo from 'assets/Tech/graphQLLogo.png'
-import nodeLogo from 'assets/Tech/nodeLogo.png'
 import sqlLogo from 'assets/Tech/SQLLogo.png'
+import nodeLogo from 'assets/Tech/Node.png'
 
 /*  Achievement Photos  */
 import CloudPractitioner from 'assets/Certs/CloudPractitionerEmailBadge.png'

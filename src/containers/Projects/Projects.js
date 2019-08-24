@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'components/Card/Card'
 import BurgerBuilderImg from 'assets/Burger.png'
-import palceHolderNode from 'assets/Tech/nodeLogo.png'
+import palceHolderNode from 'assets/Tech/Node.png'
 import * as descriptions from 'data/Data'
 
 import styles from './Style'

@@ -1,0 +1,6 @@
+@import "pallet";
+@import "variables";
+
+@mixin header {
+  color: $titleColour;
+}
