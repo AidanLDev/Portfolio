@@ -50,3 +50,9 @@ export const AWSContent = (
     </a>
   </div>
 )
+
+export const TreehouseContent = (
+  <div>
+    <br />
+  </div>
+)

@@ -9,6 +9,7 @@ import AngularLogo from 'assets/Tech/AngularLogo.png'
 import SASSLogo from 'assets/Tech/sassLogo.png'
 import NodeLogo from 'assets/Tech/Node.png'
 import MySQLLogo from 'assets/Tech/mySQLLogo.png'
+import MongoLogo from 'assets/Tech/mongoDBLogo.png'
 import AWSLogo from 'assets/Tech/AWSLogo.png'
 
 const Skills = props => {
@@ -43,6 +44,10 @@ const Skills = props => {
           <div>
             <h2>MySQL <img src={MySQLLogo} height={imgHeight} width={imgWidth} alt="MySQL Logo"/></h2>
             <p>The RDMS used for persitant data storage, experiance in both Oracle database engine and MS SQL creating transactional SQL procedures.</p>
+          </div>
+          <div>
+            <h2>MongoDB <img src={MongoLogo} height={imgHeight} width={imgWidth} alt="MongoDB Logo"/></h2>
+            <p>NoSQL alternative to traditional RDMS</p>
           </div>
           <div>
             <h2>AWS <img src={AWSLogo} height={imgHeight} width={imgWidth} alt="AWS Logo"/></h2>

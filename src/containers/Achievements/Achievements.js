@@ -1,10 +1,13 @@
 import React from 'react'
 import Card from 'components/Card/Card'
 import Skills from './skills/Skills'
-
-
-import AWSCertified from 'assets/Certs/AwsCpWhite.png'
 import * as descriptions from 'data/Data'
+
+/*  Logos  */
+import AWSCertified from 'assets/Certs/AwsCpWhite.png'
+import teamTreehouse from 'assets/Certs/teamTreeHouse.jpg'
+import Udemy from 'assets/Certs/Udemy.png'
+
 
 import styles from './Style'
 
@@ -22,10 +25,20 @@ const Achievements = props => {
         imgAlt="AWS certified"
       />
       <Card
-        title="Udemy/Treehouse"
+        title="Udemy"
         content={descriptions.AWSContent}
-        img={AWSCertified}
-        imgAlt="AWS certified"
+        img={Udemy}
+        imgWidth={400}
+        imgHeight={200}
+        imgAlt="Udemy Logo"
+      />
+      <Card
+        title="Team Treehouse"
+        content="Random crap"
+        img={teamTreehouse}
+        imgWidth={400}
+        imgHeight={200}
+        imgAlt="Team Treehouse Logo"
       />
     </div>
   </div>

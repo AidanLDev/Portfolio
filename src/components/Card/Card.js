@@ -53,7 +53,15 @@ const Card = props => {
 }
 
 Card.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string.isRequired,
+  imgLink: PropTypes.string,
+  imgLinkLocation: PropTypes.string,
+  img: PropTypes.string,
+  imgAlt: PropTypes.string,
+  imgWidth: PropTypes.number,
+  imgHeight: PropTypes.number,
+  transition: PropTypes.bool,
+  content: PropTypes.node
 }
 
 export default Card;

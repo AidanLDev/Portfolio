@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom'
 import Navigation from 'containers/Navigation/Navigation'
 import Achievements from 'containers/Achievements/Achievements'
 import Projects from 'containers/Projects/Projects'
+import Footer from 'containers/Footer/Footer'
 
 import styles from './Style'
 
@@ -25,6 +26,7 @@ const App = () => {
       <div className={styles.MainContent}>
         {routes}
       </div>
+      <Footer/>
     </div>
   );
 }
