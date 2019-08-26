@@ -25,8 +25,19 @@ const Projects = props => {
           imgAlt="Burger builder project"
         />
         <Card
-          title="Serverside Shop"
+          title="Udemy Serverside Shop"
           content={descriptions.ssShopDesc}
+          img={palceHolderNode}
+          imgLink
+          imgWidth={300}
+          imgHeight={200}
+          transition
+          imgLinkLocation="https://nodejs.org/en/"
+          imgAlt="Serverside Shop"
+        />
+        <Card
+          title="Treehouse user authentication"
+          content={descriptions.userAuth}
           img={palceHolderNode}
           imgLink
           imgWidth={300}

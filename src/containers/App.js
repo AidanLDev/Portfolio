@@ -19,7 +19,8 @@ const App = () => {
   )
 
   return (
-    <div className={styles.App}>
+    <div className={styles.App}>  
+    {/* TODO: Background img  */}
       <header className={styles.AppHeader}>
         <Navigation />
       </header>

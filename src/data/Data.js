@@ -37,6 +37,10 @@ export const ssShopDesc = <div className={styles.ssShopData}>
   <img src={sqlLogo} alt="sql logo" width="100" height="100"/>
 </div>
 
+export const userAuth = <div>
+  <p>A project created by team treehouse, teaching Mongoose, the MongoDB framework and Express, the Node.js framework, create a user authentication system. The project uses hashing and saliting techniques to encrypt sensative user information in a MongoDB</p>
+</div>
+
 /*  ############################################################################  */
 /*  ####  Achievemnets  ####  */
 
