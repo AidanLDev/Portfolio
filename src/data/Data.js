@@ -77,7 +77,15 @@ export const UdemyContent = (
 )
 
 export const TreehouseContent = (
-  <div>
-    <br />
+  <div className={styles.treehouseCert}>
+    <p>Stack JavaScript track, covering the following skills in interactive courses:</p>
+    <ul>
+      <li>ES6/ES2015</li>
+      <li>jQuery | Ajax</li>
+      <li>Node.js | Express | Rest API</li>
+      <li>Gulp</li>
+      <li>Mongo | Mongoose</li>
+      <li>JavaScript Unit Testing</li>
+    </ul>
   </div>
 )

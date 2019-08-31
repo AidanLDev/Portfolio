@@ -31,7 +31,7 @@ const Achievements = props => {
       />
       <Card
         title="Team Treehouse"
-        content="Random crap"
+        content={descriptions.TreehouseContent}
         img={teamTreehouse}
         imgWidth={400}
         imgHeight={200}
