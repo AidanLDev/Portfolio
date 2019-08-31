@@ -13,18 +13,17 @@ const Card = props => {
     setTimeout(function(){setActive(true)}, 1200)
     setMousePosition([e.pageX, e.pageY])
   }
-  const handleMouseLeave = () => {
-    setTimeout(function(){setActive(false)}, 100)
-  };
+  const handleMouseLeave = () => setActive(false);
   
   return (
-    <div className={styles.CardWrapper}>
+    <div className={styles.CardWrapper} onMouseLeave={handleMouseLeave}>
       <h2>{props.title}</h2>
       {props.imgLink
       ? <a
           href={props.imgLinkLocation}
           rel="noopener noreferrer"
           target="_blank"
+          onMouseLeave={handleMouseLeave}
         >
           
           <img

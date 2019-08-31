@@ -3,8 +3,8 @@
   padding-bottom: 2px;
 }
 
-.ssShopData {
-  
+.burgerData {
+  padding: 0 6px 0 6px;
 }
 
 .aws {
@@ -14,6 +14,11 @@
 }
 
 .udemyBurger {
+  img {
+    box-shadow: 0 2px 1px #ccc;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+  }
   img:hover {
     width: 500px;
     height: 250px;
@@ -24,4 +29,8 @@
   ul {
     text-align: left;
   }
+}
+
+.userAuth {
+  padding: 0 6px 0 6px;
 }

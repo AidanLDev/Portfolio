@@ -11,12 +11,12 @@ const Tooltip = props => {
   }
 
   return (
-    <div
+    props.active ? <div
       className={styles.tooltipWrapper}
       style={toolTipPosition}
     >
-      {props.active ? <p>{props.text}</p> : null}
-    </div>
+      <p>{props.text}</p>
+    </div> : null
   )
 }
 
