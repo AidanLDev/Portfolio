@@ -1,5 +1,6 @@
 @import "pallet";
 @import "variables";
+@import "mixins";
 
 .App {
   text-align: center;
@@ -8,6 +9,9 @@
   color: $colorPrimary;
   background-image: url('../assets/Code-Background.png');
   background-position: center;
+  h1 {
+    @include headingOne;
+  }
   .MainContent {
     padding: $navHeight;
   }

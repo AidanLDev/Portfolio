@@ -4,3 +4,8 @@
 @mixin header {
   color: $titleColour;
 }
+
+@mixin headingOne {
+  text-transform: uppercase;
+  font-size: 60px;
+}

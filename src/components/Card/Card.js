@@ -19,7 +19,7 @@ const Card = props => {
   
   return (
     <div className={styles.CardWrapper}>
-      <h1>{props.title}</h1>
+      <h2>{props.title}</h2>
       {props.imgLink
       ? <a
           href={props.imgLinkLocation}

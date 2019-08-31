@@ -4,5 +4,19 @@
 
 .footerWrapper {
   width: 100%;
-  background-color: black;
+  height: 100px;
+  background-color: $footer-background;
+  img {
+    margin-top: 10px;
+  }
+  .backToTopWrapper {
+    position: absolute;
+    right: 0px;
+    padding: 0 50px 0 0;
+    cursor: pointer;
+    svg {
+      padding: 0;
+      position: inherit;
+    }
+  }
 }
