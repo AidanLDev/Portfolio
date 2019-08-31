@@ -10,11 +10,11 @@ const Card = props => {
   const [mousePosition, setMousePosition] = useState(null);
 
   const handleMouseOver = e => {
-    setTimeout(function(){setActive(true)}, 500)
+    setTimeout(function(){setActive(true)}, 1200)
     setMousePosition([e.pageX, e.pageY])
   }
   const handleMouseLeave = () => {
-    setTimeout(function(){setActive(false)}, 300)
+    setTimeout(function(){setActive(false)}, 100)
   };
   
   return (

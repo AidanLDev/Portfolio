@@ -13,6 +13,8 @@ import nodeLogo from 'assets/Tech/Node.png'
 
 /*  Achievement Photos  */
 import CloudPractitioner from 'assets/Certs/CloudPractitionerEmailBadge.png'
+import UdemyBurgerCert from 'assets/Certs/udemyBurgerBuilder.jpg'
+
 
 
 /*  ############################################################################  */
@@ -65,8 +67,12 @@ export const AWSContent = (
 )
 
 export const UdemyContent = (
-  <div>
-    <p>React 16 cert</p>
+  <div className={styles.udemyBurger}>
+    <img height="200" width="400" alt="React-16 Cert Logo" src={UdemyBurgerCert}/>
+    <p>Maximilian Schwarzmüller's comprehensive React 16 course. Gained indepth knowledge covering the following moduals:</p>
+    <ul>
+      <li>Ajax | Accessing a server | Routing | Forms/Validation | Redux | Testing | Next.js | Animations | Redux Saga | Hooks</li>
+    </ul>
   </div>
 )
 

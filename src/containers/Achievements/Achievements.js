@@ -6,7 +6,8 @@ import * as descriptions from 'data/Data'
 /*  Logos  */
 // import AWSCertified from 'assets/Certs/AwsCpWhite.png'
 import teamTreehouse from 'assets/Certs/teamTreeHouse.jpg'
-import Udemy from 'assets/Certs/Udemy.png'
+// import Udemy from 'assets/Certs/Udemy.png'
+// import UdemyBurgerCert from 'assets/Certs/udemyBurgerBuilder.jpg'
 
 
 import styles from './Style'
@@ -27,10 +28,6 @@ const Achievements = props => {
       <Card
         title="Udemy"
         content={descriptions.UdemyContent}
-        img={Udemy}
-        imgWidth={400}
-        imgHeight={200}
-        imgAlt="Udemy Logo"
       />
       <Card
         title="Team Treehouse"
