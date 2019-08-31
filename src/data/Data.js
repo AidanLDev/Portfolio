@@ -47,11 +47,26 @@ export const userAuth = <div>
 export const achivementDescription = <p> I'm a lifelong learner, during my endovers I have picked up numerous accolades.</p>
   
 export const AWSContent = (
-  <div>
+  <div className={styles.aws}>
+    <p>May 2019, I achieved my AWS cloud practitioner certification. Demonstrating an overall understanding of the AWS Cloud along with the following skills:
+    <ul>
+      <li>AWS cloud architectural principles</li>
+      <li>AWS cloud value proposition</li>
+      <li>Key AWS services</li>
+      <li>Security and compliance aspects of the AWS platform and the shared security model</li>
+      <li>Billing, account management, and pricing models</li>
+    </ul>
+    <br/>Continuing on the AWS certification learning path, working on the AWS Solutions Architecture</p>
     <br />
     <a href="https://www.certmetrics.com/amazon/public/badge.aspx?i=9&t=c&d=2019-03-14&ci=AWS00694170" target="_blank" rel="noopener noreferrer">
       <img src={CloudPractitioner} alt="AWS Cloud Practitioner badge"/>
     </a>
+  </div>
+)
+
+export const UdemyContent = (
+  <div>
+    <p>React 16 cert</p>
   </div>
 )
 

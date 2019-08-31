@@ -4,7 +4,7 @@ import Skills from './skills/Skills'
 import * as descriptions from 'data/Data'
 
 /*  Logos  */
-import AWSCertified from 'assets/Certs/AwsCpWhite.png'
+// import AWSCertified from 'assets/Certs/AwsCpWhite.png'
 import teamTreehouse from 'assets/Certs/teamTreeHouse.jpg'
 import Udemy from 'assets/Certs/Udemy.png'
 
@@ -21,12 +21,12 @@ const Achievements = props => {
       <Card
         title="AWS"
         content={descriptions.AWSContent}
-        img={AWSCertified}
-        imgAlt="AWS certified"
+        // img={AWSCertified}
+        // imgAlt="AWS certified"
       />
       <Card
         title="Udemy"
-        content={descriptions.AWSContent}
+        content={descriptions.UdemyContent}
         img={Udemy}
         imgWidth={400}
         imgHeight={200}
