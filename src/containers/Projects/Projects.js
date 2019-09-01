@@ -2,7 +2,7 @@ import React from 'react'
 import Card from 'components/Card/Card'
 import BurgerBuilderImg from 'assets/Burger.png'
 import palceHolderNode from 'assets/Tech/Node.png'
-import * as descriptions from 'data/Data'
+import * as descriptions from 'data/Projects/Projects'
 
 import styles from './Style'
 
@@ -15,7 +15,7 @@ const Projects = props => {
       
         <Card
           title="Burger Builder"
-          content={descriptions.burgerBuilderDesc}
+          content={descriptions.burgerBuilder}
           img={BurgerBuilderImg}
           imgLink
           transition
@@ -26,25 +26,25 @@ const Projects = props => {
         />
         <Card
           title="Udemy Serverside Shop"
-          content={descriptions.ssShopDesc}
+          content={descriptions.nodeShop}
           img={palceHolderNode}
-          imgLink
+          // imgLink
           imgWidth={300}
           imgHeight={200}
-          transition
-          imgLinkLocation="https://nodejs.org/en/"
-          imgAlt="Serverside Shop"
+          // transition
+          // imgLinkLocation="https://nodejs.org/en/"
+          // imgAlt="Serverside Shop"
         />
         <Card
           title="Treehouse user authentication"
           content={descriptions.userAuth}
           img={palceHolderNode}
-          imgLink
+          // imgLink
           imgWidth={300}
           imgHeight={200}
-          transition
-          imgLinkLocation="https://nodejs.org/en/"
-          imgAlt="Serverside Shop"
+          // transition
+          // imgLinkLocation="https://nodejs.org/en/"
+          // imgAlt="Serverside Shop"
         />
       </div>
     </div>

@@ -17,6 +17,7 @@ const Card = props => {
   
   return (
     <div className={styles.CardWrapper} onMouseLeave={handleMouseLeave}>
+       <Tooltip text={`Click to navigate to the ${props.imgAlt}`} active={active} position={mousePosition}/>
       <h2>{props.title}</h2>
       {props.imgLink
       ? <a
@@ -43,7 +44,6 @@ const Card = props => {
           className={props.transition ? styles.transitionStyle : null}
         />
       }
-      <Tooltip text={`Click to navigate to the ${props.imgAlt}`} active={active} position={mousePosition}/>
       <br />
       {props.content}
      
