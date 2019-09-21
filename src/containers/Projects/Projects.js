@@ -1,18 +1,16 @@
-import React from 'react'
-import Card from 'components/Card/Card'
-import BurgerBuilderImg from 'assets/Burger.png'
-import palceHolderNode from 'assets/Tech/Node.png'
-import * as descriptions from 'data/Projects/Projects'
+import React from "react";
+import Card from "components/Card/Card";
+import BurgerBuilderImg from "assets/Burger.png";
+import placeHolderImg from "assets/ComingSoon.png";
+import * as descriptions from "data/Projects/Projects";
 
-import styles from './Style'
+import styles from "./Style";
 
 const Projects = props => {
-
   return (
     <div>
-       {/* {descriptions.projectsDescription} */}
+      {/* {descriptions.projectsDescription} */}
       <div className={styles.projectCards}>
-      
         <Card
           title="Burger Builder"
           content={descriptions.burgerBuilder}
@@ -27,9 +25,9 @@ const Projects = props => {
         <Card
           title="Udemy Serverside Shop"
           content={descriptions.nodeShop}
-          img={palceHolderNode}
+          img={placeHolderImg}
           // imgLink
-          imgWidth={300}
+          imgWidth={500}
           imgHeight={200}
           // transition
           // imgLinkLocation="https://nodejs.org/en/"
@@ -38,9 +36,9 @@ const Projects = props => {
         <Card
           title="Treehouse user authentication"
           content={descriptions.userAuth}
-          img={palceHolderNode}
+          img={placeHolderImg}
           // imgLink
-          imgWidth={300}
+          imgWidth={500}
           imgHeight={200}
           // transition
           // imgLinkLocation="https://nodejs.org/en/"
@@ -48,7 +46,7 @@ const Projects = props => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Projects;
