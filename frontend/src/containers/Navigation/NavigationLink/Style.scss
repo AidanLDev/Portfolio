@@ -1,0 +1,40 @@
+@import "pallet";
+
+.NavLink {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.NavLink a {
+    color: whitesmoke;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.NavLink a:hover,
+.NavLink a:active,
+.NavLink a.active {
+    background-color: $nav-active;
+    color: $titleColour;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 650;
+    border-bottom: 2px solid;
+}
+
+svg {
+    padding: 20px;
+}

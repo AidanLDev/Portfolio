@@ -1,0 +1,14 @@
+@import "pallet";
+@import "variables";
+
+.tooltipWrapper {
+  background-color: #1d1212cc;
+  z-index: 200;
+  height: fit-content;
+  width: fit-content;
+  position: fixed;
+  padding: $text-padding;
+  p {
+    color: #fff;
+  }
+}

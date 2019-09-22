@@ -1,0 +1,24 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.CardWrapper {
+  border: 1px solid $darkGrey;
+  box-shadow: 3px 4px 2px 2px #888888;
+  height: 450px;
+  width: 600px;
+  padding-bottom: 30px;
+  margin: 30px;
+  background-color: $cardBackgroundColor;
+  border-radius: 10px 10px;
+  .transitionStyle:hover {
+    width: 320px;
+    height: 220px;
+  }
+  h2 {
+    @include header;
+  }
+  img {
+    transition: width 1s, height 1s;
+  }
+}

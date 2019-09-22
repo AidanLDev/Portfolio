@@ -1,0 +1,9 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.achCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
