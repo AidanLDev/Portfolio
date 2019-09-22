@@ -2,9 +2,16 @@ const express = require("express");
 const path = require("path");
 const cluster = require("cluster");
 const numCPUs = require("os").cpus().length;
+const fs = require("fs");
+const https = require("https");
+
+const cert = fs.readFileSync("./certs/aidanlowson_com.crt");
+const ca = fs.readFileSync("./certs/aidanlowson_com.ca-bundle");
+const key = fs.readFileSync("./certs/aidanlowson.key");
 
 const isDev = process.env.NODE_ENV !== "production";
 const PORT = process.env.PORT || 5000;
+const hostname = "aidanlowson.com";
 
 // Multi-process to utilize all CPU cores.
 if (!isDev && cluster.isMaster) {
