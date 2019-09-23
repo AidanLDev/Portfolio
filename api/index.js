@@ -15,7 +15,7 @@ const key = fs.readFileSync(
 );
 
 const isDev = process.env.NODE_ENV !== "production";
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 5000;
 const hostname = "aidanlowson.com";
 
 const app = express();
