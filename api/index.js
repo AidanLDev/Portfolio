@@ -5,12 +5,18 @@ const numCPUs = require("os").cpus().length;
 const fs = require("fs");
 const https = require("https");
 
-const cert = fs.readFileSync("./certs/aidanlowson_com.crt");
-const ca = fs.readFileSync("./certs/aidanlowson_com.ca-bundle");
-const key = fs.readFileSync("./certs/aidanlowson.key");
+const cert = fs.readFileSync(
+  path.join(__dirname, "./certs", "/aidanlowson_com.crt")
+);
+const ca = fs.readFileSync(
+  path.join(__dirname, "./certs", "/aidanlowson_com.ca-bundle")
+);
+const key = fs.readFileSync(
+  path.join(__dirname, "./certs", "/aidanlowson.key")
+);
 
 const isDev = process.env.NODE_ENV !== "production";
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 443;
 const hostname = "aidanlowson.com";
 
 // Multi-process to utilize all CPU cores.
@@ -49,7 +55,7 @@ if (!isDev && cluster.isMaster) {
     console.error(
       `Node ${
         isDev ? "dev server" : "cluster worker " + process.pid
-      }: listening on port ${PORT}`
+      }: listening on port http://localhost:${PORT}`
     );
   });
 }
