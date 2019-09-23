@@ -39,7 +39,9 @@ app.get("*", function(request, response) {
   response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 });
 
-http
+//  Change http -> https
+
+https
   .createServer(httpsOptions, app)
   .listen(PORT, () =>
     console.log(`listening on port https://localhost:${PORT}`)
