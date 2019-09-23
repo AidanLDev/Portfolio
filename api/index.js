@@ -41,7 +41,7 @@ app.get("*", function(request, response) {
 
 //  Change http -> https
 
-https
+http
   .createServer(httpsOptions, app)
   .listen(PORT, () =>
     console.log(`listening on port https://localhost:${PORT}`)
