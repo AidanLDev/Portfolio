@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Button from "components/Button/Button";
 import Icon from "@mdi/react";
 import { mdiChevronUp } from "@mdi/js";
@@ -10,6 +11,9 @@ import styles from "./Style";
 const Footer = props => {
   const backToTop = () => window.scrollTo(0, 0);
 
+  const hoverScale = 1.2;
+  const tapScale = 0.8;
+
   return (
     <div className={styles.footerWrapper}>
       <img
@@ -19,17 +23,23 @@ const Footer = props => {
         width="167"
         height="42"
       />
-      <a
-        href="https://www.linkedin.com/in/aidanlowson1/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <img src={LinkedinLogo} alt="LinkedIn Logo" width="50" height="50" />
-      </a>
-      <div onClick={backToTop} className={styles.backToTopWrapper}>
+        <a
+          href="https://www.linkedin.com/in/aidanlowson1/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <motion.img
+            src={LinkedinLogo}
+            alt="LinkedIn Logo"
+            width="50"
+            height="50"
+            whileHover={{ scale: hoverScale }}
+            whileTap={{ scale: tapScale }} />
+        </a>
+      <motion.div onClick={backToTop} className={styles.backToTopWrapper} whileHover={{ scale: hoverScale }} whileTap={{ scale: tapScale }}>
         <Button>Back to top</Button>
         <Icon path={mdiChevronUp} size={1} color={"white"} />
-      </div>
+      </motion.div>
     </div>
   );
 };
