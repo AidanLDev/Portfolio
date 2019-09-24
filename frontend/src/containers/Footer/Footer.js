@@ -18,12 +18,7 @@ const Footer = props => {
     <div className={styles.footerWrapper}>
       <div className={styles.tooltip}>
         <span className={styles.tooltiptext}>Secure SSL Certificate</span>
-        <img
-          src={sslImg}
-          alt="SSL Certificate"
-          width="167"
-          height="42"
-        />
+        <img src={sslImg} alt="SSL Certificate" width="167" height="42" />
       </div>
       <div className={styles.tooltip}>
         <span className={styles.tooltiptext}>Linkedin Profile</span>
@@ -38,10 +33,16 @@ const Footer = props => {
             width="50"
             height="50"
             whileHover={{ scale: hoverScale }}
-            whileTap={{ scale: tapScale }} />
+            whileTap={{ scale: tapScale }}
+          />
         </a>
       </div>
-      <motion.div onClick={backToTop} className={styles.backToTopWrapper} whileHover={{ scale: hoverScale }} whileTap={{ scale: tapScale }}>
+      <motion.div
+        onClick={backToTop}
+        className={styles.backToTopWrapper}
+        whileHover={{ scale: hoverScale }}
+        whileTap={{ scale: tapScale }}
+      >
         <Button>Back to top</Button>
         <Icon path={mdiChevronUp} size={1} color={"white"} />
       </motion.div>

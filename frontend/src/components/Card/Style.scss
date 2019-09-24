@@ -21,4 +21,21 @@
   img {
     transition: width 1s, height 1s;
   }
+
+  .tooltip {
+    @include tooltip;
+  }
+
+  .tooltip .tooltiptext {
+    @include tooltipAndText;
+    @include positionLeft;
+  }
+
+  .tooltip:hover .tooltiptext {
+    @include tooptipHover;
+  }
+
+  .tooltip .tooltiptext::after {
+    @include tooltipArrowRight;
+  }
 }

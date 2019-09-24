@@ -15,8 +15,6 @@ const Projects = props => {
           title="Burger Builder"
           content={descriptions.burgerBuilder}
           img={BurgerBuilderImg}
-          imgLink
-          transition
           imgWidth={300}
           imgHeight={200}
           imgLinkLocation="https://aidans-burger-builder.firebaseapp.com/"
@@ -26,11 +24,8 @@ const Projects = props => {
           title="Udemy Serverside Shop"
           content={descriptions.nodeShop}
           img={placeHolderImg}
-          // imgLink
           imgWidth={500}
           imgHeight={200}
-          // transition
-          // imgLinkLocation="https://nodejs.org/en/"
           // imgAlt="Serverside Shop"
         />
         <Card

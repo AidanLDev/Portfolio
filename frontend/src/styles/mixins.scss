@@ -80,12 +80,12 @@
 @mixin tooltipArrowTop {
   content: " ";
   position: absolute;
-  bottom: 100%;  /* At the top of the tooltip */
+  bottom: 100%; /* At the top of the tooltip */
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent black transparent;
+  border-color: transparent transparent $darkGrey transparent;
 }
 
 /*  .tooltip .tooltiptext::after  */
@@ -97,7 +97,7 @@
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent black transparent transparent;
+  border-color: transparent $darkGrey transparent transparent;
 }
 
 /*  .tooltip .tooltiptext::after  */
@@ -109,5 +109,5 @@
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent transparent black;
+  border-color: transparent transparent transparent $darkGrey;
 }
