@@ -9,9 +9,28 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  .tooltip {
+    @include tooltip;
+  }
+
+  .tooltip .tooltiptext {
+    @include tooltipAndText;
+    @include positionBottom;
+  }
+
+  .tooltip:hover .tooltiptext {
+    @include tooptipHover;
+  }
+
+  .tooltip .tooltiptext::after {
+    @include tooltipArrowBottom
+  }
+
   img {
     margin: 10px 0 0 0;
   }
+
   .backToTopWrapper {
     cursor: pointer;
     svg {
@@ -19,4 +38,5 @@
       position: inherit;
     }
   }
+
 }

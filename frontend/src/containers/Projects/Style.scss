@@ -1,5 +1,26 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
 .projectCards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.tooltip {
+  @include tooltip;
+}
+
+.tooltip .tooltiptext {
+  @include tooltipAndText;
+  @include positionBottom;
+}
+
+.tooltip:hover .tooltiptext {
+  @include tooptipHover;
+}
+
+.tooltip .tooltiptext::after {
+  @include tooltipArrowBottom
 }
