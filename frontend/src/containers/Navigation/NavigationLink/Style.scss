@@ -1,13 +1,41 @@
 @import "pallet";
+@import "variables";
+@import "mixins";
 
 .NavLink {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    height: 100%;
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
 }
 
 .NavLink a {
+  color: whitesmoke;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.NavLink a:hover,
+.NavLink a:active,
+.NavLink a.active {
+  color: aquamarine;
+  font-weight: 600;
+}
+
+svg {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .NavLink {
+    display: block;
+    height: 100%;
+    margin: 0;
+  }
+  
+  .NavLink a {
     color: whitesmoke;
     text-decoration: none;
     width: 100%;
@@ -19,11 +47,11 @@
     align-items: center;
     font-size: 18px;
     font-weight: 600;
-}
-
-.NavLink a:hover,
-.NavLink a:active,
-.NavLink a.active {
+  }
+  
+  .NavLink a:hover,
+  .NavLink a:active,
+  .NavLink a.active {
     background-color: $nav-active;
     color: $titleColour;
     height: 100%;
@@ -33,8 +61,11 @@
     font-size: 22px;
     font-weight: 650;
     border-bottom: 2px solid;
-}
-
-svg {
+  }
+  
+  svg {
     padding: 20px;
+    display: block;
+  }
+    
 }

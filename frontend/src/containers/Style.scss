@@ -9,6 +9,35 @@
   color: $colorPrimary;
   background-image: url('../assets/Code-Background.png');
   background-position: center;
+
+  .AppHeader {
+    @media (max-width: 499px) {
+      .desktopOnly {
+        display: none;
+      }
+    }
+  }
+
+  .AppHeader {
+    .mobileOnly {
+      width: 100%;
+      background-color: $evenMoreTransparentBlack;
+      height: 100px;
+      position: fixed;
+      z-index: 100;
+      svg {
+        display: block;
+        padding: 20px;
+        cursor: pointer;
+      }
+    }
+    @media (min-width: 500px) {
+      .mobileOnly {
+        display: none;
+      }
+    }
+  }
+  
   h1 {
     @include headingOne;
   }

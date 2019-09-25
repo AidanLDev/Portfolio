@@ -19,3 +19,13 @@
   padding: 0;
   top: 0;
 }
+
+@media (max-width: 500px) {
+  .navBar {
+    position: relative;
+    background-color: $modalBackground;
+  }
+  .linkContainer {
+    flex-direction: column;
+  }
+}
