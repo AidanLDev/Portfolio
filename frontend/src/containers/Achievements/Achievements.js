@@ -18,29 +18,55 @@ import styles from "./Style";
 const Achievements = props => {
   
   const [showUdemy, setShowUdemy] = useState(false);
+  const [showDeg, setShowDeg] = useState(false);
 
-  const handleShowUdemy = () => setShowUdemy(true);
+  const showModal = modalToDisplay => {
+    if (modalToDisplay === 'udemy') {
+      setShowUdemy(true);
+    } else if (modalToDisplay === 'deg') {
+      setShowDeg(true)
+    }
+  };
 
-  const closeModal = () => setShowUdemy(false);
+  const closeModal = (modalDisplayed) => {
+    if (modalDisplayed === 'udemy') {
+      setShowUdemy(false);
+    } else if (modalDisplayed === 'deg') {
+      setShowDeg(false);
+    }
+  };
 
   return (
     <div>
-      {/* {descriptions.achivementDescription} */}
-      <h1>Now with an express backend!</h1>
       <Skills />
       <h1>Certifications</h1>
       <div className={styles.achCards}>
-        <Card
-          title="BSc Computing"
-          img={degree}
-          imgWidth={300}
-          imgHeight={400}
-        />
+        <div onClick={() => showModal('deg')}>
+          <Card
+            title="BSc Computing"
+            img={degree}
+            imgWidth={300}
+            imgHeight={400}
+          />
+        </div>
+        {/* Deg modal */}
+        <Modal show={showDeg} closeModal={() => closeModal('deg')}>
+          <img
+            src={degree}
+            alt="Computing Degree"
+            height="400"
+            width="300"
+          />
+          <ul>
+            <li>Graduated summer of 2016 with a 2:1 in computing from Manchester Metropolitan University</li>
+          </ul>
+        </Modal>
         <Card title="AWS" content={descriptions.AWS} />
-        <div onClick={handleShowUdemy}>
+        <div onClick={() => showModal('udemy')}>
           <Card title="Udemy" content={descriptions.react16} />
         </div>
-        <Modal show={showUdemy} closeModal={closeModal}>
+        {/* Udemy modal */}
+        <Modal show={showUdemy} closeModal={() => closeModal('udemy')}>
           <img
             src={UdemyBurgerCert}
             alt="React-16 Cert"
