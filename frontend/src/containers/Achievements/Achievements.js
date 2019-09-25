@@ -30,7 +30,6 @@ const Achievements = props => {
       <Skills />
       <h1>Certifications</h1>
       <div className={styles.achCards}>
-        {/* TODO: Create model that opens up this image onclick */}
         <Card
           title="BSc Computing"
           img={degree}
@@ -41,7 +40,7 @@ const Achievements = props => {
         <div onClick={handleShowUdemy}>
           <Card title="Udemy" content={descriptions.react16} />
         </div>
-        <Modal show={showUdemy}>
+        <Modal show={showUdemy} closeModal={closeModal}>
           <img
             src={UdemyBurgerCert}
             alt="React-16 Cert"
