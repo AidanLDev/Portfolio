@@ -6,6 +6,7 @@ import styles from "./Style";
 import CloudPractitioner from "assets/Certs/CloudPractitionerEmailBadge.png";
 import UdemyBurgerCert from "assets/Certs/udemyBurgerBuilder.jpg";
 
+
 export const AWS = (
   <div className={styles.AWS}>
     <p>
@@ -49,7 +50,7 @@ export const react16 = (
     <img
       height="200"
       width="400"
-      alt="React-16 Cert Logo"
+      alt="React-16 Cert"
       src={UdemyBurgerCert}
     />
     <p>

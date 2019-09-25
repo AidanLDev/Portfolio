@@ -1,4 +1,9 @@
-$navHeight: 95px;
-$text-padding: 8px;
-$page-margin: 10px 10px 10px 10px;
+$navHeight:     95px;
+$text-padding:  8px;
+$page-margin:   10px 10px 10px 10px;
 $footerPadding: 20px;
+
+/*  Breakpoints  */
+$m-mobile: 375px;
+$s-mobile: 320px;
+$ipad:     1024px;

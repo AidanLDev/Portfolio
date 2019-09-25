@@ -1,0 +1,43 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.modal {
+  position: fixed;
+  z-index: 500;
+  background-color: $modalBackground;
+  width: 70%;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px black;
+  padding: 16px;
+  left: 15%;
+  top: 30%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+@media (min-width: 600px) {
+  .modal {
+    width: 650px;
+    left: calc(40% - 250px);
+  }
+}
+
+@media (max-width: 850px) {
+  .modal {
+    width: 600px;
+    img {
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: $m-mobile) {
+  .modal {
+    width: 325px;
+    max-height: 425px;
+    img {
+      max-width: 300px;
+    }
+  }
+}

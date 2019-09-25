@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "components/Card/Card";
 import Skills from "./skills/Skills";
+import Modal from "components/Modal/Modal";
 import * as descriptions from "data/Achievements/Achievements";
 
 /*  Logos  */
@@ -9,12 +10,19 @@ import teamTreehouse from "assets/Certs/teamTreeHouse.jpg";
 import degree from "assets/Certs/degree.jpeg";
 
 // import Udemy from 'assets/Certs/Udemy.png'
-// import UdemyBurgerCert from 'assets/Certs/udemyBurgerBuilder.jpg'
+import UdemyBurgerCert from 'assets/Certs/udemyBurgerBuilder.jpg'
 
 //  Test comment
 import styles from "./Style";
 
 const Achievements = props => {
+  
+  const [showUdemy, setShowUdemy] = useState(false);
+
+  const handleShowUdemy = () => setShowUdemy(true);
+
+  const closeModal = () => setShowUdemy(false);
+
   return (
     <div>
       {/* {descriptions.achivementDescription} */}
@@ -30,7 +38,20 @@ const Achievements = props => {
           imgHeight={400}
         />
         <Card title="AWS" content={descriptions.AWS} />
-        <Card title="Udemy" content={descriptions.react16} />
+        <div onClick={handleShowUdemy}>
+          <Card title="Udemy" content={descriptions.react16} />
+        </div>
+        <Modal show={showUdemy}>
+          <img
+            src={UdemyBurgerCert}
+            alt="React-16 Cert"
+            height="300"
+            width="600"
+          />
+          <ul>
+            <li>A certificate achieved on completion of Max's React 16 course</li>
+          </ul>
+        </Modal>
         <Card
           title="Team Treehouse"
           content={descriptions.javaScriptTrack}
