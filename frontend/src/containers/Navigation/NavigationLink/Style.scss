@@ -23,7 +23,6 @@
 .NavLink a:hover,
 .NavLink a:active,
 .NavLink a.active {
-  color: aquamarine;
   font-weight: 600;
 }
 
@@ -35,7 +34,7 @@ svg {
   .NavLink {
     display: block;
     height: 60%;
-    padding: 10px 20px 0 20px;
+    padding: 10px 75px 0 20px;
     margin: 0;
   }
 
@@ -54,11 +53,11 @@ svg {
 
   .NavLink a:active,
   .NavLink a.active {
-    color: $titleColour;
+    color: #7facff;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 650;
     border-bottom: 2px solid;
   }

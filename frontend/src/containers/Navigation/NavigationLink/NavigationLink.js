@@ -9,7 +9,7 @@ const NavigationLink = props => (
   <motion.li
     className={styles.NavLink}
     whileTap={{ scale: 0.9 }}
-    whileHover={{ scale: 1.2 }}
+    whileHover={{ scale: 1.1 }}
   >
     <NavLink
       to={props.link}
@@ -18,7 +18,7 @@ const NavigationLink = props => (
     >
       {props.children}
       {props.iconPath ? (
-        <Icon path={props.iconPath} size={1.2} color={"#faebd7"} />
+        <Icon path={props.iconPath} size={1.2} color={"rgb(181, 145, 0)"} />
       ) : null}
     </NavLink>
   </motion.li>
