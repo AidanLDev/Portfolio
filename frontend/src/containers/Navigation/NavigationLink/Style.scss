@@ -6,12 +6,10 @@
   margin: 10px 0;
   box-sizing: border-box;
   display: block;
-  width: 30%;
 
-  @media(max-width: 500px) {
+  @media (max-width: 500px) {
     margin: 10px auto;
   }
-
 }
 
 .NavLink a {
@@ -37,10 +35,10 @@ svg {
   .NavLink {
     display: block;
     height: 60%;
-    padding: 10px 0 0 0;
+    padding: 10px 20px 0 20px;
     margin: 0;
   }
-  
+
   .NavLink a {
     color: whitesmoke;
     text-decoration: none;
@@ -53,8 +51,7 @@ svg {
     font-size: 18px;
     font-weight: 600;
   }
-  
-  .NavLink a:hover,
+
   .NavLink a:active,
   .NavLink a.active {
     color: $titleColour;
@@ -63,12 +60,11 @@ svg {
     align-items: center;
     font-size: 22px;
     font-weight: 650;
-    border-bottom: 1px solid;
+    border-bottom: 2px solid;
   }
-  
+
   svg {
     padding: 20px 8px 20px 8px;
     display: block;
   }
-    
 }

@@ -1,4 +1,4 @@
-@import 'pallet';
+@import "pallet";
 @import "variables";
 
 .navBar {
@@ -17,16 +17,15 @@
   }
 
   .mobileOnly {
-    @media(max-width: 500px) {
+    @media (max-width: 500px) {
       display: none;
     }
-   }
-
+  }
 }
 
 .linkContainer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
   margin: 0;
