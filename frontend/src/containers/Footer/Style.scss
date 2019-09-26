@@ -27,6 +27,12 @@
     @include tooltipArrowBottom;
   }
 
+  .socialMedia {
+    @media(max-width: 450px) {
+      width: 50px;
+    }
+  }
+
   img {
     margin: 10px 0 0 0;
   }

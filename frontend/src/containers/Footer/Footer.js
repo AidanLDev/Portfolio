@@ -34,6 +34,7 @@ const Footer = props => {
             height="50"
             whileHover={{ scale: hoverScale }}
             whileTap={{ scale: tapScale }}
+            className={styles.socialMedia}
           />
         </a>
       </div>
