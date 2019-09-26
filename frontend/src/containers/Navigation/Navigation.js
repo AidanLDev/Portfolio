@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from 'components/Logo/Logo';
 import NavigationLink from './NavigationLink/NavigationLink'
-import { mdiCodeBraces } from '@mdi/js'
+import { mdiCodeBraces, mdiPostOutline } from '@mdi/js';
 
 import styles from './Style'
 
@@ -20,7 +20,8 @@ const Navigation = props => {
         </NavigationLink>
         <NavigationLink
           link="/projects"
-          exact>
+          exact
+          iconPath={mdiPostOutline}>
           (PLACEHOLDER LINK)
         </NavigationLink>
       </ul>
