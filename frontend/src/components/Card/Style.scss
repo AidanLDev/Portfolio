@@ -19,7 +19,9 @@
     @include header;
   }
   img {
-    transition: width 1s, height 1s;
+    @media(max-width: $m-mobile) {
+      width: 40%;
+    }
   }
 
   .tooltip {
@@ -38,4 +40,10 @@
   .tooltip .tooltiptext::after {
     @include tooltipArrowRight;
   }
+
+  @media(max-width: 660px) {
+    width: 100%;
+    margin: 64px 0 0 0;
+  }
+
 }

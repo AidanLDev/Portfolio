@@ -42,6 +42,6 @@
     @include headingOne;
   }
   .MainContent {
-    padding: $navHeight;
+    padding-top: $navHeight;
   }
 }

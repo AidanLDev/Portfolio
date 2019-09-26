@@ -8,6 +8,12 @@
 @mixin headingOne {
   text-transform: uppercase;
   font-size: 60px;
+  @media(max-width: 500px) {
+    font-size: 40px;
+  }
+  @media(max-width: $m-mobile) {
+    font-size: 30px;
+  }
 }
 
 /*  Tooltip  */

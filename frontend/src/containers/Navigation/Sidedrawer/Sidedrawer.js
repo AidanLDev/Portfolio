@@ -10,11 +10,13 @@ const sidedrawer = props => {
     <div>
       <Backdrop show={props.showDrawer} clicked={props.closeDrawer}/>
       <div className={styles.sidedrawer}>
-        <div>Menu</div>
+        <div>LOGO PLACEHOLDER</div>
+        <hr/>
         {/* Logo */}
         <nav>
           <Navigation />
         </nav>
+        <hr/>
         <Button clicked={props.closeDrawer}>Close Menu</Button>
       </div>
     </div>

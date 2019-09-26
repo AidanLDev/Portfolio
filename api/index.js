@@ -50,6 +50,14 @@ app.get("*", function(request, response) {
   response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 });
 
+//  Redirect?
+// if (req.protocol === 'http') {
+//   http.get('*', function(req, res) {
+//     res.redirect('https://' + req.headers.host + req.url);
+//     //  'https://aidanlowson.com'
+//   });
+// }
+
 //  Change http -> https
 
 http

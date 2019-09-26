@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "components/Card/Card";
 import Skills from "./skills/Skills";
 import Modal from "components/Modal/Modal";
+import Projects from "containers/Projects/Projects";
 import * as descriptions from "data/Achievements/Achievements";
 
 /*  Logos  */
@@ -38,16 +39,18 @@ const Achievements = props => {
   return (
     <div>
       <Skills />
+      <hr/>
       <h1>Certifications</h1>
       <div className={styles.achCards}>
-        <div onClick={() => showModal("deg")}>
+        {/* <div onClick={() => showModal("deg")}> */}
           <Card
             title="BSc Computing"
             img={degree}
             imgWidth={300}
             imgHeight={400}
+            clicked={() => showModal("deg")}
           />
-        </div>
+        {/* </div> */}
         {/* Deg modal */}
         <Modal show={showDeg} closeModal={() => closeModal("deg")}>
           <img src={degree} alt="Computing Degree" height="500" width="350" />
@@ -85,6 +88,9 @@ const Achievements = props => {
           imgAlt="Team Treehouse Logo"
         />
       </div>
+      <hr/>
+      <h1>Projects</h1>
+      <Projects/>
     </div>
   );
 };

@@ -32,6 +32,7 @@ const Card = props => {
           alt={props.imgAlt}
           width={props.imgWidth}
           height={props.imgHeight}
+          onClick={props.clicked}
         />
       )}
       <br />
@@ -47,7 +48,8 @@ Card.propTypes = {
   imgAlt: PropTypes.string,
   imgWidth: PropTypes.number,
   imgHeight: PropTypes.number,
-  content: PropTypes.node
+  content: PropTypes.node,
+  clicked: PropTypes.func
 };
 
 export default Card;
