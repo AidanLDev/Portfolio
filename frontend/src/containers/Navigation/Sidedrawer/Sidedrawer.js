@@ -1,6 +1,7 @@
 import React from 'react';
 import Backdrop from 'components/Backdrop/Backdrop';
-import Button from 'components/Button/Button'
+import Button from 'components/Button/Button';
+import Logo from 'components/Logo/Logo';
 import Navigation from 'containers/Navigation/Navigation';
 
 import styles from './Style.scss';
@@ -10,7 +11,7 @@ const sidedrawer = props => {
     <div>
       <Backdrop show={props.showDrawer} clicked={props.closeDrawer}/>
       <div className={styles.sidedrawer}>
-        <div>LOGO PLACEHOLDER</div>
+        <Logo />
         <hr/>
         {/* Logo */}
         <nav>

@@ -2,18 +2,11 @@ import React, { useState } from "react";
 import Card from "components/Card/Card";
 import Skills from "./skills/Skills";
 import Modal from "components/Modal/Modal";
-import Projects from "containers/Projects/Projects";
 import * as descriptions from "data/Achievements/Achievements";
 
-/*  Logos  */
-// import AWSCertified from 'assets/Certs/AwsCpWhite.png'
 import teamTreehouse from "assets/Certs/teamTreeHouse.jpg";
 import degree from "assets/Certs/degree.jpeg";
-
-// import Udemy from 'assets/Certs/Udemy.png'
 import UdemyBurgerCert from "assets/Certs/udemyBurgerBuilder.jpg";
-
-//  Test comment
 import styles from "./Style";
 
 const Achievements = props => {
@@ -38,20 +31,19 @@ const Achievements = props => {
 
   return (
     <div>
+      {/* Dynamically change the title depending on the route */}
+      <div style={{display: 'none'}}>{document.title = 'Aidan Lowson | Portfolio'}</div>
       <Skills />
       <hr/>
       <h1>Certifications</h1>
       <div className={styles.achCards}>
-        {/* <div onClick={() => showModal("deg")}> */}
-          <Card
-            title="BSc Computing"
-            img={degree}
-            imgWidth={300}
-            imgHeight={400}
-            clicked={() => showModal("deg")}
-          />
-        {/* </div> */}
-        {/* Deg modal */}
+        <Card
+          title="BSc Computing"
+          img={degree}
+          imgWidth={300}
+          imgHeight={400}
+          clicked={() => showModal("deg")}
+        />
         <Modal show={showDeg} closeModal={() => closeModal("deg")}>
           <img src={degree} alt="Computing Degree" height="500" width="350" />
           <ul>
@@ -90,7 +82,6 @@ const Achievements = props => {
       </div>
       <hr/>
       <h1>Projects</h1>
-      <Projects/>
     </div>
   );
 };

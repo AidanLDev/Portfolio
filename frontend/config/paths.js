@@ -83,6 +83,7 @@ module.exports = {
   variables: resolveApp('src/styles/variables.scss'),
   mixins: resolveApp('src/styles/mixins.scss'),
   containers: resolveApp('src/containers'),
+  pages: resolveApp('src/pages'),
   appTsConfig: resolveApp('tsconfig.json'),
   appJsConfig: resolveApp('jsconfig.json'),
   yarnLockFile: resolveApp('yarn.lock'),

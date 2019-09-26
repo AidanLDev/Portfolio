@@ -272,6 +272,7 @@ module.exports = function(webpackEnv) {
         components: path.resolve(paths.componentRoot),
         pallet: path.resolve(paths.pallet),
         containers: path.resolve(paths.containers),
+        pages: path.resolve(paths.pages),
         variables: path.resolve(paths.variables),
         assets: path.resolve(paths.assets),
         data: path.resolve(paths.data),

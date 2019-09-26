@@ -13,11 +13,13 @@ const NavigationLink = props => (
       activeClassName={styles.active}
     >
       {props.children}
-      <Icon
+      {props.iconPath
+        ? <Icon
         path={props.iconPath}
         size={1.2}
-        color={'green'}
+        color={'#faebd7'}
       />
+        : null}
     </NavLink>
   </motion.li>
 )

@@ -4,7 +4,7 @@ import { mdiMenu } from '@mdi/js';
 import Icon from '@mdi/react';
 
 import Navigation from 'containers/Navigation/Navigation'
-import Achievements from 'containers/Achievements/Achievements'
+import Portfolio from 'pages/Portfolio/Portfolio'
 import Projects from 'containers/Projects/Projects'
 import Footer from 'containers/Footer/Footer'
 
@@ -17,7 +17,7 @@ const App = () => {
 
   const routes = (
     <Switch>
-      <Route path="/" exact component={Achievements} />
+      <Route path="/" exact component={Portfolio} />
       <Route path="/projects" component={Projects} />
       <Redirect to="/" />
     </Switch>
