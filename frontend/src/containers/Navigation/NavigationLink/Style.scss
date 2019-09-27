@@ -26,6 +26,10 @@
   font-weight: 600;
 }
 
+.NavLink a:hover {
+  border-bottom: 2px solid;
+}
+
 svg {
   display: none;
 }

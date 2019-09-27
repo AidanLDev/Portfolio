@@ -9,7 +9,6 @@ const NavigationLink = props => (
   <motion.li
     className={styles.NavLink}
     whileTap={{ scale: 0.9 }}
-    whileHover={{ scale: 1.1 }}
   >
     <NavLink
       to={props.link}
