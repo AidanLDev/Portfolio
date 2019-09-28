@@ -1,33 +1,26 @@
-import React from 'react'
-import Logo from 'components/Logo/Logo';
-import NavigationLink from './NavigationLink/NavigationLink'
-import { mdiCodeBraces, mdiPostOutline } from '@mdi/js';
+import React from "react";
+import Logo from "components/Logo/Logo";
+import NavigationLink from "./NavigationLink/NavigationLink";
+import { mdiCodeBraces, mdiPostOutline } from "@mdi/js";
 
-import styles from './Style'
+import styles from "./Style";
 
 const Navigation = props => {
   return (
     <div className={styles.navBar}>
-      <div className={[styles.leftNavBar, styles.mobileOnly].join(' ')}>
+      <div className={[styles.leftNavBar, styles.mobileOnly].join(" ")}>
         <Logo />
       </div>
       <ul className={styles.linkContainer}>
-        <NavigationLink
-          link="/"
-          exact
-          iconPath={mdiCodeBraces}>
-            Portfolio
+        <NavigationLink link="/" exact iconPath={mdiCodeBraces}>
+          Portfolio
         </NavigationLink>
-        <NavigationLink
-          link="/projects"
-          exact
-          iconPath={mdiPostOutline}>
-          (PLACEHOLDER LINK)
+        <NavigationLink link="/blog" exact iconPath={mdiPostOutline}>
+          (Blog - Coming Soon)
         </NavigationLink>
       </ul>
     </div>
-  )
-}
-
+  );
+};
 
 export default Navigation;
