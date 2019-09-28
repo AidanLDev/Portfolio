@@ -8,7 +8,6 @@ import Icon from "@mdi/react";
 const NavigationLink = props => {
   const capitalizeFirstLetter = string =>
     string.charAt(0).toUpperCase() + string.slice(1);
-  console.log(window.location.pathname);
   return (
     <motion.li
       className={styles.NavLink}

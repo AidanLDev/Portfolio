@@ -10,17 +10,16 @@
   left: 0;
   top: 0;
   z-index: 200;
-  background-color:$modalBackground;
+  background-color: $modalBackground;
   padding: 32px 0 0 /*  16px  */;
   box-sizing: border-box;
-  transition: transform 0.3s ease-out;
+  transition: transform 1.3s ease-out;
 
   button {
     bottom: 20%;
     position: absolute;
     left: 31%;
   }
-
 }
 
 @media (min-width: 500px) {
