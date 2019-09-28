@@ -9,8 +9,6 @@ import styles from "./Style";
 const Projects = props => {
   return (
     <div>
-      {/* Dynamically change the title depending on the route */}
-      <div style={{display: 'none'}}>{document.title = 'Aidan Lowson | Projects'}</div>
       <div className={styles.projectCards}>
         <Card
           title="Burger Builder"

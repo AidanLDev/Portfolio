@@ -31,10 +31,8 @@ const Achievements = props => {
 
   return (
     <div>
-      {/* Dynamically change the title depending on the route */}
-      <div style={{display: 'none'}}>{document.title = 'Aidan Lowson | Portfolio'}</div>
       <Skills />
-      <hr/>
+      <hr />
       <h1>Certifications</h1>
       <div className={styles.achCards}>
         <Card
@@ -80,7 +78,7 @@ const Achievements = props => {
           imgAlt="Team Treehouse Logo"
         />
       </div>
-      <hr/>
+      <hr />
       <h1>Projects</h1>
     </div>
   );
