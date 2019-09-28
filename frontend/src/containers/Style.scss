@@ -11,7 +11,7 @@
   background-position: center;
 
   .AppHeader {
-    @media (max-width: 499px) {
+    @media (max-width: 500px) {
       .desktopOnly {
         display: none;
       }
@@ -31,7 +31,7 @@
         cursor: pointer;
       }
     }
-    @media (min-width: 500px) {
+    @media (min-width: 501px) {
       .mobileOnly {
         display: none;
       }
