@@ -41,17 +41,18 @@ app.get("/api", function(req, res) {
 //   })
 // );
 
-app.use(function(req, res, next) {
-  if (req.secure) {
-    next();
-  } else {
-    res.redirect("https://www.aidanlowson.com" + req.url);
-  }
-});
-
 // All remaining requests return the React app, so it can handle routing.
 app.get("*", function(req, res) {
-  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+  res.sendFile(
+    path.resolve(__dirname, "../frontend/build", "index.html"),
+    function(err) {
+      if (err) {
+        next(err);
+      } else {
+        res.redirect("https://www.aidanlowson.com" + req.url);
+      }
+    }
+  );
 });
 
 //  Use proxy to send traffic from http -> https
