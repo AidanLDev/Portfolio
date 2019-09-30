@@ -27,13 +27,13 @@ const httpsOptions = {
 };
 
 /* simple redirect middleware  */
-// app.use(function(req, res, next) {
+// app.use (function (req, res, next) {
 //   if (req.secure) {
 //     // request was via https, so do no special handling
 //     next();
 //   } else {
 //     // request was via http, so redirect to https
-//     res.redirect("https://www.aidanlowson" + req.headers.host + req.url);
+//     res.redirect('https://' + req.headers.host + req.url);
 //   }
 // });
 
@@ -53,8 +53,9 @@ app.get("*", function(request, response) {
 //  Redirect?
 if (req.protocol === "http") {
   http.get("*", function(req, res) {
-    res.redirect("https://" + req.headers.host + req.url);
+    res.redirect("https://" + "aidanlowson.com" + req.url);
     //  'https://aidanlowson.com'
+    // req.headers.host
   });
 }
 
