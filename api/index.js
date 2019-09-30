@@ -31,7 +31,8 @@ app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 // Answer API requests.
 app.get("/api", function(req, res) {
-  res.set("Content-Type", "application/json");
+  set("Content-Type", "application/json");
+  res.redirect("https://www.aidanlowson.com" + req.url);
 });
 
 // app.use(
@@ -43,15 +44,7 @@ app.get("/api", function(req, res) {
 
 // All remaining requests return the React app, so it can handle routing.
 app.get("*", function(req, res) {
-  sendFile(path.resolve(__dirname, "../frontend/build", "index.html"), function(
-    err
-  ) {
-    if (err) {
-      next(err);
-    } else {
-      res.redirect("https://www.aidanlowson.com" + req.url);
-    }
-  });
+  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html")
 });
 
 //  Use proxy to send traffic from http -> https
