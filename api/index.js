@@ -52,6 +52,9 @@ app.get("*", function(request, response) {
 
 //  Redirect?
 app.use(function(req, res, next) {
+  console.log(req.protocol);
+  console.log(req.protocol === "http");
+  console.log(req);
   if (req.protocol === "http") {
     res.redirect("https://" + "www." + "aidanlowson.com" + req.url);
   }
