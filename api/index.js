@@ -34,13 +34,14 @@ app.get("/api", function(req, res) {
   res.set("Content-Type", "application/json");
 });
 
+app.use("/", proxy("https://www.aidanlowson.com"));
+
 // All remaining requests return the React app, so it can handle routing.
 app.get("*", function(req, res) {
   res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 });
 
 //  Use proxy to send traffic from http -> https
-app.use("*", proxy("https://www.aidanlowson.com"));
 
 http
   .createServer(httpsOptions, app)
