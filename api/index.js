@@ -33,9 +33,6 @@ const httpsOptions = {
 //   })
 //   .listen(443);
 
-// Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, "../frontend/build")));
-
 app.use(function(req, res, next) {
   if (req.secure) {
     next();
@@ -43,6 +40,13 @@ app.use(function(req, res, next) {
     res.redirect("https://" + req.headers.host + req.url);
   }
 });
+
+// Priority serve any static files.
+app.use(
+  express.static(
+    path.resolve(__dirname, "../frontend/build", { redirect: false })
+  )
+);
 
 // Answer API requests.
 app.get("/api", function(req, res) {
