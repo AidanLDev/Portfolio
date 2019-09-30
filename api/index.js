@@ -36,18 +36,7 @@ const httpsOptions = {
 //     res.redirect('https://' + req.headers.host + req.url);
 //   }
 // });
-//  Redirect?
-app.use(function(req, res, next) {
-  console.log(req.protocol);
-  console.log(req.protocol === "http");
-  console.log(req);
-  if (req.protocol === "http") {
-    res.redirect("https://" + "www." + "aidanlowson.com" + req.url);
-  }
-  next();
-  //  'https://aidanlowson.com'
-  // req.headers.host
-});
+
 // Priority serve any static files.
 app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
@@ -59,7 +48,24 @@ app.get("/api", function(req, res) {
 // All remaining requests return the React app, so it can handle routing.
 app.get("*", function(request, response) {
   response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+  if (request.protocol === "http") {
+    response.redirect("https://" + "www." + "aidanlowson.com" + request.url);
+  }
+  next();
 });
+
+//  Redirect?
+// app.use(function(req, res, next) {
+//   console.log(req.protocol);
+//   console.log(req.protocol === "http");
+//   console.log(req);
+//   if (req.protocol === "http") {
+//     res.redirect("https://" + "www." + "aidanlowson.com" + req.url);
+//   }
+//   next();
+//   //  'https://aidanlowson.com'
+//   // req.headers.host
+// });
 
 //  Change http -> https
 
