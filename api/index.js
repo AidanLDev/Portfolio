@@ -46,7 +46,7 @@ app.get("/api", function(req, res) {
 });
 
 // All remaining requests return the React app, so it can handle routing.
-app.get("*", function(request, response) {
+app.get("*", function(request, response, next) {
   response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
   if (request.protocol === "http") {
     response.redirect("https://" + "www." + "aidanlowson.com" + request.url);
