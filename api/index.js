@@ -2,7 +2,10 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const http = require("http");
-const https = require("https");
+const proxy = require("express-http-proxy");
+const PORT = process.env.PORT || 443;
+
+const app = express();
 
 const cert = fs.readFileSync(
   path.join(__dirname, "./certs", "/aidanlowson_com.crt")
@@ -13,10 +16,6 @@ const ca = fs.readFileSync(
 const key = fs.readFileSync(
   path.join(__dirname, "./certs", "/aidanlowson.key")
 );
-
-const PORT = process.env.PORT || 443;
-
-const app = express();
 
 //  X-Forwarded-Proto header field to be trusted so its value can be used to determine the portocol.
 app.enable("trust proxy");
@@ -36,19 +35,15 @@ app.get("/api", function(req, res) {
 });
 
 // All remaining requests return the React app, so it can handle routing.
-http.get("*", function(req, res) {
-  sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
-  console.log(request.headers);
-  console.log(request.url);
-  res.redirect("https://" + request.headers.host + request.url);
+app.get("*", function(req, res) {
+  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 });
 
-// app.get("*", function(request, response) {
-//   response.redirect("https://" + request.headers.host + request.url);
-// });
+//  Use proxy to send traffic from http -> https
+app.use("*", proxy("https://www.aidanlowson.com"));
 
 http
   .createServer(httpsOptions, app)
   .listen(PORT, () =>
-    console.log(`listening on port https://localhost:${PORT}`)
+    console.log(`listening on port http://localhost:${PORT}`)
   );
