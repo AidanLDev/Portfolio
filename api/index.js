@@ -14,7 +14,7 @@ const key = fs.readFileSync(
   path.join(__dirname, "./certs", "/aidanlowson.key")
 );
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 443;
 
 const app = express();
 
@@ -27,26 +27,8 @@ const httpsOptions = {
   ca: ca
 };
 
-// https
-//   .createServer(httpsOptions, function(req, res) {
-//     res.end("Secure");
-//   })
-//   .listen(443);
-
-app.use(function(req, res, next) {
-  if (req.secure) {
-    next();
-  } else {
-    res.redirect("https://" + req.headers.host + req.url);
-  }
-});
-
 // Priority serve any static files.
-app.use(
-  express.static(
-    path.resolve(__dirname, "../frontend/build", { redirect: false })
-  )
-);
+app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 // Answer API requests.
 app.get("/api", function(req, res) {
@@ -56,6 +38,10 @@ app.get("/api", function(req, res) {
 // All remaining requests return the React app, so it can handle routing.
 app.get("*", function(request, response) {
   response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+});
+
+app.get("*", function(request, response) {
+  response.redirect("https://" + request.headers.host + request.url);
 });
 
 http
