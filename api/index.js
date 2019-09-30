@@ -51,13 +51,11 @@ app.get("*", function(request, response) {
 });
 
 //  Redirect?
-if (req && req.protocol === "http") {
-  http.get("*", function(req, res) {
-    res.redirect("https://" + "aidanlowson.com" + req.url);
-    //  'https://aidanlowson.com'
-    // req.headers.host
-  });
-}
+http.get("*", function(req, res) {
+  res.redirect("https://" + "www.aidanlowson.com" + req.url);
+  //  'https://aidanlowson.com'
+  // req.headers.host
+});
 
 //  Change http -> https
 
