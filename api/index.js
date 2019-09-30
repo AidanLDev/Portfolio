@@ -4,27 +4,27 @@ const fs = require("fs");
 const http = require("http");
 const https = require("https");
 
-const cert = fs.readFileSync(
-  path.join(__dirname, "./certs", "/aidanlowson_com.crt")
-);
-const ca = fs.readFileSync(
-  path.join(__dirname, "./certs", "/aidanlowson_com.ca-bundle")
-);
-const key = fs.readFileSync(
-  path.join(__dirname, "./certs", "/aidanlowson.key")
-);
+// const cert = fs.readFileSync(
+//   path.join(__dirname, "./certs", "/aidanlowson_com.crt")
+// );
+// const ca = fs.readFileSync(
+//   path.join(__dirname, "./certs", "/aidanlowson_com.ca-bundle")
+// );
+// const key = fs.readFileSync(
+//   path.join(__dirname, "./certs", "/aidanlowson.key")
+// );
 
 const isDev = process.env.NODE_ENV !== "production";
 const PORT = process.env.PORT || 5000;
-const hostname = "aidanlowson.com";
+// const hostname = "aidanlowson.com";
 
 const app = express();
 
-const httpsOptions = {
-  key: key,
-  cert: cert,
-  ca: ca
-};
+// const httpsOptions = {
+//   key: key,
+//   cert: cert,
+//   ca: ca
+// };
 
 /* simple redirect middleware  */
 app.use(function(req, res, next) {
@@ -58,18 +58,8 @@ app.get("*", function(request, response) {
 //   });
 // }
 
-//  Change http -> https
-
-https
-  .createServer(httpsOptions, app)
+http
+  .createServer(app)
   .listen(PORT, () =>
     console.log(`listening on port https://localhost:${PORT}`)
   );
-
-// app.listen(PORT, function() {
-//   console.error(
-//     `Node ${
-//       isDev ? "dev server" : "cluster worker " + process.pid
-//     }: listening on port http://localhost:${PORT}`
-//   );
-// });
