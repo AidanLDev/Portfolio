@@ -51,7 +51,7 @@ app.get("*", function(request, response) {
 });
 
 //  Redirect?
-if (req.protocol === "http") {
+if (req && req.protocol === "http") {
   http.get("*", function(req, res) {
     res.redirect("https://" + "aidanlowson.com" + req.url);
     //  'https://aidanlowson.com'
