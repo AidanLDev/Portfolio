@@ -37,8 +37,11 @@ app.get("/api", function(req, res) {
 
 // All remaining requests return the React app, so it can handle routing.
 app.get("*", function(request, response) {
-  sendFile(path.resolve(__dirname, "../frontend/build", "index.html")),
-    response.redirect("https://" + request.headers.host + request.url);
+  sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+  // If statement
+  console.log(request.headers);
+  console.log(request.url);
+  response.redirect("https://" + request.headers.host + request.url);
 });
 
 // app.get("*", function(request, response) {
