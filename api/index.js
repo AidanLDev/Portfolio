@@ -34,12 +34,20 @@ app.get("/api", function(req, res) {
   res.set("Content-Type", "application/json");
 });
 
-app.use(
-  "/",
-  proxy("https://www.aidanlowson.com", {
-    https: true
-  })
-);
+// app.use(
+//   "/",
+//   proxy("https://www.aidanlowson.com", {
+//     https: true
+//   })
+// );
+
+app.use(function(req, res, next) {
+  if (req.secure) {
+    next();
+  } else {
+    res.redirect("https://www.aidanlowson.com" + req.url);
+  }
+});
 
 // All remaining requests return the React app, so it can handle routing.
 app.get("*", function(req, res) {
