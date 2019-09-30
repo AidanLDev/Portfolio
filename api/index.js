@@ -33,14 +33,14 @@ app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 // Answer API requests.
 app.get("/api", function(req, res) {
   res.set("Content-Type", "application/json");
-  console.log(request.headers);
-  console.log(request.url);
-  res.redirect("https://" + request.headers.host + request.url);
 });
 
 // All remaining requests return the React app, so it can handle routing.
-app.get("*", function(req, res) {
-  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+http.get("*", function(req, res) {
+  sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+  console.log(request.headers);
+  console.log(request.url);
+  res.redirect("https://" + request.headers.host + request.url);
 });
 
 // app.get("*", function(request, response) {
