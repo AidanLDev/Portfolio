@@ -46,30 +46,21 @@ app.get("/api", function(req, res) {
 });
 
 // All remaining requests return the React app, so it can handle routing.
-app.get("*", function(request, response, next) {
+app.get("*", function(request, response) {
   response.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
-  if (request.protocol === "http") {
-    response.redirect("https://" + "www." + "aidanlowson.com" + request.url);
-  }
-  next();
 });
 
 //  Redirect?
-// app.use(function(req, res, next) {
-//   console.log(req.protocol);
-//   console.log(req.protocol === "http");
-//   console.log(req);
-//   if (req.protocol === "http") {
-//     res.redirect("https://" + "www." + "aidanlowson.com" + req.url);
-//   }
-//   next();
-//   //  'https://aidanlowson.com'
-//   // req.headers.host
-// });
+// if (req.protocol === 'http') {
+//   http.get('*', function(req, res) {
+//     res.redirect('https://' + req.headers.host + req.url);
+//     //  'https://aidanlowson.com'
+//   });
+// }
 
 //  Change http -> https
 
-http
+https
   .createServer(httpsOptions, app)
   .listen(PORT, () =>
     console.log(`listening on port https://localhost:${PORT}`)
