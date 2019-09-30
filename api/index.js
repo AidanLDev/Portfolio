@@ -51,8 +51,11 @@ app.get("*", function(request, response) {
 });
 
 //  Redirect?
-http.get("*", function(req, res) {
-  res.redirect("https://" + "www.aidanlowson.com" + req.url);
+http.get("*", function(req, res, next) {
+  if (req.protocol === "http") {
+    res.redirect("https://" + "www." + "aidanlowson.com" + req.url);
+  }
+  next();
   //  'https://aidanlowson.com'
   // req.headers.host
 });
