@@ -14,8 +14,7 @@
     "frontend/node_modules"
   ],
   "dependencies": {
-    "express": "^4.16.4",
-    "express-http-proxy": "^1.6.0"
+    "express": "^4.16.4"
   },
   "keywords": [
     "node",

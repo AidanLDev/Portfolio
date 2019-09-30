@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const http = require("http");
-const proxy = require("express-http-proxy");
 const PORT = process.env.PORT || 443;
 
 const app = express();
@@ -31,16 +30,8 @@ app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 // Answer API requests.
 app.get("/api", function(req, res) {
-  set("Content-Type", "application/json");
-  res.redirect("https://www.aidanlowson.com" + req.url);
+  res.set("Content-Type", "application/json");
 });
-
-// app.use(
-//   "/",
-//   proxy("https://www.aidanlowson.com", {
-//     https: true
-//   })
-// );
 
 // All remaining requests return the React app, so it can handle routing.
 app.get("*", function(req, res) {
