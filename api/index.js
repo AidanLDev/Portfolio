@@ -39,7 +39,7 @@ app.get("*", function(req, res, next) {
     res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
   } else {
     console.log("Redirect");
-    res.redirect("https://" + request.headers.host + request.url);
+    res.redirect("https://" + req.headers.host + req.url);
   }
 });
 
