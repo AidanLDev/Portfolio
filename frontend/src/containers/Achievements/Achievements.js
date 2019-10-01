@@ -35,13 +35,15 @@ const Achievements = props => {
       <hr />
       <h1>Certifications</h1>
       <div className={styles.achCards}>
-        <Card
-          title="BSc Computing"
-          img={degree}
-          imgWidth={300}
-          imgHeight={400}
-          clicked={() => showModal("deg")}
-        />
+        <div className={styles.degreeCard}>
+          <Card
+            title="BSc Computing"
+            img={degree}
+            imgWidth={300}
+            imgHeight={400}
+            clicked={() => showModal("deg")}
+          />
+        </div>
         <Modal show={showDeg} closeModal={() => closeModal("deg")}>
           <img src={degree} alt="Computing Degree" height="500" width="350" />
           <ul>

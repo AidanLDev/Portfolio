@@ -6,7 +6,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  img:nth-child(2) {
-    cursor: pointer;
+  .degreeCard {
+    img {
+      cursor: pointer;
+    }
   }
 }
