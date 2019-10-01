@@ -34,11 +34,18 @@ app.get("/api", function(req, res) {
 });
 
 // All remaining requests return the React app, so it can handle routing.
-app.get("*", function(req, res) {
+app.get("/", function(req, res) {
   res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 });
 
-//  Use proxy to send traffic from http -> https
+app.get("*", function(req, res, next) {
+  if (req.secure) {
+    next();
+  } else {
+    console.log("Redirect");
+    res.redirect("https://" + request.headers.host + request.url);
+  }
+});
 
 http
   .createServer(httpsOptions, app)
