@@ -26,7 +26,14 @@ const httpsOptions = {
 };
 
 // Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+// app.use(function(req, res, next) {
+//   if (req.protocol === "https") {
+//     express.static(path.resolve(__dirname, "../frontend/build"));
+//     next();
+//   } else {
+//     res.redirect("https://" + req.headers.host + req.url);
+//   }
+// });
 
 // Answer API requests.
 app.get("/api", function(req, res) {
