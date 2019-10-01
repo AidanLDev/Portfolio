@@ -23,5 +23,5 @@ export const nodeShop = <div className={styles.nodeShop}>
 </div>
 
 export const userAuth = <div className={styles.userAuth}>
-  <p>A project created by team treehouse, teaching Mongoose, the MongoDB framework and Express, the Node.js framework, to create a user authentication system. The project uses hashing and saliting techniques to encrypt sensative user information in a MongoDB.</p>
+  <p>A project created by team treehouse, teaching Mongoose and Express, to create a user authentication system. The project uses hashing and saliting techniques to encrypt sensative user information, ring fences routes whether a users logged in or not and uses sessions to keep a user logged in.</p>
 </div>
