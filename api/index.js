@@ -39,7 +39,8 @@ app.get("/", function(req, res) {
 });
 
 app.get("*", function(req, res, next) {
-  if (req.secure) {
+  if (req.protocol === "https") {
+    console.log("Secure, NO REDIRECT");
     next();
   } else {
     console.log("Redirect");
