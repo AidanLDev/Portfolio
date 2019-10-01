@@ -33,20 +33,20 @@ app.get("/api", function(req, res) {
   res.set("Content-Type", "application/json");
 });
 
-// All remaining requests return the React app, so it can handle routing.
-app.get("/", function(req, res) {
-  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
-});
-
 app.get("*", function(req, res, next) {
   if (req.protocol === "https") {
-    console.log("Secure, NO REDIRECT");
-    next();
+    console.log("Secure, NO REDIRECT and send the app");
+    res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
   } else {
     console.log("Redirect");
     res.redirect("https://" + request.headers.host + request.url);
   }
 });
+
+// All remaining requests return the React app, so it can handle routing.
+// app.get("/", function(req, res) {
+//   res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+// });
 
 http
   .createServer(httpsOptions, app)
