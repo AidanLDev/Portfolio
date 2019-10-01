@@ -10,7 +10,7 @@ const Card = props => {
       <h2>{props.title}</h2>
       {props.imgLinkLocation ? (
         <div className={styles.tooltip}>
-          <span className={styles.tooltiptext}>Checkout the {props.title}</span>
+          <span className={styles.tooltiptext}>Checkout the {props.title} project</span>
           <a
             href={props.imgLinkLocation}
             rel="noopener noreferrer"

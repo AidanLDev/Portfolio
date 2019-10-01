@@ -31,12 +31,11 @@ const Projects = props => {
           title="Treehouse user authentication"
           content={descriptions.userAuth}
           img={placeHolderImg}
-          // imgLink
           imgWidth={500}
           imgHeight={200}
           // transition
-          // imgLinkLocation="https://nodejs.org/en/"
-          // imgAlt="Serverside Shop"
+          imgLinkLocation="https://aidans-auth-project.herokuapp.com/"
+          imgAlt="User Authentication project - Bookworm"
         />
       </div>
     </div>
