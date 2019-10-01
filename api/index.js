@@ -1,8 +1,8 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const http = require("http");
-const PORT = process.env.PORT | 443;
+const https = require("https");
+const PORT = process.env.PORT || 443;
 
 const app = express();
 
@@ -40,7 +40,7 @@ app.get("*", function(req, res) {
 
 //  Use proxy to send traffic from http -> https
 
-http
+https
   .createServer(httpsOptions, app)
   .listen(PORT, () =>
     console.log(`listening on port http://localhost:${PORT}`)
