@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const http = require("http");
-const PORT = process.env.PORT || 443;
+const PORT = 443;
 
 const app = express();
 
