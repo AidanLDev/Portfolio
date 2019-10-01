@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
-const https = require("https");
+const http = require("http");
 const PORT = process.env.PORT || 443;
 
 const app = express();
@@ -26,14 +26,7 @@ const httpsOptions = {
 };
 
 // Priority serve any static files.
-app.use(function(req, res, next) {
-  if (req.protocol === "https") {
-    express.static(path.resolve(__dirname, "../frontend/build"));
-    next();
-  } else {
-    res.redirect("https://" + req.headers.host + req.url);
-  }
-});
+app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 // Answer API requests.
 app.get("/api", function(req, res) {
@@ -55,7 +48,7 @@ app.get("*", function(req, res, next) {
 //   res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 // });
 
-https
+http
   .createServer(httpsOptions, app)
   .listen(PORT, () =>
     console.log(`listening on port http://localhost:${PORT}`)

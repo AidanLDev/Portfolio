@@ -1,15 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import App from './containers/App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import HttpsRedirect from "react-https-redirect";
+import App from "./containers/App";
 
-import './index.css';
-
+import "./index.css";
 
 const app = (
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-)
+  <HttpsRedirect>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </HttpsRedirect>
+);
 
-ReactDOM.render(app, document.getElementById('root'));
+ReactDOM.render(app, document.getElementById("root"));
