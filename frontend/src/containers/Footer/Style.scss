@@ -28,7 +28,7 @@
   }
 
   .socialMedia {
-    @media(max-width: 450px) {
+    @media (max-width: 450px) {
       width: 50px;
     }
   }
@@ -43,7 +43,8 @@
       padding: 0;
       position: inherit;
       display: initial;
-      @media(max-width: 480px) {
+      position: absolute;
+      @media (max-width: 480px) {
         display: none;
       }
     }
