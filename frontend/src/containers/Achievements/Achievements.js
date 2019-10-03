@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "components/Card/Card";
 import Skills from "./skills/Skills";
 import Modal from "components/Modal/Modal";
@@ -12,6 +12,13 @@ import styles from "./Style";
 const Achievements = props => {
   const [showUdemy, setShowUdemy] = useState(false);
   const [showDeg, setShowDeg] = useState(false);
+
+  //  Similar to componentDidMount
+  useEffect(() => {
+    fetch("https://teamtreehouse.com/aidanlowson.json")
+      .then(results => console.log(results.json()))
+      .catch(err => console.error(err))
+  })
 
   const showModal = modalToDisplay => {
     if (modalToDisplay === "udemy") {
