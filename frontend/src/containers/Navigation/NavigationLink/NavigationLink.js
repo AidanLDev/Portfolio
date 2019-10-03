@@ -26,7 +26,7 @@ const NavigationLink = props => {
       >
         {props.children}
         {props.iconPath ? (
-          <Icon path={props.iconPath} size={1.2} color={"rgb(181, 145, 0)"} />
+          <Icon path={props.iconPath} size={1} color={"rgb(181, 145, 0)"} />
         ) : null}
       </NavLink>
     </li>

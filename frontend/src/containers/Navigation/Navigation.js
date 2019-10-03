@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "components/Logo/Logo";
 import NavigationLink from "./NavigationLink/NavigationLink";
-import { mdiCodeBraces, mdiPostOutline } from "@mdi/js";
+import { mdiCodeBraces, mdiPencil } from "@mdi/js";
 
 import styles from "./Style";
 
@@ -15,7 +15,7 @@ const Navigation = props => {
         <NavigationLink link="/" exact iconPath={mdiCodeBraces}>
           Portfolio
         </NavigationLink>
-        <NavigationLink link="/blog" exact iconPath={mdiPostOutline}>
+        <NavigationLink link="/blog" exact iconPath={mdiPencil}>
           (Blog - Coming Soon)
         </NavigationLink>
       </ul>
