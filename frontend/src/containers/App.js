@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
+import Particles from "react-particles-js";
 import { mdiMenu } from "@mdi/js";
 import Icon from "@mdi/react";
 
@@ -10,6 +11,8 @@ import Footer from "containers/Footer/Footer";
 
 import styles from "./Style";
 import Sidedrawer from "./Navigation/Sidedrawer/Sidedrawer";
+
+import * as portfolioData from "data/portfolio/portfolio";
 
 const App = () => {
   const [showSideDrawer, setShowSideDrawer] = useState(false);
@@ -49,6 +52,12 @@ const App = () => {
           )}
         </nav>
       </header>
+      {window.location.pathname === "/" ? (
+        <Particles
+          className={styles.particlesBackground}
+          params={portfolioData.particleParams}
+        />
+      ) : null}
       <div className={styles.MainContent}>{routes}</div>
       <Footer />
     </div>

@@ -9,6 +9,12 @@
   color: $colorPrimary;
   // background-image: url("../assets/Code-Background.png");
   // background-position: center;
+  .particlesBackground {
+    z-index: -100;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+  }
 
   .AppHeader {
     @media (max-width: 500px) {
