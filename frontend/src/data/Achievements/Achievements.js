@@ -47,12 +47,15 @@ export const AWS = (
 
 export const react16 = (
   <div className={styles.react16}>
-    <img
-      height="200"
-      width="400"
-      alt="React-16 Cert"
-      src={UdemyBurgerCert}
-    />
+    <div className={styles.tooltip}>
+      <span className={styles.tooltiptext}>View Certificate of Completion</span>
+        <img
+          height="200"
+          width="400"
+          alt="React-16 Cert"
+          src={UdemyBurgerCert}
+        />
+    </div>
     <p>
       Maximilian Schwarzmüller's comprehensive React 16 course. Gained indepth
       knowledge covering the following moduals:

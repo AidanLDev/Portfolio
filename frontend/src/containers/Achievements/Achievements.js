@@ -12,13 +12,18 @@ import styles from "./Style";
 const Achievements = props => {
   const [showUdemy, setShowUdemy] = useState(false);
   const [showDeg, setShowDeg] = useState(false);
+  const [points, setPoints] = useState(0)
 
-  //  Similar to componentDidMount
+  //  Similar to componentDidMount (Runs once when the component has mounted)
   useEffect(() => {
     fetch("https://teamtreehouse.com/aidanlowson.json")
-      .then(results => console.log(results.json()))
+      .then(results => results.json())
+        .then(data => {
+          const points = data.points;
+          setPoints(points)
+        })
       .catch(err => console.error(err))
-  })
+  }, []);
 
   const showModal = modalToDisplay => {
     if (modalToDisplay === "udemy") {
@@ -36,6 +41,20 @@ const Achievements = props => {
     }
   };
 
+  const treehousePointsValues = () => {
+    return (
+    <div>
+      <p>Team Treehouse distribute points for completing courses, code challenged and quizzes. Currently I have the following:</p>
+      <ul style={{textAlign: "left"}}>
+        <li>Total Points: {points.total}</li>
+        <li>Database Points: {points.Databases}</li>
+        <li>Development Tools: Points {points["Development Tools"]}</li>
+        <li>JavaScript Points: {points.JavaScript}</li>
+        <li>CSS Points: {points.CSS}</li>
+    </ul>
+  </div>
+  )}
+
   return (
     <div>
       <Skills />
@@ -49,6 +68,7 @@ const Achievements = props => {
             imgWidth={300}
             imgHeight={400}
             clicked={() => showModal("deg")}
+            toolTipText="Click to view degree certificate"
           />
         </div>
         <Modal show={showDeg} closeModal={() => closeModal("deg")}>
@@ -62,7 +82,10 @@ const Achievements = props => {
         </Modal>
         <Card title="AWS" content={descriptions.AWS} />
         <div onClick={() => showModal("udemy")}>
-          <Card title="Udemy" content={descriptions.react16} />
+          <Card
+            title="Udemy"
+            content={descriptions.react16}
+            />
         </div>
         {/* Udemy modal */}
         <Modal show={showUdemy} closeModal={() => closeModal("udemy")}>
@@ -80,7 +103,7 @@ const Achievements = props => {
         </Modal>
         <Card
           title="Team Treehouse"
-          content={descriptions.javaScriptTrack}
+          content={treehousePointsValues()}
           img={teamTreehouse}
           imgWidth={400}
           imgHeight={200}

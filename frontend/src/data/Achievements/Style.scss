@@ -6,22 +6,6 @@
   ul {
     text-align: left;
   }
-  .tooltip {
-    @include tooltip;
-  }
-
-  .tooltip .tooltiptext {
-    @include tooltipAndText;
-    @include positionLeft;
-  }
-
-  .tooltip:hover .tooltiptext {
-    @include tooptipHover;
-  }
-
-  .tooltip .tooltiptext::after {
-    @include tooltipArrowRight;
-  }
 }
 
 .react16 {
@@ -45,4 +29,21 @@
 
 .userAuth {
   padding: 0 6px 0 6px;
+}
+
+.tooltip {
+  @include tooltip;
+}
+
+.tooltip .tooltiptext {
+  @include tooltipAndText;
+  @include positionLeft;
+}
+
+.tooltip:hover .tooltiptext {
+  @include tooptipHover;
+}
+
+.tooltip .tooltiptext::after {
+  @include tooltipArrowRight;
 }
