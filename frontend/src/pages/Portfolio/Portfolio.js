@@ -4,14 +4,22 @@ import Projects from "containers/Projects/Projects";
 import Particles from "react-particles-js";
 import styles from "./Style.scss";
 
-import * as portfolioData from "data/portfolio/portfolio";
+import * as portfolioData from "data/Backgrounds/particleBackgrounds";
 
-const Portfolio = props => {
+const Portfolio = () => {
+  const dateTime = new Date();
+  const currentMonth = dateTime.getMonth();
+
+  console.log(currentMonth);
   return (
     <div>
       <Particles
         className={styles.particlesBackground}
-        params={portfolioData.particleParams}
+        params={
+          currentMonth === 11
+            ? portfolioData.particleParamsSnow
+            : portfolioData.particleParamsPent
+        }
       />
       <Achievements />
       <Projects />
