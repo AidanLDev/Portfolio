@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import styles from "./Style";
 
 const Card = props => {
-  console.log(props.toolTipText)
   return (
     <div className={styles.CardWrapper}>
       <h2>{props.title}</h2>
@@ -29,21 +28,19 @@ const Card = props => {
             />
           </a>
         </div>
+      ) : props.toolTipText ? (
+        <div className={styles.tooltip}>
+          <span className={styles.tooltiptext}>{props.toolTipText}</span>
+          <img
+            src={props.img}
+            alt={props.imgAlt}
+            width={props.imgWidth}
+            height={props.imgHeight}
+            onClick={props.clicked}
+          />
+        </div>
       ) : (
-        props.toolTipText
-          ? <div className={styles.tooltip}>
-              <span className={styles.tooltiptext}>
-                {props.toolTipText}
-              </span>
-              <img
-                src={props.img}
-                alt={props.imgAlt}
-                width={props.imgWidth}
-                height={props.imgHeight}
-                onClick={props.clicked}
-              />
-            </div>
-          : <img
+        <img
           src={props.img}
           alt={props.imgAlt}
           width={props.imgWidth}
