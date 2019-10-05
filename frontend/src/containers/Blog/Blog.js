@@ -12,7 +12,7 @@ const Blog = () => {
       </div>
       <div className={styles.mainContainer}>
         <h1>Blog Posts</h1>
-        <p>This is where my content will go</p>
+        <p>This is where the content will be!</p>
       </div>
     </div>
   );

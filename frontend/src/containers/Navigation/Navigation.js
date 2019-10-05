@@ -16,7 +16,7 @@ const Navigation = props => {
           Portfolio
         </NavigationLink>
         <NavigationLink link="/blog" exact iconPath={mdiPencil}>
-          (Blog - Coming Soon)
+          Blog
         </NavigationLink>
       </ul>
     </div>
