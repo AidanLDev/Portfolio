@@ -16,8 +16,7 @@ const Portfolio = () => {
       <Particles
         className={styles.particlesBackground}
         params={
-          // Change back to 11
-          currentMonth === 9
+          currentMonth === 11
             ? portfolioData.particleParamsSnow
             : portfolioData.particleParamsPent
         }

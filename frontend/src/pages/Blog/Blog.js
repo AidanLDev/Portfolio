@@ -1,10 +1,10 @@
 import React from "react";
-
+import Blog from "containers/Blog/Blog";
 import styles from "./Style.scss";
 
 const blog = props => (
   <div className={styles.container}>
-    <h1>Coming Soon</h1>
+    <Blog />
   </div>
 );
 
