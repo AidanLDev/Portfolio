@@ -1,4 +1,6 @@
 import React from "react";
+import BlogCard from "components/BlogCard/BlogCard";
+import * as blogData from "data/Blog/blogData";
 
 import styles from "./Style";
 
@@ -12,7 +14,7 @@ const Blog = () => {
       </div>
       <div className={styles.mainContainer}>
         <h1>Blog Posts</h1>
-        <p>This is where the content will be!</p>
+        <BlogCard title="Deploying your first website" description={blogData.deployingWebAppDesc}/>
       </div>
     </div>
   );
