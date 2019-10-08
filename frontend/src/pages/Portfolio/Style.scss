@@ -1,3 +1,7 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
 .particlesBackground {
   z-index: -100;
   width: 100%;
