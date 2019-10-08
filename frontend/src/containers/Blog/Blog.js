@@ -26,6 +26,10 @@ const Blog = () => {
           title="Reacts useEffect()"
           description={blogData.placeHolder2}
         />
+        <BlogCard
+          title="Will Quantum Computing break encryption"
+          description={blogData.placeHolder3}
+        />
       </div>
     </div>
   );
