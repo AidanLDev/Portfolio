@@ -18,8 +18,14 @@ const Blog = () => {
           title="Deploying your first website"
           description={blogData.deployingWebAppDesc}
         />
-        <BlogCard title="Place Holder #1" description={blogData.placeHolder1} />
-        <BlogCard title="Place Holder #2" description={blogData.placeHolder2} />
+        <BlogCard
+          title="# Must use JavaScript array methods"
+          description={blogData.placeHolder1}
+        />
+        <BlogCard
+          title="Reacts useEffect()"
+          description={blogData.placeHolder2}
+        />
       </div>
     </div>
   );
