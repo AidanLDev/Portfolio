@@ -23,7 +23,7 @@
   .mainContainer {
     background-color: $lightGrey;
     width: 70%;
-    // margin: auto;
+    padding: 10px 0;
     @media (max-width: 1300px) {
       width: 100%;
     }
