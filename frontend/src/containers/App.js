@@ -5,6 +5,7 @@ import Icon from "@mdi/react";
 
 import Navigation from "containers/Navigation/Navigation";
 import Portfolio from "pages/Portfolio/Portfolio";
+import BlogSearch from "pages/BlogSearch/BlogSearch";
 import Blog from "pages/Blog/Blog";
 import Footer from "containers/Footer/Footer";
 
@@ -17,6 +18,7 @@ const App = () => {
   const routes = (
     <Switch>
       <Route path="/" exact component={Portfolio} />
+      <Route exact path="/blog/search" component={BlogSearch} />
       <Route path="/blog" component={Blog} />
       <Redirect to="/" />
     </Switch>

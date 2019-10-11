@@ -9,8 +9,6 @@ import * as portfolioData from "data/Backgrounds/particleBackgrounds";
 const Portfolio = () => {
   const dateTime = new Date();
   const currentMonth = dateTime.getMonth();
-
-  console.log(currentMonth);
   return (
     <div>
       <Particles

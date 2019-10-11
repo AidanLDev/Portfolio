@@ -1,13 +1,11 @@
 import React from "react";
 
-const deployWebsite = () => {
+export const deployWebsite = () => {
   const blog = (
     <div>
       <h1>Deploy a website</h1>
-      <p></p>
+      <p>This is a blog</p>
     </div>
   );
-  return <div></div>;
+  return <div>{blog}</div>;
 };
-
-export default deployWebsite;
