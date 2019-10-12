@@ -22,6 +22,7 @@ const BlogNav = () => {
         <BlogCard
           title="# Must use JavaScript array methods"
           description={blogData.placeHolder1}
+          route="must-use-array-methods"
         />
         <BlogCard
           title="Reacts useEffect()"
