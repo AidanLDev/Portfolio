@@ -27,18 +27,22 @@ const BlogNav = () => {
         <BlogCard
           title="Reacts useEffect()"
           description={blogData.placeHolder2}
+          route="using-use-effect"
         />
         <BlogCard
           title="Will Quantum Computing break encryption"
           description={blogData.placeHolder3}
+          route="quantum-computing"
         />
         <BlogCard
           title="JS ES6 using Spread vs Flatten"
           description={blogData.placeHolder3}
+          route="spread-vs-flatten"
         />
         <BlogCard
           title="JavaScript prototype"
           description={blogData.placeHolder3}
+          route="javascript-prototype"
         />
       </div>
     </div>
