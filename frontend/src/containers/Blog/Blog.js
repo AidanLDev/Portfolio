@@ -1,9 +1,12 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
+import Icon from "@mdi/react";
+import { mdiChevronLeft } from "@mdi/js";
 
 import Button from "components/Button/Button";
 
 import * as Blogs from "blogs";
+import styles from "./Style";
 
 const Blog = props => {
   const path = window.location.pathname.split("/").slice(-1)[0];
@@ -32,7 +35,10 @@ const Blog = props => {
 
   return (
     <div>
-      <Button clicked={() => goBack()}>Go Back</Button>
+      <div className={styles.buttonWrapper} onClick={() => goBack()}>
+        <Icon color="#131211" size={1} path={mdiChevronLeft} />
+        <Button>Go Back</Button>
+      </div>
       <h1>Something interesting</h1>
       {renderSwitch(path)}
     </div>

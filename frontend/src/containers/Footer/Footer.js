@@ -44,8 +44,13 @@ const Footer = props => {
         whileHover={{ scale: hoverScale }}
         whileTap={{ scale: tapScale }}
       >
-        <Button>Back to top</Button>
-        <Icon path={mdiChevronUp} size={1} color={"white"} className={styles.mobileOnly} />
+        <Button footer>Back to top</Button>
+        <Icon
+          path={mdiChevronUp}
+          size={1}
+          color={"white"}
+          className={styles.mobileOnly}
+        />
       </motion.div>
     </div>
   );

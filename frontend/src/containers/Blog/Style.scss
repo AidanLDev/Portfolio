@@ -1,0 +1,18 @@
+.buttonWrapper {
+  cursor: pointer;
+  position: absolute;
+  padding: 20px;
+  margin: 0 0 0 50px;
+  @media (max-width: 620px) {
+    display: flex;
+    position: inherit;
+    margin: 0;
+    width: 75px;
+  }
+  svg {
+    padding: 0;
+    left: 5px;
+    display: initial;
+    position: absolute;
+  }
+}
