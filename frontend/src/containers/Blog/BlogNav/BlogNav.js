@@ -13,7 +13,7 @@ const BlogNav = () => {
         <input type="text" name="search"></input>
       </div>
       <div className={styles.mainContainer}>
-        <h1 className={styles.blogHeading}>Blog Posts</h1>
+        <h1>Blog Posts</h1>
         <BlogCard
           title="Deploying your first website"
           description={blogData.deployingWebAppDesc}

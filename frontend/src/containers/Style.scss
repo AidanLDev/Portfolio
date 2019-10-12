@@ -40,7 +40,7 @@
   }
 
   h1 {
-    @include headingOne;
+    @include mainTitle;
   }
   .MainContent {
     margin-top: $navHeight;

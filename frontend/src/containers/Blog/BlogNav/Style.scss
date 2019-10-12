@@ -24,9 +24,6 @@
     background-color: $lightGrey;
     width: 70%;
     padding: 10px 0;
-    .blogHeading {
-      @include blogHeading;
-    }
     @media (max-width: 1300px) {
       width: 100%;
     }

@@ -34,12 +34,11 @@ const Blog = props => {
   };
 
   return (
-    <div>
+    <div className={styles.blogContainer}>
       <div className={styles.buttonWrapper} onClick={() => goBack()}>
         <Icon color="#131211" size={1} path={mdiChevronLeft} />
         <Button>Go Back</Button>
       </div>
-      <h1>Something interesting</h1>
       {renderSwitch(path)}
     </div>
   );
