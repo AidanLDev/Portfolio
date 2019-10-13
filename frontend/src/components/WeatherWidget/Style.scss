@@ -8,13 +8,15 @@
 
 .tooltip .tooltiptext {
   @include tooltipAndText;
-  @include positionBottom;
+  @include positionLeft;
 }
 
 .tooltip:hover .tooltiptext {
   @include tooptipHover;
+  top: 35px;
+  right: 100px;
 }
 
 .tooltip .tooltiptext::after {
-  @include tooltipArrowBottom;
+  @include tooltipArrowRight;
 }
