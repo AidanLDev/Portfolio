@@ -1,61 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BlogCard from "components/BlogCard/BlogCard";
+import WeatherWidget from "components/WeatherWidget/WeatherWidget";
 import * as blogData from "data/Blog/blogData";
 
 import styles from "./Style";
 
 const BlogNav = () => {
   const [filterValue, setFilterValue] = useState("");
+  const [weatherData, setWeatherData] = useState(null);
+
+  const weatherRequestUrl =
+    "http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=231273878f22174e32dccfe816682568";
+
   const handleInputChange = event => setFilterValue(event.target.value);
 
-  const blogs = [
-    {
-      title: "Deploying your first website",
-      description: blogData.deployingWebAppDesc,
-      route: "deploying-a-website"
-    },
-    {
-      title: "# Must use JavaScript array methods",
-      description: blogData.placeHolder1,
-      route: "must-use-array-methods"
-    },
-    {
-      title: "Reacts useEffect()",
-      description: blogData.placeHolder2,
-      route: "using-use-effect"
-    },
-    {
-      title: "Will Quantum Computing break encryption",
-      description: blogData.placeHolder3,
-      route: "quantum-computing"
-    },
-    {
-      title: "JS ES6 using Spread vs Flatten",
-      description: blogData.placeHolder3,
-      route: "spread-vs-flatten"
-    },
-    {
-      title: "JavaScript prototype",
-      description: blogData.placeHolder3,
-      route: "javascript-prototype"
-    }
-  ];
+  useEffect(() => {
+    // 231273878f22174e32dccfe816682568
+    fetch(weatherRequestUrl)
+      .then(results => results.json())
+      .then(data => {
+        console.log(data);
+        setWeatherData(data);
+      })
+      .catch(err => console.error(err));
+  }, []);
 
   return (
     <div className={styles.container}>
       <div className={styles.rightSidebar}>
-        <span>Search</span>
-        {/* Make a nice UI component */}
-        <input
-          name="search"
-          placeholder="Search Blogs"
-          value={filterValue}
-          onChange={handleInputChange}
-        />
+        <div className={styles.searchBar}>
+          <span>Search</span>
+          {/* Make a nice UI component for input */}
+          <input
+            name="search"
+            placeholder="Search Blogs"
+            value={filterValue}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div className={styles.weatherWidget}>
+          <WeatherWidget
+            weatherData={weatherData}
+            className={styles.weatherWidget}
+          />
+        </div>
       </div>
       <div className={styles.mainContainer}>
         <h1>Blog Posts</h1>
-        {blogs.map(blog => {
+        {blogData.blogs.map(blog => {
           if (filterValue === "" || RegExp(filterValue, "i").test(blog.title)) {
             return (
               <BlogCard
