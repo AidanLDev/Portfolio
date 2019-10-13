@@ -3,14 +3,29 @@
 @import "mixins";
 
 .container {
+  min-height: 765px;
   .rightSidebar {
     background-color: $lightGrey;
     position: absolute;
     right: 200px;
     top: 120px;
     width: 320px;
+    input {
+      height: 25px;
+      margin: 2px 0 0 3px;
+    }
     span {
       padding: 5px;
+    }
+    @media (min-width: 1300px) {
+      display: flex;
+      height: 300px;
+      input {
+        width: 75%;
+      }
+    }
+    @media (max-width: 1750px) {
+      right: 50px;
     }
     @media (max-width: 1300px) {
       position: relative;

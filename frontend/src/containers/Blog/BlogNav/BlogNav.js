@@ -56,7 +56,7 @@ const BlogNav = () => {
       <div className={styles.mainContainer}>
         <h1>Blog Posts</h1>
         {blogs.map(blog => {
-          if (filterValue === "" || filterValue === blog.title) {
+          if (filterValue === "" || RegExp(filterValue, "i").test(blog.title)) {
             return (
               <BlogCard
                 key={blog.title}
