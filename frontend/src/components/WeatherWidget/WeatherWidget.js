@@ -21,7 +21,13 @@ const weatherWidget = props => {
       {props.weatherData ? (
         <div>
           <h3>{location}</h3>
-          {/* {weather.description} to be tooltip value */}
+          <div className={styles.tooltip}>
+            <span className={styles.tooltiptext}>{weather.description}</span>
+            <img
+              src={`http://openweathermap.org/img/wn/${iconCode}@2x.png`}
+              alt="Weather Icon"
+            />
+          </div>
         </div>
       ) : null}
     </div>
