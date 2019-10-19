@@ -33,6 +33,10 @@ const weatherWidget = props => {
     <div>
       {props.weatherData ? (
         <div>
+          <hr />
+          <p>
+            <b>Whats the weather around the world?</b>
+          </p>
           <h3>
             {location}: {celsius.toFixed(1)} °C | {farenheit.toFixed(2)} °F
           </h3>
