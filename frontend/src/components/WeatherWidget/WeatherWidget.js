@@ -34,7 +34,7 @@ const weatherWidget = props => {
       {props.weatherData ? (
         <div>
           <h3>
-            {location}: {celsius.toFixed(2)} °C | {farenheit.toFixed(2)} °F
+            {location}: {celsius.toFixed(1)} °C | {farenheit.toFixed(2)} °F
           </h3>
           <div className={styles.tooltip}>
             <span className={styles.tooltiptext}>{weather.description}</span>
