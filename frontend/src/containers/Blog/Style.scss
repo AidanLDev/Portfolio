@@ -3,7 +3,7 @@
 @import "mixins";
 
 .blogContainer {
-  background-color: #fbfbfb;
+  background-color: #ffffff;
   width: 70%;
   min-height: 800px;
   margin: auto;
@@ -17,13 +17,14 @@
   .buttonWrapper {
     cursor: pointer;
     position: absolute;
+    top: 85px;
     padding: 20px;
     margin: 0 0 0 50px;
     @media (max-width: 620px) {
       display: flex;
       position: inherit;
       margin: 0;
-      width: 75px;
+      width: 90px;
     }
     svg {
       padding: 0;

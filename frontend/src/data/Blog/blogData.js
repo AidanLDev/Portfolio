@@ -1,9 +1,9 @@
 export const blogs = [
-  {
-    title: "Deploying your first website",
-    description: "W/e i wrote in word",
-    route: "deploying-a-website"
-  },
+  // {
+  //   title: "Deploying your first website",
+  //   description: "W/e i wrote in word",
+  //   route: "deploying-a-website"
+  // },
   {
     title: "# Must use JavaScript array methods",
     description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Donec adipiscing tristique risus nec feugiat in fermentum. Diam in arcu cursus euismod quis. Facilisis magna etiam tempor orci eu.`,
