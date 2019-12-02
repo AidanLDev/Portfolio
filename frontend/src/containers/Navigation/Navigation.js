@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "components/Logo/Logo";
 import NavigationLink from "./NavigationLink/NavigationLink";
-import { mdiCodeBraces, mdiPencil } from "@mdi/js";
+import { mdiCodeBraces, mdiPencil, mdiMapSearch } from "@mdi/js";
 
 import styles from "./Style";
 
@@ -17,6 +17,9 @@ const Navigation = props => {
         </NavigationLink>
         <NavigationLink link="/blog/search" exact iconPath={mdiPencil}>
           Blog
+        </NavigationLink>
+        <NavigationLink link="/map" exact iconPath={mdiMapSearch}>
+          Map
         </NavigationLink>
       </ul>
     </div>

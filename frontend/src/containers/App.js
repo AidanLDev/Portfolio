@@ -7,6 +7,7 @@ import Navigation from "containers/Navigation/Navigation";
 import Portfolio from "pages/Portfolio/Portfolio";
 import BlogSearch from "pages/BlogSearch/BlogSearch";
 import Blog from "pages/Blog/Blog";
+import Map from "pages/Map/Map";
 import Footer from "containers/Footer/Footer";
 
 import styles from "./Style";
@@ -20,6 +21,7 @@ const App = () => {
       <Route path="/" exact component={Portfolio} />
       <Route exact path="/blog/search" component={BlogSearch} />
       <Route path="/blog" component={Blog} />
+      <Route path="/map" component={Map} />
       <Redirect to="/" />
     </Switch>
   );
