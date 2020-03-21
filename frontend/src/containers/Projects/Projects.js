@@ -22,26 +22,6 @@ const Projects = props => {
           imgAlt="Burger builder project"
           hoverScale={1.2}
         />
-        <div className={styles.userAuthCard}>
-          <Card
-            title="Treehouse user authentication"
-            content={descriptions.userAuth}
-            img={userAuthImg}
-            imgWidth={500}
-            imgHeight={200}
-            hoverScale={1.1}
-            imgLinkLocation="https://aidans-auth-project.herokuapp.com/"
-            imgAlt="User Authentication project - Bookworm"
-          />
-        </div>
-        <Card
-          title="Udemy Serverside Shop"
-          content={descriptions.nodeShop}
-          img={placeHolderImg}
-          imgWidth={500}
-          imgHeight={200}
-          // imgAlt="Serverside Shop"
-        />
       </div>
     </div>
   );

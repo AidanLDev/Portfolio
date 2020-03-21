@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Card from "components/Card/Card";
 import Skills from "./skills/Skills";
 import Modal from "components/Modal/Modal";
@@ -12,19 +12,6 @@ import styles from "./Style";
 const Achievements = props => {
   const [showUdemy, setShowUdemy] = useState(false);
   const [showDeg, setShowDeg] = useState(false);
-  const [points, setPoints] = useState(0);
-
-  //  Similar to componentDidMount (Runs once when the component has mounted)
-  useEffect(() => {
-    // Move the fetch logic to the API
-    fetch("https://teamtreehouse.com/aidanlowson.json")
-      .then(results => results.json())
-      .then(data => {
-        const points = data.points;
-        setPoints(points);
-      })
-      .catch(err => console.error(err));
-  }, []);
 
   const showModal = modalToDisplay => {
     if (modalToDisplay === "udemy") {
@@ -46,16 +33,9 @@ const Achievements = props => {
     return (
       <div>
         <p>
-          Team Treehouse distribute points for completing courses, code
-          challenged and quizzes. Currently I have the following:
+          Completed the 'Stack JavaScript Developer' track, gaining relevant
+          skills in becoming a competent JavaScript developer.
         </p>
-        <ul style={{ textAlign: "left" }}>
-          <li>Total Points: {points.total}</li>
-          <li>Database Points: {points.Databases}</li>
-          <li>Development Tools: Points {points["Development Tools"]}</li>
-          <li>JavaScript Points: {points.JavaScript}</li>
-          <li>CSS Points: {points.CSS}</li>
-        </ul>
       </div>
     );
   };
