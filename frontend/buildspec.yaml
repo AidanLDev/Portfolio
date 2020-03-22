@@ -21,4 +21,4 @@ phases:
           # ./frontend/build/index.html s3://${DeployBucket}/
 artifacts:
   files:
-    - "frontend/build/*"
+    - "./build/*"
