@@ -2,7 +2,7 @@ import React from "react";
 import Achievements from "containers/Achievements/Achievements";
 import Projects from "containers/Projects/Projects";
 import Particles from "react-particles-js";
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 
 import * as portfolioData from "data/Backgrounds/particleBackgrounds";
 

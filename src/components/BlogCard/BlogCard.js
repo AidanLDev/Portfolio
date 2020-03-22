@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 
 const blogCard = props => {
   return (

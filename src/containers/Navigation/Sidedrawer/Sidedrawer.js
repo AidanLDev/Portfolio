@@ -4,7 +4,7 @@ import Button from "components/Button/Button";
 import Logo from "components/Logo/Logo";
 import Navigation from "containers/Navigation/Navigation";
 
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 
 const sidedrawer = props => {
   return (

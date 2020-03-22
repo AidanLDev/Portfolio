@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 /*  Logos  */
 import CloudPractitioner from "assets/Certs/CloudPractitionerEmailBadge.png";
 import UdemyBurgerCert from "assets/Certs/udemyBurgerBuilder.jpg";

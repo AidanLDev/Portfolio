@@ -3,7 +3,7 @@ import BlogCard from "components/BlogCard/BlogCard";
 import WeatherWidget from "components/WeatherWidget/WeatherWidget";
 import * as blogData from "data/Blog/blogData";
 
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 
 const BlogNav = () => {
   const [filterValue, setFilterValue] = useState("");

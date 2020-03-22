@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 
 const button = props => {
   const variableStyles = {

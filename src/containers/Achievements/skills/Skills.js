@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 
 /*  Logos */
 import JSLogo from "assets/Tech/JavaScriptLogo.png";
@@ -14,7 +14,6 @@ import AWSLogo from "assets/Tech/AWSLogo.png";
 import GitLogo from "assets/Tech/GitLogo.png";
 import WebpackLogo from "assets/Tech/webpackLogo.png";
 import DockerLogo from "assets/Tech/DockerLogo.png";
-import SolidityLogo from "assets/Tech/SolidityLogo.png";
 
 const Skills = props => {
   const imgHeight = "50";
@@ -133,16 +132,6 @@ const Skills = props => {
           />
           <h2>Docker</h2>
           {/* <p>TODO</p> */}
-        </div>
-        <div>
-          <img
-            src={SolidityLogo}
-            height={imgHeight}
-            width={imgWidth}
-            alt="Solidity Logo"
-          />
-          <h2>Solidity </h2>
-          {/* <p>The language used to create de-centralised Etheruim applications using the latest Block Chain technology</p> */}
         </div>
       </div>
     </div>

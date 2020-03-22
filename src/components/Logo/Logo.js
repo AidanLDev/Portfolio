@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 
 const logo = props => (
   <div className={styles.logoContainer} onClick={props.clicked}>

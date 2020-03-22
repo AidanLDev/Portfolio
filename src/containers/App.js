@@ -10,7 +10,7 @@ import Blog from "pages/Blog/Blog";
 import Map from "pages/Map/Map";
 import Footer from "containers/Footer/Footer";
 
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 import Sidedrawer from "./Navigation/Sidedrawer/Sidedrawer";
 
 const App = () => {

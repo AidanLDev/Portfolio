@@ -6,7 +6,7 @@ import { mdiChevronLeft } from "@mdi/js";
 import Button from "components/Button/Button";
 
 import * as Blogs from "blogs";
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 
 const Blog = props => {
   const path = window.location.pathname.split("/").slice(-1)[0];

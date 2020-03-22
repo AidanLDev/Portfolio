@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Style.scss'
+import styles from './Style.module.scss'
 
 export const projectsDescription = <p>
 Developing websites/web applications is more than a carear, but a hobby too. I have worked on various personal projects:

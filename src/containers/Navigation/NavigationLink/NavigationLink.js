@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 import Icon from "@mdi/react";
 
 const NavigationLink = props => {

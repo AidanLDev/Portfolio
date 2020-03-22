@@ -3,10 +3,8 @@ import Card from "components/Card/Card";
 import * as descriptions from "data/Projects/Projects";
 
 import BurgerBuilderImg from "assets/Burger.png";
-import placeHolderImg from "assets/ComingSoon.png";
-import userAuthImg from "assets/userAuth.png";
 
-import styles from "./Style.scss";
+import styles from "./Style.module.scss";
 
 const Projects = props => {
   return (
