@@ -6,7 +6,7 @@ import BurgerBuilderImg from "assets/Burger.png";
 import placeHolderImg from "assets/ComingSoon.png";
 import userAuthImg from "assets/userAuth.png";
 
-import styles from "./Style";
+import styles from "./Style.scss";
 
 const Projects = props => {
   return (

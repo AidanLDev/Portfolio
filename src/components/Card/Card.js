@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 
-import styles from "./Style";
+import styles from "./Style.scss";
 
 const Card = props => {
   return (

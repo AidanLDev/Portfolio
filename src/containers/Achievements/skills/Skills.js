@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Style";
+import styles from "./Style.scss";
 
 /*  Logos */
 import JSLogo from "assets/Tech/JavaScriptLogo.png";

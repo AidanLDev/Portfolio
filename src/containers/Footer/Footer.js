@@ -6,7 +6,7 @@ import { mdiChevronUp } from "@mdi/js";
 import LinkedinLogo from "assets/LinkedinLogo.png";
 import sslImg from "assets/positivessl_trust_seal_md_167x42.png";
 
-import styles from "./Style";
+import styles from "./Style.scss";
 
 const Footer = props => {
   const backToTop = () => window.scrollTo(0, 0);

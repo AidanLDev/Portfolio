@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './Style'
+import styles from './Style.scss'
 
 const Tooltip = props => {
   /*  TODO: add fade-in/out animation   */

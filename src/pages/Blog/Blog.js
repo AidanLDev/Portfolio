@@ -1,7 +1,7 @@
 import React from "react";
 import Blog from "containers/Blog/Blog";
 
-import styles from "./Style";
+import styles from "./Style.scss";
 
 const blog = props => {
   return (

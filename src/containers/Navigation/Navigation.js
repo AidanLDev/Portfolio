@@ -3,7 +3,7 @@ import Logo from "components/Logo/Logo";
 import NavigationLink from "./NavigationLink/NavigationLink";
 import { mdiCodeBraces, mdiPencil, mdiMapSearch } from "@mdi/js";
 
-import styles from "./Style";
+import styles from "./Style.scss";
 
 const Navigation = props => {
   return (

@@ -7,7 +7,7 @@ import * as descriptions from "data/Achievements/Achievements";
 import teamTreehouse from "assets/Certs/teamTreeHouse.jpg";
 import degree from "assets/Certs/degree.jpeg";
 import UdemyBurgerCert from "assets/Certs/udemyBurgerBuilder.jpg";
-import styles from "./Style";
+import styles from "./Style.scss";
 
 const Achievements = props => {
   const [showUdemy, setShowUdemy] = useState(false);
