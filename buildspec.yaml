@@ -10,11 +10,10 @@ phases:
       - npm run build
   post_build:
     commands:
-      - echo Build Complete on `date`
       - echo `ls`
-        # Move built files
-        # Copy the contents of /build to S3
-        # - aws s3 cp --recursive --acl public-read ./frontend/build s3://${DeployBucket}
+      # Move built files
+      # Copy the contents of /build to S3
+      - aws s3 cp --recursive --acl public-read ./build s3://aidantestsite
         # Prevent browser caching
         # --cache-control="max-age=0, no-cache, no-store, must-revalidate"
         # ./frontend/build/service-worker.js s3://${DeployBucket}/
