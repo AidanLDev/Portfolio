@@ -1,0 +1,32 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.logoContainer {
+  cursor: pointer;
+  a {
+    text-decoration: none;
+  }
+  @media (max-width: 750px) {
+    padding: 0;
+  }
+  padding: 20px 0;
+  .logo {
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 32px;
+    height: auto;
+    line-height: 12px;
+    margin-right: 12px;
+    color: $titleColour;
+    overflow-wrap: break-word;
+
+    @media (max-width: 750px) {
+      line-height: 28px;
+    }
+
+    @media (max-width: 500px) {
+      // Sidebar Logo styles here
+    }
+  }
+}

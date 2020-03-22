@@ -1,0 +1,9 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.container {
+  height: 100%;
+  background-color: #f7f7f7;
+  color: $black;
+}

@@ -1,0 +1,78 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.NavLink {
+  margin: 10px 0;
+  box-sizing: border-box;
+  display: block;
+
+  @media (max-width: 700px) {
+  }
+
+  @media (max-width: 500px) {
+    margin: 10px auto;
+  }
+}
+
+.NavLink a {
+  color: whitesmoke;
+  text-decoration: none;
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+.NavLink a:hover,
+.NavLink a:active,
+.NavLink a.active {
+  font-weight: 600;
+  color: #7facff;
+}
+
+.NavLink a:hover {
+  border-bottom: 2px solid;
+}
+
+svg {
+  display: none;
+}
+
+@media (min-width: 501px) {
+  .NavLink {
+    display: block;
+    height: 60%;
+    padding: 10px 75px 0 20px;
+    margin: 0;
+    @media (max-width: 700px) {
+      padding: 28px 25px 0 20px;
+    }
+  }
+
+  .NavLink a {
+    color: whitesmoke;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .NavLink a:active,
+  .NavLink a.active {
+    color: #7facff;
+    border-bottom: 2px solid;
+  }
+
+  svg {
+    padding: 20px 8px 20px 8px;
+    display: block;
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+}

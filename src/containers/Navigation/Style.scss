@@ -1,0 +1,45 @@
+@import "pallet";
+@import "variables";
+
+.navBar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: $nav-standard;
+  opacity: 0.9;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  height: $navHeight;
+  top: 0;
+  z-index: 100;
+
+  .leftNavBar {
+    width: 50%;
+  }
+
+  .mobileOnly {
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+}
+
+@media (max-width: 500px) {
+  .navBar {
+    position: relative;
+    background-color: $modalBackground;
+  }
+  .linkContainer {
+    flex-direction: column;
+  }
+}

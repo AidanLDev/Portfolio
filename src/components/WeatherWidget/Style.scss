@@ -1,0 +1,22 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.tooltip {
+  @include tooltip;
+}
+
+.tooltip .tooltiptext {
+  @include tooltipAndText;
+  @include positionLeft;
+}
+
+.tooltip:hover .tooltiptext {
+  @include tooptipHover;
+  top: 35px;
+  right: 100px;
+}
+
+.tooltip .tooltiptext::after {
+  @include tooltipArrowRight;
+}

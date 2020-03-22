@@ -1,0 +1,59 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.container {
+  min-height: 765px;
+  .rightSidebar {
+    .searchBar {
+      input {
+        height: 25px;
+        margin: 2px 0 0 3px;
+      }
+      span {
+        padding: 5px;
+      }
+      @media (min-width: 1300px) {
+        padding: 10px 0 0 0;
+        display: flex;
+        input {
+          width: 75%;
+        }
+      }
+    }
+    background-color: #fbfbfb;
+    position: absolute;
+    right: 200px;
+    top: 120px;
+    width: 320px;
+
+    .weatherWidget {
+      @media (max-width: 1300px) {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1300px) {
+      height: 240px;
+    }
+    @media (max-width: 1750px) {
+      right: 50px;
+    }
+    @media (max-width: 1300px) {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 100%;
+      padding: 15px 0;
+    }
+  }
+  background-color: #f7f7f7;
+  .mainContainer {
+    background-color: #fbfbfb;
+    width: 70%;
+    padding: 10px 0;
+    @media (max-width: 1300px) {
+      width: 100%;
+    }
+  }
+}

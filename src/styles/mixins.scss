@@ -1,0 +1,134 @@
+@import "pallet";
+@import "variables";
+
+@mixin header {
+  color: $titleColour;
+}
+
+@mixin portfolioTitle {
+  text-transform: uppercase;
+  font-size: 50px;
+  @media (max-width: 500px) {
+    font-size: 40px;
+  }
+  @media (max-width: $m-mobile) {
+    font-size: 30px;
+  }
+}
+
+@mixin mainTitle {
+  text-transform: none;
+  font-size: 40px;
+}
+
+/*  Tooltip  */
+@mixin tooltip {
+  display: inline-block;
+  position: relative;
+}
+/*  Tooltip Positioning  */
+/*  .tooltip .tooltiptext */
+@mixin positionBottom {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+/*  .tooltip .tooltiptext */
+@mixin positionRight {
+  top: -5px;
+  left: 105%;
+}
+
+/*  .tooltip .tooltiptext */
+@mixin positionLeft {
+  top: -5px;
+  right: 105%;
+}
+
+/*  .tooltip .tooltiptext */
+@mixin positionTop {
+  width: 120px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/*  .tooltip .tooltiptext  */
+@mixin tooltipAndText {
+  visibility: hidden;
+  width: 120px;
+  background-color: $darkGrey;
+  color: $titleColour;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+/*  tooltip:hover .tooltiptext  */
+@mixin tooptipHover {
+  visibility: visible;
+}
+
+/*  Tooptip Arrows  */
+/*  .tooltip .tooltiptext::after  */
+@mixin tooltipArrowBottom {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: $darkGrey transparent transparent transparent;
+}
+
+/*  .tooltip .tooltiptext::after  */
+@mixin tooltipArrowTop {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent $darkGrey transparent;
+}
+
+/*  .tooltip .tooltiptext::after  */
+@mixin tooltipArrowLeft {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent $darkGrey transparent transparent;
+}
+
+/*  .tooltip .tooltiptext::after  */
+@mixin tooltipArrowRight {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent $darkGrey;
+}
+
+/*  Blog Styles */
+
+@mixin blogHeader {
+  color: $black;
+}
+
+@mixin blogParagraph {
+  color: $black;
+}

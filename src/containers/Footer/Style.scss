@@ -1,0 +1,52 @@
+@import "pallet";
+@import "variables";
+@import "mixins";
+
+.footerWrapper {
+  width: 100%;
+  height: 100px;
+  background-color: #131211;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .tooltip {
+    @include tooltip;
+  }
+
+  .tooltip .tooltiptext {
+    @include tooltipAndText;
+    @include positionBottom;
+  }
+
+  .tooltip:hover .tooltiptext {
+    @include tooptipHover;
+  }
+
+  .tooltip .tooltiptext::after {
+    @include tooltipArrowBottom;
+  }
+
+  .socialMedia {
+    @media (max-width: 450px) {
+      width: 50px;
+    }
+  }
+
+  img {
+    margin: 10px 0 0 0;
+  }
+
+  .backToTopWrapper {
+    cursor: pointer;
+    svg {
+      padding: 0;
+      position: inherit;
+      display: initial;
+      position: absolute;
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+}
