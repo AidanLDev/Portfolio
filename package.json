@@ -7,14 +7,15 @@
   },
   "scripts": {
     "start": "node api",
-    "build": "cd frontend/ && npm install && npm run build"
+    "build": "cd frontend/ && npm install && rimraf build &&npm run build"
   },
   "cacheDirectories": [
     "node_modules",
     "frontend/node_modules"
   ],
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "rimraf": "^3.0.2"
   },
   "keywords": [
     "node",
