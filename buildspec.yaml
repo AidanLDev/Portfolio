@@ -4,23 +4,23 @@ phases:
     commands:
       - echo Installing source NPM dependencies
       - npm install
-    build:
-      commands:
-        - echo Build started on `date`
-        - npm run build
-      post_build:
-        commands:
-          - echo Build Complete on `date`
-          - echo `ls`
-          # Move built files
-          # Copy the contents of /build to S3
-          # - aws s3 cp --recursive --acl public-read ./frontend/build s3://${DeployBucket}
-          # Prevent browser caching
-          # --cache-control="max-age=0, no-cache, no-store, must-revalidate"
-          # ./frontend/build/service-worker.js s3://${DeployBucket}/
-          # Prevent browser caching index.html
-          # --cache-control="max-age=0, no-cache, no-store, must-revalidate"
-          # ./frontend/build/index.html s3://${DeployBucket}/
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build
+  post_build:
+    commands:
+      - echo Build Complete on `date`
+      - echo `ls`
+        # Move built files
+        # Copy the contents of /build to S3
+        # - aws s3 cp --recursive --acl public-read ./frontend/build s3://${DeployBucket}
+        # Prevent browser caching
+        # --cache-control="max-age=0, no-cache, no-store, must-revalidate"
+        # ./frontend/build/service-worker.js s3://${DeployBucket}/
+        # Prevent browser caching index.html
+        # --cache-control="max-age=0, no-cache, no-store, must-revalidate"
+        # ./frontend/build/index.html s3://${DeployBucket}/
 artifacts:
   files:
     - "./build/*"
