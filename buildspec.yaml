@@ -14,9 +14,10 @@ phases:
       # Empty bucket before adding new scripts
       - aws s3 rm s3://aidanlowson.com --recursive
       # Remove cloudFront cache
+      # --paths "./index.html" "./build/*" "./asset-manifest.json"
       - aws cloudfront create-invalidation
         --distribution-id E1MWBYTX2PMKXG
-        --paths "./index.html" "./build/*" "./asset-manifest.json"
+        --paths "**/*"
       # Move built files
       # Copy the contents of /build to S3
       - aws s3 cp --recursive --acl public-read ./build s3://aidanlowson.com
