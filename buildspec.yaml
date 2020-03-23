@@ -12,7 +12,7 @@ phases:
     commands:
       - echo `ls`
       # Empty bucket before adding new scripts
-      - aws s3 rm s3://aidantestsite -name --recursive
+      - aws s3 rm s3://aidantestsite --recursive
       # Move built files
       # Copy the contents of /build to S3
       - aws s3 cp --recursive --acl public-read ./build s3://aidantestsite
