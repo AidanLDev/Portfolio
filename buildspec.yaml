@@ -13,14 +13,11 @@ phases:
       - echo `ls`
       # Empty bucket before adding new scripts
       - aws s3 rm s3://aidanlowson.com --recursive
+      # Remove cloudFront cache
+      # - aws cloudfront create-invalidation
       # Move built files
       # Copy the contents of /build to S3
       - aws s3 cp --recursive --acl public-read ./build s3://aidanlowson.com
-      # Prevent browser caching
-      # - >
-      # - aws s3 cp --acl public-read
-      # --cache-control="max-age=0, no-cache, no-store, must-revalidate"
-      # ./frontend/build/index.html s3://aidantestsite
 artifacts:
   files:
     - "./build/*"
