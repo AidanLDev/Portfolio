@@ -16,7 +16,7 @@ phases:
       # Remove cloudFront cache
       - aws cloudfront create-invalidation
         --distribution-id E1MWBYTX2PMKXG
-        --paths "index.html" "build/*" "asset-manifest.json"
+        --paths "./index.html" "./build/*" "./asset-manifest.json"
       # Move built files
       # Copy the contents of /build to S3
       - aws s3 cp --recursive --acl public-read ./build s3://aidanlowson.com
