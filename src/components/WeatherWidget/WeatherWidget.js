@@ -35,7 +35,7 @@ const weatherWidget = props => {
         <div>
           <hr />
           <p>
-            <b>Whats the weather around the world?</b>
+            <b>Whats the weather like where Aidan is?</b>
           </p>
           <h3>
             {location}: {celsius.toFixed(1)} °C | {farenheit.toFixed(2)} °F
