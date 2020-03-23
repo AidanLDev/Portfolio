@@ -33,7 +33,6 @@ const weatherWidget = props => {
     <div>
       {props.weatherData ? (
         <div>
-          <hr />
           <p>
             <b>Whats the weather like where Aidan is?</b>
           </p>
