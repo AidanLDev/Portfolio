@@ -10,7 +10,7 @@ const BlogNav = () => {
   const [weatherData, setWeatherData] = useState(null);
 
   const weatherRequestUrl =
-    "http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=231273878f22174e32dccfe816682568";
+    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=231273878f22174e32dccfe816682568";
 
   const handleInputChange = event => setFilterValue(event.target.value);
 
