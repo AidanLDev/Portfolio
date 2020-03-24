@@ -21,7 +21,6 @@ const BlogNav = () => {
     fetch(weatherRequestUrl)
       .then(results => results.json())
       .then(data => {
-        console.log(data);
         setWeatherData(data);
       })
       .catch(err => console.error(err));

@@ -24,7 +24,6 @@ const Map = props => {
     //  Search/autocomplete
   });
 
-  // console.log(mapAPI);
   return (
     <div className={styles.mapWrapper}>
       <div className={styles.formGroup}>

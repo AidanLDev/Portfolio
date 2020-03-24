@@ -1,6 +1,8 @@
 import React from "react";
+import Button from '@material-ui/core/Button';
+
 import Backdrop from "components/Backdrop/Backdrop";
-import Button from "components/Button/Button";
+// import Button from "components/Button/Button";
 import Logo from "components/Logo/Logo";
 import Navigation from "containers/Navigation/Navigation";
 
@@ -18,7 +20,8 @@ const sidedrawer = props => {
           <Navigation />
         </nav>
         <hr />
-        <Button clicked={props.closeDrawer}>Close Menu</Button>
+        {/* #efefef */}
+        <Button onClick={props.closeDrawer}>Close Menu</Button>
       </div>
     </div>
   );

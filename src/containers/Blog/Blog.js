@@ -10,7 +10,6 @@ import styles from "./Style.module.scss";
 
 const Blog = props => {
   const path = window.location.pathname.split("/").slice(-1)[0];
-  console.log(path);
 
   const goBack = () => window.history.back();
 
