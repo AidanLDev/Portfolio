@@ -6,19 +6,9 @@
   min-height: 765px;
   .rightSidebar {
     .searchBar {
-      input {
-        height: 25px;
-        margin: 2px 0 0 3px;
-      }
-      span {
-        padding: 5px;
-      }
       @media (min-width: 1300px) {
         padding: 10px 0 0 0;
         display: flex;
-        input {
-          width: 75%;
-        }
       }
     }
     background-color: #fbfbfb;
