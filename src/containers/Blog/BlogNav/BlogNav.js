@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import TextField from '@material-ui/core/TextField';
+
 import BlogCard from "components/BlogCard/BlogCard";
 import WeatherWidget from "components/WeatherWidget/WeatherWidget";
 import * as blogData from "data/Blog/blogData";
@@ -19,7 +21,6 @@ const BlogNav = () => {
     fetch(weatherRequestUrl)
       .then(results => results.json())
       .then(data => {
-        console.log(data);
         setWeatherData(data);
       })
       .catch(err => console.error(err));
@@ -29,13 +30,11 @@ const BlogNav = () => {
     <div className={styles.container}>
       <div className={styles.rightSidebar}>
         <div className={styles.searchBar}>
-          <span>Search</span>
-          {/* Make a nice UI component for input */}
-          <input
-            name="search"
-            placeholder="Search Blogs"
+          <TextField
             value={filterValue}
             onChange={handleInputChange}
+            label="Search Blogs"
+            style={{margin: 'auto'}}
           />
         </div>
         <div className={styles.weatherWidget}>
