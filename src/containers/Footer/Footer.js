@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Button from "components/Button/Button";
-import EmailIcon from '@material-ui/icons/Email';
+import EmailIcon from "@material-ui/icons/Email";
 import Icon from "@mdi/react";
 import { mdiChevronUp } from "@mdi/js";
 import LinkedinLogo from "assets/LinkedinLogo.png";
@@ -19,7 +19,12 @@ const Footer = props => {
       <div className={styles.tooltip}>
         <span className={styles.tooltiptext}>Email Aidan</span>
         <a href="mailto:dev@aidanlowson.com">
-          <EmailIcon fontSize="large"/>
+          <motion.div
+            whileHover={{ scale: hoverScale }}
+            whileTap={{ scale: tapScale }}
+          >
+            <EmailIcon fontSize="large" />
+          </motion.div>
         </a>
       </div>
       <div className={styles.tooltip}>
