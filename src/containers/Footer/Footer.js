@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Button from "components/Button/Button";
+import EmailIcon from '@material-ui/icons/Email';
 import Icon from "@mdi/react";
 import { mdiChevronUp } from "@mdi/js";
 import LinkedinLogo from "assets/LinkedinLogo.png";
-import sslImg from "assets/positivessl_trust_seal_md_167x42.png";
 
 import styles from "./Style.module.scss";
 
@@ -17,8 +17,10 @@ const Footer = props => {
   return (
     <div className={styles.footerWrapper}>
       <div className={styles.tooltip}>
-        <span className={styles.tooltiptext}>Secure SSL Certificate</span>
-        <img src={sslImg} alt="SSL Certificate" width="167" height="42" />
+        <span className={styles.tooltiptext}>Email Aidan</span>
+        <a href="mailto:dev@aidanlowson.com">
+          <EmailIcon fontSize="large"/>
+        </a>
       </div>
       <div className={styles.tooltip}>
         <span className={styles.tooltiptext}>Linkedin Profile</span>
