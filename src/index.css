@@ -19,13 +19,11 @@ code {
   transition: width 0.2s ease-in-out;
 }
 ::-webkit-scrollbar-track {
-  background: #666666;
-  border: 1px solid #dedede;
+  background: #6666662f;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb {
   background: #0e003c;
-  border: 1px solid #dedede;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
