@@ -1,14 +1,9 @@
-@import"styles/pallet.scss";
-@import"styles/variables.scss";
-@import"styles/mixins.scss";
+@import 'styles/pallet.scss';
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
 
 .achCards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  .degreeCard {
-    img {
-      cursor: pointer;
-    }
-  }
 }

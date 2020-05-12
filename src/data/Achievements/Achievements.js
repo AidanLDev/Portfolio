@@ -1,11 +1,10 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { motion } from 'framer-motion';
 
-import styles from "./Style.module.scss";
+import styles from './Style.module.scss';
 /*  Logos  */
-import CloudPractitioner from "assets/Certs/CloudPractitionerEmailBadge.png";
-import UdemyBurgerCert from "assets/Certs/udemyBurgerBuilder.jpg";
-
+import CloudPractitioner from 'assets/Certs/CloudPractitionerEmailBadge.png';
+import UdemyBurgerCert from 'assets/Certs/udemyBurgerBuilder.jpg';
 
 export const AWS = (
   <div className={styles.AWS}>
@@ -31,14 +30,14 @@ export const AWS = (
     <div className={styles.tooltip}>
       <span className={styles.tooltiptext}>View Badge</span>
       <a
-        href="https://www.certmetrics.com/amazon/public/badge.aspx?i=9&t=c&d=2019-03-14&ci=AWS00694170"
-        target="_blank"
-        rel="noopener noreferrer"
+        href='https://www.certmetrics.com/amazon/public/badge.aspx?i=9&t=c&d=2019-03-14&ci=AWS00694170'
+        target='_blank'
+        rel='noopener noreferrer'
       >
         <motion.img
           whileTap={{ scale: 0.8 }}
           src={CloudPractitioner}
-          alt="AWS Cloud Practitioner badge"
+          alt='AWS Cloud Practitioner badge'
         />
       </a>
     </div>
@@ -47,15 +46,7 @@ export const AWS = (
 
 export const react16 = (
   <div className={styles.react16}>
-    <div className={styles.tooltip}>
-      <span className={styles.tooltiptext}>View Certificate of Completion</span>
-        <img
-          height="200"
-          width="400"
-          alt="React-16 Cert"
-          src={UdemyBurgerCert}
-        />
-    </div>
+    <img height='200' width='400' alt='React-16 Cert' src={UdemyBurgerCert} />
     <p>
       Maximilian Schwarzmüller's comprehensive React 16 course. Gained indepth
       knowledge covering the following moduals:

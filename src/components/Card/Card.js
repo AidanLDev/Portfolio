@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { motion } from "framer-motion";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 
-import styles from "./Style.module.scss";
+import styles from './Style.module.scss';
 
-const Card = props => {
+const Card = (props) => {
   return (
     <div className={styles.CardWrapper}>
       <h2>{props.title}</h2>
@@ -15,15 +15,15 @@ const Card = props => {
           </span>
           <a
             href={props.imgLinkLocation}
-            rel="noopener noreferrer"
-            target="_blank"
+            rel='noopener noreferrer'
+            target='_blank'
           >
             <motion.img
               src={props.img}
               alt={props.imgAlt}
               width={props.imgWidth}
               height={props.imgHeight}
-              whileHover={{ scale: props.hoverScale || 1.2 }}
+              whileHover={{ scale: props.hoverScale || 1.1 }}
               whileTap={{ scale: 0.9 }}
             />
           </a>
@@ -64,7 +64,7 @@ Card.propTypes = {
   content: PropTypes.node,
   clicked: PropTypes.func,
   hoverScale: PropTypes.number,
-  toolTipText: PropTypes.string
+  toolTipText: PropTypes.string,
 };
 
 export default Card;
