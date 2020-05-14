@@ -50,3 +50,12 @@ export const marsWeatherApp = (
     created an simple webpage that displays what the weathers like on Mars.
   </p>
 );
+
+export const fizzBuzz = (
+  <p className={styles.padding}>
+    My take on the classic Fizz Buzz programming challenge. The program takes
+    two numbers It will print Fizz when there's a multiple of the first number
+    Buzz when it's a multiple of the second number When a multiple of both the
+    first and second number Fizz Buzz will be printed
+  </p>
+);

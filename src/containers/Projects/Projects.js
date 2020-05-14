@@ -4,6 +4,7 @@ import * as descriptions from 'data/Projects/Projects';
 
 import BurgerBuilderImg from 'assets/Burger.png';
 import Mars from 'assets/Projects/Mars_space.jpg';
+import FizzBuzz from 'assets/Projects/fizzBuzz.png';
 
 import styles from './Style.module.scss';
 
@@ -28,6 +29,15 @@ const Projects = (props) => {
           imgWidth={400}
           imgHeight={250}
           imgLinkLocation='https://aidanldev.github.io/'
+          imgAlt='Burger builder project'
+        />
+        <Card
+          title='FizzBuzz'
+          content={descriptions.fizzBuzz}
+          img={FizzBuzz}
+          imgWidth={400}
+          imgHeight={250}
+          imgLinkLocation='http://fizz-buzz.s3-website.eu-west-2.amazonaws.com/'
           imgAlt='Burger builder project'
         />
       </div>

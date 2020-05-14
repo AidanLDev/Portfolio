@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from 'components/Card/Card';
 import Skills from './skills/Skills';
 import * as descriptions from 'data/Achievements/Achievements';
 
 import teamTreehouse from 'assets/Certs/teamTreeHouse.jpg';
 import degree from 'assets/Certs/degree.jpeg';
-import UdemyBurgerCert from 'assets/Certs/udemyBurgerBuilder.jpg';
 import styles from './Style.module.scss';
 
 const Achievements = (props) => {
