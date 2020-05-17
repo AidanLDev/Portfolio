@@ -30,7 +30,11 @@ const Footer = (props) => {
       </div>
       <div className={styles.tooltip}>
         <span className={styles.tooltiptext}>Aidans Github profile</span>
-        <a href='https://github.com/AidanLDev'>
+        <a
+          href='https://github.com/AidanLDev'
+          rel='noopener noreferrer'
+          target='_blank'
+        >
           <motion.img
             src={GithubLogo}
             alt='Github Logo'

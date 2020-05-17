@@ -55,7 +55,16 @@ export const fizzBuzz = (
   <p className={styles.padding}>
     My take on the classic Fizz Buzz programming challenge. The program takes
     two numbers It will print Fizz when there's a multiple of the first number
-    Buzz when it's a multiple of the second number When a multiple of both the
+    Buzz when it's a multiple of the second number. When a multiple of both the
     first and second number Fizz Buzz will be printed
+  </p>
+);
+
+export const trackSearch = (
+  <p className={styles.padding}>
+    Search through a data set of songs, either by searching for a specific track
+    ID or by Artist name. The frontend uses a Bootstrap template and a React
+    Frontend to serve the intiative UI. The app is served using Express and the
+    API for querying and serving the data is also written using Express.
   </p>
 );

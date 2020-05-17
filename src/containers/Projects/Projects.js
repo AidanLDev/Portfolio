@@ -5,6 +5,7 @@ import * as descriptions from 'data/Projects/Projects';
 import BurgerBuilderImg from 'assets/Burger.png';
 import Mars from 'assets/Projects/Mars_space.jpg';
 import FizzBuzz from 'assets/Projects/fizzBuzz.png';
+import TrackSearch from 'assets/Projects/MusicLibraryProject.png';
 
 import styles from './Style.module.scss';
 
@@ -38,6 +39,15 @@ const Projects = (props) => {
           imgWidth={400}
           imgHeight={250}
           imgLinkLocation='http://fizz-buzz.s3-website.eu-west-2.amazonaws.com/'
+          imgAlt='Burger builder project'
+        />
+        <Card
+          title='Track Search'
+          content={descriptions.trackSearch}
+          img={TrackSearch}
+          imgWidth={400}
+          imgHeight={250}
+          imgLinkLocation='https://aidans-song-search.herokuapp.com/'
           imgAlt='Burger builder project'
         />
       </div>
