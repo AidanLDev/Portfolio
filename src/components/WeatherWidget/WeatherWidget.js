@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Style.module.scss";
+import styles from './Style.module.scss';
 
-const weatherWidget = props => {
+const weatherWidget = (props) => {
   // Extracting data
   let data;
   let location;
@@ -12,8 +12,8 @@ const weatherWidget = props => {
   let celsius;
   let farenheit;
 
-  const kelvinToCelsius = temp => (celsius = temp - 273.15);
-  const kelvinToFarenheit = temp => {
+  const kelvinToCelsius = (temp) => (celsius = temp - 273.15);
+  const kelvinToFarenheit = (temp) => {
     farenheit = ((temp - 273.15) * 9) / 5 + 32;
     return farenheit;
   };
@@ -34,7 +34,7 @@ const weatherWidget = props => {
       {props.weatherData ? (
         <div>
           <p>
-            <b>Whats the weather like where Aidan is?</b>
+            <b>Whats the weather like?</b>
           </p>
           <h3>
             {location}: {celsius.toFixed(1)} °C | {farenheit.toFixed(2)} °F
@@ -43,7 +43,7 @@ const weatherWidget = props => {
             <span className={styles.tooltiptext}>{weather.description}</span>
             <img
               src={`https://openweathermap.org/img/wn/${iconCode}@2x.png`}
-              alt="Weather Icon"
+              alt='Weather Icon'
             />
           </div>
         </div>

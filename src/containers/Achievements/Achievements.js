@@ -10,7 +10,7 @@ import styles from './Style.module.scss';
 const Achievements = (props) => {
   const treehousePointsValues = () => {
     return (
-      <div>
+      <div className={styles.padding}>
         <p>
           Completed the 'Stack JavaScript Developer' track, gaining relevant
           skills in becoming a competent JavaScript developer.

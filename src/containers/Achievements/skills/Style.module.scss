@@ -1,6 +1,6 @@
-@import"styles/pallet.scss";
-@import"styles/variables.scss";
-@import"styles/mixins.scss";
+@import 'styles/pallet.scss';
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
 
 .skillsContainer {
   display: flex;
@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   margin: auto;
   max-width: 1100px;
+  cursor: default;
   h2 {
     @include header;
     margin: 5px 10px 5px 10px;
@@ -15,7 +16,7 @@
   & div {
     width: 250px;
     padding: 0 5px;
-    @media(max-width: 520px) {
+    @media (max-width: 520px) {
       width: 150px;
     }
   }

@@ -4,7 +4,7 @@ import styles from './Style.module.scss';
 
 export const projectsDescription = (
   <p>
-    Developing websites/web applications is more than a carear, but a hobby too.
+    Developing websites/web applications is more than a career, but a hobby too.
     I have worked on various personal projects:
   </p>
 );
@@ -14,10 +14,10 @@ export const burgerBuilder = (
     <p>
       The Burger Builder was developed as part of a Udemy course on React 16;
       including hooks, the context API, Redux and Firebase's NoSQL database. The
-      project highlights user authentication and storing persistant data using
+      project highlights user authentication and storing persistent data using
       Firebase, a FE application using React with state management from Redux.
       Once authenticated you can create a burger using the controls at the
-      bottom of the page and 'order' this burger. Orderes are stored on a NoSQL
+      bottom of the page and 'order' this burger. Orders are stored on a NoSQL
       database and can be viewed, if authenticated, in the Orders page
     </p>
   </div>
@@ -36,9 +36,9 @@ export const userAuth = (
   <div className={styles.padding}>
     <p>
       A project created by team treehouse, teaching Mongoose and Express, to
-      create a user authentication system. The project uses hashing and saliting
-      techniques to encrypt sensative user information, ring fences routes
-      whether a users logged in or not and uses sessions to keep a user logged
+      create a user authentication system. The project uses hashing and salting
+      techniques to encrypt sensitive user information, ring-fences routes
+      whether users are logged in or not and uses sessions to keep a user logged
       in.
     </p>
   </div>
@@ -47,7 +47,7 @@ export const userAuth = (
 export const marsWeatherApp = (
   <p className={styles.padding}>
     Using the Mars InSight API that provides data from our red neighbour, I have
-    created an simple webpage that displays what the weathers like on Mars.
+    created a simple webpage that displays what the weathers like on Mars.
   </p>
 );
 
@@ -64,7 +64,10 @@ export const trackSearch = (
   <p className={styles.padding}>
     Search through a data set of songs, either by searching for a specific track
     ID or by Artist name. The frontend uses a Bootstrap template and a React
-    Frontend to serve the intiative UI. The app is served using Express and the
-    API for querying and serving the data is also written using Express.
+    Frontend to serve the initiative UI. The app is served using Express and the
+    API for querying and serving the data is also written using Express. Using
+    TypeScript, development for this project was quick as I could utilise
+    VSCode's built-in TypeScript support and reduce bugs that may otherwise have
+    gone unnoticed.
   </p>
 );

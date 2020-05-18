@@ -1,8 +1,9 @@
-@import"styles/pallet.scss";
-@import"styles/variables.scss";
+@import 'styles/pallet.scss';
+@import 'styles/variables.scss';
 
 @mixin header {
   color: $titleColour;
+  cursor: default;
 }
 
 @mixin portfolioTitle {
@@ -19,6 +20,7 @@
 @mixin mainTitle {
   text-transform: none;
   font-size: 40px;
+  cursor: default;
 }
 
 /*  Tooltip  */
@@ -77,7 +79,7 @@
 /*  Tooptip Arrows  */
 /*  .tooltip .tooltiptext::after  */
 @mixin tooltipArrowBottom {
-  content: " ";
+  content: ' ';
   position: absolute;
   top: 100%; /* At the bottom of the tooltip */
   left: 50%;
@@ -89,7 +91,7 @@
 
 /*  .tooltip .tooltiptext::after  */
 @mixin tooltipArrowTop {
-  content: " ";
+  content: ' ';
   position: absolute;
   bottom: 100%; /* At the top of the tooltip */
   left: 50%;
@@ -101,7 +103,7 @@
 
 /*  .tooltip .tooltiptext::after  */
 @mixin tooltipArrowLeft {
-  content: " ";
+  content: ' ';
   position: absolute;
   top: 50%;
   right: 100%; /* To the left of the tooltip */
@@ -113,7 +115,7 @@
 
 /*  .tooltip .tooltiptext::after  */
 @mixin tooltipArrowRight {
-  content: " ";
+  content: ' ';
   position: absolute;
   top: 50%;
   left: 100%; /* To the right of the tooltip */
