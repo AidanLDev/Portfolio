@@ -14,6 +14,7 @@ const Projects = (props) => {
     <div>
       <div className={styles.projectCards}>
         <Card
+          projects='https://github.com/AidanLDev/Training-Burger-Builder'
           title='Burger Builder'
           content={descriptions.burgerBuilder}
           img={BurgerBuilderImg}
@@ -24,6 +25,7 @@ const Projects = (props) => {
           hoverScale={1.2}
         />
         <Card
+          projects='https://github.com/AidanLDev/Weather-App'
           title='Mars Weather App'
           content={descriptions.marsWeatherApp}
           img={Mars}
@@ -33,6 +35,7 @@ const Projects = (props) => {
           imgAlt='Burger builder project'
         />
         <Card
+          projects='https://github.com/AidanLDev/FizzBuzz.js'
           title='FizzBuzz'
           content={descriptions.fizzBuzz}
           img={FizzBuzz}
@@ -42,6 +45,7 @@ const Projects = (props) => {
           imgAlt='Burger builder project'
         />
         <Card
+          projects='https://github.com/AidanLDev/Song_Search'
           title='Track Search'
           content={descriptions.trackSearch}
           img={TrackSearch}

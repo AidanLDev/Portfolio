@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
+import gitHubLogo from 'assets/Githublogo.png';
 
 import styles from './Style.module.scss';
 
 const Card = (props) => {
   return (
     <div className={styles.CardWrapper}>
+      {props.projects && (
+        <div className={styles.git}>
+          <a href={props.projects} rel='noopener noreferrer' target='_blank'>
+            <img src={gitHubLogo} alt='Github' />
+          </a>
+        </div>
+      )}
       <h2>{props.title}</h2>
       {props.imgLinkLocation ? (
         <div className={styles.tooltip}>
