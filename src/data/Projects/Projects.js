@@ -71,3 +71,10 @@ export const trackSearch = (
     gone unnoticed.
   </p>
 );
+
+export const boostStrapReactCityGuide = (
+  <p className={styles.padding}>
+    Using React16, the frontend framework Bootstrap React and the context API I
+    designed and developed a city guide application.
+  </p>
+);
