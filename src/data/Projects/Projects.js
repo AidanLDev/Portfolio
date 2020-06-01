@@ -75,6 +75,9 @@ export const trackSearch = (
 export const boostStrapReactCityGuide = (
   <p className={styles.padding}>
     Using React16, the frontend framework Bootstrap React and the context API I
-    designed and developed a city guide application.
+    designed and developed a city guide application. I used a mobile first
+    approach for this project, using the Boostrap framework it's simple to
+    create good looking UI layouts and components. The components are further
+    styled using Styled Components the popular NPM module and React Router.
   </p>
 );
