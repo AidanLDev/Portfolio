@@ -1,16 +1,25 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Style.module.scss";
+import styles from './Style.module.scss';
 
-const button = props => {
+interface Props {
+  footer: boolean;
+  disabled: boolean;
+  clicked:
+    | ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)
+    | undefined;
+  props: any;
+}
+
+const button: React.FC<Props> = ({ footer, disabled, clicked }, props) => {
   const variableStyles = {
-    color: props.footer ? "" : "#131211"
+    color: footer ? '' : '#131211',
   };
   return (
     <button
-      disabled={props.disabled}
+      disabled={disabled}
       className={styles.Button}
-      onClick={props.clicked}
+      onClick={clicked}
       style={variableStyles}
     >
       {props.children}
