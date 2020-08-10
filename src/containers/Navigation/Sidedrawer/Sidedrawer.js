@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 import Button from '@material-ui/core/Button';
 
-import Backdrop from "components/Backdrop/Backdrop";
-import Logo from "components/Logo/Logo";
-import Navigation from "containers/Navigation/Navigation";
+import Backdrop from 'components/Backdrop/Backdrop';
+import Logo from 'components/Logo/Logo';
+import Navigation from 'containers/Navigation/Navigation';
 
-import styles from "./Style.module.scss";
+import styles from './Style.module.scss';
 
-const sidedrawer = props => {
+const sidedrawer = (props) => {
   return (
     <div>
       <Backdrop show={props.showDrawer} clicked={props.closeDrawer} />

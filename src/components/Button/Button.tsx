@@ -8,7 +8,6 @@ interface Props {
   clicked:
     | ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)
     | undefined;
-  props: any;
 }
 
 const button: React.FC<Props> = ({ footer, disabled, clicked }, props) => {
