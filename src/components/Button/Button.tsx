@@ -3,8 +3,8 @@ import React from 'react';
 import styles from './Style.module.scss';
 
 interface Props {
-  footer: boolean;
-  disabled: boolean;
+  footer?: boolean;
+  disabled?: boolean;
   clicked:
     | ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)
     | undefined;

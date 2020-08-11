@@ -12,13 +12,16 @@ interface Props {
   imgWidth: number;
   imgHeight: number;
   content: JSX.Element;
-  clicked: ((event: React.MouseEvent<HTMLImageElement, MouseEvent>) => void) | undefined;
+  clicked:
+    | ((event: React.MouseEvent<HTMLImageElement, MouseEvent>) => void)
+    | undefined;
   hoverScale: number;
   toolTipText: string;
   projects: string;
 }
 
-const Card: React.FC<Props> = ({title,
+const Card: React.FC<Props> = ({
+  title,
   imgLinkLocation,
   img,
   imgAlt,
@@ -28,7 +31,8 @@ const Card: React.FC<Props> = ({title,
   clicked,
   hoverScale,
   toolTipText,
-  projects}) => {
+  projects,
+}) => {
   return (
     <div className={styles.CardWrapper}>
       {projects && (
@@ -44,11 +48,7 @@ const Card: React.FC<Props> = ({title,
           <span className={styles.tooltiptext}>
             Checkout the {title} project
           </span>
-          <a
-            href={imgLinkLocation}
-            rel='noopener noreferrer'
-            target='_blank'
-          >
+          <a href={imgLinkLocation} rel='noopener noreferrer' target='_blank'>
             <motion.img
               src={img}
               alt={imgAlt}
