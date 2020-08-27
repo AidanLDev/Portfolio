@@ -8,12 +8,12 @@ import Button from 'components/Button/Button';
 import * as Blogs from 'blogs';
 import styles from './Style.module.scss';
 
-const Blog = props => {
-  const path = window.location.pathname.split('/').slice(-1)[0];
+const Blog = () => {
+  const path: string = window.location.pathname.split('/').slice(-1)[0];
 
   const goBack = () => window.history.back();
 
-  const renderSwitch = path => {
+  const renderSwitch = (path: string) => {
     switch (path) {
       case 'deploying-a-website':
         return <Blogs.deployWebsite />;

@@ -1,29 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import TextField from '@material-ui/core/TextField';
 
-import BlogCard from "components/BlogCard/BlogCard";
-import WeatherWidget from "components/WeatherWidget/WeatherWidget";
-import * as blogData from "data/Blog/blogData";
+import BlogCard from 'components/BlogCard/BlogCard';
+import WeatherWidget from 'components/WeatherWidget/WeatherWidget';
+import * as blogData from 'data/Blog/blogData';
 
-import styles from "./Style.module.scss";
+import styles from './Style.module.scss';
 
 const BlogNav = () => {
-  const [filterValue, setFilterValue] = useState("");
+  const [filterValue, setFilterValue] = useState('');
   const [weatherData, setWeatherData] = useState(null);
 
   const weatherRequestUrl =
-    "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=231273878f22174e32dccfe816682568";
+    'https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=231273878f22174e32dccfe816682568';
 
-  const handleInputChange = event => setFilterValue(event.target.value);
+  const handleInputChange = (event: React.SyntheticEvent): void => {
+    let target = event.target as HTMLInputElement;
+    setFilterValue(target.value);
+  };
 
   useEffect(() => {
     // 231273878f22174e32dccfe816682568
     fetch(weatherRequestUrl)
-      .then(results => results.json())
-      .then(data => {
+      .then((results) => results.json())
+      .then((data) => {
         setWeatherData(data);
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   }, []);
 
   return (
@@ -33,8 +36,8 @@ const BlogNav = () => {
           <TextField
             value={filterValue}
             onChange={handleInputChange}
-            label="Search Blogs"
-            style={{margin: 'auto'}}
+            label='Search Blogs'
+            style={{ margin: 'auto' }}
           />
         </div>
         <div className={styles.weatherWidget}>
@@ -46,8 +49,8 @@ const BlogNav = () => {
       </div>
       <div className={styles.mainContainer}>
         <h1>Blog Posts</h1>
-        {blogData.blogs.map(blog => {
-          if (filterValue === "" || RegExp(filterValue, "i").test(blog.title)) {
+        {blogData.blogs.map((blog) => {
+          if (filterValue === '' || RegExp(filterValue, 'i').test(blog.title)) {
             return (
               <BlogCard
                 key={blog.title}

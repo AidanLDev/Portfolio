@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './Style.module.scss';
 
 interface Props {
-  clicked:
+  clicked?:
     | ((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void)
     | undefined;
   route: string;

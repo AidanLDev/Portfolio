@@ -16,7 +16,7 @@ import WebpackLogo from 'assets/Tech/webpackLogo.png';
 import DockerLogo from 'assets/Tech/DockerLogo.png';
 import TypescriptLogo from 'assets/Tech/TypeScript.png';
 
-const Skills = (props) => {
+const Skills = () => {
   const imgHeight = '50';
   const imgWidth = '50';
 

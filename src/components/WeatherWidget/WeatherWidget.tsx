@@ -4,28 +4,29 @@ import styles from './Style.module.scss';
 
 interface Props {
   weatherData?: {
-    name: string,
+    name: string | null;
     weather: Array<{
-      icon: string,
-      description: string,
+      icon: string;
+      description: string;
     }>;
     main: {
-      temp: number
+      temp: number;
     };
-  };
+  } | null;
+  className?: any;
 }
 
-const weatherWidget:React.FC<Props> = ({ weatherData }) => {
+const weatherWidget: React.FC<Props> = ({ weatherData }) => {
   // Extracting data
   let data;
   let location;
   let weather;
   let iconCode;
-  let temp:number = 0;
+  let temp: number = 0;
   let description;
 
-  const kelvinToCelsius = (temp:number) => (temp - 273.15);
-  const kelvinToFarenheit = (temp:number) => ((temp - 273.15) * 9) / 5 + 32;
+  const kelvinToCelsius = (temp: number) => temp - 273.15;
+  const kelvinToFarenheit = (temp: number) => ((temp - 273.15) * 9) / 5 + 32;
 
   if (weatherData) {
     data = weatherData;
@@ -44,7 +45,8 @@ const weatherWidget:React.FC<Props> = ({ weatherData }) => {
             <b>Whats the weather like?</b>
           </p>
           <h3>
-            {location}: {kelvinToCelsius(temp).toFixed(1)} °C | {kelvinToFarenheit(temp).toFixed(2)} °F
+            {location}: {kelvinToCelsius(temp).toFixed(1)} °C |{' '}
+            {kelvinToFarenheit(temp).toFixed(2)} °F
           </h3>
           <div className={styles.tooltip}>
             <span className={styles.tooltiptext}>{description}</span>

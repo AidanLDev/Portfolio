@@ -5,7 +5,7 @@ import styles from './Style.module.scss';
 interface Props {
   footer?: boolean;
   disabled?: boolean;
-  clicked:
+  clicked?:
     | ((event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void)
     | undefined;
 }

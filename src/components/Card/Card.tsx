@@ -6,18 +6,18 @@ import styles from './Style.module.scss';
 
 interface Props {
   title: string;
-  imgLinkLocation: string;
-  img: string;
-  imgAlt: string;
-  imgWidth: number;
-  imgHeight: number;
-  content: JSX.Element;
-  clicked:
+  imgLinkLocation?: string;
+  img?: string;
+  imgAlt?: string;
+  imgWidth?: number;
+  imgHeight?: number;
+  content?: JSX.Element;
+  clicked?:
     | ((event: React.MouseEvent<HTMLImageElement, MouseEvent>) => void)
     | undefined;
-  hoverScale: number;
-  toolTipText: string;
-  projects: string;
+  hoverScale?: number;
+  toolTipText?: string;
+  projects?: string;
 }
 
 const Card: React.FC<Props> = ({

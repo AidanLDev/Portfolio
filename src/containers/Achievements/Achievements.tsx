@@ -7,7 +7,7 @@ import teamTreehouse from 'assets/Certs/teamTreeHouse.jpg';
 import degree from 'assets/Certs/degree.jpeg';
 import styles from './Style.module.scss';
 
-const Achievements = (props) => {
+const Achievements = () => {
   const treehousePointsValues = () => {
     return (
       <div className={styles.padding}>
