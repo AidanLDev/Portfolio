@@ -1,6 +1,6 @@
-@import"styles/pallet.scss";
-@import"styles/variables.scss";
-@import"styles/mixins.scss";
+@import 'styles/pallet.scss';
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
 
 .blogContainer {
   background-color: #ffffff;
@@ -8,7 +8,7 @@
   min-height: 800px;
   margin: auto;
   padding: 10px;
-  font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman",
+  font-family: medium-content-serif-font, Georgia, Cambria, 'Times New Roman',
     Times, serif;
   p {
     padding: 10px 40px;
@@ -20,17 +20,11 @@
     top: 85px;
     padding: 20px;
     margin: 0 0 0 50px;
-    @media (max-width: 620px) {
+    @media (max-width: $landscapeTablet) {
       display: flex;
       position: inherit;
       margin: 0;
-      width: 90px;
-    }
-    svg {
       padding: 0;
-      left: 5px;
-      display: initial;
-      position: absolute;
     }
   }
   @media (max-width: $portraitTablet) {
