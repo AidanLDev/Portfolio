@@ -1,6 +1,6 @@
-@import"styles/pallet.scss";
-@import"styles/variables.scss";
-@import"styles/mixins.scss";
+@import 'styles/pallet.scss';
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
 
 .footerWrapper {
   width: 100%;
@@ -38,10 +38,14 @@
   }
 
   .backToTopWrapper {
+    span {
+      color: white;
+      padding: 0 0 0 10px;
+    }
     cursor: pointer;
     svg {
       padding: 0;
-      position: inherit;
+      margin: -2px 0px 0px -15px;
       display: initial;
       position: absolute;
       @media (max-width: 480px) {

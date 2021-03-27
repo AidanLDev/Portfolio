@@ -1,10 +1,9 @@
 import React from 'react';
 
-export const pending = () => {
+export const Pending = () => {
   const blog = (
     <div>
       <h1>Blog Placeholder</h1>
-      <p>This is a blog</p>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus
         justo id tristique volutpat. Nulla condimentum ac dolor lobortis

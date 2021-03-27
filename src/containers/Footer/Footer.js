@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Button from 'components/Button/Button';
 import EmailIcon from '@material-ui/icons/Email';
 import Icon from '@mdi/react';
 import { mdiChevronUp } from '@mdi/js';
@@ -64,20 +63,15 @@ const Footer = (props) => {
           />
         </a>
       </div>
-      <motion.div
-        onClick={backToTop}
-        className={styles.backToTopWrapper}
-        whileHover={{ scale: hoverScale }}
-        whileTap={{ scale: tapScale }}
-      >
-        <Button footer>Back to top</Button>
+      <div onClick={backToTop} className={styles.backToTopWrapper}>
         <Icon
           path={mdiChevronUp}
           size={1}
           color={'white'}
           className={styles.mobileOnly}
         />
-      </motion.div>
+        <span>Back to top</span>
+      </div>
     </div>
   );
 };
