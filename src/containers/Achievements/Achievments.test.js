@@ -1,15 +1,8 @@
 import React from 'react';
-import Achievemnts from 'containers/Achievements/Achievements';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import Achievemnts from './Achievements';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <BrowserRouter>
-      <Achievemnts />
-    </BrowserRouter>,
-    div
-  );
-  ReactDOM.unmountComponentAtNode(div);
+it('Renders Component Correctly', () => {
+  const component = shallow(<Achievemnts />);
+  expect(component).toMatchSnapshot();
 });
