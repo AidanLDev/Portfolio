@@ -1,15 +1,8 @@
 import React from 'react';
-import Projects from 'containers/Projects/Projects';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import Projects from './Projects';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <BrowserRouter>
-      <Projects />
-    </BrowserRouter>,
-    div
-  );
-  ReactDOM.unmountComponentAtNode(div);
+it('Renders Projects Component Correctly', () => {
+  const component = shallow(<Projects />);
+  expect(component).toMatchSnapshot();
 });

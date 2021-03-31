@@ -1,15 +1,8 @@
 import React from 'react';
-import Blog from 'containers/Blog/Blog';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import Blog from './Blog';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <BrowserRouter>
-      <Blog />
-    </BrowserRouter>,
-    div
-  );
-  ReactDOM.unmountComponentAtNode(div);
+it('Renders Blog Component Correctly', () => {
+  const component = shallow(<Blog />);
+  expect(component).toMatchSnapshot();
 });

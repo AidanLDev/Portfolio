@@ -1,15 +1,8 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from 'containers/App';
-import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
-    div
-  );
-  ReactDOM.unmountComponentAtNode(div);
+it('Renders App Component Correctly', () => {
+  const component = shallow(<App />);
+  expect(component).toMatchSnapshot();
 });

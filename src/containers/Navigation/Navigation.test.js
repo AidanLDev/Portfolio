@@ -1,15 +1,8 @@
 import React from 'react';
-import Navigation from 'containers/Navigation/Navigation';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import Navigation from './Navigation';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <BrowserRouter>
-      <Navigation />
-    </BrowserRouter>,
-    div
-  );
-  ReactDOM.unmountComponentAtNode(div);
+it('Renders Navigation Component Correctly', () => {
+  const component = shallow(<Navigation />);
+  expect(component).toMatchSnapshot();
 });

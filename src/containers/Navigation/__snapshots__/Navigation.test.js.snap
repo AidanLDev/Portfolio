@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders Navigation Component Correctly 1`] = `
+<div
+  className="navBar"
+>
+  <div
+    className="leftNavBar mobileOnly"
+  >
+    <logo />
+  </div>
+  <ul
+    className="linkContainer"
+  >
+    <NavigationLink
+      exact={true}
+      iconPath="M8,3A2,2 0 0,0 6,5V9A2,2 0 0,1 4,11H3V13H4A2,2 0 0,1 6,15V19A2,2 0 0,0 8,21H10V19H8V14A2,2 0 0,0 6,12A2,2 0 0,0 8,10V5H10V3M16,3A2,2 0 0,1 18,5V9A2,2 0 0,0 20,11H21V13H20A2,2 0 0,0 18,15V19A2,2 0 0,1 16,21H14V19H16V14A2,2 0 0,1 18,12A2,2 0 0,1 16,10V5H14V3H16Z"
+      link="/"
+    >
+      Portfolio
+    </NavigationLink>
+    <NavigationLink
+      exact={true}
+      iconPath="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z"
+      link="/blog/search"
+    >
+      Blog
+    </NavigationLink>
+  </ul>
+</div>
+`;

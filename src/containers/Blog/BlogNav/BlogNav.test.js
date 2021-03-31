@@ -1,15 +1,8 @@
 import React from 'react';
-import BlogNav from 'containers/Blog/BlogNav/BlogNav';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import BlodNav from './BlogNav';
+import { shallow } from 'enzyme';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(
-    <BrowserRouter>
-      <BlogNav />
-    </BrowserRouter>,
-    div
-  );
-  ReactDOM.unmountComponentAtNode(div);
+it('Renders BlodNav Component Correctly', () => {
+  const component = shallow(<BlodNav />);
+  expect(component).toMatchSnapshot();
 });
