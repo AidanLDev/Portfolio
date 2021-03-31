@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders BlogCard Component 1`] = `
+<NavLink
+  className="blogLinks"
+  to="/blog/undefined"
+>
+  <div
+    className="blogCardContainer"
+  >
+    <h1>
+      About Aidans Life
+    </h1>
+    <p>
+      once upon a time...
+    </p>
+  </div>
+</NavLink>
+`;
