@@ -14,10 +14,14 @@ describe('<BlogCard />', () => {
   });
 
   // https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/contains.html
-  // it('Contains a title and paragraph', () => {
-  //   expect(component.contains(<div className={styles.blogCardContainer}>
-  //     <h1>{titleProp}</h1>
-  //     <p>{descriptionProp}</p>
-  //   </div>).toEqual(true))
-  // })
+  it('Contains a title and paragraph', () => {
+    expect(
+      component.contains(
+        <div className={styles.blogCardContainer}>
+          <h1>{titleProp}</h1>
+          <p>{descriptionProp}</p>
+        </div>
+      )
+    ).toEqual(true);
+  });
 });

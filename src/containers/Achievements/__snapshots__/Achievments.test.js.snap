@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Renders Achievemnts Component Correctly 1`] = `
+exports[`<Achievements /> Renders Achievemnts Component Correctly 1`] = `
 <div>
   <Skills />
   <hr />

@@ -76,3 +76,12 @@ export const javaScriptTrack = (
     </ul>
   </div>
 );
+
+export const treehousePointsValues = (
+  <div className={styles.padding}>
+    <p>
+      Completed the 'Stack JavaScript Developer' track, gaining relevant skills
+      in becoming a competent JavaScript developer.
+    </p>
+  </div>
+);

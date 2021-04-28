@@ -8,17 +8,6 @@ import degree from 'assets/Certs/degree.jpeg';
 import styles from './Style.module.scss';
 
 const Achievements = () => {
-  const treehousePointsValues = () => {
-    return (
-      <div className={styles.padding}>
-        <p>
-          Completed the 'Stack JavaScript Developer' track, gaining relevant
-          skills in becoming a competent JavaScript developer.
-        </p>
-      </div>
-    );
-  };
-
   return (
     <div>
       <Skills />
@@ -37,7 +26,7 @@ const Achievements = () => {
         <Card title='Udemy' content={descriptions.react16} />
         <Card
           title='Team Treehouse'
-          content={treehousePointsValues()}
+          content={descriptions.treehousePointsValues}
           img={teamTreehouse}
           imgWidth={400}
           imgHeight={200}
