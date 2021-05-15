@@ -30,7 +30,7 @@ export const AWS = (
     <div className={styles.tooltip}>
       <span className={styles.tooltiptext}>View Badge</span>
       <a
-        href='https://www.certmetrics.com/amazon/public/badge.aspx?i=9&t=c&d=2019-03-14&ci=AWS00694170'
+        href='https://www.credly.com/badges/1947b99b-4878-4620-97bc-01c1c6dd713c/public_url'
         target='_blank'
         rel='noopener noreferrer'
       >
