@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from 'components/Card/Card';
 import Skills from './skills/Skills';
 import * as descriptions from 'data/Achievements/Achievements';
