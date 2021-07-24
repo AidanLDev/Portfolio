@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 // Images
 import AylesburyEvening from 'assets/About/AylesburyEvening.jpg'
@@ -26,30 +26,55 @@ import TravelRome1 from 'assets/About/TravelRome1.jpg'
 import TravelRome2 from 'assets/About/TravelRome2.jpg'
 
 const SlideShow = () => {
-  const [index, setindex] = useState(0);
+  const [index, setIndex] = useState(0);
   const timeoutRef = useRef(null);
-    const imageObjects = [
-        {
-            img: AylesburyEvening,
-            description: 'My town Aylesbury on a quiet evening'
-        },
-        {
-          img: CoasterWickerman,
-          description: 'Wickerman at Alton Towers'
-        }
-    ];
-    
 
-    return (
-        <>
-          {imageObjects.map(img => {return(
-            <div>
-              <img width={400} height={400} src={img.img} />
-              <p>{img.description}</p>
-            </div>)
-          })}
-        </>
-    )
+  const delay = 2500
+
+  const imageObjects = [
+    {
+      img: AylesburyEvening,
+      description: 'My town Aylesbury on a quiet evening'
+    },
+    {
+      img: CoasterWickerman,
+      description: 'Wickerman at Alton Towers'
+    }
+  ];
+
+  const resetTimeout = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+  }
+
+  useEffect(() => {
+    resetTimeout();
+    timeoutRef.current = setTimeout(
+      () =>
+        setIndex((prevIndex) =>
+          prevIndex === imageObjects.length - 1 ? 0 : prevIndex + 1
+        ),
+      delay
+    );
+
+    return () => {
+      resetTimeout();
+    };
+  }, [index]);
+
+
+  return (
+    <>
+      {imageObjects.map((img, index) => {
+        return (
+          <div>
+            <img key={index} width={400} height={400} src={img.img} alt={img.description} />
+            <p>{img.description}</p>
+          </div>)
+      })}
+    </>
+  )
 }
 
 export default SlideShow;

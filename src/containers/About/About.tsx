@@ -4,9 +4,9 @@ const About = () => {
   return (
     <div>
       <hr />
-      <p>
+      <h2>
         A lifelong learner with a love of travelling, music and nature
-      </p>
+      </h2>
       <SlideShow />
     </div>
   );
