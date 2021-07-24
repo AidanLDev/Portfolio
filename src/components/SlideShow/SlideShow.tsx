@@ -1,47 +1,33 @@
+import { useState, useRef } from 'react';
+
+// Images
 import AylesburyEvening from 'assets/About/AylesburyEvening.jpg'
 import AylesburyTrains from 'assets/About/AylesburyTrains.jpg'
 import CoasterWickerman from 'assets/About/CoasterWickerman.jpg'
+import CoasterColossos from 'assets/About/CoasterColossos.jpg'
+import Computer from 'assets/About/Computer.jpg'
+import Gameboy from 'assets/About/Gameboy.jpg'
+import MusicAmonAmarth from 'assets/About/MusicAmonAmarth.jpg'
+import MusicAmonAmarth2 from 'assets/About/MusicAmonAmarth2.jpg'
+import MusicMaidenLandscape from 'assets/About/MusicMaidenLandscape.jpg'
+import MusicMaidenLive from 'assets/About/MusicMaidenLive.jpg'
+import MusicPriestLive from 'assets/About/MusicPriestLive.jpg'
+import MusicSabbathBridge from 'assets/About/MusicSabbathBridge.jpg'
+import PlanB from 'assets/About/PlanB.jpg'
+import RunSelfie from 'assets/About/RunSelfie.jpg'
+import TravelLondon1 from 'assets/About/TravelLondon1.jpg'
+import TravelLondonNature from 'assets/About/TravelLondonNature.jpg'
+import TravelViennaBridge from 'assets/About/TravelViennaBridge.jpg'
+import TrooperBeer from 'assets/About/TrooperBeer.jpg'
+import WebSumbit1 from 'assets/About/WebSumbit1.jpg'
+import WebsumbitAWS from 'assets/About/WebsumbitAWS.jpg'
+import WebSumbitBrave from 'assets/About/WebSumbitBrave.jpg'
+import TravelRome1 from 'assets/About/TravelRome1.jpg'
+import TravelRome2 from 'assets/About/TravelRome2.jpg'
 
-/*
--a----        02/06/2021     17:07         263666 CoasterColosso
-                                                  s.jpg
--a----        26/06/2021     12:20         108311 CoasterWickerm
-                                                  an.jpg        
--a----        01/07/2018     14:14        1099346 Computer.JPG   
--a----        27/10/2019     15:12        1348358 Gameboy.jpg    
--a----        30/11/2019     21:31        1735990 MusicAmonAmart
-                                                  h.jpg
--a----        30/11/2019     21:37        1780283 MusicAmonAmart 
-                                                  h2.jpg
--a----        19/07/2021     15:10         108491 MusicMaidenLan 
-                                                  dscape.jpg     
--a----        02/08/2018     09:51         668224 MusicMaidenLiv 
-                                                  e.JPG
--a----        02/08/2018     09:51         714266 MusicPriestLiv 
-                                                  e.JPG
--a----        21/07/2019     16:26        1625653 MusicSabbathBr 
-                                                  idge.jpg       
--a----        28/09/2019     11:48         140261 PlanB.jpg      
--a----        13/06/2021     10:56        1857831 RunSelfie.jpg 
--a----        02/09/2019     13:22        2379947 TravelLondon1. 
-                                                  jpg
--a----        20/06/2021     15:46         288407 TravelLondonNa 
-                                                  ture.jpg       
--a----        23/02/2020     12:20        1717713 TravelRome1.he 
-                                                  ic
--a----        22/02/2020     19:14        1482965 TravelRome2.he 
-                                                  ic
--a----        26/07/2018     19:31        1917531 TravelViennaBr 
-                                                  idge.JPG       
--a----        19/06/2021     14:23        1258738 TrooperBeer.jp
-                                                  g
--a----        05/11/2019     11:28        1093582 WebSumbit1.jpg 
--a----        05/11/2019     11:54        2390270 WebsumbitAWS.j 
-                                                  pg
--a----        07/11/2019     11:35        1828718 WebSumbitBrave 
-                                                .jpg
-*/
 const SlideShow = () => {
+  const [index, setindex] = useState(0);
+  const timeoutRef = useRef(null);
     const imageObjects = [
         {
             img: AylesburyEvening,
