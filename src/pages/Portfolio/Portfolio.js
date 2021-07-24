@@ -1,10 +1,10 @@
-import React from "react";
-import Achievements from "containers/Achievements/Achievements";
-import Projects from "containers/Projects/Projects";
-import Particles from "react-particles-js";
-import styles from "./Style.module.scss";
+import About from 'containers/About/About';
+import Achievements from 'containers/Achievements/Achievements';
+import Projects from 'containers/Projects/Projects';
+import Particles from 'react-particles-js';
+import styles from './Style.module.scss';
 
-import * as portfolioData from "data/Backgrounds/particleBackgrounds";
+import * as portfolioData from 'data/Backgrounds/particleBackgrounds';
 
 const Portfolio = () => {
   const dateTime = new Date();
@@ -19,6 +19,7 @@ const Portfolio = () => {
             : portfolioData.particleParamsPent
         }
       />
+      <About />
       <Achievements />
       <Projects />
     </div>
