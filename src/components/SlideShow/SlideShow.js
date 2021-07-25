@@ -1,6 +1,7 @@
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import './slideShow.scss';
+import './slideShow.css';
+import Styles from './Style.module.scss';
 
 // Images
 import AylesburyEvening from 'assets/About/AylesburyEvening.jpg';
@@ -37,7 +38,7 @@ const SlideShow = () => {
     { img: AylesburyTrains, description: 'My town Aylesbury' },
     {
       img: CoasterWickerman,
-      description: 'Sunny day with Big Bob at Alton Towers',
+      description: 'Good times with Big Bob at Alton Towers',
     },
     { img: Computer, description: 'The PC' },
     {
@@ -70,7 +71,7 @@ const SlideShow = () => {
       img: MusicSabbathBridge,
       description: 'Sitting with ledgends in their home town of Birmingham',
     },
-    { img: PlanB, description: 'Time for plan B' },
+    { img: PlanB, description: 'Who knows?' },
     { img: RunSelfie, description: 'Running around' },
     { img: AylesburyEvening, description: 'A quiet evening in Aylesbury' },
     {
@@ -112,10 +113,9 @@ const SlideShow = () => {
             <img
               onDragStart={handleDragStart}
               src={img.img}
-              height='500px'
               width='80%'
               alt={img.description}
-              style={{ maxWidth: '666px', cursor: 'pointer' }}
+              className={Styles.imageSlideContainer}
             />
             <h3>{img.description}</h3>
           </div>

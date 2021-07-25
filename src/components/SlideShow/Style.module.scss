@@ -1,0 +1,12 @@
+@import 'styles/pallet.scss';
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
+
+.imageSlideContainer {
+  max-width: 666px;
+  max-height: 500px;
+  cursor: pointer;
+  @media (max-width: $portraitTablet) {
+    max-height: 350px;
+  }
+}
