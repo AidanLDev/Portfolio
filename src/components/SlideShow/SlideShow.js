@@ -7,19 +7,19 @@ import AylesburyEvening from 'assets/About/AylesburyEvening.jpg';
 import AylesburyTrains from 'assets/About/AylesburyTrains.jpg';
 import CoasterWickerman from 'assets/About/CoasterWickerman.jpg';
 import CoasterColossos from 'assets/About/CoasterColossos.jpg';
-import Computer from 'assets/About/Computer.JPG';
+import Computer from 'assets/About/Computer.jpg';
 import Gameboy from 'assets/About/Gameboy.jpg';
 import MusicAmonAmarth from 'assets/About/MusicAmonAmarth.jpg';
 import MusicAmonAmarth2 from 'assets/About/MusicAmonAmarth2.jpg';
 import MusicMaidenLandscape from 'assets/About/MusicMaidenLandscape.jpg';
-import MusicMaidenLive from 'assets/About/MusicMaidenLive.JPG';
-import MusicPriestLive from 'assets/About/MusicPriestLive.JPG';
+import MusicMaidenLive from 'assets/About/MusicMaidenLive.jpg';
+import MusicPriestLive from 'assets/About/MusicPriestLive.jpg';
 import MusicSabbathBridge from 'assets/About/MusicSabbathBridge.jpg';
 import PlanB from 'assets/About/PlanB.jpg';
 import RunSelfie from 'assets/About/RunSelfie.jpg';
 import TravelLondon1 from 'assets/About/TravelLondon1.jpg';
 import TravelLondonNature from 'assets/About/TravelLondonNature.jpg';
-import TravelViennaBridge from 'assets/About/TravelViennaBridge.JPG';
+import TravelViennaBridge from 'assets/About/TravelViennaBridge.jpg';
 import TrooperBeer from 'assets/About/TrooperBeer.jpg';
 import WebSumbit1 from 'assets/About/WebSumbit1.jpg';
 import WebsumbitAWS from 'assets/About/WebsumbitAWS.jpg';
@@ -98,32 +98,30 @@ const SlideShow = () => {
     { img: TravelRome1, description: 'Rome 2020' },
     { img: TravelRome2, description: 'Rome 2020' },
     { img: Plants1, description: 'My lockdown compainions' },
-    { img: Plants2, description: 'My lockdown compainions' },
-    { img: Plants3, description: 'My lockdown compainions' },
+    { img: Plants2, description: 'Some plants' },
+    { img: Plants3, description: 'Some more plants' },
   ];
 
   const handleDragStart = (e) => e.preventDefault();
 
   return (
-    <div className='slide-container'>
-      <AliceCarousel autoPlay autoPlayInterval='3500' mouseTracking>
-        {imageObjects.map((img, index) => {
-          return (
-            <div className='each-slide' key={index} style={{ width: '100%' }}>
-              <img
-                onDragStart={handleDragStart}
-                src={img.img}
-                height='500px'
-                width='80%'
-                alt={img.description}
-                style={{ maxWidth: '600px', cursor: 'pointer' }}
-              />
-              <h3>{img.description}</h3>
-            </div>
-          );
-        })}
-      </AliceCarousel>
-    </div>
+    <AliceCarousel autoPlay autoPlayInterval='3500' mouseTracking>
+      {imageObjects.map((img, index) => {
+        return (
+          <div key={index} style={{ width: '100%' }}>
+            <img
+              onDragStart={handleDragStart}
+              src={img.img}
+              height='500px'
+              width='80%'
+              alt={img.description}
+              style={{ maxWidth: '666px', cursor: 'pointer' }}
+            />
+            <h3>{img.description}</h3>
+          </div>
+        );
+      })}
+    </AliceCarousel>
   );
 };
 

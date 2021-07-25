@@ -1,10 +1,14 @@
-import About from 'containers/About/About';
-import Achievements from 'containers/Achievements/Achievements';
-import Projects from 'containers/Projects/Projects';
+import React from 'react';
 import Particles from 'react-particles-js';
 import styles from './Style.module.scss';
+import SquareLoader from 'react-spinners/SquareLoader';
 
 import * as portfolioData from 'data/Backgrounds/particleBackgrounds';
+const About = React.lazy(() => import('containers/About/About'));
+const Achievements = React.lazy(() =>
+  import('containers/Achievements/Achievements')
+);
+const Projects = React.lazy(() => import('containers/Projects/Projects'));
 
 const Portfolio = () => {
   const dateTime = new Date();
@@ -19,9 +23,19 @@ const Portfolio = () => {
             : portfolioData.particleParamsPent
         }
       />
-      <About />
-      <Achievements />
-      <Projects />
+      <React.Suspense
+        fallback={
+          <SquareLoader
+            size={350}
+            color='#F5A623'
+            styles={{ position: 'absolute' }}
+          />
+        }
+      >
+        <About />
+        <Achievements />
+        <Projects />
+      </React.Suspense>
     </div>
   );
 };

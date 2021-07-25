@@ -3,7 +3,7 @@ import Skills from './skills/Skills';
 import * as descriptions from 'data/Achievements/Achievements';
 
 import teamTreehouse from 'assets/Certs/teamTreeHouse.jpg';
-import degree from 'assets/Certs/degree.jpeg';
+import degree from 'assets/Certs/degree.jpg';
 import styles from './Style.module.scss';
 
 const Achievements = () => {

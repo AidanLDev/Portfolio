@@ -1,14 +1,12 @@
-@import"styles/pallet.scss";
-@import"styles/variables.scss";
-@import"styles/mixins.scss";
+@import 'styles/pallet.scss';
+@import 'styles/variables.scss';
+@import 'styles/mixins.scss';
 
 .App {
   text-align: center;
   height: 100%;
   width: 100%;
   color: $colorPrimary;
-  // background-image: url("../assets/Code-Background.png");
-  // background-position: center;
 
   .AppHeader {
     @media (max-width: 500px) {

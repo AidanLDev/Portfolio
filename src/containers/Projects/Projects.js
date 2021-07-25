@@ -2,7 +2,7 @@ import React from 'react';
 import Card from 'components/Card/Card';
 import * as descriptions from 'data/Projects/Projects';
 
-import BurgerBuilderImg from 'assets/Burger.png';
+import BurgerBuilderImg from 'assets/Projects/Burger.png';
 import Mars from 'assets/Projects/Mars_space.jpg';
 import FizzBuzz from 'assets/Projects/fizzBuzz.png';
 import TrackSearch from 'assets/Projects/MusicLibraryProject.png';
