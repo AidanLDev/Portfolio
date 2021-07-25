@@ -7,19 +7,19 @@ import AylesburyEvening from 'assets/About/AylesburyEvening.jpg';
 import AylesburyTrains from 'assets/About/AylesburyTrains.jpg';
 import CoasterWickerman from 'assets/About/CoasterWickerman.jpg';
 import CoasterColossos from 'assets/About/CoasterColossos.jpg';
-import Computer from 'assets/About/Computer.jpg';
+import Computer from 'assets/About/Comp.jpg';
 import Gameboy from 'assets/About/Gameboy.jpg';
 import MusicAmonAmarth from 'assets/About/MusicAmonAmarth.jpg';
 import MusicAmonAmarth2 from 'assets/About/MusicAmonAmarth2.jpg';
 import MusicMaidenLandscape from 'assets/About/MusicMaidenLandscape.jpg';
-import MusicMaidenLive from 'assets/About/MusicMaidenLive.jpg';
-import MusicPriestLive from 'assets/About/MusicPriestLive.jpg';
+import MusicMaidenLive from 'assets/About/Maiden2018.jpg';
+import MusicPriestLive from 'assets/About/Priest2018.jpg';
 import MusicSabbathBridge from 'assets/About/MusicSabbathBridge.jpg';
 import PlanB from 'assets/About/PlanB.jpg';
 import RunSelfie from 'assets/About/RunSelfie.jpg';
 import TravelLondon1 from 'assets/About/TravelLondon1.jpg';
 import TravelLondonNature from 'assets/About/TravelLondonNature.jpg';
-import TravelViennaBridge from 'assets/About/TravelViennaBridge.jpg';
+import TravelVienna from 'assets/About/TravelVienna.jpg';
 import TrooperBeer from 'assets/About/TrooperBeer.jpg';
 import WebSumbit1 from 'assets/About/WebSumbit1.jpg';
 import WebsumbitAWS from 'assets/About/WebsumbitAWS.jpg';
@@ -83,7 +83,7 @@ const SlideShow = () => {
       description: 'A great view from the London observatory',
     },
     { img: TravelLondonNature, description: 'British nature in Kent' },
-    { img: TravelViennaBridge, description: 'A view of the Danube in Vienna' },
+    { img: TravelVienna, description: 'A view of the Danube in Vienna' },
     { img: TrooperBeer, description: 'Great band, great beer' },
     { img: WebSumbit1, description: 'Web Summit 2019 in Lisbon, Portugal' },
     {
