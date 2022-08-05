@@ -9,6 +9,7 @@ import SEO from '../components/SEO';
 import styles from '../styles/Home.module.scss';
 
 export async function getStaticProps() {
+  // Change to Projects
   const blogs = getBlogPostPaths();
   return {
     props: {
@@ -21,10 +22,9 @@ export default function Home({ blogs }) {
   return (
     <Box w='100%' h='100%'>
       <SEO
-        title='Double A Team'
-        description='A website built through our passion of helping others, learning and growing. Come learn what we know, if you want to know that is!'
-        url='https://doubleateam.co.uk/'
-        image='/images/IstanbulHagiaSopia.jpg'
+        title='Aidan Lowson | Portfolio'
+        description='Showcasing my personal projects and anything else I feel should be shared with the world.'
+        url='https://aidanlowson.com'
       />
       <Box className={styles.main}>
         <HomeBackground />
