@@ -1,5 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
-import HomeBackground from '../components/HomeBackground';
+import Navbar from '../components/Navbar/Navbar';
 import HomeHeader from '../components/HomeHeader';
 import HomeBlogs from '../components/HomeBlogs';
 import Footer from '../components/Footer';
@@ -27,7 +27,7 @@ export default function Home({ blogs }) {
         url='https://aidanlowson.com'
       />
       <Box className={styles.main}>
-        <HomeBackground />
+        <Navbar />
         <HomeHeader />
       </Box>
 
