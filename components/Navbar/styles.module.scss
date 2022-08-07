@@ -1,11 +1,36 @@
 @import '../../styles/variables.scss';
 
 .navContainer {
-    border-bottom: 1px solid $main-blue;
     height: 40px;
     width: 100%;
     position: fixed;
-    background-color: #000000ab;
+    // border-bottom: 1px solid $main-blue;
+    // background-color: #000000ab;
+    .logo {
+        color: $dark-text;
+        padding: 8px 8px 8px 10px;
+        background-color: $main-blue;
+        cursor: pointer;
+        width: 40px;
+        z-index: 1;
+        position: relative;
+    }
+    .logo::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: bottom center;
+        background: $main-blue-dark;
+        z-index: -1;
+        transition: transform 0.2s ease-in;
+    }
+    .logo:hover::after {
+        transform: scaleY(1);
+    }
     .linkStyle {
         font-weight: 700;
         font-size: 1.25rem;

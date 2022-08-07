@@ -23,6 +23,7 @@ import Footer from '../../components/Footer';
 import CardTitle from '../../components/CardTitle';
 import styles from './styles.module.scss';
 import SEO from '../../components/SEO';
+import Navbar from '../../components/Navbar/Navbar';
 
 export async function getStaticProps() {
   const blogs = getBlogPostPaths();
@@ -79,33 +80,8 @@ export default function Posts({ blogs }) {
         url='https://doubleateam.co.uk/posts'
         image='/images/IstanbulHagiaSopia.jpg'
       />
-      <Box
-        height='500px'
-        backgroundImage='url(/images/sky2-resize.jpg)'
-        padding='20px'
-        borderBottom='2px solid red'
-      >
-        <Heading
-          color='primary'
-          width='50%'
-          margin='0 38%'
-          className={styles.logo}
-        >
-          <Link href={'/'}>Double A Team</Link>
-        </Heading>
-        {
-          <Text
-            position='absolute'
-            top={Math.floor(Math.random() * 300 + 100)}
-            left={Math.floor(
-              Math.random() * flashingTextWidth || isMobile ? 200 : 800
-            )}
-            fontSize={isMobile ? 'large' : '6xl'}
-            className='fadingText'
-          >
-            {messages[messageCount]}
-          </Text>
-        }
+      <Box height='500px' borderBottom='2px solid red'>
+        <Navbar active='/posts' />
       </Box>
       <Text
         fontSize={isMobile ? '32px' : '42px'}
