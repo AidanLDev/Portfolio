@@ -1,5 +1,6 @@
 // Colours
-$link-blue: #0070f3;
+$main-blue: #00EEEE;
+$main-blue-dark: darken($main-blue, 10%);
 
 // Breakpoints
 $isMobile: 575px;

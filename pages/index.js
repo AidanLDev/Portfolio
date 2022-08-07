@@ -1,6 +1,5 @@
 import { Box, Text } from '@chakra-ui/react';
 import Navbar from '../components/Navbar/Navbar';
-import HomeHeader from '../components/HomeHeader';
 import HomeBlogs from '../components/HomeBlogs';
 import Footer from '../components/Footer';
 import { getBlogPostPaths } from '../lib/posts';
@@ -28,7 +27,6 @@ export default function Home({ blogs }) {
       />
       <Box className={styles.main}>
         <Navbar />
-        <HomeHeader />
       </Box>
 
       <Box m='2% 6%' minH='1000px'>
