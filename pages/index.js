@@ -1,13 +1,11 @@
-import { Box, Text } from '@chakra-ui/react';
-import Navbar from '../components/Navbar/Navbar';
-import HomeBlogs from '../components/HomeBlogs';
-import Footer from '../components/Footer';
-import { getBlogPostPaths } from '../lib/posts';
-import SEO from '../components/SEO';
+import { Box, Text, Center } from '@chakra-ui/react'
+import Navbar from '../components/Navbar/Navbar'
+import { getBlogPostPaths } from '../lib/posts'
+import SEO from '../components/SEO'
 
-import styles from '../styles/Home.module.scss';
 import HtmlBodyTags from '../components/htmlTags/HtmlBodyTags'
 import Title from '../components/Home/Title'
+import AboutMeCard from '../components/Home/AboutMeCard'
 
 export async function getStaticProps() {
   // Change to Projects
@@ -32,6 +30,9 @@ export default function Home({ blogs }) {
         <Navbar />
         <HtmlBodyTags />
         <Title />
+        <Center>
+          <AboutMeCard />
+        </Center>
         {/* Card with desc of who I am and basic web background */}
         {/* say scroll down to see what skills I have and some projects I've worked on */}
       </Box>

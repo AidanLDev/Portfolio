@@ -22,6 +22,10 @@ body {
   
 }
 
+.heading {
+  color: $active-colour;
+}
+
 // a {
 //   color: red;
 //   cursor: pointer;
@@ -176,16 +180,70 @@ body {
   cursor: default;
   animation: fadeIn 1s forwards;
   opacity: 0;
-  animation-delay: 3s;
+  animation-delay: 1s;
   transform: translateY(-50%);
   font-size: 66px;
   font-weight: 400;
   font-family: 'coolvetica';
+  text-shadow: 2px 2px 0 #46CEBB;
+
+  @media (max-width: 500px) {
+    font-size: 48px;
+  }
+
+  .text-animate {
+    color: $main-blue;
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn 1s 2.5s;
+    animation-fill-mode: forwards;
+    min-width: 10px;
+  }
+
+  .text-animate-hover {
+    min-width: 10px;
+    display: inline-block;
+    animation-fill-mode: both;
+    &:hover {
+      animation: rubberBand 1s;
+      color: $active-colour;
+    }
+  }
+
+  @for $i from 1 through 21 {
+    .text-animate._#{$i} {
+      animation-delay: #{$i /10}s;
+    }
+  }
+
   .a {
     color: $active-colour;
+    animation: bounceIn 1s 1s;
+    animation-fill-mode: forwards;
   }
+
   .l {
     color: $active-colour;
-    margin-left: 8px;
+    animation: bounceIn 1s 1s;
+    animation-fill-mode: forwards;
+    margin-left: 4px;
+  }
+
+  &::before {
+    content: '<h1>';
+    font-family: 'La Belle Aurore';
+    color: $active-colour;
+    font-size: 18px;
+    opacity: 0.6;
+  }
+  &::after {
+    content: '</h1>';
+    font-family: 'La Belle Aurore';
+    color: $active-colour;
+    font-size: 18px;
+    opacity: 0.6;
+    position: absolute;
+    margin-top: 85px;
+    margin-right: 360px;
   }
 }
