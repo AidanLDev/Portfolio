@@ -3,14 +3,18 @@ import Link from 'next/link';
 import styles from './styles.module.scss';
 
 export default function NavLink({ item, active }) {
+  const activeClass = active === item.link
   return (
     <Link href={item.link} passHref>
       <a
         className={styles.linkStyle}
-        style={{ textDecoration: active === '/posts' ? 'underline' : '' }}
+        style={{
+          textDecoration: activeClass ? 'underline' : '',
+          color: activeClass ? '#ffd700' : '',
+        }}
       >
         {item.label}
       </a>
     </Link>
-  );
+  )
 }

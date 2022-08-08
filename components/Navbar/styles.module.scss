@@ -1,13 +1,14 @@
 @import '../../styles/variables.scss';
 
 .navContainer {
+    z-index: 3;
     height: 40px;
     width: 100%;
     position: fixed;
     // border-bottom: 1px solid $main-blue;
     // background-color: #000000ab;
     .logo {
-        color: $dark-text;
+        color: $secondary-colour;
         padding: 8px 8px 8px 10px;
         background-color: $main-blue;
         cursor: pointer;
@@ -46,7 +47,8 @@
             content: "";
             position: absolute;
             z-index: -1;
-            top: 28px;
+            top: 24px;
+            height: 2px;
             bottom: 0;
             left: 0;
             right: 0;

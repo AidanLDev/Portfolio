@@ -17,11 +17,15 @@
     "@fontsource/aldrich": "^4.5.1",
     "@fontsource/nerko-one": "^4.5.2",
     "@fontsource/open-sans": "^4.5.6",
+    "animate.css": "^4.1.1",
     "framer-motion": "6.5.1",
+    "gsap-trial": "^3.10.4",
+    "loaders.css": "^0.1.2",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
     "react-icons": "latest",
+    "react-loaders": "^3.0.1",
     "sass": "latest"
   },
   "devDependencies": {

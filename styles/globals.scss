@@ -4,7 +4,15 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: black !important;
+  // background-color: black !important;
+  margin: 0;
+  font: 400 16px/1.4 'Helvetica Neue', sans-serif;  // 300 11px
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #022c43 !important;
+  // overflow: hidden;
+  display: block;
   a, p {
     color: $main-blue;
   }
@@ -57,4 +65,127 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: $main-blue-dark;
+}
+
+// From react-portfolio YT: https://www.youtube.com/watch?v=bmpI252DmiI&list=WL&index=3
+@import 'animate.css';
+@import '~loaders.css/src/animations/pacman.scss';
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/helvetica-neu.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'La Belle Aurore';
+  src: url('/fonts/LaBelleAurore.woff2') format('woff2'),
+    url('/fonts/LaBelleAurore.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
+    url('/fonts/CoolveticaRg-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+input,
+textarea {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.dashboard {
+  margin-top: 200px;
+  margin-left: 200px;
+}
+
+/*
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font: 300 11px/1.4 'Helvetica Neue', sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #022c43;
+  overflow: hidden;
+  display: block;
+}
+
+
+
+*/
+
+.top-tag-html {
+  bottom: auto;
+  top: 12px;
+  margin-left: -20px;
+}
+
+.top-tags {
+  bottom: auto;
+  top: 35px;
+}
+
+.tags {
+  color: #ffd700;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 0;
+  left: 120px;
+  font-size: 18px;
+  font-family: 'La Belle Aurore', cursive;
+  cursor: default;
+}
+
+.bottom-tag-html {
+  margin-left: -20px;
+}
+
+.container {
+  min-height: 100vh;
+  // padding: 0 2rem;
+  width: 100%;
+  will-change: contents;
+  // height: 90%;
+  // min-height: 566px;
+  position: absolute;
+  opacity: 0;
+  top: 5%;
+  margin: 0 auto;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+}
+
+.headingContainer {
+  color: $main-blue;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  cursor: default;
+  animation: fadeIn 1s forwards;
+  opacity: 0;
+  animation-delay: 3s;
+  transform: translateY(-50%);
+  font-size: 66px;
+  font-weight: 400;
+  font-family: 'coolvetica';
+  .a {
+    color: $active-colour;
+  }
+  .l {
+    color: $active-colour;
+    margin-left: 8px;
+  }
 }

@@ -1,20 +1,16 @@
 @import './variables.scss';
 
-.container {
-  padding: 0 2rem;
-}
-
 .homeContainer {
   height: 100%;
   width: 100%;
 }
 
 .main {
-  min-height: 100vh;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  
+  // flex: 1;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 }
 
 .footer {
