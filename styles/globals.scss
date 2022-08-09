@@ -235,6 +235,7 @@ body {
     color: $active-colour;
     font-size: 18px;
     opacity: 0.6;
+    text-shadow: none;
   }
   &::after {
     content: '</h1>';
@@ -245,5 +246,6 @@ body {
     position: absolute;
     margin-top: 85px;
     margin-right: 360px;
+    text-shadow: none;
   }
 }

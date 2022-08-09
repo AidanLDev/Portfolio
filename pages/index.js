@@ -33,7 +33,6 @@ export default function Home({ blogs }) {
         <Center>
           <AboutMeCard />
         </Center>
-        {/* Card with desc of who I am and basic web background */}
         {/* say scroll down to see what skills I have and some projects I've worked on */}
       </Box>
 

@@ -12,9 +12,11 @@ export default function AboutMeCard() {
         </Center>
         <Text>
           I'm a Frontend developer from the UK who loves creating websites.
-          Hobbies wise I play the guitar, enjoy learning new things such as a
-          language and keeping fit and active by running.
+          Hobbies wise I play the guitar, enjoy both learning and experiencing
+          new things such as a language, both programming and human ones,
+          traveling around and keeping fit usually by running.
         </Text>
+        {/* Links to GH, email and linkedIn */}
       </Box>
     </Box>
   )
