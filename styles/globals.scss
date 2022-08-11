@@ -22,18 +22,41 @@ body {
   
 }
 
-.cardHeading {
-  color: $active-colour;
-  padding-bottom: 24px;
+.cardContainer {
+  .cardHeading {
+    color: $active-colour;
+    padding-bottom: 24px;
+  }
+  p {
+    font-size: 18px;
+    padding-bottom: 12px;
+  }
+  &::before {
+    content: '<Card>';
+    font-family: 'La Belle Aurore';
+    color: $main-blue-dark;
+    font-size: 18px;
+    opacity: 0.6;
+    position: absolute;
+    margin-top: -25px;
+  }
+  &::after {
+    content: '</Card>';
+    font-family: 'La Belle Aurore';
+    color: $main-blue-dark;
+    font-size: 18px;
+    opacity: 0.6;
+    position: absolute;
+  }
 }
-
-// a {
-//   color: red;
-//   cursor: pointer;
-// }
-// a:hover {
-//   text-decoration: underline;
-// }
+  // The bit that animates
+  .detailsBox {
+    background-color: $secondary-colour;
+    transition: all 1s ease-in-out;
+  }
+  .cardContainer:hover .detailsBox {
+    transform: translate(100%);
+  }
 
 * {
   box-sizing: border-box;
@@ -142,7 +165,7 @@ body {
 }
 
 .tags {
-  color: #ffd700;
+  color: $main-blue-dark;
   opacity: 0.6;
   position: absolute;
   bottom: 0;
@@ -233,7 +256,7 @@ body {
   &::before {
     content: '<h1>';
     font-family: 'La Belle Aurore';
-    color: $active-colour;
+    color: $main-blue-dark;
     font-size: 18px;
     opacity: 0.6;
     text-shadow: none;
@@ -241,7 +264,7 @@ body {
   &::after {
     content: '</h1>';
     font-family: 'La Belle Aurore';
-    color: $active-colour;
+    color: $main-blue-dark;
     font-size: 18px;
     opacity: 0.6;
     position: absolute;
