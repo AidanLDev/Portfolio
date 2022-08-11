@@ -10,6 +10,7 @@ export default function AboutMeCard() {
           <Heading className="cardHeading">About Me</Heading>
         </Center>
         <Divider marginBottom="24px" />
+        {/* TODO: Make text more readable */}
         <Text>
           I'm a Frontend developer from the UK who loves creating websites.
           Hobbies wise I play the guitar, enjoy both learning and experiencing
