@@ -10,6 +10,14 @@ import {
 } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import ImageLink from './ImageLink'
+import styled from '@emotion/styled'
+
+const DisplayOver = styled(Box)({
+  zIndex: 2,
+  backgroundColor: 'transparent',
+  transition: 'background-color 350ms ease',
+  position: 'absolute',
+})
 
 export default function AboutMeCard() {
   const [isCardHovered, setCardHovered] = useState(false)
@@ -39,16 +47,17 @@ export default function AboutMeCard() {
           <Heading className="cardHeading">DevOps Engineer</Heading>
         </Center>
       </Box>
-      <Box p={5} h="255px" className="detailsBox">
-        {/* TODO: Create transition animation */}
+      <Box p={5} h="255px" className="detailsBox" position="relative">
         {isCardHovered ? (
-          <VStack>
-            <ImageLink
-              alt="GitHub Image"
-              link="https://github.com/AidanLDev"
-              imagePath="/images/Logos/GithubLogo.png"
-            />
-          </VStack>
+          <DisplayOver>
+            <VStack>
+              <ImageLink
+                alt="GitHub Image"
+                link="https://github.com/AidanLDev"
+                imagePath="/images/Logos/GithubLogo.png"
+              />
+            </VStack>
+          </DisplayOver>
         ) : (
           <Box>
             <Text>

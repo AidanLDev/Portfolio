@@ -31,6 +31,7 @@ export default function Home({ blogs }) {
         <HtmlBodyTags />
         <Title />
         <Center>
+          {/* TODO: Make card fly in from the bottom */}
           <AboutMeCard />
         </Center>
         {/* say scroll down to see what skills I have and some projects I've worked on */}
