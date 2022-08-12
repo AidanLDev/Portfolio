@@ -15,8 +15,13 @@ import styled from '@emotion/styled'
 const DisplayOver = styled(Box)({
   zIndex: 2,
   backgroundColor: 'transparent',
-  transition: 'background-color 350ms ease',
+  transition: 'background-color 2s ease',
   position: 'absolute',
+})
+
+const Hover = styled(Box)({
+  opacity: 0,
+  transition: 'opacity 2s ease',
 })
 
 export default function AboutMeCard() {
