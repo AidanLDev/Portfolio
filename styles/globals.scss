@@ -23,9 +23,8 @@ body {
 }
 
 .cardContainer {
-  transition: all 2s ease-in-out;
-  // opacity: 0;
-  // transform: translateY(100%);
+  animation: flyInFromBottom 2.5s ease-in-out forwards;
+  overflow: auto;
   .cardHeading {
     color: $active-colour;
     padding-bottom: 24px;
@@ -50,6 +49,18 @@ body {
     font-size: 18px;
     opacity: 0.6;
     position: absolute;
+  }
+}
+
+@keyframes flyInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  80% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
   // The bit that animates
@@ -184,6 +195,7 @@ body {
 
 .container {
   min-height: 100vh;
+  overflow: hidden;
   // padding: 0 2rem;
   width: 100%;
   will-change: contents;
