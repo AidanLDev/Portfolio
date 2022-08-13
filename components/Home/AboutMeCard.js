@@ -8,7 +8,7 @@ import {
   VStack,
   Image,
 } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ImageLink from './ImageLink'
 import styled from '@emotion/styled'
 
@@ -26,6 +26,11 @@ const Hover = styled(Box)({
 
 export default function AboutMeCard() {
   const [isCardHovered, setCardHovered] = useState(false)
+  const [initialAnimate, setInitialAnimate] = useState(false)
+
+  useEffect(() => {
+    setInitialAnimate(true)
+  }, [])
 
   // On hover with emotion: https://www.codedaily.io/tutorials/Create-a-Hoverable-Display-Card-with-React-and-Emotion
 
@@ -36,9 +41,13 @@ export default function AboutMeCard() {
       background="#44444473"
       overflow="hidden"
       boxShadow="md"
-      className="cardContainer"
+      className="cardContainer cardContainerSlideIn"
       onMouseOver={() => setCardHovered(true)}
       onMouseOut={() => setCardHovered(false)}
+      style={{
+        opacity: initialAnimate ? 1 : 0,
+        transform: initialAnimate ? 'translateY(0)' : 'translateY(100%)',
+      }}
     >
       <Box backgroundImage={`/images/spaceBgS.jpg`}>
         <Center>
