@@ -8,14 +8,20 @@ import styles from "./Style.module.scss";
 const Navigation = props => {
   return (
     <div className={styles.navBar}>
-      <div className={[styles.leftNavBar, styles.mobileOnly].join(" ")}>
+      <div
+        className={[styles.leftNavBar, styles.mobileOnly].join(' ')}
+      >
         <Logo />
       </div>
       <ul className={styles.linkContainer}>
-        <NavigationLink link="/" exact iconPath={mdiCodeBraces}>
+        <NavigationLink link='/' exact iconPath={mdiCodeBraces}>
           Portfolio
         </NavigationLink>
-        <NavigationLink link="/blog/search" exact iconPath={mdiPencil}>
+        <NavigationLink
+          link='https://doubleateam.co.uk'
+          exact
+          iconPath={mdiPencil}
+        >
           Blog
         </NavigationLink>
         {/* <NavigationLink link="/map" exact iconPath={mdiMapSearch}>

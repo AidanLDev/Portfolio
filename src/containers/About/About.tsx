@@ -1,4 +1,4 @@
-import SlideShow from "components/SlideShow/SlideShow";
+// import SlideShow from "components/SlideShow/SlideShow";
 
 const About = () => {
   return (
@@ -7,7 +7,7 @@ const About = () => {
       <h2>
         A lifelong learner with a love of travelling, music and nature
       </h2>
-      <SlideShow />
+      {/* <SlideShow /> */}
     </div>
   );
 };
