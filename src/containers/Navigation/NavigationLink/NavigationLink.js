@@ -21,16 +21,26 @@ const NavigationLink = (props) => {
         )}`);
       }}
     >
-      <NavLink
-        to={props.link}
-        exact={props.exact}
-        activeClassName={styles.active}
-      >
-        {props.children}
-        {props.iconPath ? (
-          <Icon path={props.iconPath} size={1} color={'rgb(181, 145, 0)'} />
-        ) : null}
-      </NavLink>
+      {
+        <NavLink
+          to={
+            props.link !== 'https://doubleateam.co.uk'
+              ? props.link
+              : { pathname: 'https://doubleateam.co.uk' }
+          }
+          exact={props.exact}
+          activeClassName={styles.active}
+        >
+          {props.children}
+          {props.iconPath ? (
+            <Icon
+              path={props.iconPath}
+              size={1}
+              color={'rgb(181, 145, 0)'}
+            />
+          ) : null}
+        </NavLink>
+      }
     </li>
   );
 };
