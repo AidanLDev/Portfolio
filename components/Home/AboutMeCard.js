@@ -37,8 +37,6 @@ export default function AboutMeCard() {
       overflow="hidden"
       boxShadow="md"
       className="cardContainer cardContainerSlideIn"
-      onMouseOver={() => setCardHovered(true)}
-      onMouseOut={() => setCardHovered(false)}
     >
       <Box backgroundImage={`/images/spaceBgS.jpg`}>
         <Center>
@@ -52,7 +50,8 @@ export default function AboutMeCard() {
           <Heading className="cardHeading">DevOps Engineer</Heading>
         </Center>
       </Box>
-      <Box p={5} h="255px" className="detailsBox" position="relative">
+      <Box p={5} h="255px" className="detailsBox" position="relative" onMouseOver={() => setCardHovered(true)} onMouseOut={() => setCardHovered(false)}>
+        {/* TODO: Make transition smooth */}
         {isCardHovered ? (
           <DisplayOver>
             <VStack>

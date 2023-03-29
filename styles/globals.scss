@@ -25,6 +25,7 @@ body {
 .cardContainer {
   animation: flyInFromBottom 2.5s ease-in-out forwards;
   overflow: auto;
+  border-radius: 20px;
   .cardHeading {
     color: $active-colour;
     padding-bottom: 24px;
@@ -66,10 +67,11 @@ body {
   // The bit that animates
   .detailsBox {
     background-color: $secondary-colour;
-    transition: all 1s ease-in-out;
+    transition: all 3s ease-in-out;
+    background-color: #290808;
   }
   .cardContainer:hover .detailsBox {
-    transform: translate(100%);
+    // transform: translate(100%);
   }
 
 * {
