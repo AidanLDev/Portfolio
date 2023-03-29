@@ -5,8 +5,7 @@ import ImageLink from './ImageLink'
 
 const IntroText = (
   <Text className="cardText">
-    Full time DevOps technician, aspiring web freelancer. Hover for links and
-    stuff
+    Full time DevOps technician, aspiring freelancer. Hover for links and stuff
   </Text>
 )
 
@@ -21,8 +20,6 @@ const LinksStack = (
 )
 
 export default function AboutMeCard() {
-  // On hover with emotion: https://www.codedaily.io/tutorials/Create-a-Hoverable-Display-Card-with-React-and-Emotion
-
   return (
     <Box
       w="400px"
