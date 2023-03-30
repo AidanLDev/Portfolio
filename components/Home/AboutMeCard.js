@@ -26,7 +26,7 @@ export default function AboutMeCard() {
           <Heading className="cardHeading">DevOps Engineer</Heading>
         </Center>
       </Box>
-      <Box p={5} h="300px" className="detailsBox" position="relative">
+      <Box p={5} h="200px" className="detailsBox" position="relative">
         <Text className="cardText">
           Full time DevOps technician, aspiring freelancer. Hover for links and stuff
         </Text>
