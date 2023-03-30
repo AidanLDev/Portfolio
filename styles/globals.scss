@@ -27,6 +27,7 @@ body {
   overflow: auto;
   border-radius: 20px;
   transition: all 1.5s ease-in-out;
+  width: 400px;
   .cardHeading {
     color: $active-colour;
     padding-bottom: 24px;
@@ -70,6 +71,7 @@ body {
   .detailsBox {
     background-color: $secondary-colour;
     background-color: #290808;
+    height: 200px;
   }
   .detailsBox:hover .cardText {
     transform: translate(120%);
@@ -79,13 +81,16 @@ body {
     transition: all 1.5s ease-in-out;
   }
   .cardLinks {
-    transform: translate(120%);
+    transform: translateY(150%);
     transition: all 1.5s ease-in-out;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 30px;
+    position: relative;
+    padding-left: 40px;
+    top: -132px;
     a {
       display: flex;
       width: 100%;
@@ -94,7 +99,30 @@ body {
   .detailsBox:hover .cardLinks {
     transform: translate(0%);
     transition: all 1.5s ease-in-out;
-  } 
+  }
+
+  // About me cards touchscreen styles
+  @media(max-width: $isTablet) {
+    .detailsBox {
+      height: 400px;
+      .detailsBox:hover .cardText {
+        transform: translate(0);
+      }
+      .cardLinks {
+        transform: translateY(0);
+        top: 0;
+      }
+    }
+  }
+
+  @media (max-width: $isMobile) {
+    .cardContainer {
+      width: 80%;
+    }
+    .cardLinks {
+      padding-left: 0;
+    }
+  }
   
 * {
   box-sizing: border-box;

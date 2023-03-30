@@ -7,7 +7,6 @@ import ImageLink from './ImageLink'
 export default function AboutMeCard() {
   return (
     <Box
-      w="400px"
       rounded="20px"
       background="#44444473"
       overflow="hidden"
@@ -26,11 +25,11 @@ export default function AboutMeCard() {
           <Heading className="cardHeading">DevOps Engineer</Heading>
         </Center>
       </Box>
-      <Box p={5} h="200px" className="detailsBox" position="relative">
+      <Box p={5} className="detailsBox" position="relative">
         <Text className="cardText">
           Full time DevOps technician, aspiring freelancer. Hover for links and stuff
         </Text>
-        <Box className="cardLinks" transition="all 1.5s ease-in-out" pos="relative" top="-132px">
+        <Box className="cardLinks" transition="all 1.5s ease-in-out">
           <ImageLink
             alt="GitHub"
             link="https://github.com/AidanLDev"
