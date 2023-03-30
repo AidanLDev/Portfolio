@@ -3,21 +3,6 @@ import { Box, Text, Heading, Center, VStack, Image } from '@chakra-ui/react'
 import React from 'react'
 import ImageLink from './ImageLink'
 
-const IntroText = (
-  <Text className="cardText">
-    Full time DevOps technician, aspiring freelancer. Hover for links and stuff
-  </Text>
-)
-
-const LinksStack = (
-  <VStack className="cardLinks" transition="all 1.5s ease-in-out">
-    <ImageLink
-      alt="GitHub Image"
-      link="https://github.com/AidanLDev"
-      imagePath="/images/Logos/GithubLogo.png"
-    />
-  </VStack>
-)
 
 export default function AboutMeCard() {
   return (
@@ -42,8 +27,20 @@ export default function AboutMeCard() {
         </Center>
       </Box>
       <Box p={5} h="255px" className="detailsBox" position="relative">
-        {IntroText}
-        {LinksStack}
+        <Text className="cardText">
+          Full time DevOps technician, aspiring freelancer. Hover for links and stuff
+        </Text>
+        <VStack className="cardLinks" transition="all 1.5s ease-in-out">
+          <ImageLink
+            alt="GitHub Image"
+            link="https://github.com/AidanLDev"
+            imagePath="/images/Logos/GithubLogo.png"
+          />
+          {/* Double A Team */}
+          {/* Email */}
+          {/* LinkedIn */}
+
+        </VStack>
       </Box>
     </Box>
   )

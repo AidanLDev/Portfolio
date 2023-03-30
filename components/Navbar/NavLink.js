@@ -12,6 +12,7 @@ export default function NavLink({ item, active }) {
           textDecoration: activeClass ? 'underline' : '',
           color: activeClass ? '#ffd700' : '',
         }}
+        rel="noreferrer" target="_blank"
       >
         {item.label}
       </a>

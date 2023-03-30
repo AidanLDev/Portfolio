@@ -4,7 +4,7 @@ import Link from 'next/link';
 import NavLink from './NavLink';
 import styles from './styles.module.scss';
 
-const navItems = [{ label: 'Blogs', link: '/posts/' }];
+const navItems = [{ label: 'Blogs', link: 'https://doubleateam.co.uk/posts' }];
 
 export default function Navbar({ active }) {
   return (
