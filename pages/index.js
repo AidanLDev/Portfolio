@@ -6,6 +6,7 @@ import SEO from '../components/SEO'
 import HtmlBodyTags from '../components/htmlTags/HtmlBodyTags'
 import Title from '../components/Home/Title'
 import AboutMeCard from '../components/Home/AboutMeCard'
+import AWSCert from '../components/Skills/AWSCert'
 
 export async function getStaticProps() {
   // Change to Projects
@@ -34,6 +35,7 @@ export default function Home({ blogs }) {
           <AboutMeCard />
         </Center>
         {/* say scroll down to see what skills I have and some projects I've worked on */}
+        <AWSCert /> 
       </Box>
 
       {/* <Box m="2% 6%" minH="1000px"> */}

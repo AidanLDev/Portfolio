@@ -75,10 +75,10 @@ body {
   }
   .detailsBox:hover .cardText {
     transform: translate(120%);
-    transition: all 1.5s ease-in-out;
+    transition: all 1s ease-in-out;
   }
   .cardText {
-    transition: all 1.5s ease-in-out;
+    transition: all 2s ease-in-out;
   }
   .cardLinks {
     transform: translateY(150%);
