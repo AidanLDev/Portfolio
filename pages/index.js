@@ -8,6 +8,7 @@ import HtmlBodyTags from '../components/htmlTags/HtmlBodyTags'
 import Title from '../components/Home/Title'
 import AboutMeCard from '../components/Home/AboutMeCard'
 import SkillsContainer from '../components/Skills/SkillsContainer'
+import ScrollDown from '../components/Home/ScrollDown'
 
 export async function getStaticProps() {
   // Change to Projects
@@ -32,11 +33,12 @@ export default function Home({ blogs }) {
         <Navbar />
         <HtmlBodyTags />
         <Parallax pages={3}>
-          <ParallaxLayer speed={0.6}>
+          <ParallaxLayer speed={0.6} offset={0}>
             <Title />
             <Center>
               <AboutMeCard />
             </Center>
+            <ScrollDown />
           </ParallaxLayer>
           {/* Skills */}
           <ParallaxLayer offset={1} speed={1.3}>

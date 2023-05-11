@@ -4,5 +4,21 @@
   padding: 2rem 4rem;
   .title {
     color: $main-blue;
+    margin:2rem;
+  }
+  .skillsList {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1100px;
+    gap: 22px;
+    cursor: default;
+    text-align: -webkit-center;
+    .skillsBox {
+      width: 250px;
+      font-size: 22px;
+      font-weight: 500;
+    }
   }
 }

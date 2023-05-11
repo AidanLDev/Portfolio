@@ -3,6 +3,7 @@ import { Center, Heading } from '@chakra-ui/react'
 import styles from './styles.module.scss'
 
 import AWSCert from './AWSCert'
+import Skills from './Skills'
 
 export default function SkillsContainer() {
   return (
@@ -10,13 +11,12 @@ export default function SkillsContainer() {
       <Center>
         <Heading className={styles.title}>Skills</Heading>
       </Center>
-      {/* Grid of all the things I know */}
+      <Skills />
       <Center>
         <Heading className={styles.title}>
           Certifications and achievements
         </Heading>
       </Center>
-      {/* Grid of certs */}
       <AWSCert />
     </div>
   )
