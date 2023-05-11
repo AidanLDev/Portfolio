@@ -3,7 +3,6 @@ import { Box, Text, Heading, Center, Image } from '@chakra-ui/react'
 import React from 'react'
 import ImageLink from './ImageLink'
 
-
 export default function AboutMeCard() {
   return (
     <Box
@@ -27,7 +26,8 @@ export default function AboutMeCard() {
       </Box>
       <Box p={5} className="detailsBox" position="relative">
         <Text className="cardText">
-          Full time DevOps technician, aspiring freelancer. Hover for links and stuff
+          Full time DevOps technician, aspiring freelancer. Hover for links and
+          stuff
         </Text>
         <Box className="cardLinks" transition="all 1.5s ease-in-out">
           <ImageLink
@@ -57,24 +57,11 @@ export default function AboutMeCard() {
           />
           <ImageLink
             alt="Personal Blog"
-            link="https://doubleateam.co.uk"
+            link="https://blog.aidanlowson.com"
             imagePath="/images/Logos/blog-icon.png"
           />
-
         </Box>
       </Box>
     </Box>
   )
-}
-{
-  /* OnHover Links to GH, email and linkedIn */
-}
-{
-  /* <VStack>
-          <ImageLink
-            alt="GitHub Image"
-            link="https://github.com/AidanLDev"
-            imagePath="/images/Logos/GithubLogo.png"
-          />
-        </VStack> */
 }
