@@ -1,7 +1,6 @@
 @import 'styles/variables.scss';
 
 .skillsContainer {
-  padding: 2rem 4rem;
   .title {
     color: $main-blue;
     margin:2rem;
@@ -19,6 +18,18 @@
       width: 250px;
       font-size: 22px;
       font-weight: 500;
+    }
+  }
+  .certContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 42px;
+    justify-content: center;
+    .certBox {
+      width: 500px;
+      font-size: 22px;
+      font-weight: 500;
+      color: $main-blue;
     }
   }
 }

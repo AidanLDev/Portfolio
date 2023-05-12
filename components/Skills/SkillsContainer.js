@@ -2,22 +2,22 @@ import React from 'react'
 import { Center, Heading } from '@chakra-ui/react'
 import styles from './styles.module.scss'
 
-import AWSCert from './AWSCert'
 import Skills from './Skills'
+import Certifications from './Certifications'
 
 export default function SkillsContainer() {
   return (
-    <div className={styles.skillsContainer}>
+    <div className={`${styles.skillsContainer} containerPadding`}>
       <Center>
         <Heading className={styles.title}>Skills</Heading>
       </Center>
       <Skills />
       <Center>
         <Heading className={styles.title}>
-          Certifications and achievements
+          Certifications
         </Heading>
       </Center>
-      <AWSCert />
+      <Certifications />
     </div>
   )
 }
