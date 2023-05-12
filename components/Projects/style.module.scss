@@ -1,0 +1,11 @@
+@import 'styles/variables.scss';
+
+.projectContainer {
+  h2 {
+    color: $main-blue;
+  }
+  .projectCard {
+    width: 25%;
+    overflow: hidden;
+  }
+}

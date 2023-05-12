@@ -1,0 +1,21 @@
+@import 'styles/variables.scss';
+
+.scrollDownContainer {
+  -webkit-animation: pulsate 4s ease-out;
+  -webkit-animation-iteration-count: infinite; 
+  animation-delay: 6s;
+  opacity: 0;
+  animation-name: appear;
+  color:$main-blue;
+  position: relative;
+  top: 8%;
+  left: 45%;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+@keyframes appear {
+  0% {opacity: 0;}
+  50% { opacity: 1;}
+  100% {opacity: 50;}
+}

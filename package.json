@@ -1,64 +1,36 @@
 {
-  "name": "frontend",
-  "version": "0.1.1",
+  "name": "portfolio",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "@mdi/font": "^5.9.55",
-    "@mdi/js": "^5.9.55",
-    "@mdi/react": "^1.4.0",
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^13.0.16",
-    "@types/jest": "^26.0.22",
-    "@types/node": "^14.14.37",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "@types/react-router-dom": "^5.1.7",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "enzyme-to-json": "^3.6.1",
-    "framer-motion": "^4.0.3",
-    "node-sass": "^5.0.0",
-    "react": "^17.0.2",
-    "react-alice-carousel": "^2.5.1",
-    "react-dom": "^17.0.2",
-    "react-particles-js": "^3.4.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
-    "react-spinners": "^0.11.0",
-    "sass-loader": "^11.0.1",
-    "typescript": "^4.3.5"
+    "@chakra-ui/react": "latest",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@fontsource/aguafina-script": "^4.5.8",
+    "@fontsource/aldrich": "^4.5.1",
+    "@fontsource/nerko-one": "^4.5.2",
+    "@fontsource/open-sans": "^4.5.6",
+    "@react-spring/parallax": "^9.7.2",
+    "animate.css": "^4.1.1",
+    "framer-motion": "6.5.1",
+    "gsap-trial": "^3.10.4",
+    "loaders.css": "^0.1.2",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-icons": "latest",
+    "react-loaders": "^3.0.1",
+    "sass": "latest"
   },
   "devDependencies": {
-    "canvas": "^2.7.0",
-    "ts-jest": "^26.5.4"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
+    "eslint": "8.11.0",
+    "eslint-config-next": "12.1.0"
   }
 }

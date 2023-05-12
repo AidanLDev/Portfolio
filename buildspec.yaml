@@ -8,6 +8,7 @@ phases:
     commands:
       - echo Build started on `date`
       - npm run build
+      - npm run export
   post_build:
     commands:
       - echo `ls`
@@ -23,4 +24,4 @@ phases:
       - aws s3 cp --recursive --acl public-read ./build s3://aidanlowson.com
 artifacts:
   files:
-    - "./build/*"
+    - './out/*'
