@@ -1,5 +1,4 @@
 import { Box, Center } from '@chakra-ui/react'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Navbar from '../components/Navbar/Navbar'
 import { getBlogPostPaths } from '../lib/posts'
 import SEO from '../components/SEO'
@@ -33,22 +32,14 @@ export default function Home({ blogs }) {
       <Box className="container">
         <Navbar />
         <HtmlBodyTags />
-        <Parallax pages={3}>
-          <ParallaxLayer speed={0.6} offset={0}>
-            <Title />
-            <Center>
-              <AboutMeCard />
-            </Center>
-            <ScrollDown />
-          </ParallaxLayer>
-          {/* Skills */}
-          <ParallaxLayer offset={1} speed={1.3}>
-            <SkillsContainer />
-          </ParallaxLayer>
-          <ParallaxLayer offset={2} speed={0.5}>
-            <ProjectContainer />
-          </ParallaxLayer>
-        </Parallax>
+        <Title />
+        <Center>
+          <AboutMeCard />
+        </Center>
+        <ScrollDown />
+        {/* Skills */}
+        <SkillsContainer />
+        <ProjectContainer />
       </Box>
     </Box>
   )

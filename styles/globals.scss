@@ -74,9 +74,11 @@ body {
     height: 200px;
   }
   .detailsBox:hover .cardText {
-    transform: translate(120%);
+    @media(min-width: $isTablet) {
+      transform: translate(120%);
+      opacity: 0;
+    }
     transition: all 1s ease-in-out;
-    opacity: 0;
   }
   .cardText {
     transition: all 2s ease-in-out;
@@ -109,12 +111,16 @@ body {
   @media(max-width: $isTablet) {
     .detailsBox {
       height: 400px;
+      transform: translate(0);
+      transition: none;
       .detailsBox:hover .cardText {
-        transform: translate(0);
+        transform: translate(0) !important;
+        transition: none;
       }
       .cardLinks {
         transform: translateY(0);
         top: 0;
+        opacity: 1;
       }
     }
   }
