@@ -6,7 +6,7 @@ phases:
       - npm install
   build:
     runtime-versions:
-    nodejs: 18
+      nodejs: 18
     commands:
       - echo Build started on `date`
       - npm run build
