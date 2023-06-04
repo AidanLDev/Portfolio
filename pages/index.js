@@ -36,7 +36,6 @@ export default function Home({ blogs }) {
         <Center>
           <AboutMeCard />
         </Center>
-        <ScrollDown />
         {/* Skills */}
         <SkillsContainer />
         <ProjectContainer />

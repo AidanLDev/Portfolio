@@ -24,7 +24,7 @@ phases:
         --paths "/*"
       # Move built files
       # Copy the contents of /build to S3
-      - aws s3 cp --recursive --acl public-read ./build s3://aidanlowson.com
+      - aws s3 cp --recursive --acl public-read ./out s3://aidanlowson.com
 artifacts:
   files:
     - './out/*'
