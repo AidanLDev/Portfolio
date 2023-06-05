@@ -30,12 +30,16 @@ export default function Home({ blogs }) {
       />
 
       <Box className="container">
-        <Navbar />
-        <HtmlBodyTags />
-        <Title />
-        <Center>
-          <AboutMeCard />
-        </Center>
+        <Box className="landingScreen">
+          <Navbar />
+          <HtmlBodyTags />
+          <Title />
+          <Center>
+            <AboutMeCard />
+          </Center>
+          <ScrollDown />
+        </Box>
+
         {/* Skills */}
         <SkillsContainer />
         <ProjectContainer />

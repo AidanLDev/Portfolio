@@ -57,7 +57,6 @@ const skills = [
 export default function Skills() {
   return (
     <div className={styles.skillsList}>
-      {/* AWS JS TS          */}
       {skills.map((skill, idx) => (
         <SkillBox
           key={`${idx}__${skill.name}`}

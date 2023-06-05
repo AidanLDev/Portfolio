@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 export default function NavLink({ item, active }) {
   const activeClass = active === item.link
   return (
-    <Link href={item.link} passHref>
+    <Link href={item.link} passHref legacyBehavior>
       <a
         className={styles.linkStyle}
         style={{

@@ -3,7 +3,7 @@
 .skillsContainer {
   .title {
     color: $main-blue;
-    margin:2rem;
+    margin:4rem 0;
   }
   .skillsList {
     display: flex;
@@ -18,6 +18,12 @@
       width: 250px;
       font-size: 22px;
       font-weight: 500;
+      @media(max-width: $isTablet) {
+        width: 150px;
+      }
+      @media(max-width: $isMobile) {
+        width: 100px;
+      }
     }
   }
   .certContainer {
