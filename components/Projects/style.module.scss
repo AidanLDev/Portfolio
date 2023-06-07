@@ -1,11 +1,25 @@
 @import 'styles/variables.scss';
 
 .projectContainer {
+  padding-bottom: 42px;
   h2 {
     color: $main-blue;
+  }
+  .projWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    @media (max-width: $isTablet) {
+      flex-direction: column;
+    }
   }
   .projectCard {
     width: 25%;
     overflow: hidden;
+    @media (max-width: $isTablet) {
+      width: 100%;
+      img {
+        height: 500px;
+      }
+    }
   }
 }

@@ -33,7 +33,7 @@ export default function ProjectContainer() {
       <Center>
         <Heading p="4rem 0">Projects</Heading>
       </Center>
-      <Box display="flex" flexWrap="wrap">
+      <Box className={style.projWrapper}>
         {projects.map((project, idx) => (
           <ProjectCard
             key={`${project.tooltip}__${idx}`}

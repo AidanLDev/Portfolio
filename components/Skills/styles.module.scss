@@ -36,6 +36,13 @@
       font-size: 22px;
       font-weight: 500;
       color: $main-blue;
+      img {
+        width: 500px;
+        height: 400px;
+        @media (max-width: $isMobile) {
+          height: 300px;
+        }
+      }
     }
   }
 }
