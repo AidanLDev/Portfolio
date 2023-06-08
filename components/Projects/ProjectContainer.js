@@ -14,16 +14,19 @@ const projects = [
     img: 'MusicLibraryProject.png',
     tooltip: 'Music library search',
     link: 'https://song-search-web-search.onrender.com/',
+    gitHubLink: 'https://github.com/AidanLDev/Song_Search',
   },
   {
     img: 'ReactBootstrapCityGuide.png',
     tooltip: 'React city guide made with Bootstrap',
     link: 'http://react-bootstrap-city-guide.s3-website.eu-west-2.amazonaws.com/',
+    gitHubLink: 'https://github.com/AidanLDev/React-Bootstrap-City-Guide',
   },
   {
     img: 'fizzBuzz.png',
     tooltip: 'FizzBuzz JS edition',
     link: 'http://fizz-buzz.s3-website.eu-west-2.amazonaws.com/',
+    gitHubLink: 'https://github.com/AidanLDev/FizzBuzz.js',
   },
 ]
 
@@ -40,6 +43,7 @@ export default function ProjectContainer() {
             img={project.img}
             tooltip={project.tooltip}
             link={project.link}
+            gitHubLink={project.gitHubLink}
           />
         ))}
       </Box>
