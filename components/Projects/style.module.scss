@@ -21,5 +21,38 @@
         height: 500px;
       }
     }
+    a {
+      position: relative;
+    }
+    .ghOverlay {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      img {
+        animation: fadeIn 2s;
+        @media (max-width: $isTablet) {
+          height: 128px;
+          width: 128px;
+          margin: 0 16%;
+        }
+      }
+      p {
+        color: black;
+        font-weight: 500;
+        font-size: 22px;
+        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
