@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 
 const socialTags = ({
   url,
@@ -25,7 +26,7 @@ const socialTags = ({
     { name: 'og:description', content: description },
     {
       name: 'og:site_name',
-      content: 'Double A Team',
+      content: 'Aidan Lowson\'s Portfolio',
     },
     {
       name: 'og:published_time',
@@ -42,9 +43,11 @@ const socialTags = ({
 
 const SEO = ({ title, description, image, url }) => {
   return (
+    <>
     <Head>
       <title>{title}</title>
       <link rel='icon' href='/favicon.ico' />
+        <link rel="canonical" href={url} />
       <meta name='description' content={description} />
       <meta itemProp='name' content={title} />
       <meta itemProp='description' content={description} />
@@ -67,6 +70,22 @@ const SEO = ({ title, description, image, url }) => {
         }}
       />
     </Head>
+      {/* <!-- Google tag (gtag.js) --> */}
+      <Script
+        id='google-analytics'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'G-W0ZWY4VS2K', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+        }}
+      />
+    </>
   );
 };
 
