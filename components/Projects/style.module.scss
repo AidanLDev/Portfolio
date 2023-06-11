@@ -43,7 +43,23 @@
         font-weight: 500;
         font-size: 22px;
         text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+        text-decoration: underline;
       }
+
+      @media (max-width: $isTablet) {
+        left: 12%;
+        top: 18%;
+        img {
+          height: 80px;
+          width: 80px;
+        }
+      }
+
+      @media (max-width: $isMobile) {
+        left: 10%;
+        top: 20%;
+      }
+
     }
   }
 }

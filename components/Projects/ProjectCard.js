@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import styles from './style.module.scss'
 import { Image, Tooltip, Text } from '@chakra-ui/react'
-import useIsTablet from '../../hooks/useIsTablet';
+import useIsTablet from '../../hooks/useIsTablet'
 
 import { motion } from 'framer-motion'
 
 export default function ProjectCard({ img, link, tooltip, gitHubLink }) {
-  const [isShown, setIsShown] = useState(false);
-  const isTablet = useIsTablet();
+  const [isShown, setIsShown] = useState(false)
+  const isTablet = useIsTablet()
   return (
     <div
       className={styles.projectCard}
@@ -30,10 +30,9 @@ export default function ProjectCard({ img, link, tooltip, gitHubLink }) {
             </div>
           </Tooltip>
         )}
-        {gitHubLink && isTablet &&
+        {gitHubLink && isTablet && (
           <div className={styles.ghOverlay}>
             <a href={gitHubLink} rel="noreferrer" target="_blank">
-
               <Image
                 w="64px"
                 as={motion.img}
@@ -41,13 +40,12 @@ export default function ProjectCard({ img, link, tooltip, gitHubLink }) {
                 src={'/images/Logos/GithubLogo.png'}
                 whileHover={{ scale: 1.1 }}
               />
-              <Text>
+              {/* <Text>
                 View code on GitHub
-              </Text>
+              </Text> */}
             </a>
-
           </div>
-        }
+        )}
         <Tooltip label={tooltip}>
           <Image
             as={motion.img}
