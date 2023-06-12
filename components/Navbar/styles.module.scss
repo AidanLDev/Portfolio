@@ -5,12 +5,12 @@
     height: 40px;
     width: 100%;
     position: fixed;
-    // border-bottom: 1px solid $main-blue;
+    // border-bottom: 1px solid $main-colour;
     // background-color: #000000ab;
     .logo {
         color: $secondary-colour;
         padding: 8px 8px 8px 10px;
-        background-color: $main-blue;
+        background-color: $main-colour;
         cursor: pointer;
         width: 40px;
         z-index: 1;
@@ -25,7 +25,7 @@
         height: 100%;
         transform: scaleY(0);
         transform-origin: bottom center;
-        background: $main-blue-dark;
+        background: $main-colour-dark;
         z-index: -1;
         transition: transform 0.2s ease-in;
     }
@@ -53,7 +53,7 @@
             left: 0;
             right: 0;
             transform: scaleX(0);
-            background: $main-blue;
+            background: $main-colour;
             transform-origin: center right;
             transition: transform .2s ease-in;
         }

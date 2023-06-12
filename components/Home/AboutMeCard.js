@@ -26,8 +26,7 @@ export default function AboutMeCard() {
       </Box>
       <Box p={5} className="detailsBox" position="relative">
         <Text className="cardText">
-          Full time DevOps technician, aspiring freelancer. Hover for links and
-          stuff
+          Full time DevOps technician, aspiring freelancer. Hover for social media links etc.
         </Text>
         <Box className="cardLinks" transition="all 1.5s ease-in-out">
           <ImageLink
