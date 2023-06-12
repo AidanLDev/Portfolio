@@ -6,7 +6,7 @@ import ProjectCard from './ProjectCard'
 
 const projects = [
   {
-    img: 'doubleATeam.png',
+    img: 'Blogs.png',
     tooltip: 'Click to view The Double A Team blog',
     link: 'https://blog.aidanlowson.com',
   },
