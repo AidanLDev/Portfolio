@@ -6,7 +6,7 @@ import ProjectCard from './ProjectCard'
 
 const projects = [
   {
-    img: 'Blogs.png',
+    img: 'DoubleATeamBlog.jpg',
     tooltip: 'Click to view The Double A Team blog',
     link: 'https://blog.aidanlowson.com',
   },
@@ -17,13 +17,13 @@ const projects = [
     gitHubLink: 'https://github.com/AidanLDev/Song_Search',
   },
   {
-    img: 'ReactBootstrapCityGuide.png',
+    img: 'CityGuideReactBoostrap.jpg',
     tooltip: 'Click to view React city guide made with Bootstrap',
     link: 'http://react-bootstrap-city-guide.s3-website.eu-west-2.amazonaws.com/',
     gitHubLink: 'https://github.com/AidanLDev/React-Bootstrap-City-Guide',
   },
   {
-    img: 'fizzBuzz.png',
+    img: 'FizzBuzzJs.jpg',
     tooltip: 'Click to view FizzBuzz JS edition',
     link: 'http://fizz-buzz.s3-website.eu-west-2.amazonaws.com/',
     gitHubLink: 'https://github.com/AidanLDev/FizzBuzz.js',
