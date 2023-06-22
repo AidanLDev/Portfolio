@@ -8,6 +8,7 @@
   .projWrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     @media (max-width: $isTablet) {
       flex-direction: column;
     }

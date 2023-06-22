@@ -28,6 +28,12 @@ const projects = [
     link: 'http://fizz-buzz.s3-website.eu-west-2.amazonaws.com/',
     gitHubLink: 'https://github.com/AidanLDev/FizzBuzz.js',
   },
+  {
+    img: 'BurgerBuilder.jpg',
+    tooltip: 'Click to view the Burger Builder',
+    link: 'https://aidans-burger-builder.firebaseapp.com/',
+    gitHubLink: 'https://github.com/AidanLDev/Training-Burger-Builder',
+  },
 ]
 
 export default function ProjectContainer() {
