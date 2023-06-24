@@ -1,0 +1,19 @@
+{
+  "ignoreUnresolved": [],
+  "ignoreUnused": [
+    "animate.css",
+    "loaders.css",
+    "next",
+    "react",
+    "react-dom"
+  ],
+  "ignoreUnimported": [
+    "build/precache-manifest.073a54da0fc0776c42285e6eb7f34509.js",
+    "build/service-worker.js",
+    "build/static/js/2.2c89710b.chunk.js",
+    "build/static/js/main.c56afeb6.chunk.js",
+    "build/static/js/runtime-main.1f1f19a3.js",
+    "hooks/useIsMobile.js",
+    "next.config.js"
+  ]
+}
