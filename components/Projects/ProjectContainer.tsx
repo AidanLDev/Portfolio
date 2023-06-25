@@ -11,7 +11,7 @@ const projects: Project[] = [
     link: 'https://blog.aidanlowson.com',
   },
   {
-    img: 'MusicLibraryProject.png',
+    img: 'MusicLibraryProject.jpg',
     tooltip: 'Click to view Music library search',
     link: 'https://song-search-web-search.onrender.com/',
     gitHubLink: 'https://github.com/AidanLDev/Song_Search',
