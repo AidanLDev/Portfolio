@@ -34,6 +34,12 @@ const projects: Project[] = [
     link: 'https://aidans-burger-builder.firebaseapp.com/',
     gitHubLink: 'https://github.com/AidanLDev/Training-Burger-Builder',
   },
+  {
+    img: 'Supa_Smoothies.png',
+    tooltip: 'Click to view the Supa Smoothies',
+    link: 'https://supasmoothy-aidanldev.vercel.app/',
+    gitHubLink: 'https://github.com/AidanLDev/supasmoothy',
+  },
 ]
 
 export default function ProjectContainer() {
