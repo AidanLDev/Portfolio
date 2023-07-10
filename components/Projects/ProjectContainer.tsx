@@ -35,10 +35,16 @@ const projects: Project[] = [
     gitHubLink: 'https://github.com/AidanLDev/Training-Burger-Builder',
   },
   {
-    img: 'Supa_Smoothies.png',
+    img: 'Supa_Smoothies.jpg',
     tooltip: 'Click to view the Supa Smoothies',
     link: 'https://supasmoothy-aidanldev.vercel.app/',
     gitHubLink: 'https://github.com/AidanLDev/supasmoothy',
+  },
+  {
+    img: 'svelte-todo.jpg',
+    tooltip: 'Click to checkout a TODO app made with Svelte and Supabase',
+    link: 'https://svelte-todo-xi.vercel.app/',
+    gitHubLink: 'https://github.com/AidanLDev/svelte-todo',
   },
 ]
 
