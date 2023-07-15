@@ -1,4 +1,6 @@
-import ScrollDown from './ScrollDown'
+import ScrollDown from '../components/Home/ScrollDown'
+import '@testing-library/jest-dom/extend-expect'
+import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 
 describe('ScrollDown component', () => {
