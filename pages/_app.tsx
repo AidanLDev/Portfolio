@@ -1,4 +1,5 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import React from 'react'
 import '../styles/globals.scss';
 // import '@fontsource/aldrich';
 // import '@fontsource/open-sans';
