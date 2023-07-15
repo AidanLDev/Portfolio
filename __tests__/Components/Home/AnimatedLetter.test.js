@@ -3,10 +3,13 @@ import AnimatedLetter from '../../../components/Home/AnimatedLetter'
 
 describe('AnimatedLetter Component', () => {
   test('Text shows up', () => {
-    const letters = ['i', 'd', 'a', 'n', ' ']
+    const letters = ['A', 'i', 'd', 'a', 'n']
     render(
       <AnimatedLetter letterClass="text-animate" letters={letters} idx={10} />
     )
-    screen.debug()
+    // Check if spans with our letters array exists
+    letters.forEach((letter) => {
+      expect(screen.getByText(letter)).toBeInTheDocument()
+    })
   })
 })
