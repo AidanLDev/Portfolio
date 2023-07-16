@@ -1,8 +1,20 @@
 import { render, screen } from '@testing-library/react'
-import SEO from '../../../components/SEO/index'
 import ProjectCard from '../../../components/Projects/ProjectCard'
 
-// TODO: Add --save-dev jest-matchmedia-mock
+// fix for win.matchMedia is not a function
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // Deprecated
+    removeListener: jest.fn(), // Deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+})
 
 const projectCardProps = {
   img: 'DoubleATeamBlog.jpg',
@@ -16,7 +28,27 @@ describe('ProjectCard Component', () => {
     If GH link is NOT passed, don't display GH link
   */
   test('Card renders with an image', () => {
-    render(<ProjectCard />)
+    render(
+      <ProjectCard
+        img={projectCardProps.img}
+        link={projectCardProps.link}
+        tooltip={projectCardProps.tooltip}
+      />
+    )
+
+    const imgEl = screen.getByRole('img')
+
+    expect(imgEl).toBeInTheDocument()
     screen.debug()
+  })
+  test('Card shows GitHub link when ones defined', () => {
+    render(
+      <ProjectCard
+        img={projectCardProps.img}
+        link={projectCardProps.link}
+        tooltip={projectCardProps.tooltip}
+        gitHubLink="https://github.com/AidanLDev/Song_Search"
+      />
+    )
   })
 })

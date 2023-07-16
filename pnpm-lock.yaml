@@ -82,6 +82,9 @@ devDependencies:
   jest-environment-jsdom:
     specifier: ^29.6.1
     version: 29.6.1
+  jest-matchmedia-mock:
+    specifier: ^1.1.0
+    version: 1.1.0(jest@29.6.1)
 
 packages:
 
@@ -5707,6 +5710,15 @@ packages:
       jest-diff: 29.6.1
       jest-get-type: 29.4.3
       pretty-format: 29.6.1
+    dev: true
+
+  /jest-matchmedia-mock@1.1.0(jest@29.6.1):
+    resolution: {integrity: sha512-REnJRsOSCMpGAlkxmvVTqEBpregyFVi9MPEH3N83W1yLKzDdNehtCkcdDZduXq74PLtfI+11NyM4zKCK5ynV9g==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      jest: '>=13'
+    dependencies:
+      jest: 29.6.1(@types/node@20.3.1)
     dev: true
 
   /jest-message-util@29.6.1:
