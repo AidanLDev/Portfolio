@@ -39,16 +39,5 @@ describe('ProjectCard Component', () => {
     const imgEl = screen.getByRole('img')
 
     expect(imgEl).toBeInTheDocument()
-    screen.debug()
-  })
-  test('Card shows GitHub link when ones defined', () => {
-    render(
-      <ProjectCard
-        img={projectCardProps.img}
-        link={projectCardProps.link}
-        tooltip={projectCardProps.tooltip}
-        gitHubLink="https://github.com/AidanLDev/Song_Search"
-      />
-    )
   })
 })
