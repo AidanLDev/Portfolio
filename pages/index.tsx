@@ -29,10 +29,10 @@ export default function Home() {
           </Center>
           <ScrollDown />
         </Box>
-
+        {/* Projects */}
+        <ProjectContainer />
         {/* Skills */}
         <SkillsContainer />
-        <ProjectContainer />
       </Box>
     </Box>
   )

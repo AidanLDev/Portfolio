@@ -60,7 +60,7 @@ export default function ProjectCard({
             as={motion.img}
             alt={tooltip}
             src={`/images/Projects/${img}`}
-            h={240}
+            h={320}
             width="100%"
             whileHover={{ scale: 1.1 }}
           />

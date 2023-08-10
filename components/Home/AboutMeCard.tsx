@@ -12,11 +12,11 @@ export default function AboutMeCard() {
       boxShadow="md"
       className="cardContainer"
     >
-      <Box backgroundImage={`/images/spaceBgS.jpg`}>
+      <Box backgroundImage={`/images/programmingBgS.jpg`}>
         <Center>
           <Image
             alt="Cartoon avatar"
-            src="/images/digitalAvatar.png"
+            src="/images/BromoSoloRoundSmaller.png"
             h="200px"
           />
         </Center>
