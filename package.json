@@ -18,7 +18,7 @@
     "@emotion/styled": "^11.8.1",
     "animate.css": "^4.1.1",
     "babel-jest": "^29.6.1",
-    "cypress": "^12.17.1",
+    "cypress": "^12.17.3",
     "framer-motion": "6.5.1",
     "identity-obj-proxy": "^3.0.0",
     "loaders.css": "^0.1.2",
