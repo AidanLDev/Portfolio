@@ -21,7 +21,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "__tests__/Components/Home/AboutMeCard.test.js"
   ],
   "exclude": [
     "node_modules"

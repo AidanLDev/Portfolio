@@ -1,4 +1,5 @@
 import { Box, Center } from '@chakra-ui/react'
+import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import SEO from '../components/SEO'
 

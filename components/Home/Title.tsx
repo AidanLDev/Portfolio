@@ -14,9 +14,13 @@ export default function Title() {
 
   return (
     <h1 className="headingContainer">
-      <span className={`${letterClass} a`}>A</span>
+      <span className={`${letterClass} a`} data-testid="first-name-title">
+        A
+      </span>
       <AnimatedLetter letters={firstName} letterClass={letterClass} idx={10} />
-      <span className={`${letterClass} _16 l`}>L</span>
+      <span className={`${letterClass} _16 l`} data-testid="last-name-title">
+        L
+      </span>
       <AnimatedLetter letters={lastName} letterClass={letterClass} idx={17} />
     </h1>
   )
