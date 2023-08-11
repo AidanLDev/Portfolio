@@ -1,4 +1,5 @@
-import BackHomeLink from '../components/BackHomeLink';
+import React from 'react'
+import BackHomeLink from '../components/BackHomeLink'
 
 export default function Custom404() {
   return (
@@ -6,5 +7,5 @@ export default function Custom404() {
       <h1>404 - Page Not Found</h1>
       <BackHomeLink />
     </>
-  );
+  )
 }

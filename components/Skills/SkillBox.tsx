@@ -1,5 +1,5 @@
-import { Image } from '@chakra-ui/image'
-import { Text } from '@chakra-ui/layout'
+import { Image } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 import React from 'react'
 import { motion } from 'framer-motion'
 
