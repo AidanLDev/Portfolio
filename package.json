@@ -10,7 +10,7 @@
     "export": "next export",
     "ship": "next build && next export",
     "cypress": "cypress open",
-    "test": "jest --watchAll"
+    "test": "jest"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.7.1",
