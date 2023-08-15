@@ -4,6 +4,8 @@ phases:
   install:
     runtime-versions:
       nodejs: 18
+    commands:
+      - npm install -g pnpm
   pre_build:
     commands:
       - echo Installing source NPM dependencies
