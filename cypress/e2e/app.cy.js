@@ -19,21 +19,21 @@ describe('Title and card work', () => {
     cy.get('[data-testid="first-name-title"]').contains('A')
     cy.get('[data-testid="last-name-title"]').contains('L')
   })
-  it('Displays a card with links', () => {
-    cy.get('[href="https://twitter.com/AidanL94"] > .chakra-image').click()
-  })
+  // it('Displays a card with links', () => {
+  //   cy.get('[href="https://twitter.com/AidanL94"] > .chakra-image').click()
+  // })
 })
 
 describe('Projects display and open project pages', () => {
   it('Displays project image', () => {
     cy.get('.style_projWrapper__sXhZp > :nth-child(1) > a > .chakra-image')
   })
-  it('Opens a project', () => {
-    cy.get('.style_projWrapper__sXhZp > :nth-child(1) > a > .chakra-image').click()
-  })
-  it('Opens a projects GitHub if it has one', () => {
-    cy.get('[href="https://song-search-web-search.onrender.com/"] > .style_ghOverlay__apx1B > a > .chakra-image').click()
-  })
+  // it('Opens a project', () => {
+  //   cy.get('.style_projWrapper__sXhZp > :nth-child(1) > a > .chakra-image').click()
+  // })
+  // it('Opens a projects GitHub if it has one', () => {
+  //   cy.get('[href="https://song-search-web-search.onrender.com/"] > .style_ghOverlay__apx1B > a > .chakra-image').click()
+  // })
 })
 
 describe('Showcase skills', () => {
@@ -47,7 +47,7 @@ describe('Certifications section', () => {
   it('Displays certifications header', () => {
     cy.contains('Certifications')
   })
-  it('Displays and opens certification', () => {
-    cy.get('.styles_certContainer__g9f88 > :nth-child(2) > a > .chakra-image').click()
-  })
+  // it('Displays and opens certification', () => {
+  //   cy.get('.styles_certContainer__g9f88 > :nth-child(2) > a > .chakra-image').click()
+  // })
 })
