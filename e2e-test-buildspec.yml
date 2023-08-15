@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - yum install -y atk at-spi2-atk
+      - yum install -y atk at-spi2-atk gtk3
       - npm install -g pnpm
   pre_build:
     commands:
