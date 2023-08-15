@@ -10,7 +10,9 @@ phases:
     commands:
       - echo Installing source NPM dependencies
       - npm install
-      - npm run dev
+      - npm run dev &
   build:
     commands:
+      - npm install wait-on
+      - npx wait-on http://localhost:3000
       - npm run cypress:test
