@@ -13,6 +13,4 @@ phases:
       - npm run dev &
   build:
     commands:
-      - npm install wait-on
-      - npx wait-on http://localhost:3000
       - npm run cypress:test
