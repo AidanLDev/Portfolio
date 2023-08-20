@@ -1,0 +1,9 @@
+@import 'styles/variables.scss';
+
+.avatarImg {
+    img {
+        outline: 4px solid white;
+        border-radius: 100px;
+        outline-offset: -2px;
+    }
+}

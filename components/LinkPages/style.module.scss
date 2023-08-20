@@ -1,0 +1,9 @@
+@import 'styles/variables.scss';
+
+.socialMediaBox {
+  flex-direction: column-reverse;
+  p {
+    padding: 0 0 14px 0;
+    font-weight: 600;
+  }
+}
