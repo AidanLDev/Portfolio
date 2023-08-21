@@ -20,11 +20,10 @@ export default function SocialMediaBox(props: SocialMediaBoxProps) {
         borderRadius="100px"
         cursor="pointer"
         className={styles.socialMediaBox}
-      >
-        <Center>
-          <Text>{props.tag}</Text>
-        </Center>
-      </Flex>
+      ></Flex>
+      <Center className={styles.socialMediaText}>
+        <Text>{props.tag}</Text>
+      </Center>
     </a>
   )
 }
