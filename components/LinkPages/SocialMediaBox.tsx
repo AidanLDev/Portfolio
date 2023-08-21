@@ -11,7 +11,7 @@ interface SocialMediaBoxProps {
 
 export default function SocialMediaBox(props: SocialMediaBoxProps) {
   return (
-    <a href="https://www.instagram.com/mynameisarni/" target="_blank">
+    <a href={props.link} target='_blank'>
       <Flex
         backgroundImage={props.backgroundImage}
         backgroundSize="contain"

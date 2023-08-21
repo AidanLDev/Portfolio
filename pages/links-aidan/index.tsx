@@ -17,24 +17,24 @@ const baseLink = '/images/Logos/'
 const socialMedias: SocialMediasObject[] = [
   {
     img: `${baseLink}InstagramCircle.webp`,
-    tag: '@mynameisarni',
-    link: 'https://www.instagram.com/mynameisarni/',
+    tag: '@LowsonAidan',
+    link: 'https://www.instagram.com/lowsonaidan/',
   },
   {
     img: `${baseLink}twitterRound.webp`,
-    tag: '@MyNameIsArni',
-    link: 'https://twitter.com/MyNameIsArni',
+    tag: '@AidanL94',
+    link: 'https://twitter.com/AidanL94',
   },
   {
     img: `${baseLink}ThradsLogoSmall.webp`,
-    tag: '@mynameisarni',
-    link: 'https://www.threads.net/@mynameisarni?igshid=MzRlODBiNWFlZA==',
+    tag: '@LowsonAidan',
+    link: 'https://www.threads.net/@lowsonaidan',
   },
   {
     img: `${baseLink}LinkedInLogoRound.webp`,
-    tag: 'Arni Riani',
-    link: 'https://www.linkedin.com/in/arni-riani-012174162/'
-  }
+    tag: 'Aidan Lowson',
+    link: 'https://www.linkedin.com/in/aidanlowson1/',
+  },
 ]
 
 export default function ArniLinks() {
@@ -43,14 +43,14 @@ export default function ArniLinks() {
       <Center className={styles.avatarImg}>
         <Image
           alt="Arni Rianis avatar/profile picture"
-          src="/images/arni-avatar.webp"
+          src="/images/BromoSoloRoundSmaller.png"
           width={175}
           height={175}
         />
       </Center>
       <Flex justify="center" p="12px 0">
         <Text p="0 4px 0 0" fontSize="24px" fontWeight={600}>
-          Arni Riani
+          Aidan Lowson
         </Text>
         <img
           src={verifiedImg}

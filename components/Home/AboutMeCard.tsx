@@ -42,7 +42,7 @@ export default function AboutMeCard() {
           <ImageLink
             alt="LinkedIn"
             link="https://www.linkedin.com/in/aidanlowson1/"
-            imagePath="/images/Logos/LinkedIn_icon_circle.svg.png"
+            imagePath="/images/Logos/LinkedInLogoRound.webp"
           />
           <ImageLink
             alt="Twitter"
