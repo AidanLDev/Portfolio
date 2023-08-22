@@ -2,13 +2,14 @@ import React from 'react'
 import { verifiedImg } from '../../lib/constants'
 import { Box, Center, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
+import Head from 'next/head'
 
 import SocialMediaBox from '../../components/LinkPages/SocialMediaBox'
 import styles from './style.module.scss'
 
 interface SocialMediasObject {
   img: string
-  tag: string
+  tag?: string
   link: string
 }
 
@@ -17,29 +18,28 @@ const baseLink = '/images/Logos/'
 const socialMedias: SocialMediasObject[] = [
   {
     img: `${baseLink}InstagramCircle.webp`,
-    tag: '@mynameisarni',
     link: 'https://www.instagram.com/mynameisarni/',
   },
   {
     img: `${baseLink}twitterRound.webp`,
-    tag: '@MyNameIsArni',
     link: 'https://twitter.com/MyNameIsArni',
   },
   {
     img: `${baseLink}ThradsLogoSmall.webp`,
-    tag: '@mynameisarni',
     link: 'https://www.threads.net/@mynameisarni?igshid=MzRlODBiNWFlZA==',
   },
   {
     img: `${baseLink}LinkedInLogoRound.webp`,
-    tag: 'Arni Riani',
-    link: 'https://www.linkedin.com/in/arni-riani-012174162/'
-  }
+    link: 'https://www.linkedin.com/in/arni-riani-012174162/',
+  },
 ]
 
 export default function ArniLinks() {
   return (
     <Box className={styles.linksWrapper}>
+      <Head>
+        <title>Arni's Socials</title>
+      </Head>
       <Center className={styles.avatarImg}>
         <Image
           alt="Arni Rianis avatar/profile picture"

@@ -2,13 +2,14 @@ import React from 'react'
 import { verifiedImg } from '../../lib/constants'
 import { Box, Center, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
+import Head from 'next/head'
 
 import SocialMediaBox from '../../components/LinkPages/SocialMediaBox'
 import styles from './style.module.scss'
 
 interface SocialMediasObject {
   img: string
-  tag: string
+  tag?: string
   link: string
 }
 
@@ -40,6 +41,9 @@ const socialMedias: SocialMediasObject[] = [
 export default function ArniLinks() {
   return (
     <Box className={styles.linksWrapper}>
+      <Head>
+        <title>Aidan's Socials</title>
+      </Head>
       <Center className={styles.avatarImg}>
         <Image
           alt="Arni Rianis avatar/profile picture"
