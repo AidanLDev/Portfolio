@@ -38,7 +38,7 @@ export default function ArniLinks() {
   return (
     <Box className={styles.linksWrapper}>
       <Head>
-        <title>Arni's Socials</title>
+        <title>Arnis Socials</title>
       </Head>
       <Center className={styles.avatarImg}>
         <Image
