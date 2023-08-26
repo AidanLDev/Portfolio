@@ -25,12 +25,16 @@ const socialMedias: SocialMediasObject[] = [
     link: 'https://twitter.com/MyNameIsArni',
   },
   {
-    img: `${baseLink}ThradsLogoSmall.webp`,
-    link: 'https://www.threads.net/@mynameisarni?igshid=MzRlODBiNWFlZA==',
+    img: `${baseLink}TikTokLogo.webp`,
+    link: 'https://www.tiktok.com/@mynameisarni'
   },
   {
     img: `${baseLink}LinkedInLogoRound.webp`,
     link: 'https://www.linkedin.com/in/arni-riani-012174162/',
+  },
+  {
+    img: `${baseLink}ThradsLogoSmall.webp`,
+    link: 'https://www.threads.net/@mynameisarni?igshid=MzRlODBiNWFlZA==',
   },
 ]
 

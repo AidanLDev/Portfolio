@@ -27,14 +27,23 @@ const socialMedias: SocialMediasObject[] = [
     link: 'https://twitter.com/AidanL94',
   },
   {
-    img: `${baseLink}ThradsLogoSmall.webp`,
-    tag: '@LowsonAidan',
-    link: 'https://www.threads.net/@lowsonaidan',
+    img: `${baseLink}TikTokLogo.webp`,
+    tag: 'aidanlowson',
+    link: 'https://www.tiktok.com/@aidanlowson'
   },
   {
     img: `${baseLink}LinkedInLogoRound.webp`,
     tag: 'Aidan Lowson',
     link: 'https://www.linkedin.com/in/aidanlowson1/',
+  },
+  {
+    img: `${baseLink}github-512.webp`,
+    link: 'https://github.com/AidanLDev'
+  },
+  {
+    img: `${baseLink}ThradsLogoSmall.webp`,
+    tag: '@LowsonAidan',
+    link: 'https://www.threads.net/@lowsonaidan',
   },
 ]
 
