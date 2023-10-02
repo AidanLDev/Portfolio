@@ -1,76 +1,75 @@
 @import 'styles/variables.scss';
 
 .projectContainer {
-  padding-bottom: 42px;
-  h2 {
-    color: $main-colour;
-  }
-  .projWrapper {
+  width: 80vw;
+    margin: auto;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    @media (max-width: $isTablet) {
-      flex-direction: column;
-    }
-  }
+    flex-direction: column;
+    
+    h2 {
+        color: $main-colour;
+      }
   .projectCard {
-    width: 25%;
-    overflow: hidden;
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    margin-bottom: 2rem;
+    padding: 2rem;
     border: 2px solid $main-colour;
-    @media (max-width: $isTablet) {
-      width: 100%;
-      img {
-        height: 500px;
-      }
+    border-radius: 16px;
+    .projectCardContent {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
     }
-    a {
-      position: relative;
+    .heading {
+      font-weight: bold;
     }
-    .ghOverlay {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      img {
-        animation: fadeIn 2s;
-        @media (max-width: $isTablet) {
-          height: 128px;
-          width: 128px;
-          margin: 0 16%;
-        }
-      }
-      p {
-        color: black;
-        font-weight: 500;
-        font-size: 22px;
-        text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-        text-decoration: underline;
-      }
-
-      @media (max-width: $isTablet) {
-        left: 12%;
-        top: 18%;
-        img {
-          height: 80px;
-          width: 80px;
-        }
-      }
-
-      @media (max-width: $isMobile) {
-        left: 10%;
-        top: 20%;
-      }
-
+    .projectLink {
+      overflow: hidden;
+    }
+    .tags {
+      padding: 0 1rem;
+      display: flex;
+      gap: 1rem;
+    }
+    img {
+      border-radius: 16px;
+      width: 30rem;
+    }
+    .projectTitleTagsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .date {
+      font-style: italic;
+      font-size: 0.8em
+    }
+    .links {
+      margin: auto 0 0 auto;
+      gap: 2rem;
+      display: flex;
+    }
+    .links a {
+      display: flex;
+      padding: 1rem;
+      align-items: center;
+      gap: 1rem;
+      border-radius: 16px;
+      transition: all 0.6s;
+    }
+    .links a:hover {
+      text-decoration: underline;
+      filter: brightness(1.5)
+    }
+    .links a:first-of-type {
+      background: darken($background-color, 20%);
+    }
+    .links a:last-of-type {
+      background: $secondary-colour;
+      
     }
   }
-}
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }

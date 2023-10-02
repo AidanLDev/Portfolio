@@ -1,64 +1,43 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styles from './style.module.scss'
-import { Image, Tooltip } from '@chakra-ui/react'
+import { Box, Image, Text, Tooltip } from '@chakra-ui/react'
 import useIsTablet from '../../hooks/useIsTablet'
-
+import { AiFillGithub } from 'react-icons/ai'
+import { BsArrowRightShort } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 
 export interface Project {
   img: string
   link: string
-  tooltip: string
-  gitHubLink?: string
+  title: string
+  gitHubLink: string
+  date: string
+  description: string
+  tags: string[]
 }
 
 export default function ProjectCard({
   img,
   link,
-  tooltip,
+  title,
   gitHubLink,
+  date,
+  description,
+  tags,
 }: Project) {
-  const [isShown, setIsShown] = useState(false)
   const isTablet = useIsTablet()
   return (
-    <div
-      className={styles.projectCard}
-      onMouseEnter={() => setIsShown(true)}
-      onMouseLeave={() => setIsShown(false)}
-    >
-      <a href={link} rel="noreferrer" target="_blank">
-        {gitHubLink && isShown && !isTablet && (
-          <Tooltip label="View code on GitHub">
-            <div className={styles.ghOverlay}>
-              <a href={gitHubLink} rel="noreferrer" target="_blank">
-                <Image
-                  w="64px"
-                  as={motion.img}
-                  alt="GitHub Logo"
-                  src={'/images/Logos/GithubLogo.png'}
-                  whileHover={{ scale: 1.1 }}
-                />
-              </a>
-            </div>
-          </Tooltip>
-        )}
-        {gitHubLink && isTablet && (
-          <div className={styles.ghOverlay}>
-            <a href={gitHubLink} rel="noreferrer" target="_blank">
-              <Image
-                w="64px"
-                as={motion.img}
-                alt="GitHub Logo"
-                src={'/images/Logos/GithubLogo.png'}
-                whileHover={{ scale: 1.1 }}
-              />
-            </a>
-          </div>
-        )}
-        <Tooltip label={tooltip}>
+    <Box className={styles.projectCard}>
+      <a
+        href={link}
+        rel="noreferrer"
+        target="_blank"
+        className={styles.projectLink}
+      >
+        <Tooltip label={`Ckick to view - ${title}`}>
           <Image
             as={motion.img}
-            alt={tooltip}
+            alt={title}
             src={`/images/Projects/${img}`}
             h={320}
             width="100%"
@@ -66,6 +45,31 @@ export default function ProjectCard({
           />
         </Tooltip>
       </a>
-    </div>
+      <Box className={styles.projectCardContent}>
+        <Box>
+          <Box className={styles.projectTitleTagsContainer}>
+            <Text className={styles.heading}>{title}</Text>
+            <Box className={styles.tags}>
+              {tags.map((tag, idx) => (
+                <Text key={`${tag}__${idx}`}>{tag}</Text>
+              ))}
+            </Box>
+          </Box>
+          <Text className={styles.date}>Created Date - {date}</Text>
+        </Box>
+        <Box>
+          <Text>{description}</Text>
+        </Box>
+        <Box className={styles.links}>
+          <a href={gitHubLink} rel="noreferrer" target="_blank">
+            <AiFillGithub /><Text>GitHub</Text>
+          </a>
+          <a href={link} rel="noreferrer" target="_blank">
+            <Text>View Project</Text>
+            <BsArrowRightShort />
+          </a>
+        </Box>
+      </Box>
+    </Box>
   )
 }
