@@ -10,7 +10,7 @@
     "export": "next export",
     "ship": "next build && next export",
     "cypress": "cypress open",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "cypress:test": "cypress run --e2e"
   },
   "dependencies": {
