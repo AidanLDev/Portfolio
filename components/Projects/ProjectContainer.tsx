@@ -11,7 +11,7 @@ const projects: Project[] = [
     link: 'https://aidanlowson.com',
     gitHubLink: 'https://github.com/AidanLDev/Portfolio',
     description:
-      "My personal portfolio website, guess what, it's what you're looking at now! Where I showcase my projects, link to my socials and describe who I am for anyone interested. It's written using Next, and uses Cypress and React Testing library that're integrating into an AWS CI/CD pipeline",
+      "My portfolio website, guess what, it's what you're looking at now! Where I showcase my projects, link to my socials and describe who I am for anyone interested. It's written using Next, and uses Cypress and React Testing library that're integrating into an AWS CI/CD pipeline.",
     date: '2019/07/23',
     tags: ['Next.js', 'TypeScript'],
   },
@@ -21,7 +21,7 @@ const projects: Project[] = [
     link: 'https://blog.aidanlowson.com',
     gitHubLink: 'https://github.com/AidanLDev/doubleateam',
     description:
-      'Our personal blog. Double A Team stands for Aidan and Arni, Arni being my wife and fellow blogger, we will write about whatever we feel people would like to know, sharing what we know with those who want to know. Written in Astro to provice that all important SEO performance. Deployed to AWS CloudFront to allow quick access to our content no matter your location',
+      'Our blog. Double A Team stands for Aidan and Arni, my wife and fellow blogger, we will write about whatever we feel people would like to know, sharing what we know with those who want to know. Written in Astro for that all-important SEO performance. Deployed to AWS CloudFront to allow quick access to our content no matter your location.',
     date: '2021/10/18',
     tags: ['Astro', 'AWS', 'TypeScript'],
   },
@@ -31,7 +31,7 @@ const projects: Project[] = [
     link: 'https://chat-pdf-xi.vercel.app/',
     gitHubLink: 'https://github.com/AidanLDev/chat-pdf',
     description:
-      "An AI application using GPT to answer questions or provide information in the context of a PDF you upload. Using Drizzle ORM for that all important type saftey, Neon DB to store chats, AWS S3 to store the PDFs and of course OpenAI's powerful language model GPT3.5 Turbo. There's an option to go pro and pay a monthly subsciption to unlock unlimited PDFs using Stripe.",
+      "An AI application to answer questions or provide information in the context of a PDF you upload. Using Drizzle ORM type saftey, Neon DB to store chats, AWS S3 to store the PDFs and of course OpenAI's powerful language model GPT3.5 Turbo. There's an option to go pro and pay a monthly subsciption to unlock unlimited PDFs using Stripe.",
     date: '2023/09/23',
     tags: [
       'GPT',
@@ -80,7 +80,7 @@ const projects: Project[] = [
     link: 'https://aidans-burger-builder.firebaseapp.com/',
     gitHubLink: 'https://github.com/AidanLDev/Training-Burger-Builder',
     description:
-      'One of my first React projects, a burger building application using React and Redux. With a Firebase backend to store burger orders',
+      'One of my first React projects, a burger building application using React and Redux. With a Firebase backend to store burger orders.',
     date: '2019/04/06',
     tags: ['React', 'Firebase', 'Redux'],
   },
@@ -94,10 +94,7 @@ export default function ProjectContainer() {
       </Center>
       <Box className={style.projWrapper}>
         {projects.map(
-          (
-            { title, img, link, gitHubLink, description, date, tags },
-            idx
-          ) => (
+          ({ title, img, link, gitHubLink, description, date, tags }, idx) => (
             <ProjectCard
               key={`${title}__${idx}`}
               img={img}

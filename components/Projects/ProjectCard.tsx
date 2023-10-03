@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './style.module.scss'
 import { Box, Image, Text, Tooltip } from '@chakra-ui/react'
-import useIsTablet from '../../hooks/useIsTablet'
 import { AiFillGithub } from 'react-icons/ai'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { motion } from 'framer-motion'
@@ -25,7 +24,6 @@ export default function ProjectCard({
   description,
   tags,
 }: Project) {
-  const isTablet = useIsTablet()
   return (
     <Box className={styles.projectCard}>
       <a
@@ -46,7 +44,7 @@ export default function ProjectCard({
         </Tooltip>
       </a>
       <Box className={styles.projectCardContent}>
-        <Box>
+        <Box className={styles.projectHeading}>
           <Box className={styles.projectTitleTagsContainer}>
             <Text className={styles.heading}>{title}</Text>
             <Box className={styles.tags}>

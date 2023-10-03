@@ -25,6 +25,7 @@
     }
     .heading {
       font-weight: bold;
+      font-size: 1.25em;
     }
     .projectLink {
       overflow: hidden;
@@ -35,7 +36,7 @@
       gap: 1rem;
       flex-wrap: wrap;
       p {
-        border: 1px solid green;
+        border: 1px solid $background-color;
         padding: 0.2rem;
       }
     }
@@ -54,6 +55,7 @@
     }
     .links {
       margin: auto 0 0 auto;
+      padding-top: 1rem;
       gap: 2rem;
       display: flex;
     }
@@ -109,6 +111,44 @@
     .descriptionBox {
       margin-top: 1rem;
     }
+        @media(max-width: $isTablet) {
+          img {
+            width: 18rem;
+            height: 18rem;
+          }
+    
+          .links {
+            gap: 1rem;
+    
+            a {
+              padding: 0.5rem;
+    
+              svg {
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+            }
+    
+          }
+        }
+
+        @media(max-width: $isMobile) {
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem;
+          .projectHeading {
+            .projectTitleTagsContainer {
+              .heading {
+                margin: auto;
+              }
+              .tags {
+                padding: 1rem;
+                margin: auto;
+              }
+            }
+            
+          }
+        }
   }
 
 }
