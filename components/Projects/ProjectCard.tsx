@@ -57,14 +57,14 @@ export default function ProjectCard({
           </Box>
           <Text className={styles.date}>Created Date - {date}</Text>
         </Box>
-        <Box>
+        <Box className={styles.descriptionBox}>
           <Text>{description}</Text>
         </Box>
         <Box className={styles.links}>
           <a href={gitHubLink} rel="noreferrer" target="_blank">
             <AiFillGithub /><Text>GitHub</Text>
           </a>
-          <a href={link} rel="noreferrer" target="_blank">
+          <a href={link} rel="noreferrer" target="_blank" className={styles.viewProjectsLink}>
             <Text>View Project</Text>
             <BsArrowRightShort />
           </a>

@@ -17,6 +17,7 @@
     padding: 2rem;
     border: 2px solid $main-colour;
     border-radius: 16px;
+    background: darken($background-color, 10%);
     .projectCardContent {
       display: flex;
       flex-direction: column;
@@ -32,6 +33,11 @@
       padding: 0 1rem;
       display: flex;
       gap: 1rem;
+      flex-wrap: wrap;
+      p {
+        border: 1px solid green;
+        padding: 0.2rem;
+      }
     }
     img {
       border-radius: 16px;
@@ -58,17 +64,50 @@
       gap: 1rem;
       border-radius: 16px;
       transition: all 0.6s;
+      svg {
+          width: 2rem;
+          height: 2rem;
+        }
+      
+        &:hover::before {
+          transform: scaleX(1);
+          transform-origin: center left;
+          z-index: 0;
+        }
+      
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: 39px;
+          height: 2px;
+          bottom: 0;
+          left: 63px;
+          width: 52px;
+          right: 0;
+          transform: scaleX(0);
+          background: $main-colour;
+          transform-origin: center right;
+          transition: transform .2s ease-in;
+        }
+    }
+    .viewProjectsLink {
+      &::before {
+        left: 16px !important;
+        width: 88px !important;
+      }
     }
     .links a:hover {
-      text-decoration: underline;
       filter: brightness(1.5)
     }
     .links a:first-of-type {
-      background: darken($background-color, 20%);
+      background: $background-color;
     }
     .links a:last-of-type {
-      background: $secondary-colour;
-      
+      background: $secondary-colour; 
+    }
+    .descriptionBox {
+      margin-top: 1rem;
     }
   }
 
