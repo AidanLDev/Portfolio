@@ -2,8 +2,12 @@
 import { Box, Text, Heading, Center, Image } from '@chakra-ui/react'
 import React from 'react'
 import ImageLink from './ImageLink'
+import useIsTablet from '../../hooks/useIsTablet'
+import useIsMobile from '../../hooks/useIsMobile'
 
 export default function AboutMeCard() {
+  const isTablet = useIsTablet()
+  const isMobile = useIsMobile()
   return (
     <Box
       rounded="20px"
@@ -18,6 +22,7 @@ export default function AboutMeCard() {
             alt="Cartoon avatar"
             src="/images/BromoSoloRoundSmaller.png"
             h="200px"
+            className="cardImg"
           />
         </Center>
         <Center>
@@ -26,7 +31,9 @@ export default function AboutMeCard() {
       </Box>
       <Box p={5} className="detailsBox" position="relative">
         <Text className="cardText">
-          Full time DevOps technician, life long learner and programming enthusiast. {`Hover for social media links`}.
+          Full time DevOps technician, life long learner and programming
+          enthusiast.{' '}
+          {!isTablet && !isMobile && 'Hover for social media links.'}
         </Text>
         <Box className="cardLinks" transition="all 1.5s ease-in-out">
           <ImageLink
