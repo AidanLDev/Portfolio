@@ -39,7 +39,7 @@ export default function ProjectCard({
             src={`/images/Projects/${img}`}
             h={320}
             width="100%"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.02 }}
           />
         </Tooltip>
       </a>
