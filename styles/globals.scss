@@ -26,15 +26,25 @@ body {
   border-radius: 20px;
   transition: all 1.5s ease-in-out;
   width: 400px;
+  .cardImg {
+    margin-top: 0.5rem;
+  }
   .cardHeading {
     color: $active-colour;
-    padding-bottom: 24px;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
     background-color: black;
+    @media(max-width: $isMobile) {
+      font-size: 1.6em;
+    }
   }
   p {
-    font-size: 28px;
+    font-size: 1.8em;
     padding-bottom: 12px;
     font-family: Arial, Helvetica, sans-serif;
+    @media(max-width: $isMobile) {
+        font-size: 1.4em
+      }
   }
   &::before {
     content: '<Card>';
@@ -70,12 +80,25 @@ body {
   .detailsBox {
     background-color: $secondary-colour;
     background-color: #290808;
-    height: 200px;
+    height: 250px;
+    border-top: 2px solid $main-colour;
+    @media(max-width: $isTablet) {
+      height: 400px;
+      transform: translate(0);
+      transition: none;
+    }
+    @media(max-width: $isMobile) {
+      height: 310px;
+    }
   }
   .detailsBox:hover .cardText {
     @media(min-width: $isTablet) {
       transform: translate(120%);
       opacity: 0;
+    }
+    @media(max-width: $isTablet) {
+      transform: translate(0) !important;
+      transition: none;
     }
     transition: all 1s ease-in-out;
   }
@@ -92,36 +115,31 @@ body {
     grid-column-gap: 0px;
     grid-row-gap: 30px;
     position: relative;
-    padding-left: 40px;
     opacity: 0;
-    top: -132px;
+    top: -185px;
     a {
       display: flex;
       width: 100%;
+      justify-content: center;
+      &:last-of-type {
+        img {
+          background: $background-color;
+          border-radius: 50%;
+          padding: 6px;
+          border: 1px solid black;
+        }
+      }
+    }
+    @media(max-width: $isTablet) {
+      transform: translateY(0);
+      top: 0;
+      opacity: 1;
     }
   }
   .detailsBox:hover .cardLinks {
     transform: translate(0%);
     transition: all 1.5s ease-in-out;
     opacity: 1;
-  }
-
-  // About me cards touchscreen styles
-  @media(max-width: $isTablet) {
-    .detailsBox {
-      height: 400px;
-      transform: translate(0);
-      transition: none;
-      .detailsBox:hover .cardText {
-        transform: translate(0) !important;
-        transition: none;
-      }
-      .cardLinks {
-        transform: translateY(0);
-        top: 0;
-        opacity: 1;
-      }
-    }
   }
 
   @media (max-width: $isMobile) {
