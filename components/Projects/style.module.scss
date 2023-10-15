@@ -43,6 +43,10 @@
     img {
       border-radius: 16px;
       width: 30rem;
+      transition: all 0.3s;
+      &:hover {
+        border-radius: 0;
+      }
     }
     .projectTitleTagsContainer {
       display: flex;
@@ -58,6 +62,7 @@
       padding-top: 1rem;
       gap: 2rem;
       display: flex;
+      flex-wrap: wrap;
     }
     .links a {
       display: flex;
@@ -91,6 +96,10 @@
           background: $main-colour;
           transform-origin: center right;
           transition: transform .2s ease-in;
+          @media(max-width: $isTablet) {
+            top: 32px;
+            left: 42px;
+          }
         }
     }
     .viewProjectsLink {

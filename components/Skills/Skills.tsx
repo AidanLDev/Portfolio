@@ -57,6 +57,26 @@ const skills: Skill[] = [
     name: 'GIT',
     logo: '/images/Tech/GitLogo.png',
   },
+  {
+    name: 'Python',
+    logo: '/images/Tech/Python.png',
+  },
+  {
+    name: 'C#',
+    logo: '/images/Tech/csharp.png',
+  },
+  {
+    name: 'Cypress',
+    logo: '/images/Tech/cypressLogo.png',
+  },
+  {
+    name: 'Jest',
+    logo: '/images/Tech/jestLogo.png',
+  },
+  {
+    name: 'Playwright',
+    logo: '/images/Tech/playwrightLogo.png',
+  },
 ]
 
 export default function Skills() {
