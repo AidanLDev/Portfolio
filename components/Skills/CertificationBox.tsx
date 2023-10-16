@@ -22,7 +22,7 @@ export default function CertificationBox({ name, img, link }: CertBoxProps) {
             src={`/images/Certs/${img}`}
             w={500}
             h={400}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.01 }}
           />
         </Tooltip>
       </a>

@@ -26,6 +26,11 @@ const certs: Certs[] = [
     img: 'FreeCodeCampCert.png',
     link: 'https://www.freecodecamp.org/certification/fcc99c3375c-a5d4-4e8a-ba4a-96473ca87aa8/javascript-algorithms-and-data-structures',
   },
+  {
+    name: 'Free Code Camp C# Foundational',
+    img: 'FreeCodeCampCSharp.jpeg',
+    link: 'https://www.freecodecamp.org/certification/fcc99c3375c-a5d4-4e8a-ba4a-96473ca87aa8/foundational-c-sharp-with-microsoft',
+  },
 ]
 
 export default function Certifications() {
