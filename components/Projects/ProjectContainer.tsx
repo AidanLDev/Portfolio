@@ -64,16 +64,17 @@ const projects: Project[] = [
     date: '2023/06/25',
     tags: ['Svelte', 'Supabase', 'TypeScript'],
   },
-  {
-    img: 'MusicLibraryProject.jpg',
-    title: 'Song Search',
-    link: 'https://song-search-web-search.onrender.com/',
-    gitHubLink: 'https://github.com/AidanLDev/Song_Search',
-    description:
-      'Search through a small library of music, using a Node.js backend and a React Frontend with Bootstrap to style the components.',
-    date: '2020/05/16',
-    tags: ['Node', 'React', 'TypeScript', 'Bootstrap'],
-  },
+  // TODO: Migrating app to Next/Vercel, uncomment once complete
+  // {
+  //   img: 'MusicLibraryProject.jpg',
+  //   title: 'Song Search',
+  //   link: 'https://song-search-web-search.onrender.com/',
+  //   gitHubLink: 'https://github.com/AidanLDev/Song_Search',
+  //   description:
+  //     'Search through a small library of music, using a Node.js backend and a React Frontend with Bootstrap to style the components.',
+  //   date: '2020/05/16',
+  //   tags: ['Node', 'React', 'TypeScript', 'Bootstrap'],
+  // },
   {
     img: 'BurgerBuilder.jpg',
     title: 'Burger Builder',
