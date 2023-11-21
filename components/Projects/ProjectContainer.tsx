@@ -65,16 +65,16 @@ const projects: Project[] = [
     tags: ['Svelte', 'Supabase', 'TypeScript'],
   },
   // TODO: Migrating app to Next/Vercel, uncomment once complete
-  // {
-  //   img: 'MusicLibraryProject.jpg',
-  //   title: 'Song Search',
-  //   link: 'https://song-search-web-search.onrender.com/',
-  //   gitHubLink: 'https://github.com/AidanLDev/Song_Search',
-  //   description:
-  //     'Search through a small library of music, using a Node.js backend and a React Frontend with Bootstrap to style the components.',
-  //   date: '2020/05/16',
-  //   tags: ['Node', 'React', 'TypeScript', 'Bootstrap'],
-  // },
+  {
+    img: 'MusicLibraryProject.jpg',
+    title: 'Song Search',
+    link: 'https://song-search-ten.vercel.app/',
+    gitHubLink: 'https://github.com/AidanLDev/Song_Search',
+    description:
+      'What used to be a hubmle Node.js backend project has evolved to use the migthy Next... Utilising Tailwind and TypeScript, this project has a "database" of songs you can search for visa the track name or if you want to see all songs by a particular artist, there\'s a dropdown for that',
+    date: '2020/05/16',
+    tags: ['Next', 'TypeScript', 'Tailwind'],
+  },
   {
     img: 'BurgerBuilder.jpg',
     title: 'Burger Builder',
