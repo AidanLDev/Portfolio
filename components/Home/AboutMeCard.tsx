@@ -26,12 +26,12 @@ export default function AboutMeCard() {
           />
         </Center>
         <Center>
-          <Heading className="cardHeading">DevOps Engineer</Heading>
+          <Heading className="cardHeading">Software Engineer</Heading>
         </Center>
       </Box>
       <Box p={5} className="detailsBox" position="relative">
         <Text className="cardText">
-          Full time DevOps technician, life long learner and programming
+          Full time Software Engineer, life long learner and programming
           enthusiast.{' '}
           {!isTablet && !isMobile && 'Hover for social media links.'}
         </Text>

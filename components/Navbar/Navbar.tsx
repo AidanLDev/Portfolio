@@ -3,15 +3,7 @@ import { Box, Text, HStack } from '@chakra-ui/react'
 import Link from 'next/link'
 import NavLink from './NavLink'
 import styles from './styles.module.scss'
-
-export interface NavItem {
-  label: string
-  link: string
-}
-
-export interface NavBarProps {
-  active?: string
-}
+import { NavBarProps, NavItem } from '../../interfaces/navbarInterfaces'
 
 const navItems: NavItem[] = [
   { label: 'Blogs', link: 'https://blog.aidanlowson.com' },

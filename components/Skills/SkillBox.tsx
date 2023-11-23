@@ -2,13 +2,12 @@ import { Image } from '@chakra-ui/react'
 import { Text } from '@chakra-ui/react'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { SkillBoxProps } from '../../interfaces/skillsInterfaces'
 
 import styles from './styles.module.scss'
 
-export interface SkillBoxProps {
-  logo: string
-  name: string
-}
+
+
 
 export default function SkillBox({ logo, name }: SkillBoxProps) {
   return (

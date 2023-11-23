@@ -2,12 +2,8 @@ import React from 'react'
 import { Text, Flex, Center } from '@chakra-ui/react'
 
 import styles from './style.module.scss'
+import { SocialMediaBoxProps } from '../../interfaces/linkPageInterfaces'
 
-interface SocialMediaBoxProps {
-  backgroundImage: string
-  tag?: string
-  link: string
-}
 
 export default function SocialMediaBox(props: SocialMediaBoxProps) {
   return (

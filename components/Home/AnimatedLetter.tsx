@@ -1,10 +1,5 @@
 import React from 'react'
-
-export interface AnimatedLetterProps {
-  letterClass: string
-  idx: number
-  letters: string[]
-}
+import { AnimatedLetterProps } from '../../interfaces/homeInterfaces'
 
 export default function AnimatedLetter({
   letterClass,

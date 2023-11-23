@@ -1,18 +1,7 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import React from 'react'
-
-export interface MetaTags {
-  name: string
-  content: string
-}
-
-export interface SEOProps {
-  title: string
-  url: string
-  description: string
-  image?: string
-}
+import { MetaTags, SEOProps } from '../../interfaces/seoInterfaces'
 
 const socialTags = (
   url: string,

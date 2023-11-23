@@ -1,12 +1,7 @@
 import React from 'react'
 import { Image, Tooltip } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-
-export interface ImageLinkProps {
-  link: string
-  imagePath: string
-  alt: string
-}
+import { ImageLinkProps } from '../../interfaces/homeInterfaces'
 
 export default function ImageLink({ link, imagePath, alt }: ImageLinkProps) {
   return (

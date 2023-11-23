@@ -4,12 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 import styles from './styles.module.scss'
-
-export interface CertBoxProps {
-  name: string
-  img: string
-  link: string
-}
+import { CertBoxProps } from '../../interfaces/skillsInterfaces'
 
 export default function CertificationBox({ name, img, link }: CertBoxProps) {
   return (

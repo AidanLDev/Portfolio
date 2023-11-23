@@ -4,16 +4,7 @@ import { Box, Image, Text, Tooltip } from '@chakra-ui/react'
 import { AiFillGithub } from 'react-icons/ai'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { motion } from 'framer-motion'
-
-export interface Project {
-  img: string
-  link: string
-  title: string
-  gitHubLink: string
-  date: string
-  description: string
-  tags: string[]
-}
+import { Project } from '../../interfaces/projectInterfaces'
 
 export default function ProjectCard({
   img,
