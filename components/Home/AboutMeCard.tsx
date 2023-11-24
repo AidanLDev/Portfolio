@@ -5,6 +5,8 @@ import ImageLink from './ImageLink'
 import useIsTablet from '../../hooks/useIsTablet'
 import useIsMobile from '../../hooks/useIsMobile'
 
+import styles from './style.module.scss'
+
 export default function AboutMeCard() {
   const isTablet = useIsTablet()
   const isMobile = useIsMobile()
@@ -14,7 +16,7 @@ export default function AboutMeCard() {
       background="#44444473"
       overflow="hidden"
       boxShadow="md"
-      className="cardContainer"
+      className={styles.cardContainer}
     >
       <Box backgroundImage={`/images/programmingBgS.webp`}>
         <Center>
@@ -22,20 +24,20 @@ export default function AboutMeCard() {
             alt="Cartoon avatar"
             src="/images/BromoSoloRoundSmaller.webp"
             h="200px"
-            className="cardImg"
+            className={styles.cardImg}
           />
         </Center>
         <Center>
-          <Heading className="cardHeading">Software Engineer</Heading>
+          <Heading className={styles.cardHeading}>Software Engineer</Heading>
         </Center>
       </Box>
-      <Box p={5} className="detailsBox" position="relative">
-        <Text className="cardText">
+      <Box p={5} className={styles.detailsBox} position="relative">
+        <Text className={styles.cardText}>
           Full time Software Engineer, life long learner and programming
           enthusiast.{' '}
           {!isTablet && !isMobile && 'Hover for social media links.'}
         </Text>
-        <Box className="cardLinks" transition="all 1.5s ease-in-out">
+        <Box className={styles.cardLinks} transition="all 1.5s ease-in-out">
           <ImageLink
             alt="GitHub"
             link="https://github.com/AidanLDev"
