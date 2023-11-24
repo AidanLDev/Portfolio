@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import Title from '../../../components/Home/Title'
+import '@testing-library/jest-dom'
 
 describe('Title component', () => {
   test('Displays a couple of spans', () => {
