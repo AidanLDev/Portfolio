@@ -17,7 +17,5 @@ describe('SEO component', () => {
         url={seoProps.url}
       />
     )
-
-    console.log('SEO runs without failing')
   })
 })
