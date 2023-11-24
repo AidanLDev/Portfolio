@@ -11,7 +11,6 @@ phases:
     commands:
       - echo Build started on `date`
       - npm run build
-      - npm run export
   post_build:
     commands:
       - echo `ls`

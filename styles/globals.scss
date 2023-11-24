@@ -33,18 +33,23 @@ body {
     color: $active-colour;
     padding: 1rem 2rem;
     margin: 1rem 0;
+    font-size: 2.25em;
     background-color: black;
+    text-align: center;
     @media(max-width: $isMobile) {
       font-size: 1.6em;
     }
   }
   p {
-    font-size: 1.8em;
+    font-size: 1.7em;
     padding-bottom: 12px;
     font-family: Arial, Helvetica, sans-serif;
     @media(max-width: $isMobile) {
         font-size: 1.4em
       }
+    @media(max-width: $isExtraSmallMobile) {
+      font-size: 1.3em;
+    }
   }
   &::before {
     content: '<Card>';
@@ -80,7 +85,7 @@ body {
   .detailsBox {
     background-color: $secondary-colour;
     background-color: #290808;
-    height: 250px;
+    height: 12rem;
     border-top: 2px solid $main-colour;
     @media(max-width: $isTablet) {
       height: 400px;
@@ -112,11 +117,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 30px;
+    column-gap: 0px;
+    row-gap: 30px;
     position: relative;
     opacity: 0;
-    top: -185px;
+    top: -170px;
     a {
       display: flex;
       width: 100%;
@@ -132,8 +137,14 @@ body {
     }
     @media(max-width: $isTablet) {
       transform: translateY(0);
-      top: 0;
+      top: 30px;
       opacity: 1;
+    }
+    @media(max-width: $isMobile) {
+      top: 0;
+    }
+    @media(max-width: $isExtraSmallMobile) {
+      row-gap: 15px;
     }
   }
   .detailsBox:hover .cardLinks {
