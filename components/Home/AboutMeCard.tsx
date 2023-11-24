@@ -16,11 +16,11 @@ export default function AboutMeCard() {
       boxShadow="md"
       className="cardContainer"
     >
-      <Box backgroundImage={`/images/programmingBgS.jpg`}>
+      <Box backgroundImage={`/images/programmingBgS.webp`}>
         <Center>
           <Image
             alt="Cartoon avatar"
-            src="/images/BromoSoloRoundSmaller.png"
+            src="/images/BromoSoloRoundSmaller.webp"
             h="200px"
             className="cardImg"
           />
@@ -44,7 +44,7 @@ export default function AboutMeCard() {
           <ImageLink
             alt="E-Mail me"
             link="mailto:dev@aidanlowson.com"
-            imagePath="/images/Logos/round-blue-mail-icon.png"
+            imagePath="/images/Logos/round-blue-mail-icon.webp"
           />
           <ImageLink
             alt="LinkedIn"
@@ -54,7 +54,7 @@ export default function AboutMeCard() {
           <ImageLink
             alt="Twitter"
             link="https://twitter.com/AidanL94"
-            imagePath="/images/Logos/twitter-circle-2.png"
+            imagePath="/images/Logos/twitter-circle-2.webp"
           />
           <ImageLink
             alt="Instagram"
@@ -64,7 +64,7 @@ export default function AboutMeCard() {
           <ImageLink
             alt="Personal Blog"
             link="https://blog.aidanlowson.com"
-            imagePath="/images/Logos/blog-icon.png"
+            imagePath="/images/Logos/blog-icon.webp"
           />
         </Box>
       </Box>

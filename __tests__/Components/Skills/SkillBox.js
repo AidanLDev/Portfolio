@@ -1,9 +1,9 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import SkillBox from '../../../components/Skills/SkillBox'
 
 const skillBoxProps = {
   name: 'AWS',
-  logo: '/images/Tech/AWSLogo.png',
+  logo: '/images/Tech/AWSLogo.webp',
 }
 
 describe('SkillBox component', () => {

@@ -6,7 +6,7 @@ describe('ImageLink component tests', () => {
     render(
       <ImageLink
         link="https://github.com/AidanLDev/Portfolio"
-        imagePath="/images/Logos/GithubLogo.png"
+        imagePath="/images/Logos/github-512.webp"
         alt="GitHub logo"
       />
     )

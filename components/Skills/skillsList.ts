@@ -1,72 +1,78 @@
 import { Skill } from '../../interfaces/skillsInterfaces'
 
+const imgPath = '/images/Tech/'
+
 export const skills: Skill[] = [
   {
     name: 'AWS',
-    logo: '/images/Tech/AWSLogo.png',
+    logo: `${imgPath}AWSLogo.webp`,
   },
   {
     name: 'JavaScript',
-    logo: '/images/Tech/JavaScriptLogo.png',
+    logo: `${imgPath}JavaScriptLogo.webp`,
   },
   {
     name: 'TypeScript',
-    logo: '/images/Tech/TypeScript.png',
+    logo: `${imgPath}TypeScript.webp`,
   },
   {
     name: 'React',
-    logo: '/images/Tech/ReactLogo.png',
+    logo: `${imgPath}ReactLogo.webp`,
   },
   {
     name: 'Node',
-    logo: '/images/Tech/Node.png',
+    logo: `${imgPath}Node.webp`,
   },
   {
     name: 'MySQL',
-    logo: '/images/Tech/mySQLLogo.png',
+    logo: `${imgPath}mySQLLogo.webp`,
   },
   {
     name: 'SASS',
-    logo: '/images/Tech/sassLogo.png',
+    logo: `${imgPath}sassLogo.webp`,
   },
   {
     name: 'Tailwind',
-    logo: '/images/Tech/Tailwind.png',
+    logo: `${imgPath}Tailwind.webp`,
   },
   {
     name: 'Angular',
-    logo: '/images/Tech/AngularLogo.png',
+    logo: `${imgPath}AngularLogo.webp`,
   },
   {
     name: 'Astro',
-    logo: '/images/Tech/astro.png',
+    logo: `${imgPath}astro.webp`,
   },
   {
     name: 'Next',
-    logo: '/images/Tech/Next.png',
+    logo: `${imgPath}Next.webp`,
   },
   {
     name: 'GIT',
-    logo: '/images/Tech/GitLogo.png',
+    logo: `${imgPath}GitLogo.webp`,
   },
   {
     name: 'Python',
-    logo: '/images/Tech/Python.png',
+    logo: `${imgPath}Python.webp`,
   },
   {
     name: 'C#',
-    logo: '/images/Tech/csharp.png',
+    logo: `${imgPath}csharp.webp`,
   },
   {
     name: 'Cypress',
-    logo: '/images/Tech/cypressLogo.png',
+    logo: `${imgPath}cypressLogo.webp`,
   },
   {
     name: 'Jest',
-    logo: '/images/Tech/jestLogo.png',
+    logo: `${imgPath}jestLogo.webp`,
   },
   {
     name: 'Playwright',
-    logo: '/images/Tech/playwrightLogo.png',
+    logo: `${imgPath}playwrightLogo.webp`,
+  },
+  {
+    name: 'Redux',
+    logo: `${imgPath}Redux.webp`,
   },
 ]

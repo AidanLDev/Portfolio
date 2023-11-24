@@ -3,7 +3,7 @@ import CertificationBox from '../../../components/Skills/CertificationBox'
 
 const certBoxProps = {
   name: 'AWS',
-  img: 'AWSCPBadge.png',
+  img: 'AWSCPBadge.webp',
   link: 'https://www.udemy.com/certificate/UC-A5AOU8C4/',
 }
 

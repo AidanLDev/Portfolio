@@ -12,7 +12,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TypeScript'],
   },
   {
-    img: 'DoubleATeamBlog.jpg',
+    img: 'DoubleATeamBlog.webp',
     title: 'Double A Team blog',
     link: 'https://blog.aidanlowson.com',
     gitHubLink: 'https://github.com/AidanLDev/doubleateam',
@@ -51,7 +51,7 @@ export const projects: Project[] = [
     tags: ['Next.js', 'TypeScript', 'Tailwind'],
   },
   {
-    img: 'Supa_Smoothies.jpg',
+    img: 'Supa_Smoothies.webp',
     title: 'Supa Smoothies',
     link: 'https://supasmoothy-aidanldev.vercel.app/',
     gitHubLink: 'https://github.com/AidanLDev/supasmoothy',
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     tags: ['Supabase', 'React', 'TypeScript', 'Vite'],
   },
   {
-    img: 'svelte-todo.jpg',
+    img: 'svelte-todo.webp',
     title: 'Svelte TODO',
     link: 'https://svelte-todo-xi.vercel.app/',
     gitHubLink: 'https://github.com/AidanLDev/svelte-todo',
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     tags: ['Svelte', 'Supabase', 'TypeScript'],
   },
   {
-    img: 'MusicLibraryProject.jpg',
+    img: 'MusicLibraryProject.webp',
     title: 'Song Search',
     link: 'https://song-search-ten.vercel.app/',
     gitHubLink: 'https://github.com/AidanLDev/Song_Search',
@@ -81,7 +81,7 @@ export const projects: Project[] = [
     tags: ['Next', 'TypeScript', 'Tailwind'],
   },
   {
-    img: 'BurgerBuilder.jpg',
+    img: 'BurgerBuilder.webp',
     title: 'Burger Builder',
     link: 'https://aidans-burger-builder.firebaseapp.com/',
     gitHubLink: 'https://github.com/AidanLDev/Training-Burger-Builder',

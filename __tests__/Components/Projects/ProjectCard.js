@@ -17,7 +17,7 @@ import ProjectCard from '../../../components/Projects/ProjectCard'
 // })
 
 const projectCardProps = {
-  img: 'DoubleATeamBlog.jpg',
+  img: 'DoubleATeamBlog.webp',
   tooltip: 'Click to view The Double A Team blog',
   link: 'https://blog.aidanlowson.com',
   gitHubLink: 'https://github.com/AidanLDev/doubleateam',

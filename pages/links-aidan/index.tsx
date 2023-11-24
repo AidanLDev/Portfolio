@@ -6,7 +6,7 @@ export default function ArnisLinks() {
   return (
     <SocialMediaLinksContainer
       title="Aidans Socials"
-      imgSrc="/images/BromoSoloRoundSmaller.png"
+      imgSrc="/images/BromoSoloRoundSmaller.webp"
       fullName="Aidan Lowson"
       socialLinks={aidansSocialMedias}
     />
