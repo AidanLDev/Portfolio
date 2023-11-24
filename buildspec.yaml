@@ -21,9 +21,7 @@ phases:
         aws s3 rm s3://aidanlowson.com --recursive
         # Remove cloudFront cache
         # --paths "./index.html" "./build/*" "./asset-manifest.json"
-        aws cloudfront create-invalidation
-          --distribution-id E1MWBYTX2PMKXG
-          --paths "/*"
+        aws cloudfront create-invalidation --distribution-id E1MWBYTX2PMKXG --paths "/*"
         # Move built files
         # Copy the contents of /build to S3
         aws s3 cp --recursive --acl public-read ./out s3://aidanlowson.com
