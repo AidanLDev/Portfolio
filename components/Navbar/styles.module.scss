@@ -58,5 +58,9 @@
             transition: transform .2s ease-in;
         }
     }
+        .active {
+            text-decoration: underline;
+            color: '$active-colour'
+        }
 }
 

@@ -4,25 +4,32 @@ import { Box, Center, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import Head from 'next/head'
 import SocialMediaBox from '../../components/LinkPages/SocialMediaBox'
-import { aidansSocialMedias as socialMedias } from '../../components/LinkPages/socialLinks'
+import { arnisSocialMedias as socialMedias } from '../../components/LinkPages/socialLinks'
 
-export default function ArniLinks() {
+import styles from './style.module.scss'
+
+export interface ISocialMediaLinksContainerProps {
+    title: string;
+    imgSrc: string;
+}
+
+export const SocialMediaLinksContainer = ({ title, imgSrc }:ISocialMediaLinksContainerProps) => {
   return (
-    <Box className={''}>
+    <Box className={styles.linksWrapper}>
       <Head>
-        <title>Aidans Socials</title>
+        <title>{title}</title>
       </Head>
-      <Center className={''}>
+      <Center className={styles.avatarImg}>
         <Image
           alt="Arni Rianis avatar/profile picture"
-          src="/images/BromoSoloRoundSmaller.png"
+          src={imgSrc}
           width={175}
           height={175}
         />
       </Center>
       <Flex justify="center" p="12px 0">
         <Text p="0 4px 0 0" fontSize="24px" fontWeight={600}>
-          Aidan Lowson
+          Arni Riani
         </Text>
         <Image
           src={verifiedImg}
