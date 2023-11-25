@@ -15,19 +15,20 @@ phases:
     commands:
       # Check if the build successfully finished and we have a bundle in the out dir
       - FILE_COUNT=$(find $CODEBUILD_SRC_DIR/out -type f | wc -l)
+      # Empty S3 bucket BUT ONLY empty S3 bucket if $FILE_COUNT is greater than 0
       - if [ "$FILE_COUNT" -gt "0" ]; then
-        echo `ls`
-        # Empty bucket before adding new scripts
         aws s3 rm s3://aidanlowson.com --recursive
-        # Remove cloudFront cache
-        # --paths "./index.html" "./build/*" "./asset-manifest.json"
-        aws cloudfront create-invalidation --distribution-id E1MWBYTX2PMKXG --paths "/*"
-        # Move built files
-        # Copy the contents of /build to S3
-        aws s3 cp --recursive --acl public-read ./out s3://aidanlowson.com
-      else
+      - else
         echo Build failed and /out dir is empty, skipping post_build commands
-      fi
+      - fi
+      # Remove cloudFront cache
+      # --paths "./index.html" "./build/*" "./asset-manifest.json"
+      - aws cloudfront create-invalidation
+       --distribution-id E1MWBYTX2PMKXG
+       --paths "/*"
+      # Move built files
+      # Copy the contents of /build to S3
+      - aws s3 cp --recursive --acl public-read ./out s3://aidanlowson.com
 artifacts:
   files:
     - './out/*'
