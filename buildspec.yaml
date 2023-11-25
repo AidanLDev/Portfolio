@@ -15,11 +15,12 @@ phases:
     commands:
       # Check if the build successfully finished and we have a bundle in the out dir
       - FILE_COUNT=$(find $CODEBUILD_SRC_DIR/out -type f | wc -l)
+      - echo "$FILE_COUNT"
       # Empty S3 bucket BUT ONLY empty S3 bucket if $FILE_COUNT is greater than 0
       - if [ "$FILE_COUNT" -gt "0" ]; then
-        aws s3 rm s3://aidanlowson.com --recursive
+        - aws s3 rm s3://aidanlowson.com --recursive
       - else
-        echo Build failed and /out dir is empty, skipping post_build commands
+        - echo Build failed and /out dir is empty, skipping post_build commands
       - fi
       # Remove cloudFront cache
       # --paths "./index.html" "./build/*" "./asset-manifest.json"
