@@ -18,9 +18,7 @@ phases:
       - echo "$FILE_COUNT"
       # Empty S3 bucket BUT ONLY empty S3 bucket if $FILE_COUNT is greater than 0
       - if [ "$FILE_COUNT" -gt "0" ]; then
-        - aws s3 rm s3://aidanlowson.com --recursive
-      - else
-        - echo Build failed and /out dir is empty, skipping post_build commands
+        aws s3 rm s3://aidanlowson.com --recursive
       - fi
       # Remove cloudFront cache
       # --paths "./index.html" "./build/*" "./asset-manifest.json"
