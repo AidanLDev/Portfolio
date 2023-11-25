@@ -17,14 +17,11 @@ phases:
       - FILE_COUNT=$(find $CODEBUILD_SRC_DIR/out -type f | wc -l)
       - echo "$FILE_COUNT"
       # Empty S3 bucket BUT ONLY empty S3 bucket if $FILE_COUNT is greater than 0
-      - if [ "$FILE_COUNT" -gt "0" ]; then
-        aws s3 rm s3://aidanlowson.com --recursive
-      - fi
-      # Remove cloudFront cache
-      # --paths "./index.html" "./build/*" "./asset-manifest.json"
-      - aws cloudfront create-invalidation
-       --distribution-id E1MWBYTX2PMKXG
-       --paths "/*"
+      - |
+        if [ "$FILE_COUNT" -gt "0" ]; then
+          aws s3 rm s3://aidanlowson.com --recursive
+        fi
+      - aws cloudfront create-invalidation --distribution-id E1MWBYTX2PMKXG --paths "/*"
       # Move built files
       # Copy the contents of /build to S3
       - aws s3 cp --recursive --acl public-read ./out s3://aidanlowson.com
