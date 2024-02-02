@@ -12,7 +12,7 @@ export default function NavLink({ item, active }: NavLinkProps) {
         rel="noreferrer"
         target="_blank"
       >
-        {item.label}
+        <span className={styles.linkLabel}>{item.label}</span>
       </a>
     </Link>
   )
