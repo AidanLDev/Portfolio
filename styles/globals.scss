@@ -11,6 +11,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: $background-color !important;
   display: block;
+  scroll-behavior: smooth;
   a, p {
     color: $main-colour;
   }

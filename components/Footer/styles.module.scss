@@ -1,0 +1,18 @@
+.footerContainer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  a {
+    display: flex;
+    gap: 1rem;
+    svg {
+      align-self: center;
+    }
+    span {
+      font-size: 1.15em;
+    }
+    span:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -18,6 +18,11 @@
     border: 2px solid $main-colour;
     border-radius: 16px;
     background: $backgorund-dark;
+    p {
+      @media(min-width: $isTablet) {
+        font-size: 1.25em;
+      }
+    }
     .projectCardContent {
       display: flex;
       flex-direction: column;
@@ -26,6 +31,9 @@
     .heading {
       font-weight: bold;
       font-size: 1.25em;
+      @media (min-width: $isTablet) {
+        font-size: 1.5em;
+      }
     }
     .projectLink {
       overflow: hidden;

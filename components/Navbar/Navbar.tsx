@@ -11,7 +11,7 @@ const navItems: NavItem[] = [
 
 export default function Navbar({ active }: NavBarProps) {
   return (
-    <Box className={styles.navContainer}>
+    <Box className={styles.navContainer} id="nav-bar">
       <Box display="flex">
         <Box flexGrow={1}>
           <Link passHref href="/">

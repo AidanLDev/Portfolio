@@ -3,8 +3,24 @@ import styles from './style.module.scss'
 import { Box, Image, Text, Tooltip } from '@chakra-ui/react'
 import { AiFillGithub } from 'react-icons/ai'
 import { BsArrowRightShort } from 'react-icons/bs'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { Project } from '../../interfaces/projectInterfaces'
+
+const cardVariants: Variants = {
+  offscreen: {
+    scale: 0.5, // Start at half size
+    opacity: 0, // Start fully transparent
+  },
+  onscreen: {
+    scale: 1, // Grow to full size
+    opacity: 1, // Become fully opaque
+    transition: {
+      type: 'spring',
+      bounce: 0.4,
+      duration: 1.2,
+    },
+  },
+}
 
 export default function ProjectCard({
   img,
@@ -16,7 +32,13 @@ export default function ProjectCard({
   tags,
 }: Project) {
   return (
-    <Box className={styles.projectCard}>
+    <motion.div
+      className={styles.projectCard}
+      viewport={{ once: true, amount: 0.8 }}
+      initial="offscreen"
+      whileInView="onscreen"
+      variants={cardVariants}
+    >
       <a
         href={link}
         rel="noreferrer"
@@ -51,14 +73,20 @@ export default function ProjectCard({
         </Box>
         <Box className={styles.links}>
           <a href={gitHubLink} rel="noreferrer" target="_blank">
-            <AiFillGithub /><Text>GitHub</Text>
+            <AiFillGithub />
+            <Text>GitHub</Text>
           </a>
-          <a href={link} rel="noreferrer" target="_blank" className={styles.viewProjectsLink}>
+          <a
+            href={link}
+            rel="noreferrer"
+            target="_blank"
+            className={styles.viewProjectsLink}
+          >
             <Text>View Project</Text>
             <BsArrowRightShort />
           </a>
         </Box>
       </Box>
-    </Box>
+    </motion.div>
   )
 }
