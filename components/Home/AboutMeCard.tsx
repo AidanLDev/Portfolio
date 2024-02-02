@@ -54,9 +54,9 @@ export default function AboutMeCard() {
             imagePath="/images/Logos/LinkedInLogoRound.webp"
           />
           <ImageLink
-            alt="Twitter"
+            alt="X"
             link="https://twitter.com/AidanL94"
-            imagePath="/images/Logos/twitter-circle-2.webp"
+            imagePath="/images/Logos/x_icon.webp"
           />
           <ImageLink
             alt="Instagram"

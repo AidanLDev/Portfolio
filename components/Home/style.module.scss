@@ -41,6 +41,10 @@
     @media(max-width: $isMobile) {
       font-size: 1.6em;
     }
+
+    @media(prefers-color-scheme: dark) {
+      background-color: $backgorund-dark;
+    }
   }
 
   p {
@@ -75,6 +79,11 @@
     opacity: 0.6;
     position: absolute;
   }
+
+  @media(prefers-color-scheme: dark) {
+    border: 1px solid white;
+  }
+
 }
 
 @keyframes flyInFromBottom {
@@ -109,6 +118,10 @@
 
   @media(max-width: $isMobile) {
     height: 310px;
+  }
+
+  @media(prefers-color-scheme: dark) {
+    background-color: $backgorund-dark;
   }
 }
 

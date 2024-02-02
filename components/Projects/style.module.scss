@@ -17,7 +17,7 @@
     padding: 2rem;
     border: 2px solid $main-colour;
     border-radius: 16px;
-    background: darken($background-color, 10%);
+    background: $backgorund-dark;
     .projectCardContent {
       display: flex;
       flex-direction: column;

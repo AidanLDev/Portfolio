@@ -17,6 +17,11 @@ body {
   a {
     cursor: pointer;
   }
+
+  // TODO: get this to work with a dark-mode toggle
+  @media (prefers-color-scheme: dark) {
+    background: black !important;
+  }
   
 }
 

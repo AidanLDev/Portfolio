@@ -9,7 +9,7 @@ export const aidansSocialMedias: SocialMediasObject[] = [
     link: 'https://www.instagram.com/lowsonaidan/',
   },
   {
-    img: `${baseLink}twitterRound.webp`,
+    img: `${baseLink}x_icon.webp`,
     tag: '@AidanL94',
     link: 'https://twitter.com/AidanL94',
   },
@@ -40,7 +40,7 @@ export const arnisSocialMedias: SocialMediasObject[] = [
     link: 'https://www.instagram.com/mynameisarni/',
   },
   {
-    img: `${baseLink}twitterRound.webp`,
+    img: `${baseLink}x_icon.webp`,
     link: 'https://twitter.com/MyNameIsArni',
   },
   {
