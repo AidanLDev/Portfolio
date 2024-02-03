@@ -16,6 +16,19 @@ import ProjectCard from '../../../components/Projects/ProjectCard'
 //   })),
 // })
 
+// Fix for IntersectionOberver is not defined
+beforeEach(() => {
+  // IntersectionObserver isn't available in test environment
+  const mockIntersectionObserver = jest.fn()
+  mockIntersectionObserver.mockReturnValue({
+    observe: () => null,
+    unobserve: () => null,
+    disconnect: () => null,
+  })
+  window.IntersectionObserver = mockIntersectionObserver
+})
+
+
 const projectCardProps = {
   img: 'DoubleATeamBlog.webp',
   tooltip: 'Click to view The Double A Team blog',

@@ -16,6 +16,18 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 })
 
+// Fix for IntersectionOberver is not defined
+beforeEach(() => {
+  const mockIntersectionObserver = jest.fn()
+  mockIntersectionObserver.mockReturnValue({
+    observe: () => null,
+    unobserve: () => null,
+    disconnect: () => null,
+  })
+  window.IntersectionObserver = mockIntersectionObserver
+})
+
+
 describe('ProjectContainer component', () => {
   test('Displays projects header', () => {
     render(<ProjectContainer />)
