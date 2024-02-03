@@ -9,7 +9,7 @@ import AboutMeCard from '../components/Home/AboutMeCard'
 import SkillsContainer from '../components/Skills/SkillsContainer'
 import ScrollDown from '../components/Home/ScrollDown'
 import ProjectContainer from '../components/Projects/ProjectContainer'
-import Footer from '../components/Footer'
+import Footer from '../components/Footer/Footer'
 
 export default function Home() {
   return (
