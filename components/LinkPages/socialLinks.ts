@@ -25,12 +25,28 @@ export const aidansSocialMedias: SocialMediasObject[] = [
   },
   {
     img: `${baseLink}github-512.webp`,
+    tag: 'AidanLDev',
     link: 'https://github.com/AidanLDev',
   },
   {
     img: `${baseLink}ThradsLogoSmall.webp`,
     tag: '@LowsonAidan',
     link: 'https://www.threads.net/@lowsonaidan',
+  },
+  {
+    img: `${baseLink}leetCodeIcon.webp`,
+    tag: 'AidanLDev',
+    link: 'https://leetcode.com/AidanLDev/',
+  },
+  {
+    img: `${baseLink}portfolioIcon.webp`,
+    tag: 'aidanlowson.com',
+    link: 'https://www.aidanlowson.com',
+  },
+  {
+    img: `${baseLink}blogIcon.webp`,
+    tag: 'blog.aidanlowson.com',
+    link: 'https://www.blog.aidanlowson.com',
   },
 ]
 

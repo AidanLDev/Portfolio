@@ -44,9 +44,9 @@ export default function AboutMeCard() {
             imagePath="/images/Logos/github-512.webp"
           />
           <ImageLink
-            alt="E-Mail me"
-            link="mailto:dev@aidanlowson.com"
-            imagePath="/images/Logos/round-blue-mail-icon.webp"
+            alt="LeetCode"
+            link="https://leetcode.com/AidanLDev/"
+            imagePath="/images/Logos/leetCodeIcon.webp"
           />
           <ImageLink
             alt="LinkedIn"
@@ -66,7 +66,7 @@ export default function AboutMeCard() {
           <ImageLink
             alt="Personal Blog"
             link="https://blog.aidanlowson.com"
-            imagePath="/images/Logos/blog-icon.webp"
+            imagePath="/images/Logos/blogIcon.webp"
           />
         </Box>
       </Box>
