@@ -1,11 +1,9 @@
 @import 'styles/variables.scss';
 
 .scrollDownContainer {
-  -webkit-animation: pulsate 4s ease-out;
-  -webkit-animation-iteration-count: infinite; 
-  animation-delay: 6s;
+  animation: bounce 3.5s infinite, fadeIn 2s forwards;
+  animation-delay: 5s, 5s;
   opacity: 0;
-  animation-name: appear;
   color:$main-colour;
   position: relative;
   top: 8%;
@@ -17,11 +15,37 @@
   font-size: 24px;
   font-weight: 500;
   padding: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  cursor: pointer;
+  a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .cardContainer {
@@ -104,11 +128,7 @@
     transform: translateY(0);
   }
 }
-@keyframes appear {
-  0% {opacity: 0;}
-  50% { opacity: 1;}
-  100% {opacity: 50;}
-}
+
 .detailsBox {
   background-color: $secondary-colour;
   background-color: #290808;

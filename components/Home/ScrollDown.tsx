@@ -6,8 +6,10 @@ import style from './style.module.scss'
 export default function ScrollDown() {
   return (
     <div className={style.scrollDownContainer}>
-      <span>Scroll Down...</span>
-      <FaArrowAltCircleDown />
+      <a href="#projects-header">
+        <span>Scroll Down...</span>
+        <FaArrowAltCircleDown />
+      </a>
     </div>
   )
 }

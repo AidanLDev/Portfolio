@@ -8,7 +8,9 @@ export default function ProjectContainer() {
   return (
     <div className={`${style.projectContainer}`}>
       <Center>
-        <Heading p="4rem 0">Projects</Heading>
+        <Heading p="4rem 0" id="projects-header">
+          Projects
+        </Heading>
       </Center>
       <Box className={style.projWrapper}>
         {projects.map(
