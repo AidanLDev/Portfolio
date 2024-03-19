@@ -8,16 +8,15 @@ import { Project } from '../../interfaces/projectInterfaces'
 
 const cardVariants: Variants = {
   offscreen: {
-    scale: 0.5, // Start at half size
+    scale: 0.7, // Start smaller
     opacity: 0, // Start fully transparent
   },
   onscreen: {
     scale: 1, // Grow to full size
     opacity: 1, // Become fully opaque
     transition: {
-      type: 'spring',
-      bounce: 0.4,
-      duration: 1.2,
+      type: 'tween',
+      duration: 0.6,
     },
   },
 }
