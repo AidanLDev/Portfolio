@@ -48,6 +48,11 @@ export const aidansSocialMedias: SocialMediasObject[] = [
     tag: 'blog.aidanlowson.com',
     link: 'https://www.blog.aidanlowson.com',
   },
+  {
+    img: `${baseLink}YTNoBackGround.webp`,
+    tag: 'Aidan Lowson',
+    link: 'https://www.youtube.com/channel/UCDJAFkcMY5Ze3SKQS-fhg0A',
+  },
 ]
 
 export const arnisSocialMedias: SocialMediasObject[] = [
