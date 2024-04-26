@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Script from 'next/script'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import React from 'react'
 import { MetaTags, SEOProps } from '../../interfaces/seoInterfaces'
 
@@ -69,22 +69,9 @@ const SEO = ({ title, description, image, url }: SEOProps) => {
             }),
           }}
         />
+        {/* <!-- Google tag (gtag.js) --> */}
+        <GoogleAnalytics gaId="G-W0ZWY4VS2K" />
       </Head>
-      {/* <!-- Google tag (gtag.js) --> */}
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', 'G-W0ZWY4VS2K', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-        }}
-      />
     </>
   )
 }

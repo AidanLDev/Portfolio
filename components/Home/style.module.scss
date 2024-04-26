@@ -4,13 +4,13 @@
   animation: bounce 3.5s infinite, fadeIn 2s forwards;
   animation-delay: 5s, 5s;
   opacity: 0;
-  color:$main-colour;
+  color: $main-colour;
   position: relative;
   top: 8%;
   left: 0;
   right: 0;
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
   width: 150px;
   font-size: 24px;
   font-weight: 500;
@@ -26,7 +26,10 @@
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 100% {
+  0%,
+  20%,
+  50%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -67,11 +70,11 @@
     background-color: black;
     text-align: center;
 
-    @media(max-width: $isMobile) {
+    @media (max-width: $isMobile) {
       font-size: 1.6em;
     }
 
-    @media(prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: dark) {
       background-color: $backgorund-dark;
     }
   }
@@ -81,11 +84,11 @@
     padding-bottom: 12px;
     font-family: Arial, Helvetica, sans-serif;
 
-    @media(max-width: $isMobile) {
-      font-size: 1.4em
+    @media (max-width: $isMobile) {
+      font-size: 1.4em;
     }
 
-    @media(max-width: $isExtraSmallMobile) {
+    @media (max-width: $isExtraSmallMobile) {
       font-size: 1.3em;
     }
   }
@@ -109,10 +112,9 @@
     position: absolute;
   }
 
-  @media(prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
     border: 1px solid white;
   }
-
 }
 
 @keyframes flyInFromBottom {
@@ -135,28 +137,28 @@
   height: 12rem;
   border-top: 2px solid $main-colour;
 
-  @media(max-width: $isTablet) {
+  @media (max-width: $isTablet) {
     height: 400px;
     transform: translate(0);
     transition: none;
   }
 
-  @media(max-width: $isMobile) {
+  @media (max-width: $isMobile) {
     height: 310px;
   }
 
-  @media(prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
     background-color: $backgorund-dark;
   }
 }
 
 .detailsBox:hover .cardText {
-  @media(min-width: $isTablet) {
+  @media (min-width: $isTablet) {
     transform: translate(120%);
     opacity: 0;
   }
 
-  @media(max-width: $isTablet) {
+  @media (max-width: $isTablet) {
     transform: translate(0) !important;
     transition: none;
   }
@@ -187,17 +189,17 @@
     justify-content: center;
   }
 
-  @media(max-width: $isTablet) {
+  @media (max-width: $isTablet) {
     transform: translateY(0);
     top: 30px;
     opacity: 1;
   }
 
-  @media(max-width: $isMobile) {
+  @media (max-width: $isMobile) {
     top: 0;
   }
 
-  @media(max-width: $isExtraSmallMobile) {
+  @media (max-width: $isExtraSmallMobile) {
     row-gap: 15px;
   }
 }
@@ -217,4 +219,3 @@
     padding-left: 0;
   }
 }
-
