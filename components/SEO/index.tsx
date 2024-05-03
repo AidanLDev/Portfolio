@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { GoogleAnalytics } from '@next/third-parties/google'
 import React from 'react'
 import { MetaTags, SEOProps } from '../../interfaces/seoInterfaces'
 
@@ -69,8 +68,6 @@ const SEO = ({ title, description, image, url }: SEOProps) => {
             }),
           }}
         />
-        {/* <!-- Google tag (gtag.js) --> */}
-        <GoogleAnalytics gaId="G-W0ZWY4VS2K" />
       </Head>
     </>
   )
