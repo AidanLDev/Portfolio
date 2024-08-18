@@ -33,3 +33,9 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# sst
+.sst
+
+# open-next
+.open-next

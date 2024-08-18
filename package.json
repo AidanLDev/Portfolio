@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "npx serve@latest out",
-    "lint": "next lint",
     "cypress": "cypress open",
+    "cypress:test": "cypress run --e2e",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "npx serve@latest out",
     "test": "jest --passWithNoTests",
-    "cypress:test": "cypress run --e2e"
+    "deploy": "npx sst deploy --stage production"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
@@ -25,7 +26,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "sst": "3.0.42"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

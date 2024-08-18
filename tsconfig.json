@@ -26,6 +26,6 @@
     "__tests__/Components/Home/AboutMeCard.test.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules","sst.config.ts"
   ]
 }

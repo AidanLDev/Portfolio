@@ -14,7 +14,7 @@ import Footer from '../components/Footer/Footer'
 
 export default function Home() {
   return (
-    <html lang="en">
+    <>
       <Box>
         <SEO
           title="Aidan Lowson | Portfolio"
@@ -40,6 +40,6 @@ export default function Home() {
         </Box>
       </Box>
       <GoogleAnalytics gaId="G-W0ZWY4VS2K" />
-    </html>
+    </>
   )
 }
