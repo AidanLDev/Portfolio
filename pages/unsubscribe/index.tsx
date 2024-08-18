@@ -5,7 +5,8 @@ export default function Unsubscribe() {
   const [email, setEmail] = useState('')
   console.log('email:', email)
   const handleUnSub = async () => {
-    await fetch('/api/unsubscribe', {
+    // TODO: Try api/unsubscribe or /unsubscribe
+    await fetch('/unsubscribe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
