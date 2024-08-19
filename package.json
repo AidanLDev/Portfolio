@@ -13,6 +13,7 @@
     "deploy": "npx sst deploy --stage production"
   },
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.632.0",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
