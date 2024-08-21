@@ -2,6 +2,16 @@ import { Project } from '../../interfaces/projectInterfaces'
 
 export const projects: Project[] = [
   {
+    img: 'Free-QR-Gen-Project.webp',
+    title: 'Free QR Gen',
+    link: 'https://freeqrgen.net',
+    gitHubLink: 'https://github.com/AidanLDev',
+    date: '2024/08/21',
+    description:
+      'Free QR Gen is a customisable QR code generator, you can create a unique code for any link you choose. Customiseable options; size, foreground colour, background colour and any icon/logo can be used as part of the code.',
+    tags: ['Next.js', 'AWS', 'TypeScript'],
+  },
+  {
     img: 'Portfolio.webp',
     title: 'Personal Portfolio',
     link: 'https://aidanlowson.com',
