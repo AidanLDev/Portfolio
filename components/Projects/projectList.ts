@@ -12,6 +12,16 @@ export const projects: Project[] = [
     tags: ['Next.js', 'AWS', 'TypeScript'],
   },
   {
+    img: 'dev-daily-hub.webp',
+    title: 'Dev Daily Hub',
+    link: 'https://devdailyhub.com',
+    gitHubLink: 'https://github.com/AidanLDev',
+    date: '2024/09/16',
+    description:
+      'My technical blog site, where I write articals about programming, software engineering and general self-help. Written with Astro to get those top performance ratings.',
+    tags: ['Astro', 'TypeScript', 'Tailwind'],
+  },
+  {
     img: 'Portfolio.webp',
     title: 'Personal Portfolio',
     link: 'https://aidanlowson.com',
