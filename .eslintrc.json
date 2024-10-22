@@ -1,3 +1,7 @@
 {
-  "extends": ["next", "prettier"]
+  "extends": ["next", "prettier"],
+  "plugins": ["eslint-plugin-react-compiler"],
+  "rules": {
+    "react-compiler/react-compiler": "error"
+  }
 }
