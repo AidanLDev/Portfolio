@@ -2,30 +2,24 @@ import React from 'react'
 import { verifiedImg } from '../../lib/constants'
 import { Box, Center, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
-import Head from 'next/head'
 import SocialMediaBox from '../../components/LinkPages/SocialMediaBox'
 import { SocialMediasObject } from '../../interfaces/socialLinksInterfaces'
 
 import styles from './style.module.scss'
 
 export interface ISocialMediaLinksContainerProps {
-  title: string;
   imgSrc: string;
   fullName: string;
   socialLinks: SocialMediasObject[];
 }
 
 export const SocialMediaLinksContainer = ({
-  title,
   imgSrc,
   fullName,
   socialLinks,
 }: ISocialMediaLinksContainerProps) => {
   return (
     <Box className={styles.linksWrapper}>
-      <Head>
-        <title>{title}</title>
-      </Head>
       <Center className={styles.avatarImg}>
         <Image
           alt={`${fullName}'s avatar/profile picture`}

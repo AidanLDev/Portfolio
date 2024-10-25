@@ -2,10 +2,9 @@ import React from 'react'
 import { SocialMediaLinksContainer } from '../../components/LinkPages/SocialMediaLinksContainer'
 import { aidansSocialMedias } from '../../components/LinkPages/socialLinks'
 
-export default function ArnisLinks() {
+export default function AidansLinks() {
   return (
     <SocialMediaLinksContainer
-      title="Aidans Socials"
       imgSrc="/images/BromoSoloRoundSmaller.webp"
       fullName="Aidan Lowson"
       socialLinks={aidansSocialMedias}
