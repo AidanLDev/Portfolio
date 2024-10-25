@@ -48,7 +48,6 @@ export default function ProjectCard({
             as={motion.img}
             alt={title}
             src={`/images/Projects/${img}`}
-            h={320}
             width="100%"
             whileHover={{ scale: 1.02 }}
           />
