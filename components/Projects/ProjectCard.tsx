@@ -32,7 +32,6 @@ export default function ProjectCard({
 }: Project) {
   return (
     <motion.div
-      className={styles.projectCard}
       viewport={{ once: true, amount: 0.8 }}
       initial="offscreen"
       whileInView="onscreen"
