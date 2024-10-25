@@ -4,7 +4,7 @@ export interface NavItem {
 }
 
 export interface NavBarProps {
-  active?: string
+  active: string
 }
 
 export interface NavLinkProps {

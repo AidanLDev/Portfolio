@@ -53,9 +53,11 @@ const SEO = ({ title, description, image, url }: SEOProps) => {
         <meta itemProp="name" content={title} />
         <meta itemProp="description" content={description} />
         {image && <meta itemProp="image" content={image} />}
-        {socialTags(url, title, description, image).map(({ name, content }) => {
-          return <meta key={name} name={name} content={content} />
-        })}
+        {socialTags(url, title, description, image ?? '').map(
+          ({ name, content }) => {
+            return <meta key={name} name={name} content={content} />
+          }
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

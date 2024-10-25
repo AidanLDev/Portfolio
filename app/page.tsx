@@ -1,7 +1,6 @@
 import { Box, Center } from '@chakra-ui/react'
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
-import SEO from '../components/SEO'
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 import HtmlBodyTags from '../components/htmlTags/HtmlBodyTags'
@@ -16,15 +15,9 @@ export default function Home() {
   return (
     <>
       <Box>
-        <SEO
-          title="Aidan Lowson | Portfolio"
-          description="Showcasing my personal projects and anything else I feel should be shared with the world."
-          url="https://aidanlowson.com"
-        />
-
         <Box className="container">
           <Box className="landingScreen">
-            <Navbar />
+            <Navbar active="" />
             <HtmlBodyTags />
             <Title />
             <Center>
