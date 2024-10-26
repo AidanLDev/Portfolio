@@ -42,6 +42,20 @@ export const projects: Project[] = [
     tags: ['Astro', 'AWS', 'TypeScript'],
   },
   {
+    img: 'Data_visualisation.webp',
+    title: 'Carbon Data Visualisation',
+    link: 'https://carbon-data-visualisation.vercel.app/',
+    gitHubLink: 'https://github.com/AidanLDev/carbon_data_visualisation',
+    description:
+      'A project created for a technical exercise, I demonstrated my approach to calling an API to get carbon data and visualising that data in a web application. I went for a Next app to hit the ground running using the create-next-app template meaning I had TypeScript and Tailwind configured out of the box. For the graph I use a library called chart.js to create a line graph to display the data.',
+    date: '2023/11/09',
+    tags: ['Next.js', 'TypeScript', 'Tailwind'],
+  },
+]
+
+/*
+  Old projects
+    {
     img: 'ChatPDF.webp',
     title: 'ChatPDF',
     link: 'https://chat-pdf-xi.vercel.app/',
@@ -60,17 +74,7 @@ export const projects: Project[] = [
       'Stripe',
     ],
   },
-  {
-    img: 'dataVisualisation.webp',
-    title: 'Carbon Data Visualisation',
-    link: 'https://energise-technical-exercise.vercel.app/',
-    gitHubLink: 'https://github.com/AidanLDev/energise-technical-exercise',
-    description:
-      'A project created for a technical exercise, I demonstrated my approach to parsing a CSV file and visualising that data in a web application. I went for a Next app to hit the ground running using the create-next-app template meaning I had TypeScript and Tailwind configured out of the box. For the graph I use a library called recharts to create an Area graph to display the data.',
-    date: '2023/11/09',
-    tags: ['Next.js', 'TypeScript', 'Tailwind'],
-  },
-  {
+{
     img: 'Supa_Smoothies.webp',
     title: 'Supa Smoothies',
     link: 'https://supasmoothy-aidanldev.vercel.app/',
@@ -110,4 +114,4 @@ export const projects: Project[] = [
     date: '2019/04/06',
     tags: ['React', 'Firebase', 'Redux'],
   },
-]
+*/
