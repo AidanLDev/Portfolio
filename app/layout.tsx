@@ -13,7 +13,7 @@ interface IRootLayout {
 export const metadata: Metadata = generateMetadata({
   title: 'Aidan Lowson | Portfolio',
   description:
-    'Showcasing my personal projects and anything else I feel should be shared with the world.',
+    'Showcasing my personal projects, my links, skills and certifications.',
   url: 'https://aidanlowson.com',
   image: 'https://aidanlowson.com/images/Projects/Portfolio.webp',
 })
