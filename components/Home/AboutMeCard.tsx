@@ -46,9 +46,9 @@ export default function AboutMeCard() {
             imagePath="/images/Logos/github-512.webp"
           />
           <ImageLink
-            alt="LeetCode"
-            link="https://leetcode.com/AidanLDev/"
-            imagePath="/images/Logos/leetCodeIcon.webp"
+            alt="YouTube"
+            link="https://www.youtube.com/@aidanl94"
+            imagePath="/images/Logos/YTNoBackGround.webp"
           />
           <ImageLink
             alt="LinkedIn"
