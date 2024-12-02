@@ -2,12 +2,13 @@
 
 import React from 'react'
 import styles from './style.module.scss'
-import { Box, Image, Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import { Tooltip } from '../ui/tooltip'
 import { AiFillGithub } from 'react-icons/ai'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { motion, Variants } from 'framer-motion'
 import { Project } from '../../interfaces/projectInterfaces'
+import { MotionImageProps } from '../../lib/types'
 
 const cardVariants: Variants = {
   offscreen: {
@@ -23,6 +24,8 @@ const cardVariants: Variants = {
     },
   },
 }
+
+const MotionImg = motion.img as React.FC<MotionImageProps>
 
 export default function ProjectCard({
   img,
@@ -46,9 +49,8 @@ export default function ProjectCard({
         target="_blank"
         className={styles.projectLink}
       >
-        <Tooltip label={`Ckick to view - ${title}`}>
-          <Image
-            as={motion.img}
+        <Tooltip content={`Ckick to view - ${title}`}>
+          <MotionImg
             alt={title}
             src={`/images/Projects/${img}`}
             width="100%"
