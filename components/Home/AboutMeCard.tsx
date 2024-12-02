@@ -20,7 +20,12 @@ export default function AboutMeCard() {
       boxShadow="md"
       className={styles.cardContainer}
     >
-      <Box backgroundImage={`/images/programmingBgS.webp`}>
+      <Box
+        backgroundImage="url('/images/programmingBgS.webp')"
+        backgroundSize="cover"
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+      >
         <Center>
           <Image
             alt="Cartoon avatar"
