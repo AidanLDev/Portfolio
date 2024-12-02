@@ -1,7 +1,7 @@
 'use client'
 
 import { Image } from '@chakra-ui/react'
-import { Tooltip } from '@chakra-ui/react'
+import { Tooltip } from '../ui/tooltip'
 import React from 'react'
 import { motion } from 'framer-motion'
 

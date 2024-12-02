@@ -2,7 +2,8 @@
 
 import React from 'react'
 import styles from './style.module.scss'
-import { Box, Image, Text, Tooltip } from '@chakra-ui/react'
+import { Box, Image, Text } from '@chakra-ui/react'
+import { Tooltip } from '../ui/tooltip'
 import { AiFillGithub } from 'react-icons/ai'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { motion, Variants } from 'framer-motion'

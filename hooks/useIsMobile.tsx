@@ -3,7 +3,9 @@ import { useMediaQuery } from '@chakra-ui/react'
 
 export default function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false)
-  const [mediaQuery] = useMediaQuery('(max-width: 575px)')
+  const [mediaQuery] = useMediaQuery(['(max-width: 575px)'], {
+    fallback: [false],
+  })
 
   useEffect(() => {
     setIsMobile(mediaQuery)

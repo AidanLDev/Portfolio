@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { useMediaQuery } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react'
+import { useMediaQuery } from '@chakra-ui/react'
 
 export default function useIsTablet() {
-  const [isTablet, setIsTablet] = useState(false);
-  const [mediaQuery] = useMediaQuery('(max-width: 1024px)');
+  const [isTablet, setIsTablet] = useState(false)
+  const [mediaQuery] = useMediaQuery(['(max-width: 1024px)'], {
+    fallback: [false],
+  })
 
   useEffect(() => {
-    setIsTablet(mediaQuery);
-  }, [mediaQuery]);
+    setIsTablet(mediaQuery)
+  }, [mediaQuery])
 
-  return isTablet;
+  return isTablet
 }

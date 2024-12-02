@@ -1,5 +1,6 @@
 import React from 'react'
-import { Image, Tooltip } from '@chakra-ui/react'
+import { Tooltip } from '../ui/tooltip'
+import { Image } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import { ImageLinkProps } from '../../interfaces/homeInterfaces'
 
