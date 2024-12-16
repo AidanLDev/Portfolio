@@ -18,7 +18,7 @@ export default function Navbar({ active }: NavBarProps) {
             <Text className={styles.logo}>AL</Text>
           </Link>
         </Box>
-        <HStack spacing={6} p="4px 24px 0 0">
+        <HStack gap={6} p="4px 24px 0 0">
           {navItems.map((item, i) => {
             return <NavLink key={`${item}__${i}`} item={item} active={active} />
           })}

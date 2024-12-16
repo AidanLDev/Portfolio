@@ -49,7 +49,7 @@ export default function ProjectCard({
         target="_blank"
         className={styles.projectLink}
       >
-        <Tooltip content={`Ckick to view - ${title}`}>
+        <Tooltip content={`Click to view - ${title}`}>
           <MotionImg
             alt={title}
             src={`/images/Projects/${img}`}
