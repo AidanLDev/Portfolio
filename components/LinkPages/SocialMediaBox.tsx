@@ -9,7 +9,7 @@ export default function SocialMediaBox(props: SocialMediaBoxProps) {
   return (
     <a href={props.link} target="_blank" rel="noreferrer">
       <Flex
-        backgroundImage={props.backgroundImage}
+        backgroundImage={`url('${props.backgroundImage}')`}
         backgroundSize="contain"
         w={160}
         h={160}
