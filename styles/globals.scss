@@ -136,6 +136,9 @@ textarea {
     min-width: 10px;
     display: inline-block;
     animation-fill-mode: both;
+    // Ensure text is visible immediately for LCP
+    opacity: 1;
+    color: $main-colour;
     &:hover {
       animation: rubberBand 1s;
       color: $active-colour;

@@ -8,7 +8,7 @@ interface IProviders {
   children: ReactNode
 }
 
-export default function Providers({ children }: IProviders) {
+export default function Providers({ children }: Readonly<IProviders>) {
   return (
     <>
       <GoogleAnalytics gaId="G-W0ZWY4VS2K" />

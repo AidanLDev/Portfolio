@@ -1,7 +1,6 @@
 import { Box, Center } from '@chakra-ui/react'
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
-import { GoogleAnalytics } from '@next/third-parties/google'
 
 import HtmlBodyTags from '../components/htmlTags/HtmlBodyTags'
 import Title from '../components/Home/Title'
@@ -13,26 +12,23 @@ import Footer from '../components/Footer/Footer'
 
 export default function Home() {
   return (
-    <>
-      <Box>
-        <Box className="container">
-          <Box className="landingScreen">
-            <Navbar active="" />
-            <HtmlBodyTags />
-            <Title />
-            <Center>
-              <AboutMeCard />
-            </Center>
-            <ScrollDown />
-          </Box>
-          {/* Projects */}
-          <ProjectContainer />
-          {/* Skills */}
-          <SkillsContainer />
-          <Footer />
+    <Box>
+      <Box className="container">
+        <Box className="landingScreen">
+          <Navbar active="" />
+          <HtmlBodyTags />
+          <Title />
+          <Center>
+            <AboutMeCard />
+          </Center>
+          <ScrollDown />
         </Box>
+        {/* Projects */}
+        <ProjectContainer />
+        {/* Skills */}
+        <SkillsContainer />
+        <Footer />
       </Box>
-      <GoogleAnalytics gaId="G-W0ZWY4VS2K" />
-    </>
+    </Box>
   )
 }
