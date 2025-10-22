@@ -6,7 +6,7 @@ import { ImageLinkProps } from '../../interfaces/homeInterfaces'
 
 const MotionImg = motion.img as React.FC<MotionImageProps>
 
-export default function ImageLink({ link, imagePath, alt }: ImageLinkProps) {
+export default function ImageLink({ link, imagePath, alt }: Readonly<ImageLinkProps>) {
   return (
     <a href={link} rel="noreferrer" target="_blank">
       <Tooltip content={alt} positioning={{ placement: 'top-start' }}>

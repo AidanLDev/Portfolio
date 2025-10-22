@@ -1,4 +1,4 @@
-@import 'styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .scrollDownContainer {
   animation: bounce 3.5s infinite, fadeIn 2s forwards;
@@ -22,6 +22,9 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+  }
+  span {
+    width: 165px;
   }
 }
 
@@ -134,7 +137,7 @@
 .detailsBox {
   background-color: $secondary-colour;
   background-color: #290808;
-  height: 12rem;
+  height: 14rem;
   border-top: 2px solid $main-colour;
 
   @media (max-width: $isTablet) {

@@ -1,7 +1,8 @@
 'use client'
 
 /* eslint-disable react/no-unescaped-entities */
-import { Box, Text, Heading, Center, Image } from '@chakra-ui/react'
+import { Box, Text, Heading, Center } from '@chakra-ui/react'
+import Image from 'next/image'
 import React from 'react'
 import ImageLink from './ImageLink'
 import useIsTablet from '../../hooks/useIsTablet'
@@ -30,7 +31,9 @@ export default function AboutMeCard() {
           <Image
             alt="Cartoon avatar"
             src="/images/BromoSoloRoundSmaller.webp"
-            h="200px"
+            width={200}
+            height={200}
+            priority
             className={styles.cardImg}
           />
         </Center>

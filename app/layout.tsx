@@ -20,7 +20,11 @@ export const metadata: Metadata = generateMetadata({
 
 export default function RootLayout({ children }: Readonly<IRootLayout>) {
   return (
-  <html lang="en" className="dark" style={{ colorScheme: 'dark' }}>
+    <html lang="en" className="dark" style={{ colorScheme: 'dark' }}>
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      </head>
       <body>
         <Providers>{children}</Providers>
       </body>
