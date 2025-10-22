@@ -31,6 +31,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "**/*.d.ts",
     "__tests__/Components/Home/AboutMeCard.test.js",
     "next-env.d.ts",
     ".next/types/**/*.ts"

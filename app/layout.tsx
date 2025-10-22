@@ -18,9 +18,9 @@ export const metadata: Metadata = generateMetadata({
   image: 'https://aidanlowson.com/images/Projects/Portfolio.webp',
 })
 
-export default function RootLayout({ children }: IRootLayout) {
+export default function RootLayout({ children }: Readonly<IRootLayout>) {
   return (
-    <html lang="en">
+  <html lang="en" className="dark" style={{ colorScheme: 'dark' }}>
       <body>
         <Providers>{children}</Providers>
       </body>

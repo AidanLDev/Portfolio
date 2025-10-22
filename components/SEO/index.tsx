@@ -29,14 +29,25 @@ const socialTags = (
       name: 'og:site_name',
       content: "Aidan Lowson's Portfolio",
     },
-    {
-      name: 'og:published_time',
-      content: createdAt || new Date().toISOString(),
-    },
-    {
-      name: 'og:modified_time',
-      content: updatedAt || new Date().toISOString(),
-    },
+    // Only include published/modified times when explicitly provided to avoid
+    // generating a different timestamp on server vs client render which can
+    // cause hydration mismatches in development.
+    ...(createdAt
+      ? [
+          {
+            name: 'og:published_time',
+            content: createdAt,
+          },
+        ]
+      : []),
+    ...(updatedAt
+      ? [
+          {
+            name: 'og:modified_time',
+            content: updatedAt,
+          },
+        ]
+      : []),
   ]
 
   return metaTags
@@ -44,34 +55,32 @@ const socialTags = (
 
 const SEO = ({ title, description, image, url }: SEOProps) => {
   return (
-    <>
-      <Head>
-        <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="canonical" href={url} />
-        <meta name="description" content={description} />
-        <meta itemProp="name" content={title} />
-        <meta itemProp="description" content={description} />
-        {image && <meta itemProp="image" content={image} />}
-        {socialTags(url, title, description, image ?? '').map(
-          ({ name, content }) => {
-            return <meta key={name} name={name} content={content} />
-          }
-        )}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@content': 'http://schema.org',
-              '@type': 'Article',
-              name: title,
-              about: description,
-              url: url,
-            }),
-          }}
-        />
-      </Head>
-    </>
+    <Head>
+      <title>{title}</title>
+      <link rel="icon" href="/favicon.ico" />
+      <link rel="canonical" href={url} />
+      <meta name="description" content={description} />
+      <meta itemProp="name" content={title} />
+      <meta itemProp="description" content={description} />
+      {image && <meta itemProp="image" content={image} />}
+      {socialTags(url, title, description, image ?? '').map(
+        ({ name, content }) => {
+          return <meta key={name} name={name} content={content} />
+        }
+      )}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@content': 'http://schema.org',
+            '@type': 'Article',
+            name: title,
+            about: description,
+            url: url,
+          }),
+        }}
+      />
+    </Head>
   )
 }
 

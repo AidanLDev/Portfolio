@@ -30,15 +30,22 @@ export async function POST(request: Request) {
       )
     }
 
-    // TODO: Add email validation here
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ message: 'Invalid email' }, { status: 400 })
+    }
 
     const updateInput: UpdateCommandInput = {
       TableName: 'NewsLetterSubscribers',
       Key: { Email: email },
-      UpdateExpression: 'set Subscribed = :isSubbed',
+      UpdateExpression: 'SET Subscribed = :isSubbed',
+      ConditionExpression:
+        'attribute_exists(Email) AND Subscribed = :wasSubbed',
       ExpressionAttributeValues: {
         ':isSubbed': false,
+        ':wasSubbed': true,
       },
+      ReturnValues: 'NONE',
     }
 
     const updateCommand = new UpdateCommand(updateInput)
@@ -57,6 +64,15 @@ export async function POST(request: Request) {
       )
     }
   } catch (err) {
+    console.error('Error during un-subscribe operation:', err)
+    const e: any = err
+    if (e && e.name === 'ConditionalCheckFailedException') {
+      return NextResponse.json(
+        { message: 'Email not found or already unsubscribed' },
+        { status: 200 }
+      )
+    }
+
     return NextResponse.json(
       { message: 'Failed to un-subscribe, error from the update command' },
       { status: 500 }
