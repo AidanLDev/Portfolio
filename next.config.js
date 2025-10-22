@@ -4,6 +4,7 @@ const path = require('node:path')
 const nextConfig = {
   reactStrictMode: true,
   reactCompiler: true,
+  cacheComponents: true,
   // output: 'export',
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
