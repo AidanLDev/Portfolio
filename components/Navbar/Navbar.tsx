@@ -9,7 +9,7 @@ const navItems: NavItem[] = [
   { label: 'Blogs', link: 'https://blog.aidanlowson.com' },
 ]
 
-export default function Navbar({ active }: NavBarProps) {
+export default function Navbar({ active }: Readonly<NavBarProps>) {
   return (
     <Box className={styles.navContainer} id="nav-bar">
       <Box display="flex">
@@ -20,7 +20,7 @@ export default function Navbar({ active }: NavBarProps) {
         </Box>
         <HStack gap={6} p="4px 24px 0 0">
           {navItems.map((item, i) => {
-            return <NavLink key={`${item}__${i}`} item={item} active={active} />
+            return <NavLink key={`${item.label}__${i}`} item={item} active={active} />
           })}
         </HStack>
       </Box>

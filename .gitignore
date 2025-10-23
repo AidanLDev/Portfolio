@@ -40,3 +40,6 @@ yarn-error.log*
 
 # open-next
 .open-next
+
+# Custom Scripts
+invalidate-cloudfront.js

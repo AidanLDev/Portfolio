@@ -11,7 +11,8 @@
     "start": "npx serve@latest out",
     "test": "jest --passWithNoTests",
     "deploy": "npx sst deploy --stage production",
-    "refresh": "npx sst refresh --stage production"
+    "refresh": "npx sst refresh --stage production",
+    "invalidate": "node invalidate-cloudfront.js"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.679.0",
@@ -34,6 +35,7 @@
     "sst": "3.3.27"
   },
   "devDependencies": {
+    "@aws-sdk/client-cloudfront": "^3.914.0",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
     "@types/node": "^20.16.5",
