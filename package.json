@@ -32,7 +32,7 @@
     "react-dom": "^19.2.0",
     "react-icons": "^5.5.0",
     "sass": "^1.93.2",
-    "sst": "3.3.27"
+    "sst": "3.17.21"
   },
   "devDependencies": {
     "@aws-sdk/client-cloudfront": "^3.914.0",
