@@ -1,6 +1,11 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "author": "Aidan Lowson <dev@aidanlowson.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AidanLDev/Portfolio.git"
+  },
   "scripts": {
     "build": "next build",
     "cypress": "cypress open",
