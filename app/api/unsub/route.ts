@@ -1,14 +1,9 @@
 // app/api/unsub/route.ts
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
 import { DynamoDBDocumentClient, UpdateCommand, UpdateCommandInput } from '@aws-sdk/lib-dynamodb'
-import { NextResponse } from 'next/server'
 
 const dynamoClient = new DynamoDBClient({
   region: 'us-east-1',
-  credentials: {
-    accessKeyId: process.env.MY_AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.MY_AWS_SECRET_ACCESS_KEY!,
-  },
 })
 const docClient = DynamoDBDocumentClient.from(dynamoClient)
 
@@ -20,12 +15,18 @@ export async function POST(request: Request) {
     console.log(`Received unsubscribe request for email: ${email}`)
 
     if (!email) {
-      return NextResponse.json({ message: 'Email is required' }, { status: 400 })
+      return new Response(JSON.stringify({ message: 'Email is required' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      })
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
-      return NextResponse.json({ message: 'Invalid email' }, { status: 400 })
+      return new Response(JSON.stringify({ message: 'Invalid email' }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' },
+      })
     }
 
     const updateInput: UpdateCommandInput = {
@@ -45,27 +46,35 @@ export async function POST(request: Request) {
     const unSubResponse = await docClient.send(updateCommand)
 
     if (unSubResponse.$metadata.httpStatusCode === 200) {
-      return NextResponse.json({ message: `Unsubscribed ${email} successfully` }, { status: 200 })
+      return new Response(JSON.stringify({ message: `Unsubscribed ${email} successfully` }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      })
     } else {
-      return NextResponse.json({ message: 'Bad response from the dynamo call' }, { status: 500 })
+      return new Response(JSON.stringify({ message: 'Bad response from the dynamo call' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      })
     }
   } catch (err) {
     console.error('Error during un-subscribe operation:', err)
     const e: any = err
     if (e && e.name === 'ConditionalCheckFailedException') {
-      return NextResponse.json(
-        { message: 'Email not found or already unsubscribed' },
-        { status: 200 },
-      )
+      return new Response(JSON.stringify({ message: 'Email not found or already unsubscribed' }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      })
     }
 
-    return NextResponse.json(
-      { message: 'Failed to un-subscribe, error from the update command' },
-      { status: 500 },
+    return new Response(
+      JSON.stringify({ message: 'Failed to un-subscribe, error from the update command' }),
+      {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      },
     )
   }
 }
-
 // Handle unsupported methods
 export async function GET() {
   return new Response('Method not allowed', { status: 405 })
