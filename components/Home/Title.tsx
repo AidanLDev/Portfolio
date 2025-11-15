@@ -34,10 +34,10 @@ export default function Title() {
   }, [])
 
   return (
-    <h1 className="headingContainer">
+    <h1 className='headingContainer'>
       <span
         className={`${isAnimating ? letterClass : 'text-animate-hover'} a`}
-        data-testid="first-name-title"
+        data-testid='first-name-title'
       >
         A
       </span>
@@ -48,7 +48,7 @@ export default function Title() {
       />
       <span
         className={`${isAnimating ? letterClass : 'text-animate-hover'} _16 l`}
-        data-testid="last-name-title"
+        data-testid='last-name-title'
       >
         L
       </span>

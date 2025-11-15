@@ -9,8 +9,8 @@ export default function NavLink({ item, active }: Readonly<NavLinkProps>) {
     <Link
       href={item.link}
       className={`${styles.linkStyle} ${activeClass ? styles.active : ''}`}
-      rel="noreferrer"
-      target="_blank"
+      rel='noreferrer'
+      target='_blank'
     >
       <span className={styles.linkLabel}>{item.label}</span>
     </Link>

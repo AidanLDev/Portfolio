@@ -8,9 +8,9 @@ import { SocialMediasObject } from '../../interfaces/socialLinksInterfaces'
 import styles from './style.module.scss'
 
 export interface ISocialMediaLinksContainerProps {
-  imgSrc: string;
-  fullName: string;
-  socialLinks: SocialMediasObject[];
+  imgSrc: string
+  fullName: string
+  socialLinks: SocialMediasObject[]
 }
 
 export const SocialMediaLinksContainer = ({
@@ -21,26 +21,21 @@ export const SocialMediaLinksContainer = ({
   return (
     <Box className={styles.linksWrapper}>
       <Center className={styles.avatarImg}>
-        <Image
-          alt={`${fullName}'s avatar/profile picture`}
-          src={imgSrc}
-          width={175}
-          height={175}
-        />
+        <Image alt={`${fullName}'s avatar/profile picture`} src={imgSrc} width={175} height={175} />
       </Center>
-      <Flex justify="center" p="12px 0">
-        <Text p="0 4px 0 0" fontSize="24px" fontWeight={600}>
+      <Flex justify='center' p='12px 0'>
+        <Text p='0 4px 0 0' fontSize='24px' fontWeight={600}>
           {fullName}
         </Text>
         <Image
           src={verifiedImg}
-          alt="Verified profile"
-          data-testid="verificationTick"
+          alt='Verified profile'
+          data-testid='verificationTick'
           width={16}
           height={36}
         />
       </Flex>
-      <Flex gap="22px" justify="space-around" wrap="wrap">
+      <Flex gap='22px' justify='space-around' wrap='wrap'>
         {socialLinks.map((social, idx) => (
           <SocialMediaBox
             backgroundImage={social.img}

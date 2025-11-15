@@ -39,21 +39,16 @@ export default function ProjectCard({
   return (
     <motion.div
       viewport={{ once: true, amount: 0.8 }}
-      initial="offscreen"
-      whileInView="onscreen"
+      initial='offscreen'
+      whileInView='onscreen'
       variants={cardVariants}
     >
-      <a
-        href={link}
-        rel="noreferrer"
-        target="_blank"
-        className={styles.projectLink}
-      >
+      <a href={link} rel='noreferrer' target='_blank' className={styles.projectLink}>
         <Tooltip content={`Click to view - ${title}`}>
           <MotionImg
             alt={title}
             src={`/images/Projects/${img}`}
-            width="100%"
+            width='100%'
             whileHover={{ scale: 1.02 }}
           />
         </Tooltip>
@@ -74,16 +69,11 @@ export default function ProjectCard({
           <Text>{description}</Text>
         </Box>
         <Box className={styles.links}>
-          <a href={gitHubLink} rel="noreferrer" target="_blank">
+          <a href={gitHubLink} rel='noreferrer' target='_blank'>
             <AiFillGithub />
             <Text>GitHub</Text>
           </a>
-          <a
-            href={link}
-            rel="noreferrer"
-            target="_blank"
-            className={styles.viewProjectsLink}
-          >
+          <a href={link} rel='noreferrer' target='_blank' className={styles.viewProjectsLink}>
             <Text>View Project</Text>
             <BsArrowRightShort />
           </a>

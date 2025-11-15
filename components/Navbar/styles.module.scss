@@ -1,73 +1,72 @@
 @import '../../styles/variables.scss';
 
 .navContainer {
-    z-index: 3;
-    height: 40px;
+  z-index: 3;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  // border-bottom: 1px solid $main-colour;
+  // background-color: #000000ab;
+  a {
+    cursor: unset;
+    display: inline-block;
+  }
+  .logo {
+    color: $secondary-colour;
+    padding: 8px 8px 8px 10px;
+    background-color: $main-colour;
+    cursor: pointer;
+    width: 40px;
+    z-index: 1;
+    position: relative;
+  }
+  .logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    position: fixed;
-    // border-bottom: 1px solid $main-colour;
-    // background-color: #000000ab;
-    a {
-        cursor: unset;
-        display: inline-block;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: bottom center;
+    background: $main-colour-dark;
+    z-index: -1;
+    transition: transform 0.2s ease-in;
+  }
+  .logo:hover::after {
+    transform: scaleY(1);
+  }
+  .linkStyle {
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    background-color: transparent;
+    position: relative;
+    .linkLabel {
+      cursor: pointer;
     }
-    .logo {
-        color: $secondary-colour;
-        padding: 8px 8px 8px 10px;
-        background-color: $main-colour;
-        cursor: pointer;
-        width: 40px;
-        z-index: 1;
-        position: relative;
+    &:hover::before {
+      transform: scaleX(1);
+      transform-origin: center left;
+      z-index: 0;
     }
-    .logo::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        transform: scaleY(0);
-        transform-origin: bottom center;
-        background: $main-colour-dark;
-        z-index: -1;
-        transition: transform 0.2s ease-in;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 24px;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: scaleX(0);
+      background: $main-colour;
+      transform-origin: center right;
+      transition: transform 0.2s ease-in;
     }
-    .logo:hover::after {
-        transform: scaleY(1);
-    }
-    .linkStyle {
-        font-weight: 700;
-        font-size: 1.25rem;
-        text-decoration: none;
-        background-color: transparent;
-        position: relative;
-        .linkLabel {
-            cursor: pointer;
-        }
-        &:hover::before {
-            transform: scaleX(1);
-            transform-origin: center left;
-            z-index: 0;
-        }
-        &::before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            top: 24px;
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            transform: scaleX(0);
-            background: $main-colour;
-            transform-origin: center right;
-            transition: transform .2s ease-in;
-        }
-    }
-        .active {
-            text-decoration: underline;
-            color: '$active-colour'
-        }
+  }
+  .active {
+    text-decoration: underline;
+    color: '$active-colour';
+  }
 }
-

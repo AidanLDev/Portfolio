@@ -6,7 +6,7 @@ import styles from './styles.module.scss'
 export default function Footer() {
   return (
     <footer className={styles.footerContainer}>
-      <Link href="#nav-bar">
+      <Link href='#nav-bar'>
         <span>Back to top</span>
         <FaArrowAltCircleUp />
       </Link>

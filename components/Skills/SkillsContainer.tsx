@@ -13,9 +13,7 @@ export default function SkillsContainer() {
       </Center>
       <Skills />
       <Center>
-        <Heading className={styles.title}>
-          Certifications
-        </Heading>
+        <Heading className={styles.title}>Certifications</Heading>
       </Center>
       <Certifications />
     </div>

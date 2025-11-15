@@ -85,13 +85,13 @@
           width: 2rem;
           height: 2rem;
         }
-  
+
         &:hover::before {
           transform: scaleX(1);
           transform-origin: center left;
           z-index: 0;
         }
-  
+
         &::before {
           content: '';
           position: absolute;
@@ -161,7 +161,7 @@
           justify-content: center;
           a {
             padding: 0.5rem;
-  
+
             svg {
               width: 1.5rem;
               height: 1.5rem;

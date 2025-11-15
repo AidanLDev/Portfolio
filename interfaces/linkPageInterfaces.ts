@@ -1,5 +1,5 @@
 export interface SocialMediaBoxProps {
-    backgroundImage: string
-    tag?: string
-    link: string
-  }
+  backgroundImage: string
+  tag?: string
+  link: string
+}

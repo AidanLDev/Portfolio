@@ -21,19 +21,16 @@ export default function Unsubscribe() {
   return (
     <div className={styles.unsubscribeContainer}>
       <Heading>Unsubscribe</Heading>
-      <p>
-        Enter your email and press un-subscribe to be removed from the mailing
-        list
-      </p>
+      <p>Enter your email and press un-subscribe to be removed from the mailing list</p>
       <Box>
         <Text>Email:</Text>
         <Input
-          placeholder="Enter your email address"
+          placeholder='Enter your email address'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </Box>
-      <Button colorScheme="blue" onClick={async () => await handleUnSub()}>
+      <Button colorScheme='blue' onClick={async () => await handleUnSub()}>
         Un-Subscribe
       </Button>
     </div>

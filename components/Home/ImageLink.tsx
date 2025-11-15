@@ -8,7 +8,7 @@ const MotionImg = motion.img as React.FC<MotionImageProps>
 
 export default function ImageLink({ link, imagePath, alt }: Readonly<ImageLinkProps>) {
   return (
-    <a href={link} rel="noreferrer" target="_blank">
+    <a href={link} rel='noreferrer' target='_blank'>
       <Tooltip content={alt} positioning={{ placement: 'top-start' }}>
         <MotionImg alt={alt} src={imagePath} whileHover={{ scale: 1.1 }} />
       </Tooltip>

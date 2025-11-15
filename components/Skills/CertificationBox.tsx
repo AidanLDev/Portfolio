@@ -13,8 +13,8 @@ const MotionImg = motion.img as React.FC<MotionImageProps>
 export default function CertificationBox({ name, img, link }: CertBoxProps) {
   return (
     <div className={styles.certBox}>
-      <a href={link} rel="noreferrer" target="_blank">
-        <Tooltip content="Click to verify certificate">
+      <a href={link} rel='noreferrer' target='_blank'>
+        <Tooltip content='Click to verify certificate'>
           <MotionImg
             alt={name}
             src={`/images/Certs/${img}`}

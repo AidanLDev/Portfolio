@@ -4,14 +4,17 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font: 400 16px/1.4 'Helvetica Neue', sans-serif;  // 300 11px
+  font:
+    400 16px/1.4 'Helvetica Neue',
+    sans-serif; // 300 11px
   color: #444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: $background-color !important;
   display: block;
   scroll-behavior: smooth;
-  a, p {
+  a,
+  p {
     color: $main-colour;
   }
   a {
@@ -22,7 +25,6 @@ body {
   @media (prefers-color-scheme: dark) {
     background: black !important;
   }
-  
 }
 
 * {
@@ -57,7 +59,8 @@ body {
 
 @font-face {
   font-family: 'La Belle Aurore';
-  src: url('/fonts/LaBelleAurore.woff2') format('woff2'),
+  src:
+    url('/fonts/LaBelleAurore.woff2') format('woff2'),
     url('/fonts/LaBelleAurore.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -65,7 +68,8 @@ body {
 
 @font-face {
   font-family: 'Coolvetica';
-  src: url('/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
+  src:
+    url('/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
     url('/fonts/CoolveticaRg-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
@@ -96,7 +100,7 @@ textarea {
   }
 }
 
-.containerPadding { 
+.containerPadding {
   padding: 2rem 4rem;
   @media (max-width: $isMobile) {
     padding: 2rem;
@@ -116,7 +120,7 @@ textarea {
   font-size: 66px;
   font-weight: 400;
   font-family: 'coolvetica';
-  text-shadow: 2px 2px 0 #46CEBB;
+  text-shadow: 2px 2px 0 #46cebb;
 
   @media (max-width: 500px) {
     font-size: 48px;
@@ -146,7 +150,7 @@ textarea {
 
   @for $i from 1 through 21 {
     .text-animate._#{$i} {
-      animation-delay: #{$i /10}s;
+      animation-delay: #{$i / 10}s;
     }
   }
 

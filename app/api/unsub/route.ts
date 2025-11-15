@@ -1,10 +1,6 @@
 // app/api/unsub/route.ts
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
-import {
-  DynamoDBDocumentClient,
-  UpdateCommand,
-  UpdateCommandInput,
-} from '@aws-sdk/lib-dynamodb'
+import { DynamoDBDocumentClient, UpdateCommand, UpdateCommandInput } from '@aws-sdk/lib-dynamodb'
 import { NextResponse } from 'next/server'
 
 const dynamoClient = new DynamoDBClient({
@@ -24,10 +20,7 @@ export async function POST(request: Request) {
     console.log(`Received unsubscribe request for email: ${email}`)
 
     if (!email) {
-      return NextResponse.json(
-        { message: 'Email is required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ message: 'Email is required' }, { status: 400 })
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -39,8 +32,7 @@ export async function POST(request: Request) {
       TableName: 'NewsLetterSubscribers',
       Key: { Email: email },
       UpdateExpression: 'SET Subscribed = :isSubbed',
-      ConditionExpression:
-        'attribute_exists(Email) AND Subscribed = :wasSubbed',
+      ConditionExpression: 'attribute_exists(Email) AND Subscribed = :wasSubbed',
       ExpressionAttributeValues: {
         ':isSubbed': false,
         ':wasSubbed': true,
@@ -53,15 +45,9 @@ export async function POST(request: Request) {
     const unSubResponse = await docClient.send(updateCommand)
 
     if (unSubResponse.$metadata.httpStatusCode === 200) {
-      return NextResponse.json(
-        { message: `Unsubscribed ${email} successfully` },
-        { status: 200 }
-      )
+      return NextResponse.json({ message: `Unsubscribed ${email} successfully` }, { status: 200 })
     } else {
-      return NextResponse.json(
-        { message: 'Bad response from the dynamo call' },
-        { status: 500 }
-      )
+      return NextResponse.json({ message: 'Bad response from the dynamo call' }, { status: 500 })
     }
   } catch (err) {
     console.error('Error during un-subscribe operation:', err)
@@ -69,13 +55,13 @@ export async function POST(request: Request) {
     if (e && e.name === 'ConditionalCheckFailedException') {
       return NextResponse.json(
         { message: 'Email not found or already unsubscribed' },
-        { status: 200 }
+        { status: 200 },
       )
     }
 
     return NextResponse.json(
       { message: 'Failed to un-subscribe, error from the update command' },
-      { status: 500 }
+      { status: 500 },
     )
   }
 }

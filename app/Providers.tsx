@@ -11,8 +11,8 @@ interface IProviders {
 export default function Providers({ children }: Readonly<IProviders>) {
   return (
     <>
-      <GoogleAnalytics gaId="G-W0ZWY4VS2K" dataLayerName="dataLayer" />
-      <ChakraProvider defaultTheme="dark">{children}</ChakraProvider>
+      <GoogleAnalytics gaId='G-W0ZWY4VS2K' dataLayerName='dataLayer' />
+      <ChakraProvider defaultTheme='dark'>{children}</ChakraProvider>
     </>
   )
 }

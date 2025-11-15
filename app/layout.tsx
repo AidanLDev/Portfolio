@@ -12,18 +12,17 @@ interface IRootLayout {
 
 export const metadata: Metadata = generateMetadata({
   title: 'Aidan Lowson | Portfolio',
-  description:
-    'Showcasing my personal projects, my links, skills and certifications.',
+  description: 'Showcasing my personal projects, my links, skills and certifications.',
   url: 'https://aidanlowson.com',
   image: 'https://aidanlowson.com/images/Projects/Portfolio.webp',
 })
 
 export default function RootLayout({ children }: Readonly<IRootLayout>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang='en' suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel='preconnect' href='https://www.googletagmanager.com' />
+        <link rel='dns-prefetch' href='https://www.googletagmanager.com' />
       </head>
       <body>
         <Providers>{children}</Providers>

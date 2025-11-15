@@ -1,12 +1,6 @@
 {
   "ignoreUnresolved": [],
-  "ignoreUnused": [
-    "animate.css",
-    "loaders.css",
-    "next",
-    "react",
-    "react-dom"
-  ],
+  "ignoreUnused": ["animate.css", "loaders.css", "next", "react", "react-dom"],
   "ignoreUnimported": [
     "build/precache-manifest.073a54da0fc0776c42285e6eb7f34509.js",
     "build/service-worker.js",

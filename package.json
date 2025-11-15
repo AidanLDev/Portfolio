@@ -9,10 +9,12 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
+    "lint": "eslint .",
     "start": "npx serve@latest out",
     "deploy": "npx sst deploy --stage production",
-    "refresh": "npx sst refresh --stage production"
+    "refresh": "npx sst refresh --stage production",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.679.0",

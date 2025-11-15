@@ -13,9 +13,9 @@ import Footer from '../components/Footer/Footer'
 export default function Home() {
   return (
     <Box>
-      <Box className="container">
-        <Box className="landingScreen">
-          <Navbar active="" />
+      <Box className='container'>
+        <Box className='landingScreen'>
+          <Navbar active='' />
           <HtmlBodyTags />
           <Title />
           <Center>
