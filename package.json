@@ -8,15 +8,11 @@
   },
   "scripts": {
     "build": "next build",
-    "cypress": "cypress open",
-    "cypress:test": "cypress run --e2e",
     "dev": "next dev",
     "lint": "next lint",
     "start": "npx serve@latest out",
-    "test": "jest --passWithNoTests",
     "deploy": "npx sst deploy --stage production",
-    "refresh": "npx sst refresh --stage production",
-    "invalidate": "node invalidate-cloudfront.js"
+    "refresh": "npx sst refresh --stage production"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.679.0",
@@ -25,7 +21,6 @@
     "@emotion/react": "^11.13.5",
     "@next/third-parties": "^16.0.0",
     "animate.css": "^4.1.1",
-    "cypress": "^13.14.2",
     "framer-motion": "11.11.9",
     "identity-obj-proxy": "^3.0.0",
     "loaders.css": "^0.1.2",
@@ -40,21 +35,30 @@
   },
   "devDependencies": {
     "@aws-sdk/client-cloudfront": "^3.914.0",
-    "@testing-library/jest-dom": "^6.5.0",
-    "@testing-library/react": "^16.0.1",
     "@types/node": "^20.16.5",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
-    "babel-jest": "^29.7.0",
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "9.38.0",
     "eslint-config-next": "^16.0.0",
-    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-compiler": "19.1.0-rc.2",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
+    "lint-staged": "^16.2.6",
+    "prettier": "^3.6.2",
+    "husky": "^9.1.7"
   },
-  "setupFilesAfterEnv": [
-    "./jest.setup.js"
-  ]
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "printWidth": 100,
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
+  }
 }
