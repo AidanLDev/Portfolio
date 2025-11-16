@@ -17,7 +17,8 @@
     "format:check": "prettier --check .",
     "postbuild": "next-sitemap",
     "test:e2e": "playwright test",
-    "test:e2e-open": "playwright test --ui"
+    "test:e2e-open": "playwright test --ui",
+    "prepare": "husky"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.679.0",
@@ -67,6 +68,7 @@
     "endOfLine": "lf"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,md}": "prettier --write"
+    "**/*.{js,jsx,ts,tsx,json,css,md}": "prettier --write",
+    "**/*.d.ts": "prettier --write"
   }
 }
