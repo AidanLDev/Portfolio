@@ -24,6 +24,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Install Playwright browsers
+        run: pnpm dlx playwright install --with-deps
+
+      - name: Run E2E tests
+        run: pnpm run test:e2e
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
