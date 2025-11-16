@@ -17,8 +17,7 @@
     "format:check": "prettier --check .",
     "postbuild": "next-sitemap",
     "test:e2e": "playwright test",
-    "test:e2e-open": "playwright test --ui",
-    "prepare": "husky"
+    "test:e2e-open": "playwright test --ui"
   },
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.679.0",
