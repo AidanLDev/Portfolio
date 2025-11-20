@@ -39,4 +39,5 @@ jobs:
 
       - name: SST Deploy
         run: npx sst deploy --stage production --yes
-# TODO: Pass the sentry auth token to SST
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
