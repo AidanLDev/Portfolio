@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
 import { useMediaQuery } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
 
 export default function useIsTablet() {
   const [isTablet, setIsTablet] = useState(false)

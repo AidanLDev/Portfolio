@@ -1,8 +1,8 @@
-import { Center, Heading, Box } from '@chakra-ui/react'
+import { Box, Center, Heading } from '@chakra-ui/react'
 import React from 'react'
-import style from './style.module.scss'
 import ProjectCard from './ProjectCard'
 import { projects } from './projectList'
+import style from './style.module.scss'
 
 export default function ProjectContainer() {
   return (

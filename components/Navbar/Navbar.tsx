@@ -1,9 +1,9 @@
-import React from 'react'
-import { Box, Text, HStack } from '@chakra-ui/react'
+import { Box, HStack, Text } from '@chakra-ui/react'
 import Link from 'next/link'
+import React from 'react'
+import { NavBarProps, NavItem } from '../../interfaces/navbarInterfaces'
 import NavLink from './NavLink'
 import styles from './styles.module.scss'
-import { NavBarProps, NavItem } from '../../interfaces/navbarInterfaces'
 
 const navItems: NavItem[] = [{ label: 'Blogs', link: 'https://blog.aidanlowson.com' }]
 

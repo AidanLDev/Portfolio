@@ -1,8 +1,7 @@
+import { Center, Flex, Text } from '@chakra-ui/react'
 import React from 'react'
-import { Text, Flex, Center } from '@chakra-ui/react'
-
-import styles from './style.module.scss'
 import { SocialMediaBoxProps } from '../../interfaces/linkPageInterfaces'
+import styles from './style.module.scss'
 
 export default function SocialMediaBox(props: SocialMediaBoxProps) {
   return (

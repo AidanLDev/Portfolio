@@ -1,9 +1,9 @@
-import React from 'react'
 import { Center, Heading } from '@chakra-ui/react'
-import styles from './styles.module.scss'
+import React from 'react'
+import Certifications from './Certifications'
 
 import Skills from './Skills'
-import Certifications from './Certifications'
+import styles from './styles.module.scss'
 
 export default function SkillsContainer() {
   return (

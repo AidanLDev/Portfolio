@@ -1,12 +1,12 @@
 'use client'
 
 /* eslint-disable react/no-unescaped-entities */
-import { Box, Text, Heading, Center } from '@chakra-ui/react'
+import { Box, Center, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
-import ImageLink from './ImageLink'
-import useIsTablet from '../../hooks/useIsTablet'
 import useIsMobile from '../../hooks/useIsMobile'
+import useIsTablet from '../../hooks/useIsTablet'
+import ImageLink from './ImageLink'
 
 import styles from './style.module.scss'
 

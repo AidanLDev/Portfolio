@@ -1,8 +1,8 @@
-import React from 'react'
-import { Tooltip } from '../ui/tooltip'
 import { motion } from 'framer-motion'
-import { MotionImageProps } from '../../lib/types'
+import React from 'react'
 import { ImageLinkProps } from '../../interfaces/homeInterfaces'
+import { MotionImageProps } from '../../lib/types'
+import { Tooltip } from '../ui/tooltip'
 
 const MotionImg = motion.img as React.FC<MotionImageProps>
 

@@ -1,9 +1,9 @@
-import React from 'react'
-import { verifiedImg } from '../../lib/constants'
 import { Box, Center, Flex, Text } from '@chakra-ui/react'
 import Image from 'next/image'
+import React from 'react'
 import SocialMediaBox from '../../components/LinkPages/SocialMediaBox'
 import { SocialMediasObject } from '../../interfaces/socialLinksInterfaces'
+import { verifiedImg } from '../../lib/constants'
 
 import styles from './style.module.scss'
 

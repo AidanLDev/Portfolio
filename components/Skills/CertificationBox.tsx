@@ -1,12 +1,11 @@
 'use client'
 
-import { Tooltip } from '../ui/tooltip'
-import React from 'react'
 import { motion } from 'framer-motion'
+import React from 'react'
 import { CertBoxProps } from '../../interfaces/skillsInterfaces'
-
-import styles from './styles.module.scss'
 import { MotionImageProps } from '../../lib/types'
+import { Tooltip } from '../ui/tooltip'
+import styles from './styles.module.scss'
 
 const MotionImg = motion.img as React.FC<MotionImageProps>
 

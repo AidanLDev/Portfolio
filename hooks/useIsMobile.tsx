@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
 import { useMediaQuery } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
 
 export default function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false)

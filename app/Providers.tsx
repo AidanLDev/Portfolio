@@ -1,7 +1,7 @@
 'use client'
 
-import { ReactNode } from 'react'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { ReactNode } from 'react'
 import { Provider as ChakraProvider } from '../components/ui/provider'
 
 interface IProviders {
