@@ -20,12 +20,12 @@
     "test:e2e-open": "playwright test --ui"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.943.0",
-    "@aws-sdk/lib-dynamodb": "^3.943.0",
+    "@aws-sdk/client-dynamodb": "^3.946.0",
+    "@aws-sdk/lib-dynamodb": "^3.946.0",
     "@chakra-ui/react": "^3.30.0",
     "@emotion/react": "^11.14.0",
     "@next/third-parties": "^16.0.7",
-    "@sentry/nextjs": "^10.28.0",
+    "@sentry/nextjs": "^10.29.0",
     "animate.css": "^4.1.1",
     "framer-motion": "^11.18.2",
     "identity-obj-proxy": "^3.0.0",
@@ -42,7 +42,7 @@
     "sst": "3.17.21"
   },
   "devDependencies": {
-    "@aws-sdk/client-cloudfront": "^3.943.0",
+    "@aws-sdk/client-cloudfront": "^3.946.0",
     "@biomejs/biome": "^2.3.8",
     "@playwright/test": "^1.57.0",
     "@types/node": "^20.19.25",
@@ -51,7 +51,8 @@
     "babel-plugin-react-compiler": "1.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "playwright": "^1.57.0"
+    "playwright": "^1.57.0",
+    "typescript": "5.9.3"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json,css,md}": "biome format --write",
