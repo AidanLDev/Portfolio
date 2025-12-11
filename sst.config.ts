@@ -18,6 +18,7 @@ export default $config({
       environment: {
         NEXT_PUBLIC_SENTRY_DNS: process.env.NEXT_PUBLIC_SENTRY_DNS!,
         SENTRY_DNS: process.env.SENTRY_DNS!,
+        NODE_ENV: 'production',
       },
       permissions: [
         {
