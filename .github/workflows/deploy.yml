@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install pnpm
         run: npm i -g pnpm
@@ -36,6 +36,12 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Install Pulumi
+        run: curl -fsSL https://get.pulumi.com | sh -s -- --version 3.137.0
+
+      - name: Add Pulumi to PATH
+        run: echo "$HOME/.pulumi/bin" >> $GITHUB_PATH
 
       - name: SST Deploy
         run: npx sst deploy --stage production --yes
