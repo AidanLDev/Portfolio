@@ -1,14 +1,22 @@
 @import "../../styles/variables.scss";
 
 .socialMediaBox {
+  display: flex;
   flex-direction: column-reverse;
   transition: all 2s;
   filter: brightness(0.7);
+  background-size: contain;
+  height: 160px;
+  width: 160px;
+  border-radius: 100px;
+  cursor: pointer;
   &:hover {
     filter: brightness(1);
   }
 }
 .socialMediaText {
+  display: flex;
+  justify-content: center;
   p {
     position: relative;
     bottom: 40px;

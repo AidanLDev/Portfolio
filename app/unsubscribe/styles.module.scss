@@ -8,5 +8,84 @@
   h2,
   input {
     color: white;
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    min-width: 280px;
+    font-size: 1rem;
+    box-shadow:
+      inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+      0 8px 20px rgba(0, 0, 0, 0.35);
+    transition:
+      border-color 180ms ease,
+      box-shadow 180ms ease,
+      background 180ms ease;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    &:hover {
+      border-color: rgba(255, 255, 255, 0.35);
+      background: rgba(26, 26, 26, 0.95);
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-color: rgba(124, 58, 237, 0.8);
+      box-shadow:
+        0 0 0 3px rgba(124, 58, 237, 0.35),
+        0 10px 24px rgba(0, 0, 0, 0.45);
+    }
+  }
+  h1 {
+    font-size: 8em;
+    font-weight: 600;
+  }
+  .emailContainer {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  button {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.75rem 1.5rem;
+    border-radius: 999px;
+    color: #f8f8f8;
+    background: linear-gradient(135deg, #2a2a2a 0%, #141414 100%);
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow:
+      0 8px 20px rgba(0, 0, 0, 0.35),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease,
+      border-color 180ms ease,
+      background 180ms ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.5);
+      box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow:
+        0 6px 14px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
+
+    &:focus-visible {
+      outline: 2px solid rgba(255, 255, 255, 0.7);
+      outline-offset: 3px;
+    }
   }
 }

@@ -1,5 +1,3 @@
-import { Box, Center } from '@chakra-ui/react'
-import React from 'react'
 import Footer from '../components/Footer/Footer'
 import AboutMeCard from '../components/Home/AboutMeCard'
 import ScrollDown from '../components/Home/ScrollDown'
@@ -11,23 +9,23 @@ import SkillsContainer from '../components/Skills/SkillsContainer'
 
 export default function Home() {
   return (
-    <Box>
-      <Box className='container'>
-        <Box className='landingScreen'>
+    <div>
+      <div className='container'>
+        <div className='landingScreen'>
           <Navbar active='' />
           <HtmlBodyTags />
           <Title />
-          <Center>
+          <div className='center'>
             <AboutMeCard />
-          </Center>
+          </div>
           <ScrollDown />
-        </Box>
+        </div>
         {/* Projects */}
         <ProjectContainer />
         {/* Skills */}
         <SkillsContainer />
         <Footer />
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }

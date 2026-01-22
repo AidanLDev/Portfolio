@@ -3,7 +3,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Box, Center, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image'
-import React from 'react'
 import useIsMobile from '../../hooks/useIsMobile'
 import useIsTablet from '../../hooks/useIsTablet'
 import ImageLink from './ImageLink'

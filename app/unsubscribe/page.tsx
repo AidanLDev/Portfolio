@@ -1,38 +1,39 @@
-'use client'
+"use client";
 
-import { Box, Button, Heading, Input, Text } from '@chakra-ui/react'
-import React, { useState } from 'react'
-import styles from './styles.module.scss'
+import { useState } from "react";
+import styles from "./styles.module.scss";
 
 export default function Unsubscribe() {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState("");
 
   const handleUnSub = async () => {
-    await fetch('/api/unsub', {
-      method: 'POST',
+    await fetch("/api/unsub", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         email,
       }),
-    })
-  }
+    });
+  };
   return (
     <div className={styles.unsubscribeContainer}>
-      <Heading>Unsubscribe</Heading>
-      <p>Enter your email and press un-subscribe to be removed from the mailing list</p>
-      <Box>
-        <Text>Email:</Text>
-        <Input
-          placeholder='Enter your email address'
+      <h1>Unsubscribe</h1>
+      <p>
+        Enter your email and press un-subscribe to be removed from the mailing
+        list
+      </p>
+      <div className={styles.emailContainer}>
+        <label htmlFor="email-input">Email:</label>
+        <input
+          id="email-input"
+          placeholder="Enter your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-      </Box>
-      <Button colorScheme='blue' onClick={async () => await handleUnSub()}>
-        Un-Subscribe
-      </Button>
+      </div>
+      <button onClick={async () => await handleUnSub()}>Un-Subscribe</button>
     </div>
-  )
+  );
 }

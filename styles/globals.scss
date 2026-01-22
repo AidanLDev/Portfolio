@@ -1,11 +1,11 @@
-@import './variables.scss';
+@import "./variables.scss";
 
 html,
 body {
   padding: 0;
   margin: 0;
   font:
-    400 16px/1.4 'Helvetica Neue',
+    400 16px/1.4 "Helvetica Neue",
     sans-serif; // 300 11px
   color: #444;
   -webkit-font-smoothing: antialiased;
@@ -14,11 +14,19 @@ body {
   display: block;
   scroll-behavior: smooth;
   a,
-  p, h1, h2 {
+  p,
+  h1,
+  h2,
+  label {
     color: $main-colour;
   }
   a {
     cursor: pointer;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
   }
 
   // TODO: get this to work with a dark-mode toggle
@@ -47,37 +55,37 @@ body {
 }
 
 // From react-portfolio YT: https://www.youtube.com/watch?v=bmpI252DmiI&list=WL&index=3
-@import 'animate.css';
-@import '~loaders.css/src/animations/pacman.scss';
+@import "animate.css";
+@import "~loaders.css/src/animations/pacman.scss";
 
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url('/fonts/helvetica-neu.ttf') format('ttf');
+  font-family: "Helvetica Neue";
+  src: url("/fonts/helvetica-neu.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'La Belle Aurore';
+  font-family: "La Belle Aurore";
   src:
-    url('/fonts/LaBelleAurore.woff2') format('woff2'),
-    url('/fonts/LaBelleAurore.woff') format('woff');
+    url("/fonts/LaBelleAurore.woff2") format("woff2"),
+    url("/fonts/LaBelleAurore.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Coolvetica';
+  font-family: "Coolvetica";
   src:
-    url('/fonts/CoolveticaRg-Regular.woff2') format('woff2'),
-    url('/fonts/CoolveticaRg-Regular.woff') format('woff');
+    url("/fonts/CoolveticaRg-Regular.woff2") format("woff2"),
+    url("/fonts/CoolveticaRg-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 input,
 textarea {
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 .container {
@@ -119,7 +127,7 @@ textarea {
   transform: translateY(-50%);
   font-size: 66px;
   font-weight: 400;
-  font-family: 'coolvetica';
+  font-family: "coolvetica";
   text-shadow: 2px 2px 0 #46cebb;
 
   @media (max-width: 500px) {
@@ -168,16 +176,16 @@ textarea {
   }
 
   &::before {
-    content: '<h1>';
-    font-family: 'La Belle Aurore';
+    content: "<h1>";
+    font-family: "La Belle Aurore";
     color: $main-colour-dark;
     font-size: 18px;
     opacity: 0.6;
     text-shadow: none;
   }
   &::after {
-    content: '</h1>';
-    font-family: 'La Belle Aurore';
+    content: "</h1>";
+    font-family: "La Belle Aurore";
     color: $main-colour-dark;
     font-size: 18px;
     opacity: 0.6;
