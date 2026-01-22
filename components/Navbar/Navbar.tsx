@@ -1,13 +1,10 @@
 import Link from "next/link";
-import { NavBarProps, NavItem } from "../../interfaces/navbarInterfaces";
 import NavLink from "./NavLink";
+import { navItems } from "./navItems";
+
 import styles from "./styles.module.scss";
 
-const navItems: NavItem[] = [
-  { label: "Blogs", link: "https://blog.aidanlowson.com" },
-];
-
-export default function Navbar({ active }: Readonly<NavBarProps>) {
+export default function Navbar() {
   return (
     <div className={styles.navContainer} id="nav-bar">
       <div className={styles.navInner}>
@@ -18,13 +15,7 @@ export default function Navbar({ active }: Readonly<NavBarProps>) {
         </div>
         <div className={styles.navRight}>
           {navItems.map((item, i) => {
-            return (
-              <NavLink
-                key={`${item.label}__${i}`}
-                item={item}
-                active={active}
-              />
-            );
+            return <NavLink key={`${item.label}__${i}`} item={item} />;
           })}
         </div>
       </div>
