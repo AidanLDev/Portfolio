@@ -1,10 +1,10 @@
 import { FaArrowAltCircleDown } from 'react-icons/fa'
 
-import style from './style.module.scss'
+import styles from './styles.module.scss'
 
 export default function ScrollDown() {
   return (
-    <div className={style.scrollDownContainer}>
+    <div className={styles.scrollDownContainer}>
       <a href='#projects-header'>
         <span>Scroll Down...</span>
         <FaArrowAltCircleDown />
