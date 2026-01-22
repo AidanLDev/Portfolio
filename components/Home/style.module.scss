@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .scrollDownContainer {
   animation:
@@ -62,9 +62,18 @@
   border-radius: 20px;
   transition: all 1.5s ease-in-out;
   width: 400px;
+  background: #44444473;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  position: relative;
 
   .cardImg {
     margin-top: 0.5rem;
+  }
+
+  .cardCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .cardHeading {
@@ -99,8 +108,8 @@
   }
 
   &::before {
-    content: '<Card>';
-    font-family: 'La Belle Aurore';
+    content: "<Card>";
+    font-family: "La Belle Aurore";
     color: $main-colour-dark;
     font-size: 18px;
     opacity: 0.6;
@@ -109,8 +118,8 @@
   }
 
   &::after {
-    content: '</Card>';
-    font-family: 'La Belle Aurore';
+    content: "</Card>";
+    font-family: "La Belle Aurore";
     color: $main-colour-dark;
     font-size: 18px;
     opacity: 0.6;
@@ -120,6 +129,13 @@
   @media (prefers-color-scheme: dark) {
     border: 1px solid white;
   }
+}
+
+.cardHeader {
+  background-image: url("/images/programmingBgS.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @keyframes flyInFromBottom {
@@ -141,6 +157,8 @@
   background-color: #290808;
   height: 14rem;
   border-top: 2px solid $main-colour;
+  padding: 1.25rem;
+  position: relative;
 
   @media (max-width: $isTablet) {
     height: 400px;
@@ -212,6 +230,38 @@
   @media (max-width: $isExtraSmallMobile) {
     row-gap: 15px;
   }
+}
+
+.imageLink {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  &:hover .imageTooltip,
+  &:focus-visible .imageTooltip {
+    opacity: 1;
+    transform: translate(-50%, -8px);
+  }
+}
+
+.imageTooltip {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
 }
 
 .detailsBox:hover .cardLinks {

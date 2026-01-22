@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import AnimatedLetter from './AnimatedLetter'
 
 export default function Title() {

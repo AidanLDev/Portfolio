@@ -1,15 +1,29 @@
-import { useMediaQuery } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 
 export default function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false)
-  const [mediaQuery] = useMediaQuery(['(max-width: 575px)'], {
-    fallback: [false],
-  })
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(mediaQuery)
-  }, [mediaQuery])
+    if (typeof window === "undefined") return;
 
-  return isMobile
+    const query = window.matchMedia("(max-width: 575px)");
+    const handleChange = () => setIsMobile(query.matches);
+
+    handleChange();
+    if (query.addEventListener) {
+      query.addEventListener("change", handleChange);
+    } else {
+      query.onchange = handleChange;
+    }
+
+    return () => {
+      if (query.removeEventListener) {
+        query.removeEventListener("change", handleChange);
+      } else {
+        query.onchange = null;
+      }
+    };
+  }, []);
+
+  return isMobile;
 }

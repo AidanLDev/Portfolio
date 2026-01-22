@@ -1,83 +1,72 @@
-'use client'
+"use client";
 
 /* eslint-disable react/no-unescaped-entities */
-import { Box, Center, Heading, Text } from '@chakra-ui/react'
-import Image from 'next/image'
-import useIsMobile from '../../hooks/useIsMobile'
-import useIsTablet from '../../hooks/useIsTablet'
-import ImageLink from './ImageLink'
+import Image from "next/image";
+import useIsMobile from "../../hooks/useIsMobile";
+import useIsTablet from "../../hooks/useIsTablet";
+import ImageLink from "./ImageLink";
 
-import styles from './style.module.scss'
+import styles from "./style.module.scss";
 
 export default function AboutMeCard() {
-  const isTablet = useIsTablet()
-  const isMobile = useIsMobile()
+  const isTablet = useIsTablet();
+  const isMobile = useIsMobile();
   return (
-    <Box
-      rounded='20px'
-      background='#44444473'
-      overflow='hidden'
-      boxShadow='md'
-      className={styles.cardContainer}
-    >
-      <Box
-        backgroundImage="url('/images/programmingBgS.webp')"
-        backgroundSize='cover'
-        backgroundPosition='center'
-        backgroundRepeat='no-repeat'
-      >
-        <Center>
+    <div className={styles.cardContainer}>
+      <div className={styles.cardHeader}>
+        <div className={styles.cardCenter}>
           <Image
-            alt='Cartoon avatar'
-            src='/images/BromoSoloRoundSmaller.webp'
+            alt="Cartoon avatar"
+            src="/images/BromoSoloRoundSmaller.webp"
             width={200}
             height={200}
             priority
             className={styles.cardImg}
           />
-        </Center>
-        <Center>
-          <Heading className={styles.cardHeading}>Software Engineer</Heading>
-        </Center>
-      </Box>
-      <Box p={5} className={styles.detailsBox} position='relative'>
-        <Text className={styles.cardText}>
-          Full time Software Engineer, life long learner and programming enthusiast.{' '}
-          {!isTablet && !isMobile && 'Hover for social media links.'}
-        </Text>
-        <Box className={styles.cardLinks} transition='all 1.5s ease-in-out'>
+        </div>
+        <div className={styles.cardCenter}>
+          <h2 className={styles.cardHeading}>Software Engineer</h2>
+        </div>
+      </div>
+      <div className={styles.detailsBox}>
+        <p className={styles.cardText}>
+          Full time Software Engineer, life long learner and programming
+          enthusiast.{" "}
+          {!isTablet && !isMobile && "Hover for social media links."}
+        </p>
+        <div className={styles.cardLinks}>
           <ImageLink
-            alt='GitHub'
-            link='https://github.com/AidanLDev'
-            imagePath='/images/Logos/github-512.webp'
+            alt="GitHub"
+            link="https://github.com/AidanLDev"
+            imagePath="/images/Logos/github-512.webp"
           />
           <ImageLink
-            alt='YouTube'
-            link='https://www.youtube.com/@aidanl94'
-            imagePath='/images/Logos/YTNoBackGround.webp'
+            alt="YouTube"
+            link="https://www.youtube.com/@aidanl94"
+            imagePath="/images/Logos/YTNoBackGround.webp"
           />
           <ImageLink
-            alt='LinkedIn'
-            link='https://www.linkedin.com/in/aidanlowson1/'
-            imagePath='/images/Logos/LinkedInLogoRound.webp'
+            alt="LinkedIn"
+            link="https://www.linkedin.com/in/aidanlowson1/"
+            imagePath="/images/Logos/LinkedInLogoRound.webp"
           />
           <ImageLink
-            alt='X'
-            link='https://twitter.com/AidanL94'
-            imagePath='/images/Logos/x_icon.webp'
+            alt="X"
+            link="https://twitter.com/AidanL94"
+            imagePath="/images/Logos/x_icon.webp"
           />
           <ImageLink
-            alt='Instagram'
-            link='https://www.instagram.com/lowsonaidan/'
-            imagePath='/images/Logos/InstagramCircle.webp'
+            alt="Instagram"
+            link="https://www.instagram.com/lowsonaidan/"
+            imagePath="/images/Logos/InstagramCircle.webp"
           />
           <ImageLink
-            alt='Personal Blog'
-            link='https://blog.aidanlowson.com'
-            imagePath='/images/Logos/blogIcon.webp'
+            alt="Personal Blog"
+            link="https://blog.aidanlowson.com"
+            imagePath="/images/Logos/blogIcon.webp"
           />
-        </Box>
-      </Box>
-    </Box>
-  )
+        </div>
+      </div>
+    </div>
+  );
 }

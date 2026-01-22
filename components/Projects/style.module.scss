@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .projectContainer {
   width: 80vw;
@@ -7,6 +7,13 @@
   flex-direction: column;
   h2 {
     color: $main-colour;
+  }
+  .projectHeader {
+    display: flex;
+    justify-content: center;
+  }
+  .projectTitle {
+    padding: 4rem 0;
   }
   .projWrapper {
     & > div {
@@ -38,6 +45,35 @@
       .projectLink {
         overflow: hidden;
         max-height: 16rem;
+      }
+      .projectImageLink {
+        position: relative;
+        display: inline-block;
+
+        &:hover .imageTooltip,
+        &:focus-visible .imageTooltip {
+          opacity: 1;
+          transform: translate(-50%, -8px);
+        }
+      }
+      .imageTooltip {
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        pointer-events: none;
+        white-space: nowrap;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        transition:
+          opacity 160ms ease,
+          transform 160ms ease;
+        z-index: 2;
       }
       .tags {
         padding: 0 1rem;
@@ -93,7 +129,7 @@
         }
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           z-index: -1;
           top: 39px;

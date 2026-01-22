@@ -1,21 +1,20 @@
-import { Center, Heading } from '@chakra-ui/react'
-import React from 'react'
-import Certifications from './Certifications'
+import React from "react";
+import Certifications from "./Certifications";
 
-import Skills from './Skills'
-import styles from './styles.module.scss'
+import Skills from "./Skills";
+import styles from "./styles.module.scss";
 
 export default function SkillsContainer() {
   return (
     <div className={`${styles.skillsContainer} containerPadding`}>
-      <Center>
-        <Heading className={styles.title}>Skills</Heading>
-      </Center>
+      <div className={styles.sectionHeader}>
+        <h2 className={styles.title}>Skills</h2>
+      </div>
       <Skills />
-      <Center>
-        <Heading className={styles.title}>Certifications</Heading>
-      </Center>
+      <div className={styles.sectionHeader}>
+        <h2 className={styles.title}>Certifications</h2>
+      </div>
       <Certifications />
     </div>
-  )
+  );
 }

@@ -1,6 +1,5 @@
 'use client'
 
-import { Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 import { SkillBoxProps } from '../../interfaces/skillsInterfaces'
@@ -22,7 +21,7 @@ export default function SkillBox({ logo, name }: SkillBoxProps) {
         }}
         whileHover={{ scale: 1.1 }}
       />
-      <Text>{name}</Text>
+      <p>{name}</p>
     </div>
   )
 }

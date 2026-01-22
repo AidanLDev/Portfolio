@@ -1,4 +1,3 @@
-import React from 'react'
 import { AnimatedLetterProps } from '../../interfaces/homeInterfaces'
 
 export default function AnimatedLetter({ letterClass, idx, letters }: AnimatedLetterProps) {

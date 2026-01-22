@@ -1,4 +1,4 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .navContainer {
   z-index: 3;
@@ -7,7 +7,19 @@
   position: fixed;
   // border-bottom: 1px solid $main-colour;
   // background-color: #000000ab;
-  a {
+  .navInner {
+    display: flex;
+    align-items: center;
+  }
+  .navLeft {
+    flex-grow: 1;
+  }
+  .navRight {
+    display: flex;
+    gap: 1.5rem;
+    padding: 4px 24px 0 0;
+  }
+  .logoLink {
     cursor: unset;
     display: inline-block;
   }
@@ -20,8 +32,12 @@
     z-index: 1;
     position: relative;
   }
+  a {
+    cursor: unset;
+    display: inline-block;
+  }
   .logo::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -51,7 +67,7 @@
       z-index: 0;
     }
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       z-index: -1;
       top: 24px;
@@ -67,6 +83,6 @@
   }
   .active {
     text-decoration: underline;
-    color: '$active-colour';
+    color: "$active-colour";
   }
 }

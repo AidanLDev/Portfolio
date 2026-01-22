@@ -1,6 +1,10 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .skillsContainer {
+  .sectionHeader {
+    display: flex;
+    justify-content: center;
+  }
   .title {
     color: $main-colour;
     margin: 4rem 0;
@@ -36,6 +40,35 @@
       font-size: 22px;
       font-weight: 500;
       color: $main-colour;
+      .certImageLink {
+        position: relative;
+        display: inline-block;
+
+        &:hover .imageTooltip,
+        &:focus-visible .imageTooltip {
+          opacity: 1;
+          transform: translate(-50%, -8px);
+        }
+      }
+      .imageTooltip {
+        position: absolute;
+        left: 50%;
+        bottom: 100%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        pointer-events: none;
+        white-space: nowrap;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        font-size: 0.85rem;
+        padding: 6px 10px;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        transition:
+          opacity 160ms ease,
+          transform 160ms ease;
+        z-index: 2;
+      }
       img {
         width: 500px;
         height: 400px;

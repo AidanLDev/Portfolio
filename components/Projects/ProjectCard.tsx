@@ -1,14 +1,12 @@
-'use client'
+"use client";
 
-import { Box, Text } from '@chakra-ui/react'
-import { motion, Variants } from 'framer-motion'
-import React from 'react'
-import { AiFillGithub } from 'react-icons/ai'
-import { BsArrowRightShort } from 'react-icons/bs'
-import { Project } from '../../interfaces/projectInterfaces'
-import { MotionImageProps } from '../../lib/types'
-import { Tooltip } from '../ui/tooltip'
-import styles from './style.module.scss'
+import { motion, Variants } from "framer-motion";
+import React from "react";
+import { AiFillGithub } from "react-icons/ai";
+import { BsArrowRightShort } from "react-icons/bs";
+import { Project } from "../../interfaces/projectInterfaces";
+import { MotionImageProps } from "../../lib/types";
+import styles from "./style.module.scss";
 
 const cardVariants: Variants = {
   offscreen: {
@@ -19,13 +17,13 @@ const cardVariants: Variants = {
     scale: 1, // Grow to full size
     opacity: 1, // Become fully opaque
     transition: {
-      type: 'tween',
+      type: "tween",
       duration: 0.6,
     },
   },
-}
+};
 
-const MotionImg = motion.img as React.FC<MotionImageProps>
+const MotionImg = motion.img as React.FC<MotionImageProps>;
 
 export default function ProjectCard({
   img,
@@ -39,46 +37,57 @@ export default function ProjectCard({
   return (
     <motion.div
       viewport={{ once: true, amount: 0.8 }}
-      initial='offscreen'
-      whileInView='onscreen'
+      initial="offscreen"
+      whileInView="onscreen"
       variants={cardVariants}
     >
-      <a href={link} rel='noreferrer' target='_blank' className={styles.projectLink}>
-        <Tooltip content={`Click to view - ${title}`}>
-          <MotionImg
-            alt={title}
-            src={`/images/Projects/${img}`}
-            width='100%'
-            whileHover={{ scale: 1.02 }}
-          />
-        </Tooltip>
+      <a
+        href={link}
+        rel="noreferrer"
+        target="_blank"
+        className={`${styles.projectLink} ${styles.projectImageLink}`}
+      >
+        <span className={styles.imageTooltip} role="tooltip">
+          {`Click to view - ${title}`}
+        </span>
+        <MotionImg
+          alt={title}
+          src={`/images/Projects/${img}`}
+          width="100%"
+          whileHover={{ scale: 1.02 }}
+        />
       </a>
-      <Box className={styles.projectCardContent}>
-        <Box className={styles.projectHeading}>
-          <Box className={styles.projectTitleTagsContainer}>
-            <Text className={styles.heading}>{title}</Text>
-            <Box className={styles.tags}>
+      <div className={styles.projectCardContent}>
+        <div className={styles.projectHeading}>
+          <div className={styles.projectTitleTagsContainer}>
+            <h3 className={styles.heading}>{title}</h3>
+            <div className={styles.tags}>
               {tags.map((tag, idx) => (
-                <Text key={`${tag}__${idx}`}>{tag}</Text>
+                <p key={`${tag}__${idx}`}>{tag}</p>
               ))}
-            </Box>
-          </Box>
-          <Text className={styles.date}>Created Date - {date}</Text>
-        </Box>
-        <Box className={styles.descriptionBox}>
-          <Text>{description}</Text>
-        </Box>
-        <Box className={styles.links}>
-          <a href={gitHubLink} rel='noreferrer' target='_blank'>
+            </div>
+          </div>
+          <p className={styles.date}>Created Date - {date}</p>
+        </div>
+        <div className={styles.descriptionBox}>
+          <p>{description}</p>
+        </div>
+        <div className={styles.links}>
+          <a href={gitHubLink} rel="noreferrer" target="_blank">
             <AiFillGithub />
-            <Text>GitHub</Text>
+            <span>GitHub</span>
           </a>
-          <a href={link} rel='noreferrer' target='_blank' className={styles.viewProjectsLink}>
-            <Text>View Project</Text>
+          <a
+            href={link}
+            rel="noreferrer"
+            target="_blank"
+            className={styles.viewProjectsLink}
+          >
+            <span>View Project</span>
             <BsArrowRightShort />
           </a>
-        </Box>
-      </Box>
+        </div>
+      </div>
     </motion.div>
-  )
+  );
 }
