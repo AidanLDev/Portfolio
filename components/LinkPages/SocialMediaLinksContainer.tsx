@@ -1,16 +1,14 @@
-import { Box, Center, Flex, Text } from '@chakra-ui/react'
-import Image from 'next/image'
-import React from 'react'
-import SocialMediaBox from '../../components/LinkPages/SocialMediaBox'
-import { SocialMediasObject } from '../../interfaces/socialLinksInterfaces'
-import { verifiedImg } from '../../lib/constants'
+import Image from "next/image";
+import SocialMediaBox from "../../components/LinkPages/SocialMediaBox";
+import { SocialMediasObject } from "../../interfaces/socialLinksInterfaces";
+import { verifiedImg } from "../../lib/constants";
 
-import styles from './style.module.scss'
+import styles from "./style.module.scss";
 
 export interface ISocialMediaLinksContainerProps {
-  imgSrc: string
-  fullName: string
-  socialLinks: SocialMediasObject[]
+  imgSrc: string;
+  fullName: string;
+  socialLinks: SocialMediasObject[];
 }
 
 export const SocialMediaLinksContainer = ({
@@ -19,23 +17,26 @@ export const SocialMediaLinksContainer = ({
   socialLinks,
 }: ISocialMediaLinksContainerProps) => {
   return (
-    <Box className={styles.linksWrapper}>
-      <Center className={styles.avatarImg}>
-        <Image alt={`${fullName}'s avatar/profile picture`} src={imgSrc} width={175} height={175} />
-      </Center>
-      <Flex justify='center' p='12px 0'>
-        <Text p='0 4px 0 0' fontSize='24px' fontWeight={600}>
-          {fullName}
-        </Text>
+    <div className={styles.linksWrapper}>
+      <div className={styles.avatarImg}>
+        <Image
+          alt={`${fullName}'s avatar/profile picture`}
+          src={imgSrc}
+          width={175}
+          height={175}
+        />
+      </div>
+      <div className={styles.avatarText}>
+        <h1>{fullName}</h1>
         <Image
           src={verifiedImg}
-          alt='Verified profile'
-          data-testid='verificationTick'
+          alt="Verified profile"
+          data-testid="verificationTick"
           width={16}
           height={36}
         />
-      </Flex>
-      <Flex gap='22px' justify='space-around' wrap='wrap'>
+      </div>
+      <div className={styles.boxWrappers}>
         {socialLinks.map((social, idx) => (
           <SocialMediaBox
             backgroundImage={social.img}
@@ -44,7 +45,7 @@ export const SocialMediaLinksContainer = ({
             key={`${social.img}__${idx}`}
           />
         ))}
-      </Flex>
-    </Box>
-  )
-}
+      </div>
+    </div>
+  );
+};

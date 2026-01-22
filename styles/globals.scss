@@ -14,7 +14,7 @@ body {
   display: block;
   scroll-behavior: smooth;
   a,
-  p {
+  p, h1, h2 {
     color: $main-colour;
   }
   a {
