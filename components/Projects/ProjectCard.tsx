@@ -2,8 +2,7 @@
 
 import { motion, Variants } from "framer-motion";
 import React from "react";
-import { AiFillGithub } from "react-icons/ai";
-import { BsArrowRightShort } from "react-icons/bs";
+import Image from "next/image";
 import { Project } from "../../interfaces/projectInterfaces";
 import { MotionImageProps } from "../../lib/types";
 import styles from "./style.module.scss";
@@ -74,7 +73,13 @@ export default function ProjectCard({
         </div>
         <div className={styles.links}>
           <a href={gitHubLink} rel="noreferrer" target="_blank">
-            <AiFillGithub />
+            <Image
+              src="/icons/githubIcon.svg"
+              alt="GitHub"
+              width={32}
+              height={32}
+              className={styles.githubIcon}
+            />
             <span>GitHub</span>
           </a>
           <a
@@ -84,7 +89,12 @@ export default function ProjectCard({
             className={styles.viewProjectsLink}
           >
             <span>View Project</span>
-            <BsArrowRightShort />
+            <Image
+              src="/icons/rightArrowIcon.svg"
+              alt="right arrow"
+              width={32}
+              height={32}
+            />
           </a>
         </div>
       </div>

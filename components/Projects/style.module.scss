@@ -110,6 +110,9 @@
         display: flex;
         flex-wrap: wrap;
       }
+      .links img {
+        width: auto;
+      }
       .links a {
         display: flex;
         padding: 1rem;
@@ -118,6 +121,10 @@
         border-radius: 16px;
         transition: all 0.6s;
         svg {
+          width: 2rem;
+          height: 2rem;
+        }
+        .githubIcon {
           width: 2rem;
           height: 2rem;
         }
@@ -199,6 +206,10 @@
             padding: 0.5rem;
 
             svg {
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+            .githubIcon {
               width: 1.5rem;
               height: 1.5rem;
             }

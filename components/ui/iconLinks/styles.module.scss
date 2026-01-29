@@ -1,0 +1,32 @@
+@import "../../../styles/variables.scss";
+
+.iconLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba($main-colour, 0.6);
+  background-color: transparent;
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $secondary-colour;
+    background-color: $secondary-colour;
+    box-shadow: 0 0 0 4px rgba($secondary-colour, 0.25);
+    transform: translateY(-1px);
+  }
+}
+
+.iconImage {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  transition: filter 200ms ease;
+}

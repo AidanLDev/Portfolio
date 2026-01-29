@@ -15,4 +15,7 @@
       text-decoration: underline;
     }
   }
+  img {
+    filter: brightness(0) invert(1);
+  }
 }

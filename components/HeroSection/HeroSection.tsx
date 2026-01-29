@@ -1,6 +1,7 @@
-import HeroTitle from "../ui/HeroTitle";
-import Subtitle from "../ui/Subtitle";
+import HeroTitle from "../ui/text/HeroTitle";
+import Subtitle from "../ui/text/Subtitle";
 import Avatar from "./Avatar/Avatar";
+import HeroLinks from "./HeroLinks/HeroLinks";
 import ScrollDown from "./ScrollDown";
 
 import styles from "./styles.module.scss";
@@ -17,7 +18,7 @@ export default function HeroSection() {
           software and have worked across the full stack, from frontend to
           backend and DevOps.
         </p>
-        {/* GitHub LinkedIn Mailto */}
+        <HeroLinks />
       </div>
 
       <ScrollDown />
