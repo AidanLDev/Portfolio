@@ -6,7 +6,7 @@
     fadeIn 2s forwards;
   animation-delay: 5s, 5s;
   opacity: 0;
-  color: $main-colour;
+  color: $primary-colour;
   position: relative;
   top: 8%;
   left: 0;
@@ -74,7 +74,6 @@
     p {
       margin: 0.5rem 0 0.75rem;
       max-width: 640px;
-
     }
   }
 
@@ -82,5 +81,8 @@
     display: flex;
     gap: 1rem;
     margin: 0.5rem 0;
+  }
+  @media (max-width: $isMobile) {
+    margin-top: 4rem;
   }
 }

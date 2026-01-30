@@ -6,7 +6,7 @@
     fadeIn 2s forwards;
   animation-delay: 5s, 5s;
   opacity: 0;
-  color: $main-colour;
+  color: $primary-colour;
   position: relative;
   top: 8%;
   left: 0;
@@ -110,7 +110,7 @@
   &::before {
     content: "<Card>";
     font-family: "La Belle Aurore";
-    color: $main-colour-dark;
+    color: $primary-colour-dark;
     font-size: 18px;
     opacity: 0.6;
     position: absolute;
@@ -120,7 +120,7 @@
   &::after {
     content: "</Card>";
     font-family: "La Belle Aurore";
-    color: $main-colour-dark;
+    color: $primary-colour-dark;
     font-size: 18px;
     opacity: 0.6;
     position: absolute;
@@ -156,7 +156,7 @@
   background-color: $secondary-colour;
   background-color: #290808;
   height: 14rem;
-  border-top: 2px solid $main-colour;
+  border-top: 2px solid $primary-colour;
   padding: 1.25rem;
   position: relative;
 

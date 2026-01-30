@@ -6,7 +6,7 @@
     justify-content: center;
   }
   .title {
-    color: $main-colour;
+    color: $primary-colour;
     margin: 4rem 0;
   }
   .skillsList {
@@ -39,7 +39,7 @@
       width: 500px;
       font-size: 22px;
       font-weight: 500;
-      color: $main-colour;
+      color: $primary-colour;
       .certImageLink {
         position: relative;
         display: inline-block;

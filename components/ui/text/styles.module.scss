@@ -9,7 +9,12 @@
 }
 
 .subtitle {
-  color: $secondary-colour;
   margin: 0.5rem 0;
   font-size: 2em;
+}
+.primary {
+  color: $primary-colour;
+}
+.secondary {
+  color: $secondary-colour;
 }

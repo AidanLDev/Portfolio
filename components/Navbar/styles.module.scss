@@ -7,7 +7,6 @@
   position: fixed;
   top: 0;
   left: 0;
-  // border-bottom: 1px solid $main-colour;
   background-color: #000000ab;
   .navInner {
     display: flex;
@@ -29,7 +28,7 @@
   .logo {
     color: $secondary-colour;
     padding: 8px 8px 8px 10px;
-    background-color: $main-colour;
+    background-color: $primary-colour;
     transition: background-color 0.2s ease-in;
     cursor: pointer;
     width: 40px;
@@ -41,7 +40,7 @@
     display: inline-block;
   }
   .logo:hover {
-    background-color: $main-colour-dark;
+    background-color: $primary-colour-dark;
   }
   .linkStyle {
     font-weight: 700;
@@ -67,7 +66,7 @@
       left: 0;
       right: 0;
       transform: scaleX(0);
-      background: $main-colour;
+      background: $primary-colour;
       transform-origin: center right;
       transition: transform 0.2s ease-in;
     }
@@ -75,5 +74,38 @@
   .active {
     text-decoration: underline;
     color: "$active-colour";
+  }
+}
+
+@media (max-width: $isMobile) {
+  .navContainer {
+    .navInner {
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .navLeft {
+      flex-grow: 0;
+    }
+    .navRight {
+      gap: 0.5rem 1rem;
+      margin: 0.25rem 0 0 0;
+    }
+    .linkStyle {
+      font-size: 1rem;
+      padding: 4px 0;
+    }
+  }
+}
+
+@media (max-width: $isExtraSmallMobile) {
+  .navContainer {
+    .navRight {
+      gap: 0.5rem 0.75rem;
+    }
+    .linkStyle {
+      font-size: 0.95rem;
+    }
   }
 }
