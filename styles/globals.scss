@@ -18,10 +18,16 @@ body {
   h1,
   h2,
   label {
-    color: $main-colour;
+    color: $main-colour-dark;
   }
   a {
     cursor: pointer;
+  }
+
+  p {
+    font-size: clamp(1rem, 1.1vw + 0.75rem, 1.125rem);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
   }
 
   .center {
@@ -53,10 +59,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: $main-colour-dark;
 }
-
-// From react-portfolio YT: https://www.youtube.com/watch?v=bmpI252DmiI&list=WL&index=3
-@import "animate.css";
-@import "~loaders.css/src/animations/pacman.scss";
 
 @font-face {
   font-family: "Helvetica Neue";
@@ -94,12 +96,9 @@ textarea {
   width: 100%;
   will-change: contents;
   position: absolute;
-  opacity: 0;
   margin: 0 auto;
   z-index: 1;
   transform-style: preserve-3d;
-  animation: fadeIn 1s forwards;
-  animation-delay: 1s;
   .landingScreen {
     min-height: 100vh;
     @media (max-width: $isTablet) {
