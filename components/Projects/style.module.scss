@@ -24,7 +24,7 @@
       padding: 2rem;
       border: 2px solid $primary-colour;
       border-radius: 16px;
-      background: $background-color;
+      background: $background-colour;
       p {
         @media (min-width: $isTablet) {
           font-size: 1.25em;
@@ -81,7 +81,7 @@
         gap: 1rem;
         flex-wrap: wrap;
         p {
-          border: 1px solid $background-color;
+          border: 1px solid $background-colour;
           padding: 0.2rem;
         }
       }
@@ -174,7 +174,7 @@
         filter: brightness(1.5);
       }
       .links a:first-of-type {
-        background: $background-color;
+        background: $background-colour;
       }
       .links a:last-of-type {
         background: $secondary-colour;
