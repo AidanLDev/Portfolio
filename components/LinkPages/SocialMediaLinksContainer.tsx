@@ -1,6 +1,6 @@
 import Image from "next/image";
 import SocialMediaBox from "../../components/LinkPages/SocialMediaBox";
-import { SocialMediasObject } from "../../interfaces/socialLinksInterfaces";
+import { SocialMediasObject } from "../../interfaces/socialLinksInterfaces.types";
 import { verifiedImg } from "../../lib/constants";
 
 import styles from "./style.module.scss";

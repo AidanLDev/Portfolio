@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import { CertBoxProps } from "../../interfaces/skillsInterfaces";
+import { CertBoxProps } from "../../interfaces/skillsInterfaces.types";
 import { MotionImageProps } from "../../lib/types";
 import styles from "./styles.module.scss";
 

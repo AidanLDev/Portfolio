@@ -1,78 +1,78 @@
-import { Skill } from '../../interfaces/skillsInterfaces'
+import { Skill } from "../../interfaces/skillsInterfaces.types";
 
-const imgPath = '/images/Tech/'
+const imgPath = "/images/Tech/";
 
 export const skills: Skill[] = [
   {
-    name: 'AWS',
+    name: "AWS",
     logo: `${imgPath}AWSLogo.webp`,
   },
   {
-    name: 'JavaScript',
+    name: "JavaScript",
     logo: `${imgPath}JavaScriptLogo.webp`,
   },
   {
-    name: 'TypeScript',
+    name: "TypeScript",
     logo: `${imgPath}TypeScript.webp`,
   },
   {
-    name: 'React',
+    name: "React",
     logo: `${imgPath}ReactLogo.webp`,
   },
   {
-    name: 'Node',
+    name: "Node",
     logo: `${imgPath}Node.webp`,
   },
   {
-    name: 'MySQL',
+    name: "MySQL",
     logo: `${imgPath}mySQLLogo.webp`,
   },
   {
-    name: 'SASS',
+    name: "SASS",
     logo: `${imgPath}sassLogo.webp`,
   },
   {
-    name: 'Tailwind',
+    name: "Tailwind",
     logo: `${imgPath}Tailwind.webp`,
   },
   {
-    name: 'Angular',
+    name: "Angular",
     logo: `${imgPath}AngularLogo.webp`,
   },
   {
-    name: 'Astro',
+    name: "Astro",
     logo: `${imgPath}astro.webp`,
   },
   {
-    name: 'Next',
+    name: "Next",
     logo: `${imgPath}Next.webp`,
   },
   {
-    name: 'GIT',
+    name: "GIT",
     logo: `${imgPath}GitLogo.webp`,
   },
   {
-    name: 'Python',
+    name: "Python",
     logo: `${imgPath}Python.webp`,
   },
   {
-    name: 'C#',
+    name: "C#",
     logo: `${imgPath}csharp.webp`,
   },
   {
-    name: 'Cypress',
+    name: "Cypress",
     logo: `${imgPath}cypressLogo.webp`,
   },
   {
-    name: 'Jest',
+    name: "Jest",
     logo: `${imgPath}jestLogo.webp`,
   },
   {
-    name: 'Playwright',
+    name: "Playwright",
     logo: `${imgPath}playwrightLogo.webp`,
   },
   {
-    name: 'Redux',
+    name: "Redux",
     logo: `${imgPath}Redux.webp`,
   },
-]
+];

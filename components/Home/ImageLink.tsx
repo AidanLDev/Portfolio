@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { ImageLinkProps } from "../../interfaces/homeInterfaces";
+import { ImageLinkProps } from "../../interfaces/homeInterfaces.types";
 import { MotionImageProps } from "../../lib/types";
 import styles from "./style.module.scss";
 

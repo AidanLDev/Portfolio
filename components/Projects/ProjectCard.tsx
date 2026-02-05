@@ -3,7 +3,7 @@
 import { motion, Variants } from "framer-motion";
 import React from "react";
 import Image from "next/image";
-import { Project } from "../../interfaces/projectInterfaces";
+import { Project } from "../../interfaces/projectInterfaces.types";
 import { MotionImageProps } from "../../lib/types";
 import styles from "./style.module.scss";
 

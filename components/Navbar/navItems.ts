@@ -1,4 +1,4 @@
-import { NavItem } from "@/interfaces/navbarInterfaces";
+import { NavItem } from "@/interfaces/navbarInterfaces.types";
 
 export const navItems: NavItem[] = [
   { label: "Experience", link: "#experience-header" },

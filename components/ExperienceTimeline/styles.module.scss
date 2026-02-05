@@ -2,7 +2,41 @@
 
 .experienceTimelineContainer {
   .experienceTimelineTitle {
+    justify-content: center;
+    width: 100%;
     display: flex;
     gap: 0.25rem;
+  }
+
+  .experienceCardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    a {
+      text-decoration: none;
+    }
+
+    .experienceCard {
+      cursor: pointer;
+      border-radius: 14px;
+      border: 1px solid $primary-colour;
+      transition: border-color 0.3s ease;
+      padding: 1.5rem;
+
+      &:hover {
+        border: 1px solid $secondary-colour;
+      }
+
+      .companyName {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4 {
+          color: $secondary-colour;
+        }
+      }
+    }
   }
 }

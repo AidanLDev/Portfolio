@@ -1,4 +1,4 @@
-import { ITitleProps } from "@/interfaces/uiInterfaces";
+import { ITitleProps } from "@/interfaces/uiInterfaces.types";
 
 import styles from "./styles.module.scss";
 

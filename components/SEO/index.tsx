@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
-import { MetaTags, SEOProps } from '../../interfaces/seoInterfaces'
+import { MetaTags, SEOProps } from '../../interfaces/seoInterfaces.types'
 
 const socialTags = (
   url: string,
