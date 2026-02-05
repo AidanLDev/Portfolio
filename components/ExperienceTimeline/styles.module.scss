@@ -13,9 +13,32 @@
     flex-direction: column;
     gap: 2rem;
     margin-top: 3rem;
+    position: relative;
+    --timeline-gutter: 2.75rem;
+    --timeline-line-x: 1.25rem;
+    --timeline-dot-size: 0.75rem;
+    --timeline-dot-border: 2px;
+    --timeline-dot-offset: 1.5rem;
+    --timeline-dot-gap: 0.35rem;
+    padding-left: var(--timeline-gutter);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: var(--timeline-line-x);
+      top: calc(
+        var(--timeline-dot-offset) + var(--timeline-dot-size) +
+          (var(--timeline-dot-border) * 2) + (var(--timeline-dot-gap) * 2)
+      );
+      bottom: 0;
+      width: 2px;
+      background-color: $primary-colour;
+      z-index: 0;
+    }
 
     a {
       text-decoration: none;
+      display: block;
     }
 
     .experienceCard {
@@ -24,9 +47,56 @@
       border: 1px solid $primary-colour;
       transition: border-color 0.3s ease;
       padding: 1.5rem;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: calc(
+          var(--timeline-line-x) - var(--timeline-gutter) -
+            (var(--timeline-dot-size) / 2) - var(--timeline-dot-border)
+        );
+        top: var(--timeline-dot-offset);
+        width: var(--timeline-dot-size);
+        height: var(--timeline-dot-size);
+        background-color: $primary-colour;
+        border-radius: 50%;
+        border: var(--timeline-dot-border) solid $secondary-colour;
+        transition: background-color 0.3s ease;
+        z-index: 2;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: calc(
+          var(--timeline-line-x) - var(--timeline-gutter) - var(
+              --timeline-dot-gap
+            )
+        );
+        top: calc(
+          var(--timeline-dot-offset) - var(--timeline-dot-gap) - var(
+              --timeline-dot-border
+            )
+        );
+        width: calc(2px + (var(--timeline-dot-gap) * 2));
+        height: calc(
+          var(--timeline-dot-size) + (var(--timeline-dot-gap) * 2) +
+            (var(--timeline-dot-border) * 2)
+        );
+        background-color: black;
+        border-radius: 999px;
+        pointer-events: none;
+        z-index: 1;
+      }
 
       &:hover {
         border: 1px solid $secondary-colour;
+
+        &::before {
+          background-color: $secondary-colour;
+        }
       }
 
       .companyName {
