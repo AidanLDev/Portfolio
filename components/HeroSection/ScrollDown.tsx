@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 export default function ScrollDown() {
   return (
     <div className={styles.scrollDownContainer}>
-      <a href='#projects-header'>
+      <a href='#experience-header'>
         <Image
           width={24}
           height={24}

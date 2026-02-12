@@ -2,8 +2,8 @@ import HeroSection from "@/components/HeroSection/HeroSection";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import ProjectContainer from "../components/Projects/ProjectContainer";
-import SkillsContainer from "../components/Skills/SkillsContainer";
 import ExperienceTimeline from "@/components/ExperienceTimeline/ExperienceTimeline";
+import SkillsContainer from "@/components/Skills/SkillsContainer";
 
 export default function Home() {
   return (
@@ -13,12 +13,9 @@ export default function Home() {
         <div className="landingScreen">
           <HeroSection />
         </div>
-        {/* Experience Timeline */}
         <ExperienceTimeline />
-        {/* Projects */}
-        <ProjectContainer />
-        {/* Skills */}
         <SkillsContainer />
+        <ProjectContainer />
         <Footer />
       </div>
     </div>

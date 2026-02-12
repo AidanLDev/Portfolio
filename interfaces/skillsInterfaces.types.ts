@@ -1,21 +1,10 @@
-export interface CertBoxProps {
-  name: string
-  img: string
-  link: string
-}
+type SkillCategory = "frontend" | "backend" | "devops";
 
-export interface Certs {
-  name: string
-  img: string
-  link: string
-}
+export type DatesUsedRange = [Date, Date];
 
-export interface SkillBoxProps {
-  logo: string
-  name: string
-}
-
-export interface Skill {
-  name: string
-  logo: string
+export interface ISkill {
+  skill: string;
+  datesUsed: DatesUsedRange[];
+  category: SkillCategory;
+  experienceDetails: string[]; // e.g. "2 years CP"
 }

@@ -20,7 +20,6 @@ export default function HeroSection() {
         </p>
         <HeroLinks />
       </div>
-
       <ScrollDown />
     </section>
   );

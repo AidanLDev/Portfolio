@@ -20,10 +20,10 @@
     "test:e2e-open": "playwright test --ui"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.971.0",
-    "@aws-sdk/lib-dynamodb": "^3.971.0",
+    "@aws-sdk/client-dynamodb": "^3.988.0",
+    "@aws-sdk/lib-dynamodb": "^3.988.0",
     "@next/third-parties": "^16.1.6",
-    "@sentry/nextjs": "^10.35.0",
+    "@sentry/nextjs": "^10.38.0",
     "framer-motion": "^11.18.2",
     "next": "^16.1.6",
     "next-sitemap": "^4.2.3",
@@ -33,10 +33,10 @@
     "sst": "^3.17.38"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.11",
-    "@playwright/test": "^1.58.0",
-    "@types/node": "^20.19.30",
-    "@types/react": "^19.2.10",
+    "@biomejs/biome": "^2.3.14",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^20.19.33",
+    "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
