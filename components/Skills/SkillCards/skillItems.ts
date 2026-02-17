@@ -199,3 +199,12 @@ export const devOpsSkills: ISkill[] = [
     ],
   },
 ];
+
+const allSkills = [...frontEndSkills, ...backendSkills, ...devOpsSkills];
+
+const earliestDate = allSkills
+  .flatMap((s) => s.datesUsed)
+  .reduce((earliest, [start]) => (start < earliest ? start : earliest), new Date());
+
+export const MAX_YEARS =
+  (new Date().getTime() - earliestDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25);

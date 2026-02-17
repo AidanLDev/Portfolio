@@ -8,3 +8,14 @@ export interface ISkill {
   category: SkillCategory;
   experienceDetails: string[]; // e.g. "2 years CP"
 }
+
+export interface SkillColumnProps {
+  title: string;
+  skills: ISkill[];
+  maxYears: number;
+}
+
+export interface ISkillCardProps {
+  skillObject: ISkill;
+  maxYears: number;
+}
