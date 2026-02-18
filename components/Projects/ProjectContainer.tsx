@@ -4,13 +4,14 @@ import style from "./style.module.scss";
 
 export default function ProjectContainer() {
   return (
-    <div className={style.projectContainer}>
+    <section className={style.projectContainer}>
       <div className={style.projectHeader}>
         <h2 className={style.projectTitle} id="projects-header">
-          Projects
+          Featured <span>Projects</span>
         </h2>
+        <div className={style.titleUnderline} />
       </div>
-      <div className={style.projWrapper}>
+      <div className={style.projGrid}>
         {projects.map(
           ({ title, img, link, gitHubLink, description, date, tags }, idx) => (
             <ProjectCard
@@ -26,6 +27,6 @@ export default function ProjectContainer() {
           ),
         )}
       </div>
-    </div>
+    </section>
   );
 }

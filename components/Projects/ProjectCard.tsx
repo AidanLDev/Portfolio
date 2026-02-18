@@ -1,100 +1,100 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import React from "react";
 import Image from "next/image";
 import { Project } from "../../interfaces/projectInterfaces.types";
-import { MotionImageProps } from "../../lib/types";
 import styles from "./style.module.scss";
 
 const cardVariants: Variants = {
   offscreen: {
-    scale: 0.7, // Start smaller
-    opacity: 0, // Start fully transparent
+    y: 30,
+    opacity: 0,
   },
   onscreen: {
-    scale: 1, // Grow to full size
-    opacity: 1, // Become fully opaque
+    y: 0,
+    opacity: 1,
     transition: {
       type: "tween",
-      duration: 0.6,
+      duration: 0.5,
     },
   },
 };
-
-const MotionImg = motion.img as React.FC<MotionImageProps>;
 
 export default function ProjectCard({
   img,
   link,
   title,
   gitHubLink,
-  date,
   description,
   tags,
 }: Project) {
   return (
     <motion.div
-      viewport={{ once: true, amount: 0.8 }}
+      className={styles.card}
+      viewport={{ once: true, amount: 0.15 }}
       initial="offscreen"
       whileInView="onscreen"
       variants={cardVariants}
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.2 }}
     >
       <a
         href={link}
         rel="noreferrer"
         target="_blank"
-        className={`${styles.projectLink} ${styles.projectImageLink}`}
+        className={styles.imageLink}
+        aria-label={`View ${title}`}
       >
-        <span className={styles.imageTooltip} role="tooltip">
-          {`Click to view - ${title}`}
-        </span>
-        <MotionImg
-          alt={title}
-          src={`/images/Projects/${img}`}
-          width="100%"
-          whileHover={{ scale: 1.02 }}
-        />
-      </a>
-      <div className={styles.projectCardContent}>
-        <div className={styles.projectHeading}>
-          <div className={styles.projectTitleTagsContainer}>
-            <h3 className={styles.heading}>{title}</h3>
-            <div className={styles.tags}>
-              {tags.map((tag, idx) => (
-                <p key={`${tag}__${idx}`}>{tag}</p>
-              ))}
-            </div>
-          </div>
-          <p className={styles.date}>Created Date - {date}</p>
+        <div className={styles.imageWrapper}>
+          <Image
+            alt={title}
+            src={`/images/Projects/${img}`}
+            fill
+            className={styles.cardImage}
+            sizes="(max-width: 575px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
         </div>
-        <div className={styles.descriptionBox}>
-          <p>{description}</p>
+      </a>
+      <div className={styles.cardBody}>
+        <h3 className={styles.cardTitle}>{title}</h3>
+        <p className={styles.cardDescription}>{description}</p>
+        <div className={styles.tags}>
+          {tags.map((tag, idx) => (
+            <span key={`${tag}__${idx}`} className={styles.tag}>
+              {tag}
+            </span>
+          ))}
         </div>
         <div className={styles.links}>
-          <a href={gitHubLink} rel="noreferrer" target="_blank">
+          <a
+            href={gitHubLink}
+            rel="noreferrer"
+            target="_blank"
+            className={styles.linkBtn}
+          >
             <Image
               src="/icons/githubIcon.svg"
               alt="GitHub"
-              width={32}
-              height={32}
-              className={styles.githubIcon}
+              width={16}
+              height={16}
+              className={styles.linkIcon}
             />
-            <span>GitHub</span>
+            <span>Code</span>
           </a>
           <a
             href={link}
             rel="noreferrer"
             target="_blank"
-            className={styles.viewProjectsLink}
+            className={styles.linkBtn}
           >
-            <span>View Project</span>
             <Image
               src="/icons/rightArrowIcon.svg"
-              alt="right arrow"
-              width={32}
-              height={32}
+              alt="Demo"
+              width={16}
+              height={16}
+              className={styles.linkIcon}
             />
+            <span>Demo</span>
           </a>
         </div>
       </div>
