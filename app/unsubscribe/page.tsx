@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Input from "@/components/ui/input/Input";
+import Button from "@/components/ui/button/Button";
 import styles from "./styles.module.scss";
 
 export default function Unsubscribe() {
@@ -24,16 +26,14 @@ export default function Unsubscribe() {
         Enter your email and press un-subscribe to be removed from the mailing
         list
       </p>
-      <div className={styles.emailContainer}>
-        <label htmlFor="email-input">Email:</label>
-        <input
-          id="email-input"
-          placeholder="Enter your email address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </div>
-      <button onClick={async () => await handleUnSub()}>Un-Subscribe</button>
+      <Input
+        id="email-input"
+        label="Email:"
+        placeholder="Enter your email address"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <Button onClick={async () => await handleUnSub()}>Un-Subscribe</Button>
     </div>
   );
 }

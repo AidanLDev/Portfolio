@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 import ProjectContainer from "../components/Projects/ProjectContainer";
 import ExperienceTimeline from "@/components/ExperienceTimeline/ExperienceTimeline";
 import SkillsContainer from "@/components/Skills/SkillsContainer";
+import ContactContainer from "@/components/Contact/ContactContainer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <ExperienceTimeline />
         <SkillsContainer />
         <ProjectContainer />
+        <ContactContainer />
         <Footer />
       </div>
     </div>
