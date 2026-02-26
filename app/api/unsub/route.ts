@@ -1,6 +1,7 @@
 // app/api/unsub/route.ts
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
 import { DynamoDBDocumentClient, UpdateCommand, UpdateCommandInput } from '@aws-sdk/lib-dynamodb'
+import { emailRegex } from '@/lib/validation'
 
 const dynamoClient = new DynamoDBClient({
   region: 'us-east-1',
@@ -21,7 +22,6 @@ export async function POST(request: Request) {
       })
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       return new Response(JSON.stringify({ message: 'Invalid email' }), {
         status: 400,

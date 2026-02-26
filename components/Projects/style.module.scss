@@ -4,14 +4,10 @@ $card-bg: #0a1628;
 $card-border: rgba(255, 255, 255, 0.08);
 
 .projectContainer {
-  width: 85vw;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 4rem 0;
-
-  @media (max-width: $isMobile) {
-    width: 100%;
-  }
 
   .projectHeader {
     text-align: center;

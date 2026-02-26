@@ -5,14 +5,10 @@ $card-border: rgba(255, 255, 255, 0.08);
 
 // ── Container ──
 .contactContainer {
-  width: 85vw;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   padding: 4rem 0;
-
-  @media (max-width: $isMobile) {
-    width: 100%;
-  }
 }
 
 // ── Header ──
@@ -25,8 +21,7 @@ $card-border: rgba(255, 255, 255, 0.08);
   font-size: 2.5rem;
   font-weight: 700;
   color: $primary-colour;
-  margin-bottom: 0.75rem;
-
+  margin: 0;
   span {
     color: $secondary-colour;
   }
@@ -129,11 +124,9 @@ p.contactValue {
 }
 
 .contactMessage {
-  background: $card-bg;
   border: 1px solid $card-border;
   border-radius: 12px;
   padding: 1.25rem;
-  margin-top: 0.5rem;
 
   p {
     color: rgba($primary-colour, 0.7);
@@ -202,4 +195,17 @@ p.contactValue {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+.fieldError {
+  color: #ff4d4d;
+  font-size: 0.8rem;
+  margin: 0.25rem 0 0;
+}
+
+.successMessage {
+  color: #4caf50;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 2rem 0;
 }

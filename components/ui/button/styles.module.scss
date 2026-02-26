@@ -39,4 +39,19 @@
     outline: 2px solid rgba(255, 255, 255, 0.7);
     outline-offset: 3px;
   }
+
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+      transform: none;
+      border-color: rgba(255, 255, 255, 0.25);
+      background: linear-gradient(135deg, #2a2a2a 0%, #141414 100%);
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    }
+  }
 }
