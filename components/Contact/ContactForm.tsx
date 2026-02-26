@@ -72,7 +72,7 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <div className={styles.contactForm}>
-        <p className={styles.successMessage}>Message sent! I'll get back to you soon.</p>
+        <p className='successMessage'>Message sent! I'll get back to you soon.</p>
       </div>
     )
   }
