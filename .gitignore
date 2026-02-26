@@ -50,3 +50,4 @@ invalidate-cloudfront.js
 .env.sentry-build-plugin
 
 .vscode
+.claude
