@@ -1,6 +1,6 @@
-import SkillCards from "./SkillCards/SkillCards";
-import SkillsTitle from "./SkillsTitle";
-import styles from "./styles.module.scss";
+import SkillCards from './SkillCards/SkillCards'
+import SkillsTitle from './SkillsTitle'
+import styles from './styles.module.scss'
 
 export default function SkillsContainer() {
   return (
@@ -8,5 +8,5 @@ export default function SkillsContainer() {
       <SkillsTitle />
       <SkillCards />
     </div>
-  );
+  )
 }

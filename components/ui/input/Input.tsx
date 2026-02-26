@@ -1,7 +1,7 @@
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss'
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
+  label?: string
 }
 
 export default function Input({ label, id, ...props }: InputProps) {
@@ -10,5 +10,5 @@ export default function Input({ label, id, ...props }: InputProps) {
       {label && <label htmlFor={id}>{label}</label>}
       <input id={id} className={styles.input} {...props} />
     </div>
-  );
+  )
 }

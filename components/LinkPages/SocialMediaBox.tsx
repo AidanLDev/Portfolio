@@ -1,10 +1,10 @@
-import React from "react";
-import { SocialMediaBoxProps } from "../../interfaces/linkPageInterfaces.types";
-import styles from "./style.module.scss";
+import React from 'react'
+import { SocialMediaBoxProps } from '../../interfaces/linkPageInterfaces.types'
+import styles from './style.module.scss'
 
 export default function SocialMediaBox(props: SocialMediaBoxProps) {
   return (
-    <a href={props.link} target="_blank" rel="noreferrer">
+    <a href={props.link} target='_blank' rel='noreferrer'>
       <div
         className={styles.socialMediaBox}
         style={{
@@ -17,5 +17,5 @@ export default function SocialMediaBox(props: SocialMediaBoxProps) {
         </div>
       )}
     </a>
-  );
+  )
 }

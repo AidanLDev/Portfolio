@@ -5,7 +5,7 @@ test('home page shows profile card text', async ({ page }) => {
   await expect(
     page.getByRole('heading', {
       level: 2,
-      name: 'Software Engineer',
+      name: 'Full-Stack Software Engineer',
     }),
   ).toBeVisible()
 })

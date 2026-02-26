@@ -1,4 +1,4 @@
-const path = require("node:path");
+const path = require('node:path')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -7,23 +7,23 @@ const nextConfig = {
   cacheComponents: true,
   // output: 'export',
   sassOptions: {
-    silenceDeprecations: ["legacy-js-api"],
-    includePaths: [path.join(__dirname, "styles")],
+    silenceDeprecations: ['legacy-js-api'],
+    includePaths: [path.join(__dirname, 'styles')],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
 
 // Injected content via Sentry wizard below
 
-const { withSentryConfig } = require("@sentry/nextjs");
+const { withSentryConfig } = require('@sentry/nextjs')
 
 module.exports = withSentryConfig(module.exports, {
   // For all available options, see:
   // https://www.npmjs.com/package/@sentry/webpack-plugin#options
 
-  org: "processvision",
-  project: "personal-portfolio",
+  org: 'processvision',
+  project: 'personal-portfolio',
 
   // Only print logs for uploading source maps in CI
   silent: !process.env.CI,
@@ -38,7 +38,7 @@ module.exports = withSentryConfig(module.exports, {
   // This can increase your server load as well as your hosting bill.
   // Note: Check that the configured route will not match with your Next.js middleware, otherwise reporting of client-
   // side errors will fail.
-  tunnelRoute: "/monitoring",
+  tunnelRoute: '/monitoring',
 
   // Enables automatic instrumentation of Vercel Cron Monitors. (Does not yet work with App Router route handlers.)
   // See the following for more information:
@@ -54,4 +54,4 @@ module.exports = withSentryConfig(module.exports, {
     // previously `automaticVercelMonitors: true`
     automaticVercelMonitors: true,
   },
-});
+})

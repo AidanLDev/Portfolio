@@ -1,5 +1,5 @@
-import { ITimelineItem } from "@/interfaces/timelineInterfaces.types";
-import styles from "../styles.module.scss";
+import { ITimelineItem } from '@/interfaces/timelineInterfaces.types'
+import styles from '../styles.module.scss'
 
 export default function ExperienceCard(props: ITimelineItem) {
   return (
@@ -18,5 +18,5 @@ export default function ExperienceCard(props: ITimelineItem) {
         ))}
       </ul>
     </div>
-  );
+  )
 }

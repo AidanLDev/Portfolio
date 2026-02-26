@@ -1,9 +1,9 @@
-"use client";
+'use client'
 
-import { motion, Variants } from "framer-motion";
-import Image from "next/image";
-import { Project } from "../../interfaces/projectInterfaces.types";
-import styles from "./style.module.scss";
+import { motion, Variants } from 'framer-motion'
+import Image from 'next/image'
+import { Project } from '../../interfaces/projectInterfaces.types'
+import styles from './style.module.scss'
 
 const cardVariants: Variants = {
   offscreen: {
@@ -14,34 +14,27 @@ const cardVariants: Variants = {
     y: 0,
     opacity: 1,
     transition: {
-      type: "tween",
+      type: 'tween',
       duration: 0.5,
     },
   },
-};
+}
 
-export default function ProjectCard({
-  img,
-  link,
-  title,
-  gitHubLink,
-  description,
-  tags,
-}: Project) {
+export default function ProjectCard({ img, link, title, gitHubLink, description, tags }: Project) {
   return (
     <motion.div
       className={styles.card}
       viewport={{ once: true, amount: 0.15 }}
-      initial="offscreen"
-      whileInView="onscreen"
+      initial='offscreen'
+      whileInView='onscreen'
       variants={cardVariants}
       whileHover={{ y: -4 }}
       transition={{ duration: 0.2 }}
     >
       <a
         href={link}
-        rel="noreferrer"
-        target="_blank"
+        rel='noreferrer'
+        target='_blank'
         className={styles.imageLink}
         aria-label={`View ${title}`}
       >
@@ -51,7 +44,7 @@ export default function ProjectCard({
             src={`/images/Projects/${img}`}
             fill
             className={styles.cardImage}
-            sizes="(max-width: 575px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes='(max-width: 575px) 100vw, (max-width: 1024px) 50vw, 33vw'
           />
         </div>
       </a>
@@ -66,30 +59,20 @@ export default function ProjectCard({
           ))}
         </div>
         <div className={styles.links}>
-          <a
-            href={gitHubLink}
-            rel="noreferrer"
-            target="_blank"
-            className={styles.linkBtn}
-          >
+          <a href={gitHubLink} rel='noreferrer' target='_blank' className={styles.linkBtn}>
             <Image
-              src="/icons/githubIcon.svg"
-              alt="GitHub"
+              src='/icons/githubIcon.svg'
+              alt='GitHub'
               width={16}
               height={16}
               className={styles.linkIcon}
             />
             <span>Code</span>
           </a>
-          <a
-            href={link}
-            rel="noreferrer"
-            target="_blank"
-            className={styles.linkBtn}
-          >
+          <a href={link} rel='noreferrer' target='_blank' className={styles.linkBtn}>
             <Image
-              src="/icons/rightArrowIcon.svg"
-              alt="Demo"
+              src='/icons/rightArrowIcon.svg'
+              alt='Demo'
               width={16}
               height={16}
               className={styles.linkIcon}
@@ -99,5 +82,5 @@ export default function ProjectCard({
         </div>
       </div>
     </motion.div>
-  );
+  )
 }

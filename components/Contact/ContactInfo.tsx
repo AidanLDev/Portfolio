@@ -1,6 +1,6 @@
-import Image from "next/image";
-import styles from "./styles.module.scss";
-import { contactDetails } from "./contactDetails";
+import Image from 'next/image'
+import styles from './styles.module.scss'
+import { contactDetails } from './contactDetails'
 
 export default function ContactInfo() {
   return (
@@ -27,11 +27,10 @@ export default function ContactInfo() {
 
       <div className={styles.contactMessage}>
         <p>
-          Whether you have a project in mind, want to collaborate, or just want
-          to say hello, I&apos;d love to hear from you. Let&apos;s create
-          something amazing together!
+          Whether you have a project in mind, want to collaborate, or just want to say hello,
+          I&apos;d love to hear from you. Let&apos;s create something amazing together!
         </p>
       </div>
     </div>
-  );
+  )
 }

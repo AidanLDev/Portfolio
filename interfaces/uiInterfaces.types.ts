@@ -1,6 +1,6 @@
-type ColourType = "primary" | "secondary";
+type ColourType = 'primary' | 'secondary'
 
 export interface ITitleProps {
-  title: string;
-  colour?: ColourType;
+  title: string
+  colour?: ColourType
 }
