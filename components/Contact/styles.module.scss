@@ -124,10 +124,7 @@ p.contactValue {
 }
 
 .contactMessage {
-  border: 1px solid $card-border;
-  border-radius: 12px;
-  padding: 1.25rem;
-
+  border-top: 1px solid;
   p {
     color: rgba($primary-colour, 0.7);
     font-size: 0.9rem;

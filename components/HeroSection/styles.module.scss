@@ -1,9 +1,7 @@
 @import "../../styles/variables.scss";
 
 .scrollDownContainer {
-  animation:
-    bounce 3.5s infinite,
-    fadeIn 2s forwards;
+  animation: bounce 3.5s infinite, fadeIn 2s forwards;
   animation-delay: 5s, 5s;
   opacity: 0;
   color: $primary-colour;
@@ -50,6 +48,7 @@
     transform: translateY(2px);
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
