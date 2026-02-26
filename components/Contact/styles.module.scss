@@ -86,6 +86,11 @@ $card-border: rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  img {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(91%) saturate(3432%)
+      hue-rotate(348deg) brightness(89%) contrast(93%);
+  }
 }
 
 .contactIcon {
@@ -105,16 +110,22 @@ $card-border: rgba(255, 255, 255, 0.08);
   font-size: 0.85rem;
   color: $secondary-colour;
   margin-bottom: 0.15rem;
+  margin-top: 0;
 }
 
 .contactValue {
   font-size: 0.95rem;
   color: $primary-colour;
   text-decoration: none;
+}
 
-  &:hover {
-    text-decoration: underline;
-  }
+a.contactValue:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+p.contactValue {
+  margin: 0;
 }
 
 .contactMessage {
