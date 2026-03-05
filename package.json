@@ -7,7 +7,7 @@
     "url": "git+https://github.com/AidanLDev/Portfolio.git"
   },
   "scripts": {
-    "build": "next build",
+    "build": "next build --webpack",
     "dev": "next dev",
     "lint": "biome check",
     "start": "npx serve@latest out",
@@ -31,7 +31,7 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "sass": "^1.97.3",
-    "sst": "^3.19.3"
+    "sst": "^4.1.10"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.4",

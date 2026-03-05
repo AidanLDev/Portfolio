@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@use "./variables.scss" as *;
 
 html,
 body {
@@ -162,7 +162,7 @@ textarea {
 
   @for $i from 1 through 21 {
     .text-animate._#{$i} {
-      animation-delay: #{$i / 10}s;
+      animation-delay: #{calc($i / 10)}s;
     }
   }
 

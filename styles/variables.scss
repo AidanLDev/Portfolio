@@ -1,6 +1,8 @@
+@use "sass:color";
+
 // Colours
 $primary-colour: #faebd7;
-$primary-colour-dark: darken($primary-colour, 10%);
+$primary-colour-dark: color.adjust($primary-colour, $lightness: -10%);
 
 $background-colour: #010b11;
 

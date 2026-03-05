@@ -30,7 +30,7 @@ export const experienceItems: ITimelineItem[] = [
     link: 'https://davies-group.com/',
   },
   {
-    roleName: 'Full Stack Developer',
+    roleName: 'Full Stack Developer/DevOps Engineer',
     companyName: 'ContactPartners',
     startDate: 'February 2018',
     endDate: 'December 2020',

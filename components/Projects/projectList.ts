@@ -5,7 +5,7 @@ export const projects: Project[] = [
     img: 'Free-QR-Gen-Project.webp',
     title: 'Free QR Gen',
     link: 'https://freeqrgen.net',
-    gitHubLink: 'https://github.com/AidanLDev',
+    gitHubLink: 'https://github.com/AidanLDev/free-qr-gen',
     date: '2024/08/21',
     description:
       'Free QR Gen is a customisable QR code generator, you can create a unique code for any link you choose. Customiseable options; size, foreground colour, background colour and any icon/logo can be used as part of the code.',
@@ -15,7 +15,7 @@ export const projects: Project[] = [
     img: 'dev-daily-hub.webp',
     title: 'Dev Daily Hub',
     link: 'https://devdailyhub.com',
-    gitHubLink: 'https://github.com/AidanLDev',
+    gitHubLink: 'https://github.com/AidanLDev/dev-daily-hub',
     date: '2024/09/16',
     description:
       'My technical blog site, where I write articals about programming, software engineering and general self-help. Written with Astro to get those top performance ratings.',
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     link: 'https://blog.aidanlowson.com',
     gitHubLink: 'https://github.com/AidanLDev/doubleateam',
     description:
-      'Our blog. Double A Team stands for Aidan and Arni, my wife and fellow blogger, we will write about whatever we feel people would like to know, sharing what we know with those who want to know. Written in Astro for that all-important SEO performance. Deployed to AWS CloudFront to allow quick access to our content no matter your location.',
+      'Our blog. Double A Team stands for Aidan and Arni, my wife and fellow blogger, we will write about whatever we feel people would like to know. Using Astro for that all-important SEO performance. Deployed to AWS CloudFront to allow low-latency access to our content no matter your location.',
     date: '2021/10/18',
     tags: ['Astro', 'AWS', 'TypeScript'],
   },
