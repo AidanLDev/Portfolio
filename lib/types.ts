@@ -1,4 +1,4 @@
-import { MotionProps } from 'framer-motion'
+import { MotionProps } from 'motion/react'
 import type { StaticImageData } from 'next/image'
 import React from 'react'
 

@@ -63,6 +63,12 @@ $card-border: rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  
+  @media (max-width: $isMobile) {
+    align-items: center;
+    border-top: 1px solid;
+    gap: 0.75rem;
+  }
 }
 
 .contactInfoTitle {
