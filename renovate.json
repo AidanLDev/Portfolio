@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "timezone": "Europe/London",
-  "schedule": ["before 6am on monday and thursday"],
+  "schedule": ["Every Thursday at 7 UTC"],
   "labels": ["dependencies"],
   "assignees": ["AidanLDev"],
   "packageRules": [

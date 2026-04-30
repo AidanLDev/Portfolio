@@ -2,7 +2,7 @@ name: Renovate
 
 on:
   schedule:
-    - cron: "0 9 * * 4"
+    - cron: "10 10 * * 4"
   workflow_dispatch:
     inputs:
       log_level:
