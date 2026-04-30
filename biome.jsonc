@@ -33,7 +33,8 @@
       "!**/.env.development",
       "!**/.env.test",
       "!**/.env.production",
-      "!**/next-env.d.ts"
+      "!**/next-env.d.ts",
+      "!**/sst-env.d.ts"
     ]
   },
   "linter": {
@@ -62,7 +63,8 @@
       "!.next/**",
       "!out/**",
       "!build/**",
-      "!next-env.d.ts"
+      "!next-env.d.ts",
+      "!sst-env.d.ts"
     ]
   },
   "javascript": {
