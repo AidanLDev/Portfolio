@@ -31,6 +31,7 @@
   ],
   "prConcurrentLimit": 5,
   "prHourlyLimit": 2,
+  "rangeStrategy": "bump",
   "rebaseWhen": "behind-base-branch",
   "commitMessagePrefix": "chore(deps):"
 }
