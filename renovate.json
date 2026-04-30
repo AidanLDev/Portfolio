@@ -1,8 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
+  "repositories": ["AidanLDev/Portfolio"],
   "timezone": "Europe/London",
-  "schedule": ["Every Thursday at 9:30 UTC"],
   "labels": ["dependencies"],
   "assignees": ["AidanLDev"],
   "packageRules": [
