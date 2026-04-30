@@ -1,0 +1,36 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "timezone": "Europe/London",
+  "schedule": ["before 6am on monday and thursday"],
+  "labels": ["dependencies"],
+  "assignees": ["AidanLDev"],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["patch"],
+      "groupName": "all patch updates",
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major-update"],
+      "automerge": false
+    },
+    {
+      "matchPackageNames": ["next", "react", "react-dom"],
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major-update", "framework-update"],
+      "automerge": false
+    }
+  ],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "rebaseWhen": "behind-base-branch",
+  "commitMessagePrefix": "chore(deps):"
+}
