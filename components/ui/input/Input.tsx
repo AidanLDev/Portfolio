@@ -6,7 +6,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export default function Input({ label, id, ...props }: InputProps) {
   return (
-    <div className={styles.inputWrapper}>
+    <div className={styles.inputWrapper} suppressHydrationWarning>
       {label && <label htmlFor={id}>{label}</label>}
       <input id={id} className={styles.input} {...props} />
     </div>
