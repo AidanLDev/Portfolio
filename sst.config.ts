@@ -10,6 +10,7 @@ export default $config({
   },
   async run() {
     new sst.aws.Nextjs('MyWeb', {
+      openNextVersion: '4.0.1',
       domain: {
         name: 'aidanlowson.com',
         aliases: ['www.aidanlowson.com'],
