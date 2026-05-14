@@ -23,7 +23,7 @@
     "@aws-sdk/client-dynamodb": "^3.1044.0",
     "@aws-sdk/client-ses": "^3.1044.0",
     "@aws-sdk/lib-dynamodb": "^3.1044.0",
-    "@next/third-parties": "^16.2.5",
+    "@next/third-parties": "^16.2.6",
     "@sentry/nextjs": "^10.51.0",
     "motion": "^12.38.0",
     "next": "^16.2.5",
@@ -34,9 +34,9 @@
     "sst": "^4.12.10"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.14",
+    "@biomejs/biome": "^2.4.15",
     "@playwright/test": "^1.59.1",
-    "@types/node": "^20.19.39",
+    "@types/node": "^20.19.41",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "^1.0.0",
