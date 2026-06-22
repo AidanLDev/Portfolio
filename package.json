@@ -20,29 +20,29 @@
     "test:e2e-open": "playwright test --ui"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.1066.0",
-    "@aws-sdk/client-ses": "^3.1066.0",
-    "@aws-sdk/lib-dynamodb": "^3.1066.0",
-    "@sentry/nextjs": "^10.53.1",
-    "@next/third-parties": "^16.2.7",
-    "motion": "^12.38.0",
-    "next": "^16.2.7",
+    "@aws-sdk/client-dynamodb": "^3.1074.0",
+    "@aws-sdk/client-ses": "^3.1074.0",
+    "@aws-sdk/lib-dynamodb": "^3.1074.0",
+    "@next/third-parties": "^16.2.9",
+    "@sentry/nextjs": "^10.59.0",
+    "motion": "^12.40.0",
+    "next": "^16.2.9",
     "next-sitemap": "^4.2.3",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "sass": "^1.99.0",
-    "sst": "^4.12.10"
+    "sass": "^1.101.0",
+    "sst": "^4.15.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.4.16",
-    "@playwright/test": "^1.59.1",
-    "@types/node": "^20.19.41",
-    "@types/react": "^19.2.16",
+    "@biomejs/biome": "^2.5.0",
+    "@playwright/test": "^1.61.0",
+    "@types/node": "^20.19.43",
+    "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "babel-plugin-react-compiler": "^1.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
-    "playwright": "^1.59.1",
+    "playwright": "^1.61.0",
     "typescript": "^5.9.3"
   },
   "lint-staged": {
