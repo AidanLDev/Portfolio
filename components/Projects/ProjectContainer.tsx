@@ -12,9 +12,9 @@ export default function ProjectContainer() {
         <div className={style.titleUnderline} />
       </div>
       <div className={style.projGrid}>
-        {projects.map(({ title, img, link, gitHubLink, description, date, tags }, idx) => (
+        {projects.map(({ title, img, link, gitHubLink, description, date, tags }) => (
           <ProjectCard
-            key={`${title}__${idx}`}
+            key={`${title}__${link}`}
             img={img}
             title={title}
             link={link}

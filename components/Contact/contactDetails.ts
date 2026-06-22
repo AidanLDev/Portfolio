@@ -1,4 +1,4 @@
-import { SvgType } from '@/lib/types'
+import type { SvgType } from '@/lib/types'
 import emailIcon from '@/public/icons/emailIcon.svg'
 import phoneIcon from '@/public/icons/phoneOutlineIcon.svg'
 import locationIcon from '@/public/icons/locationOutlineIcon.svg'

@@ -1,6 +1,6 @@
-import { MotionProps } from 'motion/react'
+import type { MotionProps } from 'motion/react'
 import type { StaticImageData } from 'next/image'
-import React from 'react'
+import type { ImgHTMLAttributes } from 'react'
 
-export type MotionImageProps = React.ImgHTMLAttributes<HTMLImageElement> & MotionProps
+export type MotionImageProps = ImgHTMLAttributes<HTMLImageElement> & MotionProps
 export type SvgType = StaticImageData

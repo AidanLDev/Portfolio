@@ -1,4 +1,4 @@
-import { ISkill, DatesUsedRange } from '@/interfaces/skillsInterfaces.types'
+import type { ISkill, DatesUsedRange } from '@/interfaces/skillsInterfaces.types'
 
 const currentlyUsingText = 'Currently using at ProcessVision'
 
@@ -179,5 +179,4 @@ const earliestDate = allSkills
   .flatMap((s) => s.datesUsed)
   .reduce((earliest, [start]) => (start < earliest ? start : earliest), new Date())
 
-export const MAX_YEARS =
-  (new Date().getTime() - earliestDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25)
+export const MAX_YEARS = (Date.now() - earliestDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25)

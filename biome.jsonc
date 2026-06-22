@@ -1,5 +1,4 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.4.13/schema.json",
   "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
   "files": { "ignoreUnknown": false },
   "formatter": {
@@ -34,19 +33,22 @@
       "!**/.env.test",
       "!**/.env.production",
       "!**/next-env.d.ts",
-      "!**/sst-env.d.ts"
+      "!**/sst-env.d.ts",
+      "!**/*.svg"
     ]
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": false,
       "performance": {
         "noImgElement": "warn",
         "noUnwantedPolyfillio": "warn",
         "useGoogleFontPreconnect": "warn"
       },
       "style": { "noHeadElement": "warn" },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
       "suspicious": {
         "noDocumentImportInPage": "error",
         "noHeadImportInDocument": "error",
@@ -64,7 +66,8 @@
       "!out/**",
       "!build/**",
       "!next-env.d.ts",
-      "!sst-env.d.ts"
+      "!sst-env.d.ts",
+      "!**/*.svg"
     ]
   },
   "javascript": {

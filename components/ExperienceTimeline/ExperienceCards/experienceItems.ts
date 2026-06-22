@@ -1,4 +1,4 @@
-import { ITimelineItem } from '@/interfaces/timelineInterfaces.types'
+import type { ITimelineItem } from '@/interfaces/timelineInterfaces.types'
 
 export const experienceItems: ITimelineItem[] = [
   {

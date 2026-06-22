@@ -1,4 +1,4 @@
-import { ISkillCardProps, DatesUsedRange } from '@/interfaces/skillsInterfaces.types'
+import type { ISkillCardProps, DatesUsedRange } from '@/interfaces/skillsInterfaces.types'
 
 import styles from './styles.module.scss'
 

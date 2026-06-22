@@ -1,7 +1,7 @@
 import SkillCard from './SkillCard'
 import { frontEndSkills, backendSkills, devOpsSkills, MAX_YEARS } from './skillItems'
 
-import { SkillColumnProps } from '@/interfaces/skillsInterfaces.types'
+import type { SkillColumnProps } from '@/interfaces/skillsInterfaces.types'
 
 import styles from './styles.module.scss'
 
@@ -10,8 +10,12 @@ function SkillColumn({ title, skills, maxYears }: Readonly<SkillColumnProps>) {
     <div className={styles.skillColumn}>
       <h3 className={styles.skillColumnTitle}>{title}</h3>
       <div className={styles.skillList}>
-        {skills.map((skillObj, idx) => (
-          <SkillCard key={`${skillObj.skill}__${idx}`} skillObject={skillObj} maxYears={maxYears} />
+        {skills.map((skillObj) => (
+          <SkillCard
+            key={`${skillObj.skill}__${skillObj.category}`}
+            skillObject={skillObj}
+            maxYears={maxYears}
+          />
         ))}
       </div>
     </div>

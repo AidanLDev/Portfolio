@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { NavLinkProps } from '../../interfaces/navbarInterfaces.types'
+import type { NavLinkProps } from '@/interfaces/navbarInterfaces.types'
 import styles from './styles.module.scss'
 
 export default function NavLink({ item }: Readonly<NavLinkProps>) {

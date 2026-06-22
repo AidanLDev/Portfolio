@@ -1,4 +1,4 @@
-import { SocialMediasObject } from '../../interfaces/socialLinksInterfaces.types'
+import type { SocialMediasObject } from '@/interfaces/socialLinksInterfaces.types'
 
 const baseLink = '/images/Logos/'
 

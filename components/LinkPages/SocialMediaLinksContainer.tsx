@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import SocialMediaBox from '../../components/LinkPages/SocialMediaBox'
-import { SocialMediasObject } from '../../interfaces/socialLinksInterfaces.types'
+import type { SocialMediasObject } from '@/interfaces/socialLinksInterfaces.types'
 import { verifiedImg } from '../../lib/constants'
 
 import styles from './style.module.scss'
@@ -32,12 +32,12 @@ export const SocialMediaLinksContainer = ({
         />
       </div>
       <div className={styles.boxWrappers}>
-        {socialLinks.map((social, idx) => (
+        {socialLinks.map((social) => (
           <SocialMediaBox
             backgroundImage={social.img}
             tag={social.tag}
             link={social.link}
-            key={`${social.img}__${idx}`}
+            key={`${social.img}__${social.link}`}
           />
         ))}
       </div>

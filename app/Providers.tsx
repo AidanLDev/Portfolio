@@ -1,7 +1,7 @@
 'use client'
 
 import { GoogleAnalytics } from '@next/third-parties/google'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 interface IProviders {
   children: ReactNode

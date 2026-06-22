@@ -1,10 +1,10 @@
 import { motion } from 'motion/react'
-import React from 'react'
-import { ImageLinkProps } from '../../interfaces/homeInterfaces.types'
-import { MotionImageProps } from '../../lib/types'
+import type { FC } from 'react'
+import type { ImageLinkProps } from '@/interfaces/homeInterfaces.types'
+import type { MotionImageProps } from '@/lib/types'
 import styles from './style.module.scss'
 
-const MotionImg = motion.img as React.FC<MotionImageProps>
+const MotionImg = motion.img as FC<MotionImageProps>
 
 export default function ImageLink({ link, imagePath, alt }: Readonly<ImageLinkProps>) {
   return (

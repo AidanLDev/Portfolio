@@ -1,6 +1,7 @@
 // app/api/unsub/route.ts
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb'
-import { DynamoDBDocumentClient, UpdateCommand, UpdateCommandInput } from '@aws-sdk/lib-dynamodb'
+import { DynamoDBDocumentClient, UpdateCommand } from '@aws-sdk/lib-dynamodb'
+import type { UpdateCommandInput } from '@aws-sdk/lib-dynamodb'
 import { emailRegex } from '@/lib/validation'
 
 const dynamoClient = new DynamoDBClient({
@@ -58,7 +59,7 @@ export async function POST(request: Request) {
     }
   } catch (err) {
     console.error('Error during un-subscribe operation:', err)
-    const e: any = err
+    const e = err
     if (e && e.name === 'ConditionalCheckFailedException') {
       return new Response(JSON.stringify({ message: 'Email not found or already unsubscribed' }), {
         status: 200,

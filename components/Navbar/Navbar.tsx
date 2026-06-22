@@ -14,8 +14,8 @@ export default function Navbar() {
           </Link>
         </div>
         <div className={styles.navRight}>
-          {navItems.map((item, i) => {
-            return <NavLink key={`${item.label}__${i}`} item={item} />
+          {navItems.map((item) => {
+            return <NavLink key={`${item.label}__${item.link}`} item={item} />
           })}
         </div>
       </div>

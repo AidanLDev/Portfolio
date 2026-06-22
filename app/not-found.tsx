@@ -1,4 +1,3 @@
-import React from 'react'
 import BackHomeLink from '../components/BackHomeLink'
 
 export default function NotFound() {

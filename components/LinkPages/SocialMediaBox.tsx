@@ -1,5 +1,4 @@
-import React from 'react'
-import { SocialMediaBoxProps } from '../../interfaces/linkPageInterfaces.types'
+import type { SocialMediaBoxProps } from '@/interfaces/linkPageInterfaces.types'
 import styles from './style.module.scss'
 
 export default function SocialMediaBox(props: SocialMediaBoxProps) {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 import { generateMetadata } from '../lib/helpers'
 
 import '../styles/globals.scss'

@@ -1,4 +1,4 @@
-import { ITimelineItem } from '@/interfaces/timelineInterfaces.types'
+import type { ITimelineItem } from '@/interfaces/timelineInterfaces.types'
 import styles from '../styles.module.scss'
 
 export default function ExperienceCard(props: ITimelineItem) {
@@ -13,8 +13,8 @@ export default function ExperienceCard(props: ITimelineItem) {
       </div>
       <p>{props.description}</p>
       <ul>
-        {props.bullets.map((bullet, idx) => (
-          <li key={`${idx}`}>{bullet}</li>
+        {props.bullets.map((bullet) => (
+          <li key={`${bullet}`}>{bullet}</li>
         ))}
       </ul>
     </div>

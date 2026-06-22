@@ -1,8 +1,9 @@
 'use client'
 
-import { motion, Variants } from 'motion/react'
+import type { Variants } from 'motion/react'
+import { motion } from 'motion/react'
 import Image from 'next/image'
-import { Project } from '../../interfaces/projectInterfaces.types'
+import type { Project } from '@/interfaces/projectInterfaces.types'
 import styles from './style.module.scss'
 
 const cardVariants: Variants = {
@@ -52,8 +53,8 @@ export default function ProjectCard({ img, link, title, gitHubLink, description,
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardDescription}>{description}</p>
         <div className={styles.tags}>
-          {tags.map((tag, idx) => (
-            <span key={`${tag}__${idx}`} className={styles.tag}>
+          {tags.map((tag) => (
+            <span key={tag} className={styles.tag}>
               {tag}
             </span>
           ))}

@@ -5,8 +5,8 @@ import { heroLinkList } from './heroLinkList'
 export default function HeroLinks() {
   return (
     <div className={styles.heroLinksContainer}>
-      {heroLinkList.map(({ link, icon }, idx) => (
-        <IconLink key={`${idx}__${link}`} link={link} icon={icon} />
+      {heroLinkList.map(({ link, icon }) => (
+        <IconLink key={link} link={link} icon={icon} />
       ))}
     </div>
   )
