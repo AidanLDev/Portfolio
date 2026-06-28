@@ -4,13 +4,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font:
-    400 16px/1.4 "Helvetica Neue",
-    sans-serif; // 300 11px
+  font: 400 16px / 1.4 "Helvetica Neue", sans-serif; // 300 11px
   color: #444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: $background-colour !important;
+  background: $background-colour;
   display: block;
   scroll-behavior: smooth;
   a,
@@ -35,9 +33,8 @@ body {
     justify-content: center;
   }
 
-  // TODO: get this to work with a dark-mode toggle
   @media (prefers-color-scheme: dark) {
-    background: black !important;
+    background: black;
   }
 }
 
@@ -95,7 +92,6 @@ textarea {
   overflow: hidden;
   max-width: 80vw;
   width: 100%;
-  margin: 0 auto;
   will-change: contents;
   margin: 0 auto;
   z-index: 1;

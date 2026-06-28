@@ -63,7 +63,7 @@ $card-border: rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  
+
   @media (max-width: $isMobile) {
     align-items: center;
     border-top: 1px solid;
@@ -89,8 +89,8 @@ $card-border: rgba(255, 255, 255, 0.08);
   gap: 1rem;
 
   img {
-    filter: brightness(0) saturate(100%) invert(22%) sepia(91%) saturate(3432%)
-      hue-rotate(348deg) brightness(89%) contrast(93%);
+    filter: brightness(0) saturate(100%) invert(22%) sepia(91%) saturate(3432%) hue-rotate(348deg)
+      brightness(89%) contrast(93%);
   }
 }
 
@@ -166,13 +166,8 @@ p.contactValue {
     font-family: inherit;
     resize: vertical;
     min-height: 120px;
-    box-shadow:
-      inset 0 0 0 1px rgba(255, 255, 255, 0.04),
-      0 8px 20px rgba(0, 0, 0, 0.35);
-    transition:
-      border-color 180ms ease,
-      box-shadow 180ms ease,
-      background 180ms ease;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
 
     &::placeholder {
       color: rgba(255, 255, 255, 0.5);
@@ -186,9 +181,7 @@ p.contactValue {
     &:focus-visible {
       outline: none;
       border-color: rgba($secondary-colour, 0.8);
-      box-shadow:
-        0 0 0 3px rgba($secondary-colour, 0.35),
-        0 10px 24px rgba(0, 0, 0, 0.45);
+      box-shadow: 0 0 0 3px rgba($secondary-colour, 0.35), 0 10px 24px rgba(0, 0, 0, 0.45);
     }
   }
 }

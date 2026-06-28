@@ -21,19 +21,6 @@
 .footerContainer {
   border-top: 1px solid;
   padding: 2rem;
-  a {
-    display: flex;
-    gap: 1rem;
-    svg {
-      align-self: center;
-    }
-    span {
-      font-size: 1.15em;
-    }
-    span:hover {
-      text-decoration: underline;
-    }
-  }
   img {
     filter: brightness(0) invert(1);
     animation: bounce 3.5s infinite;

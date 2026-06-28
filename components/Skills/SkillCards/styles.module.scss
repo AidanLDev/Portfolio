@@ -13,11 +13,7 @@
 }
 
 .skillColumn {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.04) 0%,
-    rgba(255, 255, 255, 0.01) 100%
-  );
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 1.5rem;
@@ -42,6 +38,33 @@
   gap: 0.35rem;
   position: relative;
   cursor: default;
+
+  .tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: rgba(10, 15, 25, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    span {
+      color: $primary-colour;
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+  }
 
   &:hover .tooltip {
     opacity: 1;
@@ -81,34 +104,4 @@
   border-radius: 3px;
   background: linear-gradient(90deg, $secondary-colour, color.adjust(orange, $lightness: -5%));
   transition: width 0.6s ease;
-}
-
-.tooltip {
-  position: absolute;
-  bottom: calc(100% + 8px);
-  left: 50%;
-  transform: translateX(-50%) translateY(4px);
-  background: rgba(10, 15, 25, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 8px;
-  padding: 0.5rem 0.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  white-space: nowrap;
-  z-index: 10;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 0.2s ease,
-    visibility 0.2s ease,
-    transform 0.2s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-
-  span {
-    color: $primary-colour;
-    font-size: 0.8rem;
-    line-height: 1.4;
-  }
 }
