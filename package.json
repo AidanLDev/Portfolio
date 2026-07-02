@@ -20,9 +20,9 @@
     "test:e2e-open": "playwright test --ui"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.1075.0",
-    "@aws-sdk/client-ses": "^3.1075.0",
-    "@aws-sdk/lib-dynamodb": "^3.1075.0",
+    "@aws-sdk/client-dynamodb": "^3.1078.0",
+    "@aws-sdk/client-ses": "^3.1078.0",
+    "@aws-sdk/lib-dynamodb": "^3.1078.0",
     "@next/third-parties": "^16.2.9",
     "@sentry/nextjs": "^10.59.0",
     "motion": "^12.40.0",
