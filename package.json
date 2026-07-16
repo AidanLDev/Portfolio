@@ -31,10 +31,10 @@
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "sass": "^1.101.0",
-    "sst": "^4.17.0"
+    "sst": "^4.17.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.5.2",
+    "@biomejs/biome": "^2.5.4",
     "@playwright/test": "^1.61.1",
     "@types/node": "^20.19.43",
     "@types/react": "^19.2.17",
