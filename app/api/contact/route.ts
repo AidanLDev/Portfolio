@@ -9,34 +9,34 @@ const MY_EMAIL = 'dev@aidanlowson.com'
 
 async function sendDiscordNotification(name: string, email: string, message: string) {
   if (!process.env.DISCORD_WEBHOOK_URL) {
-    console.error("Can't find discord webhook endpoint");
+    console.error("Can't find discord webhook endpoint")
     return
   }
   const discordMessageBody = JSON.stringify({
-  "username": "Portfolio Contact Form",
-  "embeds": [
-    {
-      "title": "New Contact Form Submission",
-      "color": 15158332,
-      "fields": [
-        { "name": "Name", "value": name, "inline": true },
-        { "name": "Email", "value": email, "inline": true },
-        { "name": "Message", "value": message }
-      ],
-      "timestamp": new Date().toISOString()
-    }
-  ]
-})
-  try {
-    await fetch(process.env.DISCORD_WEBHOOK_URL!, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
+    username: 'Portfolio Contact Form',
+    embeds: [
+      {
+        title: 'New Contact Form Submission',
+        color: 15158332,
+        fields: [
+          { name: 'Name', value: name, inline: true },
+          { name: 'Email', value: email, inline: true },
+          { name: 'Message', value: message },
+        ],
+        timestamp: new Date().toISOString(),
       },
-      body: discordMessageBody
+    ],
+  })
+  try {
+    await fetch(process.env.DISCORD_WEBHOOK_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: discordMessageBody,
     })
   } catch (err) {
-    console.error(`Failed to send notification to discord: ${err}`);
+    console.error(`Failed to send notification to discord: ${err}`)
   }
 }
 
@@ -113,7 +113,7 @@ export async function POST(request: Request) {
 
     await sesClient.send(sendCommand)
 
-    await sendDiscordNotification(trimmedName, trimmedEmail, trimmedMessage);
+    await sendDiscordNotification(trimmedName, trimmedEmail, trimmedMessage)
 
     return new Response(JSON.stringify({ message: 'Message sent successfully' }), {
       status: 200,
