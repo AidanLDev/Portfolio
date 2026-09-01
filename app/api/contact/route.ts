@@ -7,6 +7,39 @@ const MAX_NAME_LENGTH = 100
 const MAX_MESSAGE_LENGTH = 5000
 const MY_EMAIL = 'dev@aidanlowson.com'
 
+async function sendDiscordNotification(name: string, email: string, message: string) {
+  if (!process.env.DISCORD_WEBHOOK_URL) {
+    console.error("Can't find discord webhook endpoint");
+    return
+  }
+  const discordMessageBody = JSON.stringify({
+  "username": "Portfolio Contact Form",
+  "embeds": [
+    {
+      "title": "New Contact Form Submission",
+      "color": 15158332,
+      "fields": [
+        { "name": "Name", "value": name, "inline": true },
+        { "name": "Email", "value": email, "inline": true },
+        { "name": "Message", "value": message }
+      ],
+      "timestamp": "2026-09-01T14:00:00.000Z"
+    }
+  ]
+})
+  try {
+    await fetch(process.env.DISCORD_WEBHOOK_URL!, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: discordMessageBody
+    })
+  } catch (err) {
+    console.error(`Failed to send notification to discord: ${err}`);
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json()
@@ -80,7 +113,7 @@ export async function POST(request: Request) {
 
     await sesClient.send(sendCommand)
 
-    // TODO: Add discord webhook to get notification when an email as been sent via the contact me form
+    await sendDiscordNotification(trimmedName, trimmedEmail, trimmedMessage);
 
     return new Response(JSON.stringify({ message: 'Message sent successfully' }), {
       status: 200,
