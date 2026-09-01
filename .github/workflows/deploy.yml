@@ -93,3 +93,4 @@ jobs:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
           SENTRY_DNS: ${{ secrets.SENTRY_DNS }}
           NEXT_PUBLIC_SENTRY_DNS: ${{ secrets.SENTRY_DNS }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}

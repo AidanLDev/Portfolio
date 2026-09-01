@@ -80,6 +80,8 @@ export async function POST(request: Request) {
 
     await sesClient.send(sendCommand)
 
+    // TODO: Add discord webhook to get notification when an email as been sent via the contact me form
+
     return new Response(JSON.stringify({ message: 'Message sent successfully' }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },

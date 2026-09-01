@@ -20,6 +20,7 @@ export default $config({
         NEXT_PUBLIC_SENTRY_DNS: process.env.NEXT_PUBLIC_SENTRY_DNS ?? '',
         SENTRY_DNS: process.env.SENTRY_DNS ?? '',
         NODE_ENV: 'production',
+        DISCORD_WEBHOOK_URL: process.env.DISCORD_WEBHOOK_URL ?? '',
       },
       permissions: [
         {
