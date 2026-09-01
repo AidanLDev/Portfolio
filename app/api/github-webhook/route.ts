@@ -34,6 +34,51 @@ function isValidSignature(signature: string, expected: string): boolean {
   return timingSafeEqual(signatureBuffer, expectedBuffer)
 }
 
+type NotificationState = 'started' | WorkflowConclusion
+
+const NOTIFICATION_STYLE: Record<NotificationState, { color: number; title: string }> = {
+  started: { color: 3447003, title: 'Build started' },
+  success: { color: 3066993, title: 'Build succeeded' },
+  failure: { color: 15158332, title: 'Build failed' },
+  cancelled: { color: 9807270, title: 'Build cancelled' },
+  skipped: { color: 12370112, title: 'Build skipped' },
+  timed_out: { color: 15105570, title: 'Build timed out' },
+  action_required: { color: 16776960, title: 'Build needs action' },
+  neutral: { color: 9807270, title: 'Build finished (neutral)' },
+  stale: { color: 9807270, title: 'Build marked stale' },
+}
+
+async function sendDiscordNotification(workflowName: string, state: NotificationState) {
+  if (!process.env.DISCORD_WEBHOOK_URL) {
+    console.error('No discord webhook url found...')
+    return
+  }
+
+  const { color, title } = NOTIFICATION_STYLE[state]
+
+  const discordMessageBody = JSON.stringify({
+    username: 'GitHub Actions',
+    embeds: [
+      {
+        title,
+        color,
+        fields: [{ name: 'Workflow', value: workflowName, inline: true }],
+        timestamp: new Date().toISOString(),
+      },
+    ],
+  })
+
+  try {
+    await fetch(process.env.DISCORD_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: discordMessageBody,
+    })
+  } catch (err) {
+    console.error(`Failed to send notification to discord: ${err}`)
+  }
+}
+
 export async function POST(request: Request) {
   const secret = process.env.GH_WEBHOOK_SECRET
   const signature = request.headers.get('x-hub-signature-256')
@@ -67,6 +112,7 @@ export async function POST(request: Request) {
     switch (payload.action) {
       case 'requested': {
         console.log('Workflow run requested', payload.workflow_run.id)
+        await sendDiscordNotification(payload.workflow_run.name, 'started')
         break
       }
       case 'in_progress': {
@@ -79,6 +125,7 @@ export async function POST(request: Request) {
           payload.workflow_run.id,
           payload.workflow_run.conclusion,
         )
+        await sendDiscordNotification(payload.workflow_run.name, payload.workflow_run.conclusion)
         break
       }
     }
