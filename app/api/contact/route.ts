@@ -72,14 +72,18 @@ export async function POST(request: Request) {
 
     if (trimmedName.length > MAX_NAME_LENGTH) {
       return new Response(
-        JSON.stringify({ message: `Name must be ${MAX_NAME_LENGTH} characters or less` }),
+        JSON.stringify({
+          message: `Name must be ${MAX_NAME_LENGTH} characters or less`,
+        }),
         { status: 400, headers: { 'Content-Type': 'application/json' } },
       )
     }
 
     if (trimmedMessage.length > MAX_MESSAGE_LENGTH) {
       return new Response(
-        JSON.stringify({ message: `Message must be ${MAX_MESSAGE_LENGTH} characters or less` }),
+        JSON.stringify({
+          message: `Message must be ${MAX_MESSAGE_LENGTH} characters or less`,
+        }),
         { status: 400, headers: { 'Content-Type': 'application/json' } },
       )
     }

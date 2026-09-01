@@ -21,6 +21,7 @@ export default $config({
         SENTRY_DNS: process.env.SENTRY_DNS ?? '',
         NODE_ENV: 'production',
         DISCORD_WEBHOOK_URL: process.env.DISCORD_WEBHOOK_URL ?? '',
+        GH_WEBHOOK_SECRET: process.env.GH_WEBHOOK_SECRET ?? '',
       },
       permissions: [
         {

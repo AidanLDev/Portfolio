@@ -94,3 +94,4 @@ jobs:
           SENTRY_DNS: ${{ secrets.SENTRY_DNS }}
           NEXT_PUBLIC_SENTRY_DNS: ${{ secrets.SENTRY_DNS }}
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          GH_WEBHOOK_SECRET: ${{ secrets.GH_WEBHOOK_SECRET }}
