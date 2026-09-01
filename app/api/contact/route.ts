@@ -23,7 +23,7 @@ async function sendDiscordNotification(name: string, email: string, message: str
         { "name": "Email", "value": email, "inline": true },
         { "name": "Message", "value": message }
       ],
-      "timestamp": "2026-09-01T14:00:00.000Z"
+      "timestamp": new Date().toISOString()
     }
   ]
 })
