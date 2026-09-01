@@ -2,6 +2,26 @@ import { createHmac, timingSafeEqual } from 'node:crypto'
 
 type WebhookTrigger = 'ping' | 'workflow_run'
 
+type WorkflowConclusion =
+  | 'success'
+  | 'failure'
+  | 'cancelled'
+  | 'skipped'
+  | 'timed_out'
+  | 'action_required'
+  | 'neutral'
+  | 'stale'
+
+type WorkflowRunPayload =
+  | {
+      action: 'requested' | 'in_progress'
+      workflow_run: { id: number; name: string; conclusion: null }
+    }
+  | {
+      action: 'completed'
+      workflow_run: { id: number; name: string; conclusion: WorkflowConclusion }
+    }
+
 function isValidSignature(signature: string, expected: string): boolean {
   const signatureBuffer = Buffer.from(signature)
   const expectedBuffer = Buffer.from(expected)
@@ -41,7 +61,29 @@ export async function POST(request: Request) {
       console.error('Unexpected event... ', githubEvent)
       return new Response('Unexpected event', { status: 500 })
     }
-    console.log('running')
+
+    const payload = JSON.parse(rawBody) as WorkflowRunPayload
+
+    switch (payload.action) {
+      case 'requested': {
+        console.log('Workflow run requested', payload.workflow_run.id)
+        break
+      }
+      case 'in_progress': {
+        console.log('Workflow run in progress', payload.workflow_run.id)
+        break
+      }
+      case 'completed': {
+        console.log(
+          'Workflow run completed',
+          payload.workflow_run.id,
+          payload.workflow_run.conclusion,
+        )
+        break
+      }
+    }
+
+    return new Response('OK', { status: 200 })
   } catch (err) {
     console.error(`Error in the github webhook function ${err}`)
     return new Response(
