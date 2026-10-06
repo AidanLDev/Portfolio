@@ -3,12 +3,7 @@ import styles from './style.module.scss'
 
 export default function SocialMediaBox(props: SocialMediaBoxProps) {
   return (
-    <a
-      href={props.link}
-      target='_blank'
-      rel='noreferrer'
-      aria-label={props.tag ? undefined : props.link}
-    >
+    <a href={props.link} target='_blank' rel='noreferrer' aria-label={props.label}>
       <div
         className={styles.socialMediaBox}
         style={{

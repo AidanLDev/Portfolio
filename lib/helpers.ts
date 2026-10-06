@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const SITE_URL = 'https://aidanlowson.com'
 export const SITE_NAME = 'Aidan Lowson'
-export const DEFAULT_OG_IMAGE = '/images/Projects/Portfolio.webp'
+export const DEFAULT_OG_IMAGE = '/images/og/home.png'
 
 interface GenerateMetadataProps {
   title: string
@@ -16,13 +16,13 @@ export function generateMetadata({
   title,
   description,
   image = DEFAULT_OG_IMAGE,
-  imageAlt = "Aidan Lowson's Portfolio Cover Image",
+  imageAlt = 'Aidan Lowson, Full-Stack Software Engineer',
   url,
 }: GenerateMetadataProps): Metadata {
   const imageObject = {
     url: image,
-    width: 895,
-    height: 420,
+    width: 1200,
+    height: 630,
     alt: imageAlt,
   }
   return {
@@ -75,7 +75,11 @@ export function generateMetadata({
       },
     },
     icons: {
-      icon: { url: '/favicon.ico', type: 'image/x-icon' },
+      icon: [
+        { url: '/favicon.ico', type: 'image/x-icon' },
+        { url: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+      ],
+      apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
     },
   }
 }

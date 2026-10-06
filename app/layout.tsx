@@ -13,7 +13,7 @@ interface IRootLayout {
 export const metadata: Metadata = generateMetadata({
   title: 'Aidan Lowson | Full-Stack Software Engineer',
   description:
-    'Aidan Lowson is a UK-based full-stack software engineer building with React, Next.js, TypeScript, Node.js and AWS since 2018. Explore my work experience, skills and projects.',
+    "Aidan Lowson, full-stack software engineer in the UK. Explore my experience, the skills I've learned, projects I've built, and get in touch to collaborate.",
   url: SITE_URL,
 })
 

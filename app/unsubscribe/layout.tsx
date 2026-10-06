@@ -5,7 +5,8 @@ import { generateMetadata as generateSEO } from '../../lib/helpers'
 export const metadata: Metadata = {
   ...generateSEO({
     title: 'Unsubscribe | Aidan Lowson',
-    description: 'Unsubscribe from the mailing list.',
+    description:
+      "Want off Aidan Lowson's mailing list? You've come to the right place. Enter your email to unsubscribe.",
     url: 'https://aidanlowson.com/unsubscribe',
   }),
   robots: { index: false, follow: false },

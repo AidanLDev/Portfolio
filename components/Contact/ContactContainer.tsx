@@ -11,8 +11,9 @@ export default function ContactContainer() {
         </h2>
         <div className={styles.titleUnderline} />
         <p className={styles.contactSubtitle}>
-          I&apos;m always open to new opportunities and interesting projects. Feel free to reach
-          out!
+          Whether it&apos;s a role, a project you&apos;d like to collaborate on or a question about
+          something you&apos;ve seen here, I&apos;m always happy to hear from people. Send me a
+          message and I&apos;ll get back to you.
         </p>
       </div>
 

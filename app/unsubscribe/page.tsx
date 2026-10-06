@@ -58,7 +58,8 @@ export default function Unsubscribe() {
       <div className={styles.unsubscribeContainer}>
         <h1>Unsubscribed</h1>
         <p className='successMessage'>
-          You have been successfully unsubscribed from our mailing list.
+          You have been successfully unsubscribed from the mailing list. Sorry to see you go, and
+          thanks for reading!
         </p>
       </div>
     )
@@ -67,7 +68,10 @@ export default function Unsubscribe() {
   return (
     <div className={styles.unsubscribeContainer}>
       <h1>Unsubscribe</h1>
-      <p>Enter your email and press un-subscribe to be removed from the mailing list</p>
+      <p className={styles.intro}>
+        Want off the mailing list? You&apos;ve come to the right place. Enter the email address you
+        subscribed with and press un-subscribe, and you won&apos;t receive any more emails from me.
+      </p>
       <Input
         id='email-input'
         label='Email:'
