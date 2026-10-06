@@ -1,12 +1,11 @@
-@use "sass:color";
-
 // Colours
 $primary-colour: #faebd7;
-$primary-colour-dark: color.adjust($primary-colour, $lightness: -10%);
+$primary-colour-dark: #f4d4aa;
 
 $background-colour: #010b11;
 
 $secondary-colour: #d5262e;
+$secondary-colour-dark: #aa1e25;
 $active-colour: #ffd700;
 
 // Breakpoints

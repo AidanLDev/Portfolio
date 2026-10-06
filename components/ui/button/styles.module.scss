@@ -1,5 +1,4 @@
 @use "../../../styles/variables.scss" as *;
-@use "sass:color";
 
 .button {
   position: relative;
@@ -25,7 +24,7 @@
     background: linear-gradient(
       135deg,
       $secondary-colour 0%,
-      color.adjust($secondary-colour, $lightness: -10%) 100%
+      $secondary-colour-dark 100%
     );
   }
 
