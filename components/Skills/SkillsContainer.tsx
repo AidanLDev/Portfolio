@@ -4,9 +4,9 @@ import styles from './styles.module.scss'
 
 export default function SkillsContainer() {
   return (
-    <div className={styles.skillsContainer}>
+    <section className={styles.skillsContainer} aria-labelledby='skills-header'>
       <SkillsTitle />
       <SkillCards />
-    </div>
+    </section>
   )
 }

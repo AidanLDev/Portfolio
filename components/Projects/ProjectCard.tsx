@@ -41,7 +41,7 @@ export default function ProjectCard({ img, link, title, gitHubLink, description,
       >
         <div className={styles.imageWrapper}>
           <Image
-            alt={title}
+            alt={`Screenshot of the ${title} project`}
             src={`/images/Projects/${img}`}
             fill
             className={styles.cardImage}
@@ -60,20 +60,32 @@ export default function ProjectCard({ img, link, title, gitHubLink, description,
           ))}
         </div>
         <div className={styles.links}>
-          <a href={gitHubLink} rel='noreferrer' target='_blank' className={styles.linkBtn}>
+          <a
+            href={gitHubLink}
+            rel='noreferrer'
+            target='_blank'
+            className={styles.linkBtn}
+            aria-label={`View the ${title} source code on GitHub`}
+          >
             <Image
               src='/icons/githubIcon.svg'
-              alt='GitHub'
+              alt=''
               width={16}
               height={16}
               className={styles.linkIcon}
             />
             <span>Code</span>
           </a>
-          <a href={link} rel='noreferrer' target='_blank' className={styles.linkBtn}>
+          <a
+            href={link}
+            rel='noreferrer'
+            target='_blank'
+            className={styles.linkBtn}
+            aria-label={`View the ${title} live demo`}
+          >
             <Image
               src='/icons/rightArrowIcon.svg'
-              alt='Demo'
+              alt=''
               width={16}
               height={16}
               className={styles.linkIcon}

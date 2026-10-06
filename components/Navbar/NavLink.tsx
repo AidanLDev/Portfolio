@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 
 export default function NavLink({ item }: Readonly<NavLinkProps>) {
   return (
-    <Link href={item.link} className={styles.linkStyle} rel='noreferrer'>
+    <Link href={item.link} className={styles.linkStyle}>
       <span className={styles.linkLabel}>{item.label}</span>
     </Link>
   )

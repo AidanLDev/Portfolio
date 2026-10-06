@@ -5,9 +5,9 @@ import styles from './styles.module.scss'
 
 export default function ExperienceTimeline() {
   return (
-    <div className={styles.experienceTimelineContainer}>
+    <section className={styles.experienceTimelineContainer} aria-labelledby='experience-header'>
       <ExperienceTimelineTitle />
       <ExperienceCards />
-    </div>
+    </section>
   )
 }

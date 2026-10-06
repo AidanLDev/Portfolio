@@ -8,12 +8,14 @@ import styles from './style.module.scss'
 export interface ISocialMediaLinksContainerProps {
   imgSrc: string
   fullName: string
+  intro: string
   socialLinks: SocialMediasObject[]
 }
 
 export const SocialMediaLinksContainer = ({
   imgSrc,
   fullName,
+  intro,
   socialLinks,
 }: ISocialMediaLinksContainerProps) => {
   return (
@@ -31,11 +33,13 @@ export const SocialMediaLinksContainer = ({
           height={36}
         />
       </div>
+      <p className={styles.intro}>{intro}</p>
       <div className={styles.boxWrappers}>
         {socialLinks.map((social) => (
           <SocialMediaBox
             backgroundImage={social.img}
             tag={social.tag}
+            label={social.label}
             link={social.link}
             key={`${social.img}__${social.link}`}
           />

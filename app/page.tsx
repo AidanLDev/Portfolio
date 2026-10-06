@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div className='container'>
+      <main className='container'>
         <div className='landingScreen'>
           <HeroSection />
         </div>
@@ -19,7 +19,7 @@ export default function Home() {
         <ProjectContainer />
         <ContactContainer />
         <Footer />
-      </div>
+      </main>
     </div>
   )
 }
