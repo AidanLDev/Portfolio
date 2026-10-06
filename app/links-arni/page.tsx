@@ -5,7 +5,7 @@ import { generateMetadata as generateSEO } from '../../lib/helpers'
 
 export const metadata: Metadata = generateSEO({
   title: 'Arni Riani | Links',
-  description: "Arni Riani's social media links and profiles.",
+  description: "All of Arni Riani's social media links and profiles in one place.",
   url: 'https://aidanlowson.com/links-arni',
 })
 
