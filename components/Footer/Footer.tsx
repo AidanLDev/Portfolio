@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className={styles.footerContainer}>
       <span>Made by Aidan Lowson, thanks for visiting</span>
       <div className={styles.linkSection}>
-        <Link href='#nav-bar'>
+        <Link href='#top'>
           <Image alt='Chevron up icon' width={24} height={24} src='/icons/chevronUpIcon.svg' />
         </Link>
       </div>

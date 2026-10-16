@@ -5,6 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   reactCompiler: true,
   cacheComponents: true,
+  partialPrefetching: true,
   // output: 'export',
   sassOptions: {
     silenceDeprecations: ['legacy-js-api'],
