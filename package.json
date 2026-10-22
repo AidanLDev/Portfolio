@@ -4,7 +4,7 @@
   "author": "Aidan Lowson <dev@aidanlowson.com>",
   "packageManager": "pnpm@12.9.1",
   "engines": {
-    "node": ">=24.21.0"
+    "node": ">=24.22.1"
   },
   "repository": {
     "type": "git",
