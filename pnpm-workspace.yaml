@@ -1,3 +1,7 @@
 allowBuilds:
   '@parcel/watcher': true
   '@sentry/cli': true
+
+# Reject packages published less than 24h ago (pnpm's default, made explicit).
+# Renovate's minimumReleaseAge in renovate.json must stay >= this.
+minimumReleaseAge: 1440
