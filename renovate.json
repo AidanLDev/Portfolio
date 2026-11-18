@@ -1,19 +1,19 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "repositories": ["AidanLDev/Portfolio"],
   "timezone": "Europe/London",
   "labels": ["dependencies"],
   "assignees": ["AidanLDev"],
+  "schedule": ["before 10am on thursday"],
+  "minimumReleaseAge": "3 days",
+  "internalChecksFilter": "strict",
+  "platformAutomerge": true,
   "packageRules": [
     {
-      "matchUpdateTypes": ["patch"],
-      "groupName": "all patch updates",
-      "automerge": true,
-      "automergeType": "pr"
-    },
-    {
-      "matchUpdateTypes": ["minor"],
+      "description": "One PR for all non-major updates, so they never conflict with each other over pnpm-lock.yaml",
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-non-major",
       "automerge": true,
       "automergeType": "pr"
     },
@@ -30,8 +30,7 @@
     }
   ],
   "prConcurrentLimit": 5,
-  "prHourlyLimit": 2,
+  "prHourlyLimit": 0,
   "rangeStrategy": "bump",
-  "rebaseWhen": "behind-base-branch",
   "commitMessagePrefix": "chore(deps):"
 }
