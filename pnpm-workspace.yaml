@@ -5,3 +5,6 @@ allowBuilds:
 # Reject packages published less than 24h ago (pnpm's default, made explicit).
 # Renovate's minimumReleaseAge in renovate.json must stay >= this.
 minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  # Renovate security update: next@16.4.5
+  - next@16.4.5
